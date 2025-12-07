@@ -1,21 +1,23 @@
 import os
-import torch
+import warnings
+from collections import Counter
+
 import datasets
-import transformers
+import numpy as np
 import pandas as pd
-from datasets import load_dataset, Dataset
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support, matthews_corrcoef
+import torch
+import torch.nn.functional as F
+import transformers
+from datasets import Dataset, load_dataset
+from openprompt import PromptDataLoader, PromptForClassification
 from openprompt.data_utils import InputExample
 from openprompt.plms import load_plm
 from openprompt.prompts import ManualTemplate, ManualVerbalizer, MixedTemplate
-from openprompt import PromptDataLoader, PromptForClassification
-from transformers import AdamW, get_linear_schedule_with_warmup
-from tqdm.auto import tqdm
 from scipy.spatial import distance
-import torch.nn.functional as F
-from collections import Counter
-import numpy as np
-import warnings
+from sklearn.metrics import (accuracy_score, matthews_corrcoef,
+                             precision_recall_fscore_support)
+from tqdm.auto import tqdm
+from transformers import AdamW, get_linear_schedule_with_warmup
 
 warnings.filterwarnings("ignore")
 
@@ -29,7 +31,7 @@ lr = 5e-5
 num_epochs = 100
 use_cuda = True
 model_name = "codet5"
-pretrainedmodel_path = "D:/model/codet5-base"  # Path of the pre-trained model
+pretrainedmodel_path = "workspace/model/codet5-base"  # Path of the pre-trained model
 early_stop_threshold = 10
 ewc_lambda = 0.4  # EWC regularization term weight
 
@@ -42,28 +44,28 @@ classes = [
 ]
 
 data_paths = [
-    'H:\SOTitlePlus\SOTitlePlus\\task1\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task2\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task3\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task4\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task5\\train.xlsx',
+    'workspace/dataset/dataset/train.xlsx',
+    'workspace/dataset/dataset/train.xlsx',
+    'workspace/dataset/dataset/train.xlsx',
+    'workspace/dataset/dataset/train.xlsx',
+    'workspace/dataset/dataset/train.xlsx',
 ]
 
 test_paths = [
-    'H:\SOTitlePlus\SOTitlePlus\\task1\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task2\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task3\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task4\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task5\\test.xlsx',
+    'workspace/dataset/dataset/test.xlsx',
+    'workspace/dataset/dataset/test.xlsx',
+    'workspace/dataset/dataset/test.xlsx',
+    'workspace/dataset/dataset/test.xlsx',
+    'workspace/dataset/dataset/test.xlsx',
 
 ]
 
 valid_paths = [
-    'H:\SOTitlePlus\SOTitlePlus\\task1\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task2\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task3\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task4\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task5\\valid.xlsx',
+    'workspace/dataset/dataset/valid.xlsx',
+    'workspace/dataset/dataset/valid.xlsx',
+    'workspace/dataset/dataset/valid.xlsx',
+    'workspace/dataset/dataset/valid.xlsx',
+    'workspace/dataset/dataset/valid.xlsx',
 ]
 
 
@@ -335,7 +337,7 @@ def train_phase_one(prompt_model, train_dataloader, val_dataloader, optimizer1, 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             patience_counter = 0  # Reset the patience counter
-            torch.save(prompt_model.state_dict(), 'H:\SOTitlePlus\SOTitlePlus\\best\\best.ckpt')
+            torch.save(prompt_model.state_dict(), 'workspace/model/best/best.ckpt')
         else:
             patience_counter += 1
             if patience_counter >= patience:
@@ -386,7 +388,7 @@ def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             patience_counter = 0  # Reset the patience counter
-            torch.save(prompt_model.state_dict(), 'H:\SOTitlePlus\SOTitlePlus\\best\\best.ckpt')
+            torch.save(prompt_model.state_dict(), 'workspace/model/best/best.ckpt')
         else:
             patience_counter += 1
             if patience_counter >= patience:
@@ -572,7 +574,7 @@ for i in range(1, 6):
 
     if i >= 2:
         prompt_model.load_state_dict(
-            torch.load(os.path.join('H:\SOTitlePlus\SOTitlePlus\\best\\best.ckpt'),
+            torch.load(os.path.join('workspace/model/best/best.ckpt'),
                        map_location=torch.device('cuda:0')))
 
     print(f"Starting Phase 1 for Task {i}: Focal Loss + Label Smoothing")
@@ -593,7 +595,7 @@ for i in range(1, 6):
     print(f"Phase 1 evaluation for task {i}: ", eval_results_phase1)
 
     prompt_model.load_state_dict(
-        torch.load(os.path.join('H:\SOTitlePlus\SOTitlePlus\\best\\best.ckpt'),
+        torch.load(os.path.join('workspace/model/best/best.ckpt'),
                    map_location=torch.device('cuda:0')))
     print(f"Starting Phase 2 for Task {i}: Focal Loss + Label Smoothing + EWC")
     train_phase_two(
@@ -619,7 +621,7 @@ for i in range(1, 6):
 
     print("----------------------Load the best model and test it-----------------------------")
     prompt_model.load_state_dict(
-        torch.load(os.path.join("H:\SOTitlePlus\SOTitlePlus\\best\\best.ckpt"),
+        torch.load(os.path.join("workspace/model/best/best.ckpt"),
                    map_location=torch.device('cuda:0')))
     for task_dataloader, task_name in zip(
             [test_dataloader1, test_dataloader2, test_dataloader3, test_dataloader4, test_dataloader5],
