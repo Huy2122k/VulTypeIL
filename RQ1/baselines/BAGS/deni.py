@@ -1,19 +1,24 @@
 from __future__ import absolute_import, division, print_function
+
 import argparse
 import logging
 import os
 import pickle
 import random
+
 import numpy as np
-import torch
-from torch.utils.data import DataLoader, Dataset, SequentialSampler, RandomSampler
-from transformers import (AdamW, get_linear_schedule_with_warmup, RobertaTokenizer, RobertaModel)
-from tqdm import tqdm
-from textcnn_model import TextCNN
-from teacher_model import CNNTeacherModel
 import pandas as pd
+import torch
 # metrics
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, matthews_corrcoef
+from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef,
+                             precision_score, recall_score)
+from teacher_model import CNNTeacherModel
+from textcnn_model import TextCNN
+from torch.utils.data import (DataLoader, Dataset, RandomSampler,
+                              SequentialSampler)
+from tqdm import tqdm
+from transformers import (AdamW, RobertaModel, RobertaTokenizer,
+                          get_linear_schedule_with_warmup)
 
 logger = logging.getLogger(__name__)
 
@@ -65,7 +70,7 @@ class TextDataset(Dataset):
         return len(self.examples)
 
     def __getitem__(self, i):
-        return torch.tensor(self.examples[i].input_ids), torch.tensor(self.examples[i].label).float(), torch.tensor(
+        return torch.tensor(self.examples[i].input_ids), torch.tensor(self.examples[i].label).long(), torch.tensor(
             self.examples[i].group)
 
 
@@ -221,7 +226,7 @@ def evaluate(args, model, tokenizer, eval_dataset, eval_when_training=False):
         with torch.no_grad():
             prob = model(input_ids=input_ids, groups=groups, labels=labels, return_prob=True)
             y_preds += list((np.argmax(prob.cpu().numpy(), axis=1)))
-            y_trues += list((np.argmax(labels.cpu().numpy(), axis=1)))
+            y_trues += list(labels.cpu().numpy())
     # calculate scores
     acc = accuracy_score(y_trues, y_preds)
     precision = precision_score(y_trues, y_preds, average='macro')
@@ -266,7 +271,7 @@ def test(args, model, tokenizer, test_dataset):
         with torch.no_grad():
             prob = model(input_ids=input_ids, groups=groups, labels=labels, return_prob=True)
             y_preds += list((np.argmax(prob.cpu().numpy(), axis=1)))
-            y_trues += list((np.argmax(labels.cpu().numpy(), axis=1)))
+            y_trues += list(labels.cpu().numpy())
     # calculate scores
     acc = accuracy_score(y_trues, y_preds)
     precision = precision_score(y_trues, y_preds, average='macro')

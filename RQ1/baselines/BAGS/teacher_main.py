@@ -62,7 +62,7 @@ class TextDataset(Dataset):
         return len(self.examples)
 
     def __getitem__(self, i):
-        return torch.tensor(self.examples[i].input_ids), torch.tensor(self.examples[i].label).float(), torch.tensor(self.examples[i].group)
+        return torch.tensor(self.examples[i].input_ids), torch.tensor(self.examples[i].label).long(), torch.tensor(self.examples[i].group)
 
 def convert_examples_to_features(func, label, group_label, tokenizer, args):
     #source
@@ -212,7 +212,7 @@ def evaluate(args, model, tokenizer, eval_dataset, eval_when_training=False):
         with torch.no_grad():
             prob = model(input_ids=input_ids, groups=groups, labels=labels, return_prob=True)
             y_preds += list((np.argmax(prob.cpu().numpy(), axis=1)))
-            y_trues += list((np.argmax(labels.cpu().numpy(), axis=1)))
+            y_trues += list(labels.cpu().numpy())
     # calculate scores
     acc = accuracy_score(y_trues, y_preds)
     precision = precision_score(y_trues, y_preds, average='macro')
@@ -256,7 +256,7 @@ def test(args, model, tokenizer, test_dataset):
         with torch.no_grad():
             prob = model(input_ids=input_ids, groups=groups, labels=labels, return_prob=True)
             y_preds += list((np.argmax(prob.cpu().numpy(), axis=1)))
-            y_trues += list((np.argmax(labels.cpu().numpy(), axis=1)))
+            y_trues += list(labels.cpu().numpy())
     # calculate scores
     acc = accuracy_score(y_trues, y_preds)
     precision = precision_score(y_trues, y_preds, average='macro')
