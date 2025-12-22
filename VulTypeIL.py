@@ -1,23 +1,66 @@
+import ast
 import os
 import warnings
-from collections import Counter
+# ==================================================SPECIFIC LIB==============================
+from collections import Counter, namedtuple
 
-import datasets
+# import datasets
 import numpy as np
 import pandas as pd
 import torch
 import torch.nn.functional as F
 import transformers
-from datasets import Dataset, load_dataset
+# from datasets import Dataset, load_dataset
 from openprompt import PromptDataLoader, PromptForClassification
 from openprompt.data_utils import InputExample
-from openprompt.plms import load_plm
+from openprompt.plms import add_special_tokens
+from openprompt.plms.seq2seq import T5LMTokenizerWrapper, T5TokenizerWrapper
+# from openprompt.plms import load_plm
+# from code_t5 import load_plm
 from openprompt.prompts import ManualTemplate, ManualVerbalizer, MixedTemplate
 from scipy.spatial import distance
 from sklearn.metrics import (accuracy_score, matthews_corrcoef,
                              precision_recall_fscore_support)
 from tqdm.auto import tqdm
-from transformers import AdamW, get_linear_schedule_with_warmup
+from transformers import (AdamW, RobertaTokenizer, T5Config,
+                          T5ForConditionalGeneration,
+                          get_linear_schedule_with_warmup)
+
+ModelClass = namedtuple("ModelClass", ('config', 'tokenizer', 'model','wrapper'))
+
+def load_plm(model_name, model_path):
+    codet5_model = ModelClass(**{
+        "config": T5Config, 
+        "tokenizer": RobertaTokenizer, 
+        "model": T5ForConditionalGeneration,
+        "wrapper": T5TokenizerWrapper
+    })
+
+    model_class = codet5_model
+    model_config = model_class.config.from_pretrained("Salesforce/codet5-base")
+    # you can change huggingface model_config here
+    # if 't5'  in model_name: # remove dropout according to PPT~\ref{}
+    #     model_config.dropout_rate = 0.0
+    # if 'gpt' in model_name: # add pad token for gpt
+    #     specials_to_add = ["<pad>"]
+        # model_config.attn_pdrop = 0.0
+        # model_config.resid_pdrop = 0.0
+        # model_config.embd_pdrop = 0.0
+    model = model_class.model.from_pretrained("Salesforce/codet5-base", config=model_config)
+    tokenizer = model_class.tokenizer.from_pretrained("Salesforce/codet5-base")
+    wrapper = model_class.wrapper
+
+
+    model, tokenizer = add_special_tokens(model, tokenizer, specials_to_add=None)
+
+    # if 'opt' in model_name:
+    #     tokenizer.add_bos_token=False
+    
+    return model, tokenizer, model_config, wrapper
+
+# ==================================================END LIB==============================
+
+
 
 warnings.filterwarnings("ignore")
 
@@ -30,8 +73,8 @@ max_seq_l = 512
 lr = 5e-5
 num_epochs = 100
 use_cuda = True
-model_name = "codet5"
-pretrainedmodel_path = "workspace/model/codet5-base"  # Path of the pre-trained model
+model_name = "t5"
+pretrainedmodel_path = "Salesforce/codet5-base"  # Path of the pre-trained model
 early_stop_threshold = 10
 ewc_lambda = 0.4  # EWC regularization term weight
 
@@ -44,28 +87,27 @@ classes = [
 ]
 
 data_paths = [
-    'workspace/dataset/dataset/train.xlsx',
-    'workspace/dataset/dataset/train.xlsx',
-    'workspace/dataset/dataset/train.xlsx',
-    'workspace/dataset/dataset/train.xlsx',
-    'workspace/dataset/dataset/train.xlsx',
+    "incremental_tasks/task1_train.xlsx",
+    "incremental_tasks/task2_train.xlsx",
+    "incremental_tasks/task3_train.xlsx",
+    "incremental_tasks/task4_train.xlsx",
+    "incremental_tasks/task5_train.xlsx",
 ]
 
 test_paths = [
-    'workspace/dataset/dataset/test.xlsx',
-    'workspace/dataset/dataset/test.xlsx',
-    'workspace/dataset/dataset/test.xlsx',
-    'workspace/dataset/dataset/test.xlsx',
-    'workspace/dataset/dataset/test.xlsx',
-
+    "incremental_tasks/task1_test.xlsx",
+    "incremental_tasks/task2_test.xlsx",
+    "incremental_tasks/task3_test.xlsx",
+    "incremental_tasks/task4_test.xlsx",
+    "incremental_tasks/task5_test.xlsx",
 ]
 
 valid_paths = [
-    'workspace/dataset/dataset/valid.xlsx',
-    'workspace/dataset/dataset/valid.xlsx',
-    'workspace/dataset/dataset/valid.xlsx',
-    'workspace/dataset/dataset/valid.xlsx',
-    'workspace/dataset/dataset/valid.xlsx',
+    "incremental_tasks/task1_valid.xlsx",
+    "incremental_tasks/task2_valid.xlsx",
+    "incremental_tasks/task3_valid.xlsx",
+    "incremental_tasks/task4_valid.xlsx",
+    "incremental_tasks/task5_valid.xlsx",
 ]
 
 
@@ -148,14 +190,14 @@ def read_prompt_examples(filename):
     data = pd.read_excel(filename).astype(str)
     desc = data['description'].tolist()
     code = data['abstract_func_before'].tolist()
-    type = data['type'].tolist()
+    type = data['cwe_ids'].tolist()
     for idx in range(len(data)):
         examples.append(
             InputExample(
                 guid=idx,
                 text_a=' '.join(code[idx].split(' ')[:384]),
                 text_b=' '.join(desc[idx].split(' ')[:64]),
-                tgt_text=int(type[idx]),
+                tgt_text=", ".join(ast.literal_eval(type[idx])),
             )
         )
     return examples
@@ -169,14 +211,14 @@ def read_and_merge_previous_datasets(current_index, data_paths):
         merged_data = pd.concat([merged_data, data], ignore_index=True)
     desc = merged_data['description'].tolist()
     code = merged_data['abstract_func_before'].tolist()
-    type = merged_data['type'].tolist()
+    type = merged_data['cwe_ids'].tolist()
     for idx in range(len(merged_data)):
         examples.append(
             InputExample(
                 guid=idx,
                 text_a=' '.join(code[idx].split(' ')[:384]),
                 text_b=' '.join(desc[idx].split(' ')[:64]),
-                tgt_text=int(type[idx]),
+                tgt_text=", ".join(ast.literal_eval(type[idx])),
             )
         )
     return examples
@@ -337,7 +379,7 @@ def train_phase_one(prompt_model, train_dataloader, val_dataloader, optimizer1, 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             patience_counter = 0  # Reset the patience counter
-            torch.save(prompt_model.state_dict(), 'workspace/model/best/best.ckpt')
+            torch.save(prompt_model.state_dict(), '/workspace/model/best/best.ckpt')
         else:
             patience_counter += 1
             if patience_counter >= patience:
@@ -388,7 +430,7 @@ def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             patience_counter = 0  # Reset the patience counter
-            torch.save(prompt_model.state_dict(), 'workspace/model/best/best.ckpt')
+            torch.save(prompt_model.state_dict(), '/workspace/model/best/best.ckpt')
         else:
             patience_counter += 1
             if patience_counter >= patience:
@@ -574,7 +616,7 @@ for i in range(1, 6):
 
     if i >= 2:
         prompt_model.load_state_dict(
-            torch.load(os.path.join('workspace/model/best/best.ckpt'),
+            torch.load(os.path.join('/workspace/model/best/best.ckpt'),
                        map_location=torch.device('cuda:0')))
 
     print(f"Starting Phase 1 for Task {i}: Focal Loss + Label Smoothing")
@@ -595,7 +637,7 @@ for i in range(1, 6):
     print(f"Phase 1 evaluation for task {i}: ", eval_results_phase1)
 
     prompt_model.load_state_dict(
-        torch.load(os.path.join('workspace/model/best/best.ckpt'),
+        torch.load(os.path.join('/workspace/model/best/best.ckpt'),
                    map_location=torch.device('cuda:0')))
     print(f"Starting Phase 2 for Task {i}: Focal Loss + Label Smoothing + EWC")
     train_phase_two(
@@ -621,7 +663,7 @@ for i in range(1, 6):
 
     print("----------------------Load the best model and test it-----------------------------")
     prompt_model.load_state_dict(
-        torch.load(os.path.join("workspace/model/best/best.ckpt"),
+        torch.load(os.path.join("/workspace/model/best/best.ckpt"),
                    map_location=torch.device('cuda:0')))
     for task_dataloader, task_name in zip(
             [test_dataloader1, test_dataloader2, test_dataloader3, test_dataloader4, test_dataloader5],
