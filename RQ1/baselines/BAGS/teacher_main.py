@@ -356,7 +356,7 @@ def main():
     args.n_gpu = 1
     args.device = device
 
-    with open("../../mydata/cwe_label_map.pkl", "rb") as f:
+    with open("../mydata/cwe_label_map.pkl", "rb") as f:
         cwe_label_map = pickle.load(f)
     group_label_map = {"g1": 0, "g2": 1, "g3": 2}
     # Setup logging
