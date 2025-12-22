@@ -1,20 +1,24 @@
 from __future__ import absolute_import, division, print_function
+
 import argparse
 import logging
 import os
 import pickle
 import random
-import numpy as np
-import torch
-from torch.utils.data import DataLoader, Dataset, SequentialSampler, RandomSampler
-from transformers import (AdamW, get_linear_schedule_with_warmup, RobertaTokenizer, RobertaModel)
-from tqdm import tqdm
-from textcnn_model import TextCNN
-from teacher_model import CNNTeacherModel
-import pandas as pd
-# metrics
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, matthews_corrcoef
 
+import numpy as np
+import pandas as pd
+import torch
+# metrics
+from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef,
+                             precision_score, recall_score)
+from teacher_model import CNNTeacherModel
+from textcnn_model import TextCNN
+from torch.utils.data import (DataLoader, Dataset, RandomSampler,
+                              SequentialSampler)
+from tqdm import tqdm
+from transformers import (AdamW, RobertaModel, RobertaTokenizer,
+                          get_linear_schedule_with_warmup)
 
 logger = logging.getLogger(__name__)
 
@@ -385,9 +389,9 @@ def main():
         logger.info(f"Processing Task {task_id + 1}")
 
         # Define paths for this task
-        train_data_file = args.train_data_file + str(task_id + 1) + '/train.csv'
-        eval_data_file = args.eval_data_file + str(task_id + 1) + '/val.csv'
-        test_data_file = args.test_data_file + str(task_id + 1) + '/test.csv'
+        train_data_file = args.train_data_file + str(task_id + 1) + '_train.csv'
+        eval_data_file = args.eval_data_file + str(task_id + 1) + '_valid.csv'
+        test_data_file = args.test_data_file + str(task_id + 1) + '_test.csv'
         output_dir = args.output_dir
         model_name = args.model_name
 
@@ -416,7 +420,7 @@ def main():
         logger.info(f"Evaluating model trained on Task {task_id + 1} on all other tasks")
         for eval_task_id in range(5):
             results = {}
-            test_data_file = f"{args.test_data_file}{eval_task_id + 1}/test.csv"
+            test_data_file = f"{args.test_data_file}{eval_task_id + 1}_test.csv"
             test_dataset = TextDataset(tokenizer=tokenizer, args=args, cwe_label_map=cwe_label_map,
                                        group_label_map=group_label_map,
                                        file_path=test_data_file)
