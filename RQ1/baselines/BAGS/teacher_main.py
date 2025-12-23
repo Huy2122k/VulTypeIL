@@ -172,7 +172,7 @@ def train(args, train_dataset, model, tokenizer, eval_dataset, cwe_label_map):
                 output_flag=True
                 avg_loss=round(np.exp((tr_loss - logging_loss) /(global_step- tr_nb)),4)
 
-                if global_step % args.save_steps == 0:
+                if global_step % args.save_steps == 0 and idx == args.epochs - 1:
                     results = evaluate(args, model, tokenizer, eval_dataset, eval_when_training=True)
 
                     # Save model checkpoint
