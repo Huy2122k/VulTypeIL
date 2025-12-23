@@ -213,7 +213,7 @@ def evaluate(args, model, tokenizer, eval_dataset, eval_when_training=False):
         with torch.no_grad():
             prob = model(input_ids=input_ids, labels=labels, return_prob=True)
             y_preds += list((np.argmax(prob.cpu().numpy(), axis=1)))
-            y_trues += list((np.argmax(labels.cpu().numpy(), axis=1)))    
+            y_trues += list(labels.cpu().numpy())    
     # calculate scores    
     acc = accuracy_score(y_trues, y_preds)
     precision = precision_score(y_trues, y_preds, average='macro')
@@ -256,7 +256,7 @@ def test(args, model, tokenizer, test_dataset):
         with torch.no_grad():
             prob = model(input_ids=input_ids, labels=labels, return_prob=True)
             y_preds += list((np.argmax(prob.cpu().numpy(), axis=1)))
-            y_trues += list((np.argmax(labels.cpu().numpy(), axis=1)))
+            y_trues += list(labels.cpu().numpy())
     # calculate scores
     acc = accuracy_score(y_trues, y_preds)
     precision = precision_score(y_trues, y_preds, average='macro')
