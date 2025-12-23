@@ -55,8 +55,8 @@ class TextDataset(Dataset):
                     logger.info("*** Example ***")
                     logger.info("label: {}".format(example.label))
                     logger.info("group: {}".format(example.group))
-                    logger.info("input_tokens: {}".format([x.replace('\u0120','_') for x in example.input_tokens]))
-                    logger.info("input_ids: {}".format(' '.join(map(str, example.input_ids))))
+                    # logger.info("input_tokens: {}".format([x.replace('\u0120','_') for x in example.input_tokens]))
+                    # logger.info("input_ids: {}".format(' '.join(map(str, example.input_ids))))
 
     def __len__(self):
         return len(self.examples)
