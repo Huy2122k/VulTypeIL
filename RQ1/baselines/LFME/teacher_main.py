@@ -1,20 +1,24 @@
 from __future__ import absolute_import, division, print_function
+
 import argparse
 import logging
 import os
 import pickle
 import random
-import numpy as np
-import torch
-from torch.utils.data import DataLoader, Dataset, SequentialSampler, RandomSampler
-from transformers import (AdamW, get_linear_schedule_with_warmup, RobertaTokenizer, RobertaModel)
-from tqdm import tqdm
-from textcnn_model import TextCNN
-from teacher_model import CNNTeacherModel
-import pandas as pd
-# metrics
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, matthews_corrcoef
 
+import numpy as np
+import pandas as pd
+import torch
+# metrics
+from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef,
+                             precision_score, recall_score)
+from teacher_model import CNNTeacherModel
+from textcnn_model import TextCNN
+from torch.utils.data import (DataLoader, Dataset, RandomSampler,
+                              SequentialSampler)
+from tqdm import tqdm
+from transformers import (AdamW, RobertaModel, RobertaTokenizer,
+                          get_linear_schedule_with_warmup)
 
 logger = logging.getLogger(__name__)
 
@@ -352,7 +356,7 @@ def main():
     args.n_gpu = 1
     args.device = device
 
-    with open("../../mydata/cwe_label_map.pkl", "rb") as f:
+    with open("../mydata/cwe_label_map.pkl", "rb") as f:
         cwe_label_map = pickle.load(f)
     # Setup logging
     logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',datefmt='%m/%d/%Y %H:%M:%S',level=logging.INFO)
