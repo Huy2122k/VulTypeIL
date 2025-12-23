@@ -56,14 +56,14 @@ class TextDataset(Dataset):
             for example in self.examples[:3]:
                     logger.info("*** Example ***")
                     logger.info("label: {}".format(example.label))
-                    logger.info("input_tokens: {}".format([x.replace('\u0120','_') for x in example.input_tokens]))
-                    logger.info("input_ids: {}".format(' '.join(map(str, example.input_ids))))
+                    # logger.info("input_tokens: {}".format([x.replace('\u0120','_') for x in example.input_tokens]))
+                    # logger.info("input_ids: {}".format(' '.join(map(str, example.input_ids))))
 
     def __len__(self):
         return len(self.examples)
 
     def __getitem__(self, i):       
-        return torch.tensor(self.examples[i].input_ids), torch.tensor(self.examples[i].label).float()
+        return torch.tensor(self.examples[i].input_ids), torch.tensor(self.examples[i].label).long()
 
 def convert_examples_to_features(func, label, tokenizer, args):
     #source
