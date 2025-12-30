@@ -1,21 +1,26 @@
 from __future__ import absolute_import, division, print_function
+
 import argparse
 import logging
 import os
 import pickle
 import random
+
 import numpy as np
-import torch
-from torch.utils.data import DataLoader, Dataset, SequentialSampler, RandomSampler
-from transformers import (AdamW, get_linear_schedule_with_warmup, RobertaTokenizer, RobertaModel)
-from tqdm import tqdm
-from textcnn_model import TextCNN
-from teacher_model import CNNTeacherModel
-from combined_teacher_model import CombinedTeacher
 import pandas as pd
+import torch
 import torch.nn as nn
+from combined_teacher_model import CombinedTeacher
 # metrics
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, matthews_corrcoef
+from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef,
+                             precision_score, recall_score)
+from teacher_model import CNNTeacherModel
+from textcnn_model import TextCNN
+from torch.utils.data import (DataLoader, Dataset, RandomSampler,
+                              SequentialSampler)
+from tqdm import tqdm
+from transformers import (AdamW, RobertaModel, RobertaTokenizer,
+                          get_linear_schedule_with_warmup)
 
 logger = logging.getLogger(__name__)
 
@@ -329,6 +334,10 @@ def main():
     ## Other parameters
     parser.add_argument("--model_type", default="bert", type=str,
                         help="The model architecture to be fine-tuned.")
+    
+    parser.add_argument("--teacher_model", type=str,
+                        help="The model architecture to be fine-tuned.")
+    
     parser.add_argument("--block_size", default=512, type=int,
                         help="Optional input sequence length after tokenization."
                              "The training dataset will be truncated in block of this size for training."
@@ -441,21 +450,21 @@ def main():
                             num_labels=len(cwe_label_map),
                             args=args,
                             hidden_size=300)
-    g1_teacher.load_state_dict(torch.load("./saved_models/checkpoint-best-acc/g1_cnnteacher.bin", map_location=args.device))
+    g1_teacher.load_state_dict(torch.load(f"{args.teacher_model}/checkpoint-best-acc/g1_cnnteacher.bin", map_location=args.device))
 
     g2_teacher = CNNTeacherModel(shared_model=g2_cnn_model,
                             tokenizer=tokenizer,
                             num_labels=len(cwe_label_map),
                             args=args,
                             hidden_size=300)
-    g2_teacher.load_state_dict(torch.load("./saved_models/checkpoint-best-acc/g2_cnnteacher.bin", map_location=args.device))
+    g2_teacher.load_state_dict(torch.load(f"{args.teacher_model}/checkpoint-best-acc/g2_cnnteacher.bin", map_location=args.device))
 
     g3_teacher = CNNTeacherModel(shared_model=g3_cnn_model,
                             tokenizer=tokenizer,
                             num_labels=len(cwe_label_map),
                             args=args,
                             hidden_size=300)
-    g3_teacher.load_state_dict(torch.load("./saved_models/checkpoint-best-acc/g3_cnnteacher.bin", map_location=args.device))
+    g3_teacher.load_state_dict(torch.load(f"{args.teacher_model}/checkpoint-best-acc/g3_cnnteacher.bin", map_location=args.device))
 
     teacher = CombinedTeacher(g1_teacher, g2_teacher, g3_teacher, g1_codebert.config, tokenizer, args)
     teacher.to(args.device)
