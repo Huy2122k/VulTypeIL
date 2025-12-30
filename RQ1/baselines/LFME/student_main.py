@@ -494,9 +494,9 @@ def main():
         logger.info(f"Processing Task {task_id + 1}")
 
         # Define paths for this task
-        train_data_file = args.train_data_file + str(task_id + 1) + '/train.csv'
-        eval_data_file = args.eval_data_file + str(task_id + 1) + '/val.csv'
-        test_data_file = args.test_data_file + str(task_id + 1) + '/test.csv'
+        train_data_file = args.train_data_file + str(task_id + 1) + '_train.csv'
+        eval_data_file = args.eval_data_file + str(task_id + 1) + '_val.csv'
+        test_data_file = args.test_data_file + str(task_id + 1) + '_test.csv'
 
         # Training
         if args.do_train:
