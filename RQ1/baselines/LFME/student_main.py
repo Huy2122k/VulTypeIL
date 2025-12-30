@@ -64,7 +64,7 @@ class TextDataset(Dataset):
         return len(self.examples)
 
     def __getitem__(self, i):
-        return torch.tensor(self.examples[i].input_ids), torch.tensor(self.examples[i].label).float(), torch.tensor(self.examples[i].group)
+        return torch.tensor(self.examples[i].input_ids), torch.tensor(self.examples[i].label).long(), torch.tensor(self.examples[i].group)
 
 def convert_examples_to_features(func, label, group, tokenizer, args):
     #source
