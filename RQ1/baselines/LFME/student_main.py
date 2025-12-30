@@ -57,8 +57,8 @@ class TextDataset(Dataset):
                     logger.info("*** Example ***")
                     logger.info("label: {}".format(example.label))
                     logger.info("group: {}".format(example.group))
-                    logger.info("input_tokens: {}".format([x.replace('\u0120','_') for x in example.input_tokens]))
-                    logger.info("input_ids: {}".format(' '.join(map(str, example.input_ids))))
+                    # logger.info("input_tokens: {}".format([x.replace('\u0120','_') for x in example.input_tokens]))
+                    # logger.info("input_ids: {}".format(' '.join(map(str, example.input_ids))))
 
     def __len__(self):
         return len(self.examples)
@@ -495,7 +495,7 @@ def main():
 
         # Define paths for this task
         train_data_file = args.train_data_file + str(task_id + 1) + '_train.csv'
-        eval_data_file = args.eval_data_file + str(task_id + 1) + '_val.csv'
+        eval_data_file = args.eval_data_file + str(task_id + 1) + '_valid.csv'
         test_data_file = args.test_data_file + str(task_id + 1) + '_test.csv'
 
         # Training
