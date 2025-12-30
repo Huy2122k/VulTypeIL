@@ -177,7 +177,7 @@ def train(args, train_dataset, model, tokenizer, eval_dataset, cwe_label_map):
                     results = evaluate(args, model, tokenizer, eval_dataset, eval_when_training=True)    
                     
                     # Save model checkpoint
-                    if results['eval_acc']>best_acc:
+                    if results['eval_acc']>=best_acc:
                         best_acc=results['eval_acc']
                         logger.info("  "+"*"*20)  
                         logger.info("  Best Acc:%s",round(best_acc,4))
