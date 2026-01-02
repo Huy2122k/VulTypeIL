@@ -61,8 +61,8 @@ class TextDataset(Dataset):
                     logger.info("*** Example ***")
                     logger.info("label: {}".format(example.label))
                     logger.info("group: {}".format(example.group))
-                    logger.info("input_tokens: {}".format([x.replace('\u0120','_') for x in example.input_tokens]))
-                    logger.info("input_ids: {}".format(' '.join(map(str, example.input_ids))))
+                    # logger.info("input_tokens: {}".format([x.replace('\u0120','_') for x in example.input_tokens]))
+                    # logger.info("input_ids: {}".format(' '.join(map(str, example.input_ids))))
 
     def __len__(self):
         return len(self.examples)
@@ -284,7 +284,7 @@ def test(args, model, tokenizer, test_dataset):
     df = pd.read_csv(args.test_data_file)
     df["y_trues"] = y_trues
     df["y_preds"] = y_preds
-    df.to_csv("./raw_prediction/teacher_preds.csv")
+    df.to_csv("teacher_preds.csv")
     print("done writing predictions")
 
     return y_trues, y_preds
