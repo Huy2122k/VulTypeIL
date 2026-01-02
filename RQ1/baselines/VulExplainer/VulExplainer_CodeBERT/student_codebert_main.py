@@ -1,21 +1,26 @@
 from __future__ import absolute_import, division, print_function
+
 import argparse
 import logging
 import os
 import pickle
 import random
+
 import numpy as np
+import pandas as pd
 import torch
 import torch.nn as nn
-from torch.utils.data import DataLoader, Dataset, SequentialSampler, RandomSampler
-from transformers import (AdamW, get_linear_schedule_with_warmup, RobertaTokenizer, RobertaModel)
-from tqdm import tqdm
-from student_codebert_model import StudentBERT
-import pandas as pd
 # metrics
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, matthews_corrcoef
-from textcnn_model import TextCNN
+from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef,
+                             precision_score, recall_score)
+from student_codebert_model import StudentBERT
 from teacher_model import CNNTeacherModel
+from textcnn_model import TextCNN
+from torch.utils.data import (DataLoader, Dataset, RandomSampler,
+                              SequentialSampler)
+from tqdm import tqdm
+from transformers import (AdamW, RobertaModel, RobertaTokenizer,
+                          get_linear_schedule_with_warmup)
 
 global BEST_BETA
 BEST_BETA = None
@@ -310,6 +315,8 @@ def test(args, model, tokenizer, test_dataset, beta):
 def main():
     parser = argparse.ArgumentParser()
     ## Required parameters
+    parser.add_argument("--data_labels_path", default=None, type=str,
+                        help="The input training data file (a csv file).")
     parser.add_argument("--train_data_file", default=None, type=str,
                         help="The input training data file (a csv file).")
     parser.add_argument("--output_dir", default=None, type=str,
@@ -391,7 +398,7 @@ def main():
     args.n_gpu = 1
     args.device = device
 
-    with open("../../data/big_vul/cwe_label_map.pkl", "rb") as f:
+    with open(f"{args.data_labels_path}/cwe_label_map.pkl", "rb") as f:
         cwe_label_map = pickle.load(f)
     group_label_map = {"category": 0, "class": 1, "variant": 2, "base": 3, "deprecated": 4, "pillar": 5}
 
