@@ -1,19 +1,24 @@
 from __future__ import absolute_import, division, print_function
+
 import argparse
 import logging
 import os
 import pickle
 import random
+
 import numpy as np
-import torch
-from torch.utils.data import DataLoader, Dataset, SequentialSampler, RandomSampler
-from transformers import (AdamW, get_linear_schedule_with_warmup, RobertaTokenizer, RobertaModel)
-from tqdm import tqdm
-from textcnn_model import TextCNN
-from teacher_model import CNNTeacherModel
 import pandas as pd
+import torch
 # metrics
-from sklearn.metrics import accuracy_score, precision_score, recall_score, matthews_corrcoef, f1_score
+from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef,
+                             precision_score, recall_score)
+from teacher_model import CNNTeacherModel
+from textcnn_model import TextCNN
+from torch.utils.data import (DataLoader, Dataset, RandomSampler,
+                              SequentialSampler)
+from tqdm import tqdm
+from transformers import (AdamW, RobertaModel, RobertaTokenizer,
+                          get_linear_schedule_with_warmup)
 
 logger = logging.getLogger(__name__)
 
@@ -287,6 +292,8 @@ def test(args, model, tokenizer, test_dataset):
 def main():
     parser = argparse.ArgumentParser()
     ## Required parameters
+    parser.add_argument("--data_labels_path", default=None, type=str,
+                        help="The input training data file (a csv file).")
     parser.add_argument("--train_data_file", default=None, type=str,
                         help="The input training data file (a csv file).")
     parser.add_argument("--output_dir", default=None, type=str,
@@ -363,7 +370,7 @@ def main():
     args.n_gpu = 1
     args.device = device
 
-    with open("../../mydata/cwe_label_map.pkl", "rb") as f:
+    with open(f"{args.data_labels_path}/cwe_label_map.pkl", "rb") as f:
         cwe_label_map = pickle.load(f)
     group_label_map = {"category": 0, "class": 1, "variant": 2, "base": 3, "deprecated": 4, "pillar": 5}
     # Setup logging

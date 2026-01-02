@@ -1,0 +1,5 @@
+LOGNAME: livable.log
+MODELDIR: livable_model
+MODELNAME: LivableModel
+LOSS:
+  LOSS_TYPE: "ClassBalanceCE"
