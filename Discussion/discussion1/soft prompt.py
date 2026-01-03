@@ -219,11 +219,13 @@ def read_prompt_examples(filename):
             target = CWE_TO_INDEX.get(cwe_id, 0)  # Map to index, default 0
         except:
             target = 0  # Fallback
+        # Reduce token limits to prevent exceeding max_seq_length
+        # Template adds ~50 tokens, so use 256 for code and 32 for description
         examples.append(
             InputExample(
                 guid=idx,
-                text_a=' '.join(code[idx].split(' ')[:384]),
-                text_b=' '.join(desc[idx].split(' ')[:64]),
+                text_a=' '.join(code[idx].split(' ')[:256]),
+                text_b=' '.join(desc[idx].split(' ')[:32]),
                 tgt_text=target,
             )
         )
@@ -246,11 +248,13 @@ def read_and_merge_previous_datasets(current_index, data_paths):
             target = CWE_TO_INDEX.get(cwe_id, 0)  # Map to index, default 0
         except:
             target = 0  # Fallback
+        # Reduce token limits to prevent exceeding max_seq_length
+        # Template adds ~50 tokens, so use 256 for code and 32 for description
         examples.append(
             InputExample(
                 guid=idx,
-                text_a=' '.join(code[idx].split(' ')[:384]),
-                text_b=' '.join(desc[idx].split(' ')[:64]),
+                text_a=' '.join(code[idx].split(' ')[:256]),
+                text_b=' '.join(desc[idx].split(' ')[:32]),
                 tgt_text=target,
             )
         )
@@ -535,36 +539,36 @@ test_dataloader1 = PromptDataLoader(
     dataset=read_prompt_examples(test_paths[0]),
     template=mytemplate,
     tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,
-    batch_size=batch_size, shuffle=True,
-    teacher_forcing=False, predict_eos_token=False, truncate_method="head",
+    batch_size=batch_size, shuffle=False,
+    teacher_forcing=False, predict_eos_token=False, truncate_method="tail",
     decoder_max_length=3)
 test_dataloader2 = PromptDataLoader(
     dataset=read_prompt_examples(test_paths[1]),
     template=mytemplate,
     tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,
-    batch_size=batch_size, shuffle=True,
-    teacher_forcing=False, predict_eos_token=False, truncate_method="head",
+    batch_size=batch_size, shuffle=False,
+    teacher_forcing=False, predict_eos_token=False, truncate_method="tail",
     decoder_max_length=3)
 test_dataloader3 = PromptDataLoader(
     dataset=read_prompt_examples(test_paths[2]),
     template=mytemplate,
     tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,
-    batch_size=batch_size, shuffle=True,
-    teacher_forcing=False, predict_eos_token=False, truncate_method="head",
+    batch_size=batch_size, shuffle=False,
+    teacher_forcing=False, predict_eos_token=False, truncate_method="tail",
     decoder_max_length=3)
 test_dataloader4 = PromptDataLoader(
     dataset=read_prompt_examples(test_paths[3]),
     template=mytemplate,
     tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,
-    batch_size=batch_size, shuffle=True,
-    teacher_forcing=False, predict_eos_token=False, truncate_method="head",
+    batch_size=batch_size, shuffle=False,
+    teacher_forcing=False, predict_eos_token=False, truncate_method="tail",
     decoder_max_length=3)
 test_dataloader5 = PromptDataLoader(
     dataset=read_prompt_examples(test_paths[4]),
     template=mytemplate,
     tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,
-    batch_size=batch_size, shuffle=True,
-    teacher_forcing=False, predict_eos_token=False, truncate_method="head",
+    batch_size=batch_size, shuffle=False,
+    teacher_forcing=False, predict_eos_token=False, truncate_method="tail",
     decoder_max_length=3)
 
 # Training process with EWC and Meta-Learning
@@ -587,7 +591,7 @@ for i in range(1, 6):
             shuffle=True,
             teacher_forcing=False,
             predict_eos_token=False,
-            truncate_method="head",
+            truncate_method="tail",
             decoder_max_length=3
         )
     else:
@@ -602,7 +606,7 @@ for i in range(1, 6):
             shuffle=True,
             teacher_forcing=False,
             predict_eos_token=False,
-            truncate_method="head",
+            truncate_method="tail",
             decoder_max_length=3
         )
 
@@ -621,7 +625,7 @@ for i in range(1, 6):
             shuffle=True,
             teacher_forcing=False,
             predict_eos_token=False,
-            truncate_method="head",
+            truncate_method="tail",
             decoder_max_length=3
         )
 
@@ -632,10 +636,10 @@ for i in range(1, 6):
         tokenizer_wrapper_class=WrapperClass,
         max_seq_length=max_seq_l,
         batch_size=batch_size,
-        shuffle=True,
+        shuffle=False,
         teacher_forcing=False,
         predict_eos_token=False,
-        truncate_method="head",
+        truncate_method="tail",
         decoder_max_length=3
     )
 
