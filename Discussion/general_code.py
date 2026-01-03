@@ -35,6 +35,8 @@ parser.add_argument('--use_cuda', action='store_true', default=True, help='Use C
 parser.add_argument('--focal_alpha', type=float, default=0.5, help='w focal.')
 parser.add_argument('--num_samples', type=int, default=200, help='num_samples.')
 parser.add_argument('--ewc_lambda', type=float, default=0.4, help='ewc_lambda.')
+parser.add_argument('--train_phase_2', action='store_true', default=True, help='Use CUDA.')
+
 
 args = parser.parse_args()
 
@@ -483,7 +485,7 @@ if use_cuda:
     prompt_model = prompt_model.cuda()
 
 # 初始化损失函数
-loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)
+loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=ewc_lambda, decay_factor=0.9)
 
 no_decay = ['bias', 'LayerNorm.weight']
 optimizer_grouped_parameters1 = [
@@ -633,30 +635,31 @@ for i in range(1, 6):
     eval_results_phase1 = test(prompt_model, validation_dataloader, f'task_{i}_val_phase1')
     print(f"Phase 1 evaluation for task {i}: ", eval_results_phase1)
 
-    prompt_model.load_state_dict(
-        torch.load(os.path.join('best.ckpt'),
-                   map_location=torch.device('cuda:0')))
-    print(f"Starting Phase 2 for Task {i}: Focal Loss + Label Smoothing + EWC")
-    train_phase_two(
-        prompt_model,
-        train_dataloader,
-        validation_dataloader,  # Add validation data loader
-        optimizer1,
-        optimizer2,
-        scheduler1,
-        scheduler2,
-        num_epochs,
-        loss_func_with_ewc,
-        patience=5  # You can adjust patience as needed
-    )
+    if args.train_phase_2:
+        prompt_model.load_state_dict(
+            torch.load(os.path.join('best.ckpt'),
+                    map_location=torch.device('cuda:0')))
+        print(f"Starting Phase 2 for Task {i}: Focal Loss + Label Smoothing + EWC")
+        train_phase_two(
+            prompt_model,
+            train_dataloader,
+            validation_dataloader,  # Add validation data loader
+            optimizer1,
+            optimizer2,
+            scheduler1,
+            scheduler2,
+            num_epochs,
+            loss_func_with_ewc,
+            patience=5  # You can adjust patience as needed
+        )
 
 
-    eval_results_phase2 = test(prompt_model, validation_dataloader, f'task_{i}_val_phase2')
-    print(f"Phase 2 evaluation for task {i}: ", eval_results_phase2)
-    # Update Fisher Information for EWC after each task
-    loss_func_with_ewc.update_fisher(prompt_model, train_dataloader)
-    print(f"Testing Task {i} model on previous datasets after Phase 2")
-    # Load the best model and test it on all tasks
+        eval_results_phase2 = test(prompt_model, validation_dataloader, f'task_{i}_val_phase2')
+        print(f"Phase 2 evaluation for task {i}: ", eval_results_phase2)
+        # Update Fisher Information for EWC after each task
+        loss_func_with_ewc.update_fisher(prompt_model, train_dataloader)
+        print(f"Testing Task {i} model on previous datasets after Phase 2")
+        # Load the best model and test it on all tasks
 
     print("----------------------Load the best model and test it-----------------------------")
     prompt_model.load_state_dict(

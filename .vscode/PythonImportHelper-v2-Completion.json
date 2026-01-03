@@ -9,6 +9,15 @@
         "documentation": {}
     },
     {
+        "label": "ast",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ast",
+        "description": "ast",
+        "detail": "ast",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -24,6 +33,14 @@
         "importPath": "warnings",
         "description": "warnings",
         "detail": "warnings",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
         "documentation": {}
     },
     {
@@ -557,6 +574,22 @@
     },
     {
         "label": "Dataset",
+        "importPath": "datasets",
+        "description": "datasets",
+        "isExtraImport": true,
+        "detail": "datasets",
+        "documentation": {}
+    },
+    {
+        "label": "Dataset",
+        "importPath": "datasets",
+        "description": "datasets",
+        "isExtraImport": true,
+        "detail": "datasets",
+        "documentation": {}
+    },
+    {
+        "label": "load_dataset",
         "importPath": "datasets",
         "description": "datasets",
         "isExtraImport": true,
@@ -1121,6 +1154,22 @@
         "documentation": {}
     },
     {
+        "label": "get_linear_schedule_with_warmup",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AdamW",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
         "label": "RobertaModel",
         "importPath": "transformers",
         "description": "transformers",
@@ -2377,11 +2426,19 @@
         "documentation": {}
     },
     {
-        "label": "InputExample",
-        "importPath": "openprompt.data_utils",
-        "description": "openprompt.data_utils",
+        "label": "PromptDataLoader",
+        "importPath": "openprompt",
+        "description": "openprompt",
         "isExtraImport": true,
-        "detail": "openprompt.data_utils",
+        "detail": "openprompt",
+        "documentation": {}
+    },
+    {
+        "label": "PromptForClassification",
+        "importPath": "openprompt",
+        "description": "openprompt",
+        "isExtraImport": true,
+        "detail": "openprompt",
         "documentation": {}
     },
     {
@@ -2641,275 +2698,19 @@
         "documentation": {}
     },
     {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
+        "label": "InputExample",
+        "importPath": "openprompt.data_utils",
+        "description": "openprompt.data_utils",
         "isExtraImport": true,
-        "detail": "openprompt.plms",
+        "detail": "openprompt.data_utils",
         "documentation": {}
     },
     {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
+        "label": "InputExample",
+        "importPath": "openprompt.data_utils",
+        "description": "openprompt.data_utils",
         "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "load_plm",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "add_special_tokens",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "add_special_tokens",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "add_special_tokens",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "add_special_tokens",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
-        "documentation": {}
-    },
-    {
-        "label": "add_special_tokens",
-        "importPath": "openprompt.plms",
-        "description": "openprompt.plms",
-        "isExtraImport": true,
-        "detail": "openprompt.plms",
+        "detail": "openprompt.data_utils",
         "documentation": {}
     },
     {
@@ -3633,6 +3434,30 @@
         "documentation": {}
     },
     {
+        "label": "ManualTemplate",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "ManualVerbalizer",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "MixedTemplate",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
         "label": "MixedTemplate",
         "importPath": "openprompt.prompts",
         "description": "openprompt.prompts",
@@ -3905,27 +3730,11 @@
         "documentation": {}
     },
     {
-        "label": "accuracy_score",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
+        "label": "distance",
+        "importPath": "scipy.spatial",
+        "description": "scipy.spatial",
         "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
-        "label": "matthews_corrcoef",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
-        "label": "precision_recall_fscore_support",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
+        "detail": "scipy.spatial",
         "documentation": {}
     },
     {
@@ -4153,54 +3962,6 @@
         "documentation": {}
     },
     {
-        "label": "precision_recall_fscore_support",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
-        "label": "matthews_corrcoef",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
-        "label": "accuracy_score",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
-        "label": "precision_recall_fscore_support",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
-        "label": "matthews_corrcoef",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
-        "label": "accuracy_score",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
         "label": "matthews_corrcoef",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",
@@ -4273,6 +4034,30 @@
         "documentation": {}
     },
     {
+        "label": "matthews_corrcoef",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_fscore_support",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
         "label": "precision_recall_fscore_support",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",
@@ -4282,6 +4067,78 @@
     },
     {
         "label": "matthews_corrcoef",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_fscore_support",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "matthews_corrcoef",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_fscore_support",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "matthews_corrcoef",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "matthews_corrcoef",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_fscore_support",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",
         "isExtraImport": true,
@@ -5465,12 +5322,291 @@
         "documentation": {}
     },
     {
-        "label": "ast",
-        "kind": 6,
+        "label": "tqdm",
+        "importPath": "tqdm.auto",
+        "description": "tqdm.auto",
         "isExtraImport": true,
-        "importPath": "ast",
-        "description": "ast",
-        "detail": "ast",
+        "detail": "tqdm.auto",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "codet5",
+        "description": "codet5",
+        "isExtraImport": true,
+        "detail": "codet5",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "codet5",
+        "description": "codet5",
+        "isExtraImport": true,
+        "detail": "codet5",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "codet5",
+        "description": "codet5",
+        "isExtraImport": true,
+        "detail": "codet5",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "codet5",
+        "description": "codet5",
+        "isExtraImport": true,
+        "detail": "codet5",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "codet5",
+        "description": "codet5",
+        "isExtraImport": true,
+        "detail": "codet5",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "codet5",
+        "description": "codet5",
+        "isExtraImport": true,
+        "detail": "codet5",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "codet5",
+        "description": "codet5",
+        "isExtraImport": true,
+        "detail": "codet5",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "codet5",
+        "description": "codet5",
+        "isExtraImport": true,
+        "detail": "codet5",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "codet5",
+        "description": "codet5",
+        "isExtraImport": true,
+        "detail": "codet5",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "codet5",
+        "description": "codet5",
+        "isExtraImport": true,
+        "detail": "codet5",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "add_special_tokens",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "add_special_tokens",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "add_special_tokens",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "add_special_tokens",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "add_special_tokens",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
         "documentation": {}
     },
     {
@@ -7818,7 +7954,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion1.hard prompt",
         "description": "Discussion.discussion1.hard prompt",
-        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['type'].tolist()\n    for idx in range(len(data)):\n        examples.append(\n            InputExample(\n                guid=idx,",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    cwe_strs = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        try:\n            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list\n            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119",
         "detail": "Discussion.discussion1.hard prompt",
         "documentation": {}
     },
@@ -7827,7 +7963,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion1.hard prompt",
         "description": "Discussion.discussion1.hard prompt",
-        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    type = merged_data['type'].tolist()\n    for idx in range(len(merged_data)):",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    cwe_strs = merged_data['cwe_ids'].tolist()\n    for idx in range(len(merged_data)):",
         "detail": "Discussion.discussion1.hard prompt",
         "documentation": {}
     },
@@ -7971,7 +8107,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.hard prompt",
         "description": "Discussion.discussion1.hard prompt",
-        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}",
         "detail": "Discussion.discussion1.hard prompt",
         "documentation": {}
     },
@@ -7980,7 +8116,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.hard prompt",
         "description": "Discussion.discussion1.hard prompt",
-        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',",
+        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [",
         "detail": "Discussion.discussion1.hard prompt",
         "documentation": {}
     },
@@ -7989,7 +8125,16 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.hard prompt",
         "description": "Discussion.discussion1.hard prompt",
-        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',",
+        "detail": "Discussion.discussion1.hard prompt",
+        "documentation": {}
+    },
+    {
+        "label": "CWE_TO_INDEX",
+        "kind": 5,
+        "importPath": "Discussion.discussion1.hard prompt",
+        "description": "Discussion.discussion1.hard prompt",
+        "peekOfCode": "CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',\n    f'{args.data_dir}/task4_train.csv',\n    f'{args.data_dir}/task5_train.csv',\n]\ntest_paths = [\n    f'{args.data_dir}/task1_test.csv',",
         "detail": "Discussion.discussion1.hard prompt",
         "documentation": {}
     },
@@ -8025,7 +8170,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.hard prompt",
         "description": "Discussion.discussion1.hard prompt",
-        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = ManualTemplate(tokenizer=tokenizer, text=template_text)\n# Define the verbalizer",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = ManualTemplate(tokenizer=tokenizer, text=template_text)\n# Define the verbalizer",
         "detail": "Discussion.discussion1.hard prompt",
         "documentation": {}
     },
@@ -8034,7 +8179,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.hard prompt",
         "description": "Discussion.discussion1.hard prompt",
-        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = ManualTemplate(tokenizer=tokenizer, text=template_text)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = ManualTemplate(tokenizer=tokenizer, text=template_text)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
         "detail": "Discussion.discussion1.hard prompt",
         "documentation": {}
     },
@@ -8250,7 +8395,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_excel(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['type'].tolist()\n    for idx in range(len(data)):\n        examples.append(\n            InputExample(\n                guid=idx,",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    cwe_strs = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        try:\n            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list\n            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8259,7 +8404,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_excel(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    type = merged_data['type'].tolist()\n    for idx in range(len(merged_data)):",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    cwe_strs = merged_data['cwe_ids'].tolist()\n    for idx in range(len(merged_data)):",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8403,7 +8548,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8412,7 +8557,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',",
+        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8421,7 +8566,16 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',",
+        "detail": "Discussion.discussion1.soft prompt",
+        "documentation": {}
+    },
+    {
+        "label": "CWE_TO_INDEX",
+        "kind": 5,
+        "importPath": "Discussion.discussion1.soft prompt",
+        "description": "Discussion.discussion1.soft prompt",
+        "peekOfCode": "CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',\n    f'{args.data_dir}/task4_train.csv',\n    f'{args.data_dir}/task5_train.csv',\n]\ntest_paths = [\n    f'{args.data_dir}/task1_test.csv',",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8457,7 +8611,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = '{\"soft\":\"The code snippet:\"} {\"placeholder\":\"text_a\"} ' \\\n                '{\"soft\":\"The vulnerability description:\"} {\"placeholder\":\"text_b\"} ' \\\n                '{\"soft\":\"Identify the vulnerability type:\"} {\"mask\"}'\nmytemplate = SoftTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = '{\"soft\":\"The code snippet:\"} {\"placeholder\":\"text_a\"} ' \\\n                '{\"soft\":\"The vulnerability description:\"} {\"placeholder\":\"text_b\"} ' \\\n                '{\"soft\":\"Identify the vulnerability type:\"} {\"mask\"}'\nmytemplate = SoftTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8466,7 +8620,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = '{\"soft\":\"The code snippet:\"} {\"placeholder\":\"text_a\"} ' \\\n                '{\"soft\":\"The vulnerability description:\"} {\"placeholder\":\"text_b\"} ' \\\n                '{\"soft\":\"Identify the vulnerability type:\"} {\"mask\"}'\nmytemplate = SoftTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = '{\"soft\":\"The code snippet:\"} {\"placeholder\":\"text_a\"} ' \\\n                '{\"soft\":\"The vulnerability description:\"} {\"placeholder\":\"text_b\"} ' \\\n                '{\"soft\":\"Identify the vulnerability type:\"} {\"mask\"}'\nmytemplate = SoftTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8547,7 +8701,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "optimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# 加载五个任务的测试集\ntest_dataloader1 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[0]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)",
+        "peekOfCode": "optimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# 加载五个任务的测试集\ntest_dataloader1 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[0]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=False,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"tail\",\n    decoder_max_length=3)",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8556,7 +8710,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "optimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# 加载五个任务的测试集\ntest_dataloader1 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[0]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\ntest_dataloader2 = PromptDataLoader(",
+        "peekOfCode": "optimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# 加载五个任务的测试集\ntest_dataloader1 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[0]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=False,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"tail\",\n    decoder_max_length=3)\ntest_dataloader2 = PromptDataLoader(",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8565,7 +8719,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "test_dataloader1 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[0]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\ntest_dataloader2 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[1]),\n    template=mytemplate,",
+        "peekOfCode": "test_dataloader1 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[0]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=False,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"tail\",\n    decoder_max_length=3)\ntest_dataloader2 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[1]),\n    template=mytemplate,",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8574,7 +8728,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "test_dataloader2 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[1]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\ntest_dataloader3 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[2]),\n    template=mytemplate,",
+        "peekOfCode": "test_dataloader2 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[1]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=False,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"tail\",\n    decoder_max_length=3)\ntest_dataloader3 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[2]),\n    template=mytemplate,",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8583,7 +8737,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "test_dataloader3 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[2]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\ntest_dataloader4 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[3]),\n    template=mytemplate,",
+        "peekOfCode": "test_dataloader3 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[2]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=False,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"tail\",\n    decoder_max_length=3)\ntest_dataloader4 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[3]),\n    template=mytemplate,",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8592,7 +8746,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "test_dataloader4 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[3]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\ntest_dataloader5 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[4]),\n    template=mytemplate,",
+        "peekOfCode": "test_dataloader4 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[3]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=False,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"tail\",\n    decoder_max_length=3)\ntest_dataloader5 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[4]),\n    template=mytemplate,",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8601,7 +8755,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion1.soft prompt",
         "description": "Discussion.discussion1.soft prompt",
-        "peekOfCode": "test_dataloader5 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[4]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\n# Training process with EWC and Meta-Learning\nglobal_step = 0\nprev_dev_loss = float('inf')",
+        "peekOfCode": "test_dataloader5 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[4]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=False,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"tail\",\n    decoder_max_length=3)\n# Training process with EWC and Meta-Learning\nglobal_step = 0\nprev_dev_loss = float('inf')",
         "detail": "Discussion.discussion1.soft prompt",
         "documentation": {}
     },
@@ -8682,7 +8836,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion2.verbalizer1",
         "description": "Discussion.discussion2.verbalizer1",
-        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['type'].tolist()\n    for idx in range(len(data)):\n        examples.append(\n            InputExample(\n                guid=idx,",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    cwe_strs = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        try:\n            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list\n            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119",
         "detail": "Discussion.discussion2.verbalizer1",
         "documentation": {}
     },
@@ -8691,7 +8845,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion2.verbalizer1",
         "description": "Discussion.discussion2.verbalizer1",
-        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    type = merged_data['type'].tolist()\n    for idx in range(len(merged_data)):",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    cwe_strs = merged_data['cwe_ids'].tolist()\n    for idx in range(len(merged_data)):",
         "detail": "Discussion.discussion2.verbalizer1",
         "documentation": {}
     },
@@ -8835,7 +8989,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer1",
         "description": "Discussion.discussion2.verbalizer1",
-        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}",
         "detail": "Discussion.discussion2.verbalizer1",
         "documentation": {}
     },
@@ -8844,7 +8998,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer1",
         "description": "Discussion.discussion2.verbalizer1",
-        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',",
+        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [",
         "detail": "Discussion.discussion2.verbalizer1",
         "documentation": {}
     },
@@ -8853,7 +9007,16 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer1",
         "description": "Discussion.discussion2.verbalizer1",
-        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',",
+        "detail": "Discussion.discussion2.verbalizer1",
+        "documentation": {}
+    },
+    {
+        "label": "CWE_TO_INDEX",
+        "kind": 5,
+        "importPath": "Discussion.discussion2.verbalizer1",
+        "description": "Discussion.discussion2.verbalizer1",
+        "peekOfCode": "CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',\n    f'{args.data_dir}/task4_train.csv',\n    f'{args.data_dir}/task5_train.csv',\n]\ntest_paths = [\n    f'{args.data_dir}/task1_test.csv',",
         "detail": "Discussion.discussion2.verbalizer1",
         "documentation": {}
     },
@@ -8889,7 +9052,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer1",
         "description": "Discussion.discussion2.verbalizer1",
-        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
         "detail": "Discussion.discussion2.verbalizer1",
         "documentation": {}
     },
@@ -8898,7 +9061,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer1",
         "description": "Discussion.discussion2.verbalizer1",
-        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
         "detail": "Discussion.discussion2.verbalizer1",
         "documentation": {}
     },
@@ -9114,7 +9277,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['type'].tolist()\n    for idx in range(len(data)):\n        examples.append(\n            InputExample(\n                guid=idx,",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    cwe_strs = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        try:\n            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list\n            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9123,7 +9286,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    type = merged_data['type'].tolist()\n    for idx in range(len(merged_data)):",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    cwe_strs = merged_data['cwe_ids'].tolist()\n    for idx in range(len(merged_data)):",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9159,7 +9322,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "parser = argparse.ArgumentParser(description='Train model with specified parameters')\nparser.add_argument('--data_dir', type=str, default='incremental_tasks_csv', help='Directory containing the CSV data files')\nparser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to the pre-trained model')\nparser.add_argument('--batch_size', type=int, default=16, help='Batch size for training')\nparser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs for training')\nparser.add_argument('--lr', type=float, default=5e-5, help='Learning rate')\nparser.add_argument('--use_cuda', action='store_true', default=True, help='Use CUDA if available')\nparser.add_argument('--no_cuda', action='store_false', dest='use_cuda', help='Do not use CUDA')\nargs = parser.parse_args()\n# Set parameters",
+        "peekOfCode": "parser = argparse.ArgumentParser(description=\"Verbalizer5 for continual learning vulnerability classification.\")\nparser.add_argument('--data_dir', type=str, default='incremental_tasks_csv', help='Directory containing the CSV data files.')\nparser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to the pre-trained model.')\nparser.add_argument('--batch_size', type=int, default=16, help='Batch size.')\nparser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs.')\nparser.add_argument('--lr', type=float, default=5e-5, help='Learning rate.')\nparser.add_argument('--use_cuda', action='store_true', default=True, help='Use CUDA.')\nargs = parser.parse_args()\n# Set parameters\nos.environ['CUDA_VISIBLE_DEVICES'] = '0'",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9177,7 +9340,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "os.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = 42\nbatch_size = args.batch_size\nnum_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model",
+        "peekOfCode": "os.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = 42\nbatch_size = args.batch_size\nnum_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9186,7 +9349,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "seed = 42\nbatch_size = args.batch_size\nnum_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model\nearly_stop_threshold = 10",
+        "peekOfCode": "seed = 42\nbatch_size = args.batch_size\nnum_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9195,7 +9358,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "batch_size = args.batch_size\nnum_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight",
+        "peekOfCode": "batch_size = args.batch_size\nnum_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9204,7 +9367,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "num_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes",
+        "peekOfCode": "num_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9213,7 +9376,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "max_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [",
+        "peekOfCode": "max_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9222,7 +9385,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "lr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',",
+        "peekOfCode": "lr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9231,7 +9394,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "num_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',",
+        "peekOfCode": "num_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9240,7 +9403,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "use_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',",
+        "peekOfCode": "use_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9249,7 +9412,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "model_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'",
+        "peekOfCode": "model_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9258,7 +9421,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "pretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]",
+        "peekOfCode": "pretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9267,7 +9430,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9276,7 +9439,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    os.path.join(args.data_dir, 'task1_train.csv'),",
+        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9285,7 +9448,16 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    os.path.join(args.data_dir, 'task1_train.csv'),\n    os.path.join(args.data_dir, 'task2_train.csv'),\n    os.path.join(args.data_dir, 'task3_train.csv'),",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',",
+        "detail": "Discussion.discussion2.verbalizer5",
+        "documentation": {}
+    },
+    {
+        "label": "CWE_TO_INDEX",
+        "kind": 5,
+        "importPath": "Discussion.discussion2.verbalizer5",
+        "description": "Discussion.discussion2.verbalizer5",
+        "peekOfCode": "CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',\n    f'{args.data_dir}/task4_train.csv',\n    f'{args.data_dir}/task5_train.csv',\n]\ntest_paths = [\n    f'{args.data_dir}/task1_test.csv',",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9294,7 +9466,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "data_paths = [\n    os.path.join(args.data_dir, 'task1_train.csv'),\n    os.path.join(args.data_dir, 'task2_train.csv'),\n    os.path.join(args.data_dir, 'task3_train.csv'),\n    os.path.join(args.data_dir, 'task4_train.csv'),\n    os.path.join(args.data_dir, 'task5_train.csv'),\n]\ntest_paths = [\n    os.path.join(args.data_dir, 'task1_test.csv'),\n    os.path.join(args.data_dir, 'task2_test.csv'),",
+        "peekOfCode": "data_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',\n    f'{args.data_dir}/task4_train.csv',\n    f'{args.data_dir}/task5_train.csv',\n]\ntest_paths = [\n    f'{args.data_dir}/task1_test.csv',\n    f'{args.data_dir}/task2_test.csv',",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9303,7 +9475,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "test_paths = [\n    os.path.join(args.data_dir, 'task1_test.csv'),\n    os.path.join(args.data_dir, 'task2_test.csv'),\n    os.path.join(args.data_dir, 'task3_test.csv'),\n    os.path.join(args.data_dir, 'task4_test.csv'),\n    os.path.join(args.data_dir, 'task5_test.csv'),\n]\nvalid_paths = [\n    os.path.join(args.data_dir, 'task1_valid.csv'),\n    os.path.join(args.data_dir, 'task2_valid.csv'),",
+        "peekOfCode": "test_paths = [\n    f'{args.data_dir}/task1_test.csv',\n    f'{args.data_dir}/task2_test.csv',\n    f'{args.data_dir}/task3_test.csv',\n    f'{args.data_dir}/task4_test.csv',\n    f'{args.data_dir}/task5_test.csv',\n]\nvalid_paths = [\n    f'{args.data_dir}/task1_valid.csv',\n    f'{args.data_dir}/task2_valid.csv',",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9312,7 +9484,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "valid_paths = [\n    os.path.join(args.data_dir, 'task1_valid.csv'),\n    os.path.join(args.data_dir, 'task2_valid.csv'),\n    os.path.join(args.data_dir, 'task3_valid.csv'),\n    os.path.join(args.data_dir, 'task4_valid.csv'),\n    os.path.join(args.data_dir, 'task5_valid.csv'),\n]\nclass ACE_Loss(torch.nn.Module):\n    def __init__(self, num_classes, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.4):\n        super(ACE_Loss, self).__init__()",
+        "peekOfCode": "valid_paths = [\n    f'{args.data_dir}/task1_valid.csv',\n    f'{args.data_dir}/task2_valid.csv',\n    f'{args.data_dir}/task3_valid.csv',\n    f'{args.data_dir}/task4_valid.csv',\n    f'{args.data_dir}/task5_valid.csv',\n]\nclass ACE_Loss(torch.nn.Module):\n    def __init__(self, num_classes, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.4):\n        super(ACE_Loss, self).__init__()",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9321,7 +9493,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9330,7 +9502,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion2.verbalizer5",
         "description": "Discussion.discussion2.verbalizer5",
-        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
         "detail": "Discussion.discussion2.verbalizer5",
         "documentation": {}
     },
@@ -9501,7 +9673,7 @@
         "kind": 6,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):\n    def __init__(self, num_classes, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9):\n        super(OnlineEWCWithFocalLabelSmoothLoss, self).__init__()\n        self.num_classes = num_classes\n        self.smoothing = smoothing\n        self.focal_alpha = focal_alpha\n        self.focal_gamma = focal_gamma\n        self.ewc_lambda = ewc_lambda\n        self.decay_factor = decay_factor\n        self.fisher_dict = {}",
+        "peekOfCode": "class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):\n    def __init__(self, num_classes, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9):\n        super(OnlineEWCWithFocalLabelSmoothLoss, self).__init__()\n        self.num_classes = num_classes\n        self.smoothing = smoothing\n        self.focal_alpha = focal_alpha\n        self.focal_gamma = focal_gamma\n        self.ewc_lambda = ewc_lambda\n        self.decay_factor = decay_factor\n        self.fisher_dict = {}",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9537,7 +9709,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['type'].tolist()\n    for idx in range(len(data)):\n        examples.append(\n            InputExample(\n                guid=idx,",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    cwe_strs = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        try:\n            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list\n            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9546,7 +9718,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    type = merged_data['type'].tolist()\n    for idx in range(len(merged_data)):",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    cwe_strs = merged_data['cwe_ids'].tolist()\n    for idx in range(len(merged_data)):",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9582,7 +9754,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "parser = argparse.ArgumentParser(description=\"Discussion3 w0.1 for continual learning vulnerability classification.\")\nparser.add_argument('--data_dir', type=str, default='incremental_tasks_csv', help='Directory containing the CSV data files.')\nparser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to the pre-trained model.')\nparser.add_argument('--batch_size', type=int, default=16, help='Batch size.')\nparser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs.')\nparser.add_argument('--lr', type=float, default=5e-5, help='Learning rate.')\nparser.add_argument('--use_cuda', action='store_true', default=True, help='Use CUDA.')\nargs = parser.parse_args()\n# Set parameters\nos.environ['CUDA_VISIBLE_DEVICES'] = '0'",
+        "peekOfCode": "parser = argparse.ArgumentParser(description=\"Discussion3 w0.1 for continual learning vulnerability classification.\")\nparser.add_argument('--data_dir', type=str, default='incremental_tasks_csv', help='Directory containing the CSV data files.')\nparser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to the pre-trained model.')\nparser.add_argument('--batch_size', type=int, default=16, help='Batch size.')\nparser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs.')\nparser.add_argument('--lr', type=float, default=5e-5, help='Learning rate.')\nparser.add_argument('--use_cuda', action='store_true', default=True, help='Use CUDA.')\nparser.add_argument('--focal_alpha', type=int, default=True, help='w focal.')\nargs = parser.parse_args()\n# Set parameters",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9627,7 +9799,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "num_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes",
+        "peekOfCode": "num_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9636,7 +9808,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "max_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [",
+        "peekOfCode": "max_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\n# Define classes",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9645,7 +9817,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "lr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',",
+        "peekOfCode": "lr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\n# Define classes\nclasses = [",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9654,7 +9826,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "num_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',",
+        "peekOfCode": "num_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9663,7 +9835,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "use_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',",
+        "peekOfCode": "use_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9672,7 +9844,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "model_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'",
+        "peekOfCode": "model_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9681,7 +9853,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "pretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]",
+        "peekOfCode": "pretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9690,7 +9862,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9699,7 +9871,16 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',",
+        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}",
+        "detail": "Discussion.discussion3.w0.1",
+        "documentation": {}
+    },
+    {
+        "label": "global_focal_alpha",
+        "kind": 5,
+        "importPath": "Discussion.discussion3.w0.1",
+        "description": "Discussion.discussion3.w0.1",
+        "peekOfCode": "global_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9708,7 +9889,16 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',",
+        "detail": "Discussion.discussion3.w0.1",
+        "documentation": {}
+    },
+    {
+        "label": "CWE_TO_INDEX",
+        "kind": 5,
+        "importPath": "Discussion.discussion3.w0.1",
+        "description": "Discussion.discussion3.w0.1",
+        "peekOfCode": "CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',\n    f'{args.data_dir}/task4_train.csv',\n    f'{args.data_dir}/task5_train.csv',\n]\ntest_paths = [\n    f'{args.data_dir}/task1_test.csv',",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9744,7 +9934,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.1, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.1, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9753,7 +9943,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.1, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9789,7 +9979,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "prompt_model = PromptForClassification(plm=plm, template=mytemplate, verbalizer=myverbalizer, freeze_plm=False)\nif use_cuda:\n    prompt_model = prompt_model.cuda()\n# 初始化损失函数\nloss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.1, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],",
+        "peekOfCode": "prompt_model = PromptForClassification(plm=plm, template=mytemplate, verbalizer=myverbalizer, freeze_plm=False)\nif use_cuda:\n    prompt_model = prompt_model.cuda()\n# 初始化损失函数\nloss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9798,7 +9988,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.1",
         "description": "Discussion.discussion3.w0.1",
-        "peekOfCode": "loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.1, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}",
+        "peekOfCode": "loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}",
         "detail": "Discussion.discussion3.w0.1",
         "documentation": {}
     },
@@ -9960,7 +10150,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion3.w0.3",
         "description": "Discussion.discussion3.w0.3",
-        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['type'].tolist()\n    for idx in range(len(data)):\n        examples.append(\n            InputExample(\n                guid=idx,",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    cwe_strs = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        try:\n            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list\n            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119",
         "detail": "Discussion.discussion3.w0.3",
         "documentation": {}
     },
@@ -9969,7 +10159,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion3.w0.3",
         "description": "Discussion.discussion3.w0.3",
-        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    type = merged_data['type'].tolist()\n    for idx in range(len(merged_data)):",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    cwe_strs = merged_data['cwe_ids'].tolist()\n    for idx in range(len(merged_data)):",
         "detail": "Discussion.discussion3.w0.3",
         "documentation": {}
     },
@@ -10113,7 +10303,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.3",
         "description": "Discussion.discussion3.w0.3",
-        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}",
         "detail": "Discussion.discussion3.w0.3",
         "documentation": {}
     },
@@ -10122,7 +10312,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.3",
         "description": "Discussion.discussion3.w0.3",
-        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',",
+        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [",
         "detail": "Discussion.discussion3.w0.3",
         "documentation": {}
     },
@@ -10131,7 +10321,16 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.3",
         "description": "Discussion.discussion3.w0.3",
-        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',",
+        "detail": "Discussion.discussion3.w0.3",
+        "documentation": {}
+    },
+    {
+        "label": "CWE_TO_INDEX",
+        "kind": 5,
+        "importPath": "Discussion.discussion3.w0.3",
+        "description": "Discussion.discussion3.w0.3",
+        "peekOfCode": "CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',\n    f'{args.data_dir}/task4_train.csv',\n    f'{args.data_dir}/task5_train.csv',\n]\ntest_paths = [\n    f'{args.data_dir}/task1_test.csv',",
         "detail": "Discussion.discussion3.w0.3",
         "documentation": {}
     },
@@ -10167,7 +10366,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.3",
         "description": "Discussion.discussion3.w0.3",
-        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.3, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.3, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.3, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.3, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
         "detail": "Discussion.discussion3.w0.3",
         "documentation": {}
     },
@@ -10176,7 +10375,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.3",
         "description": "Discussion.discussion3.w0.3",
-        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.3, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.3, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
         "detail": "Discussion.discussion3.w0.3",
         "documentation": {}
     },
@@ -10383,7 +10582,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion3.w0.7",
         "description": "Discussion.discussion3.w0.7",
-        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['type'].tolist()\n    for idx in range(len(data)):\n        examples.append(\n            InputExample(\n                guid=idx,",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    cwe_strs = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        try:\n            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list\n            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119",
         "detail": "Discussion.discussion3.w0.7",
         "documentation": {}
     },
@@ -10392,7 +10591,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion3.w0.7",
         "description": "Discussion.discussion3.w0.7",
-        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    type = merged_data['type'].tolist()\n    for idx in range(len(merged_data)):",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    cwe_strs = merged_data['cwe_ids'].tolist()\n    for idx in range(len(merged_data)):",
         "detail": "Discussion.discussion3.w0.7",
         "documentation": {}
     },
@@ -10536,7 +10735,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.7",
         "description": "Discussion.discussion3.w0.7",
-        "peekOfCode": "early_stop_threshold = 10\newc_lambda = args.ewc_lambda  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = args.ewc_lambda  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}",
         "detail": "Discussion.discussion3.w0.7",
         "documentation": {}
     },
@@ -10545,7 +10744,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.7",
         "description": "Discussion.discussion3.w0.7",
-        "peekOfCode": "ewc_lambda = args.ewc_lambda  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    os.path.join(args.data_dir, 'task1_train.csv'),",
+        "peekOfCode": "ewc_lambda = args.ewc_lambda  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [",
         "detail": "Discussion.discussion3.w0.7",
         "documentation": {}
     },
@@ -10554,7 +10753,16 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.7",
         "description": "Discussion.discussion3.w0.7",
-        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    os.path.join(args.data_dir, 'task1_train.csv'),\n    os.path.join(args.data_dir, 'task2_train.csv'),\n    os.path.join(args.data_dir, 'task3_train.csv'),",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    os.path.join(args.data_dir, 'task1_train.csv'),\n    os.path.join(args.data_dir, 'task2_train.csv'),",
+        "detail": "Discussion.discussion3.w0.7",
+        "documentation": {}
+    },
+    {
+        "label": "CWE_TO_INDEX",
+        "kind": 5,
+        "importPath": "Discussion.discussion3.w0.7",
+        "description": "Discussion.discussion3.w0.7",
+        "peekOfCode": "CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    os.path.join(args.data_dir, 'task1_train.csv'),\n    os.path.join(args.data_dir, 'task2_train.csv'),\n    os.path.join(args.data_dir, 'task3_train.csv'),\n    os.path.join(args.data_dir, 'task4_train.csv'),\n    os.path.join(args.data_dir, 'task5_train.csv'),\n]\ntest_paths = [\n    os.path.join(args.data_dir, 'task1_test.csv'),",
         "detail": "Discussion.discussion3.w0.7",
         "documentation": {}
     },
@@ -10590,7 +10798,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.7",
         "description": "Discussion.discussion3.w0.7",
-        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.7, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.7, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.7, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.7, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
         "detail": "Discussion.discussion3.w0.7",
         "documentation": {}
     },
@@ -10599,7 +10807,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.7",
         "description": "Discussion.discussion3.w0.7",
-        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.7, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.7, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
         "detail": "Discussion.discussion3.w0.7",
         "documentation": {}
     },
@@ -10806,7 +11014,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion3.w0.9",
         "description": "Discussion.discussion3.w0.9",
-        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_excel(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['type'].tolist()\n    for idx in range(len(data)):\n        examples.append(\n            InputExample(\n                guid=idx,",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    cwe_strs = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        try:\n            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list\n            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119",
         "detail": "Discussion.discussion3.w0.9",
         "documentation": {}
     },
@@ -10815,7 +11023,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion3.w0.9",
         "description": "Discussion.discussion3.w0.9",
-        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_excel(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    type = merged_data['type'].tolist()\n    for idx in range(len(merged_data)):",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    cwe_strs = merged_data['cwe_ids'].tolist()\n    for idx in range(len(merged_data)):",
         "detail": "Discussion.discussion3.w0.9",
         "documentation": {}
     },
@@ -10941,7 +11149,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.9",
         "description": "Discussion.discussion3.w0.9",
-        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}",
         "detail": "Discussion.discussion3.w0.9",
         "documentation": {}
     },
@@ -10950,7 +11158,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.9",
         "description": "Discussion.discussion3.w0.9",
-        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task1\\\\train.xlsx',",
+        "peekOfCode": "ewc_lambda = 0.4  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [",
         "detail": "Discussion.discussion3.w0.9",
         "documentation": {}
     },
@@ -10959,7 +11167,16 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.9",
         "description": "Discussion.discussion3.w0.9",
-        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task1\\\\train.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task2\\\\train.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task3\\\\train.xlsx',",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    'incremental_tasks_csv/task1_train.csv',\n    'incremental_tasks_csv/task2_train.csv',",
+        "detail": "Discussion.discussion3.w0.9",
+        "documentation": {}
+    },
+    {
+        "label": "CWE_TO_INDEX",
+        "kind": 5,
+        "importPath": "Discussion.discussion3.w0.9",
+        "description": "Discussion.discussion3.w0.9",
+        "peekOfCode": "CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    'incremental_tasks_csv/task1_train.csv',\n    'incremental_tasks_csv/task2_train.csv',\n    'incremental_tasks_csv/task3_train.csv',\n    'incremental_tasks_csv/task4_train.csv',\n    'incremental_tasks_csv/task5_train.csv',\n]\ntest_paths = [\n    'incremental_tasks_csv/task1_test.csv',",
         "detail": "Discussion.discussion3.w0.9",
         "documentation": {}
     },
@@ -10968,7 +11185,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.9",
         "description": "Discussion.discussion3.w0.9",
-        "peekOfCode": "data_paths = [\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task1\\\\train.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task2\\\\train.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task3\\\\train.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task4\\\\train.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task5\\\\train.xlsx',\n]\ntest_paths = [\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task1\\\\test.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task2\\\\test.xlsx',",
+        "peekOfCode": "data_paths = [\n    'incremental_tasks_csv/task1_train.csv',\n    'incremental_tasks_csv/task2_train.csv',\n    'incremental_tasks_csv/task3_train.csv',\n    'incremental_tasks_csv/task4_train.csv',\n    'incremental_tasks_csv/task5_train.csv',\n]\ntest_paths = [\n    'incremental_tasks_csv/task1_test.csv',\n    'incremental_tasks_csv/task2_test.csv',",
         "detail": "Discussion.discussion3.w0.9",
         "documentation": {}
     },
@@ -10977,7 +11194,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.9",
         "description": "Discussion.discussion3.w0.9",
-        "peekOfCode": "test_paths = [\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task1\\\\test.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task2\\\\test.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task3\\\\test.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task4\\\\test.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task5\\\\test.xlsx',\n]\nvalid_paths = [\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task1\\\\valid.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task2\\\\valid.xlsx',",
+        "peekOfCode": "test_paths = [\n    'incremental_tasks_csv/task1_test.csv',\n    'incremental_tasks_csv/task2_test.csv',\n    'incremental_tasks_csv/task3_test.csv',\n    'incremental_tasks_csv/task4_test.csv',\n    'incremental_tasks_csv/task5_test.csv',\n]\nvalid_paths = [\n    'incremental_tasks_csv/task1_valid.csv',\n    'incremental_tasks_csv/task2_valid.csv',",
         "detail": "Discussion.discussion3.w0.9",
         "documentation": {}
     },
@@ -10986,7 +11203,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.9",
         "description": "Discussion.discussion3.w0.9",
-        "peekOfCode": "valid_paths = [\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task1\\\\valid.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task2\\\\valid.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task3\\\\valid.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task4\\\\valid.xlsx',\n    'H:\\SOTitlePlus\\SOTitlePlus\\\\task5\\\\valid.xlsx',\n]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]",
+        "peekOfCode": "valid_paths = [\n    'incremental_tasks_csv/task1_valid.csv',\n    'incremental_tasks_csv/task2_valid.csv',\n    'incremental_tasks_csv/task3_valid.csv',\n    'incremental_tasks_csv/task4_valid.csv',\n    'incremental_tasks_csv/task5_valid.csv',\n]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]",
         "detail": "Discussion.discussion3.w0.9",
         "documentation": {}
     },
@@ -10995,7 +11212,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.9",
         "description": "Discussion.discussion3.w0.9",
-        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.9, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.9, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.9, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.9, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
         "detail": "Discussion.discussion3.w0.9",
         "documentation": {}
     },
@@ -11004,7 +11221,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion3.w0.9",
         "description": "Discussion.discussion3.w0.9",
-        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.9, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.9, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
         "detail": "Discussion.discussion3.w0.9",
         "documentation": {}
     },
@@ -11211,7 +11428,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion4.lamda0.1",
         "description": "Discussion.discussion4.lamda0.1",
-        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['type'].tolist()\n    for idx in range(len(data)):\n        examples.append(\n            InputExample(\n                guid=idx,",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    cwe_strs = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        try:\n            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list\n            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119",
         "detail": "Discussion.discussion4.lamda0.1",
         "documentation": {}
     },
@@ -11220,7 +11437,7 @@
         "kind": 2,
         "importPath": "Discussion.discussion4.lamda0.1",
         "description": "Discussion.discussion4.lamda0.1",
-        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    type = merged_data['type'].tolist()\n    for idx in range(len(merged_data)):",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    cwe_strs = merged_data['cwe_ids'].tolist()\n    for idx in range(len(merged_data)):",
         "detail": "Discussion.discussion4.lamda0.1",
         "documentation": {}
     },
@@ -11364,7 +11581,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion4.lamda0.1",
         "description": "Discussion.discussion4.lamda0.1",
-        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.1  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = 0.1  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}",
         "detail": "Discussion.discussion4.lamda0.1",
         "documentation": {}
     },
@@ -11373,7 +11590,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion4.lamda0.1",
         "description": "Discussion.discussion4.lamda0.1",
-        "peekOfCode": "ewc_lambda = 0.1  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',",
+        "peekOfCode": "ewc_lambda = 0.1  # EWC regularization term weight\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [",
         "detail": "Discussion.discussion4.lamda0.1",
         "documentation": {}
     },
@@ -11382,7 +11599,16 @@
         "kind": 5,
         "importPath": "Discussion.discussion4.lamda0.1",
         "description": "Discussion.discussion4.lamda0.1",
-        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',",
+        "detail": "Discussion.discussion4.lamda0.1",
+        "documentation": {}
+    },
+    {
+        "label": "CWE_TO_INDEX",
+        "kind": 5,
+        "importPath": "Discussion.discussion4.lamda0.1",
+        "description": "Discussion.discussion4.lamda0.1",
+        "peekOfCode": "CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',\n    f'{args.data_dir}/task4_train.csv',\n    f'{args.data_dir}/task5_train.csv',\n]\ntest_paths = [\n    f'{args.data_dir}/task1_test.csv',",
         "detail": "Discussion.discussion4.lamda0.1",
         "documentation": {}
     },
@@ -11418,7 +11644,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion4.lamda0.1",
         "description": "Discussion.discussion4.lamda0.1",
-        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
         "detail": "Discussion.discussion4.lamda0.1",
         "documentation": {}
     },
@@ -11427,7 +11653,7 @@
         "kind": 5,
         "importPath": "Discussion.discussion4.lamda0.1",
         "description": "Discussion.discussion4.lamda0.1",
-        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
         "detail": "Discussion.discussion4.lamda0.1",
         "documentation": {}
     },
@@ -14750,6 +14976,456 @@
         "description": "Discussion.fine tuning",
         "peekOfCode": "valid_paths = [\n    f'{args.data_dir}/task1_valid.csv',\n    f'{args.data_dir}/task2_valid.csv',\n    f'{args.data_dir}/task3_valid.csv',\n    f'{args.data_dir}/task4_valid.csv',\n    f'{args.data_dir}/task5_valid.csv',\n]\n# Set random seed for reproducibility\ndef set_seed(seed):\n    torch.manual_seed(seed)",
         "detail": "Discussion.fine tuning",
+        "documentation": {}
+    },
+    {
+        "label": "OnlineEWCWithFocalLabelSmoothLoss",
+        "kind": 6,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):\n    def __init__(self, num_classes, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9):\n        super(OnlineEWCWithFocalLabelSmoothLoss, self).__init__()\n        self.num_classes = num_classes\n        self.smoothing = smoothing\n        self.focal_alpha = focal_alpha\n        self.focal_gamma = focal_gamma\n        self.ewc_lambda = ewc_lambda\n        self.decay_factor = decay_factor\n        self.fisher_dict = {}",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "mahalanobis_distance",
+        "kind": 2,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "def mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():\n        for inputs in dataloader:\n            cwe_ids = inputs['tgt_text']  # 假设每个batch包含'cwe_id'字段",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "compute_mahalanobis",
+        "kind": 2,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "def compute_mahalanobis(prompt_model, dataloader):\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():\n        for inputs in dataloader:\n            cwe_ids = inputs['tgt_text']  # 假设每个batch包含'cwe_id'字段\n            all_cwe_ids.extend(cwe_ids)\n            if use_cuda:\n                inputs = inputs.cuda()",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "select_uncertain_samples_mahalanobis",
+        "kind": 2,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "def select_uncertain_samples_mahalanobis(prompt_model, dataloader, num_samples=200):\n    \"\"\"Select high-uncertainty samples based on Mahalanobis distance with tail and head data.\"\"\"\n    mahalanobis_distances, all_features, all_cwe_ids = compute_mahalanobis(prompt_model, dataloader)\n    # 计算CWE ID的出现次数\n    cwe_counts = Counter(all_cwe_ids)\n    total_samples = len(all_cwe_ids)\n    tail_cwe_ids = {cwe_id for cwe_id, count in cwe_counts.items() if count < 0.05 * total_samples}\n    # 分离taildata和headdata\n    taildata = []\n    headdata = []",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "read_prompt_examples",
+        "kind": 2,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    cwe_strs = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        try:\n            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list\n            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "read_and_merge_previous_datasets",
+        "kind": 2,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    cwe_strs = merged_data['cwe_ids'].tolist()\n    for idx in range(len(merged_data)):",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "def test(prompt_model, test_dataloader, name):\n    num_test_steps = len(test_dataloader)\n    allpreds = []\n    alllabels = []\n    with torch.no_grad():\n        for step, inputs in enumerate(test_dataloader):\n            if use_cuda:\n                inputs = inputs.cuda()\n            logits = prompt_model(inputs)\n            labels = inputs['tgt_text']",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "train_phase_one",
+        "kind": 2,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "def train_phase_one(prompt_model, train_dataloader, val_dataloader, optimizer1, optimizer2, scheduler1, scheduler2,\n                    num_epochs, loss_func_no_ewc, patience=5):\n    \"\"\"Phase 1: Train with Focal Loss + Label Smoothing only (no EWC) to learn task-specific features.\"\"\"\n    best_val_loss = float('inf')\n    patience_counter = 0\n    progress_bar = tqdm(range(num_epochs * len(train_dataloader)))\n    for epoch in range(num_epochs):\n        prompt_model.train()\n        for step, inputs in enumerate(train_dataloader):\n            if use_cuda:",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "train_phase_two",
+        "kind": 2,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, optimizer2, scheduler1, scheduler2,\n                    num_epochs, loss_func_with_ewc, patience=5):\n    \"\"\"Phase 2: Train with Focal Loss + Label Smoothing + EWC to prevent forgetting of previous tasks.\"\"\"\n    best_val_loss = float('inf')\n    patience_counter = 0\n    progress_bar = tqdm(range(num_epochs * len(train_dataloader)))\n    for epoch in range(num_epochs):\n        prompt_model.train()\n        for step, inputs in enumerate(train_dataloader):\n            if use_cuda:",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "parser",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "parser = argparse.ArgumentParser(description=\"Discussion3 w0.1 for continual learning vulnerability classification.\")\nparser.add_argument('--data_dir', type=str, default='incremental_tasks_csv', help='Directory containing the CSV data files.')\nparser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to the pre-trained model.')\nparser.add_argument('--batch_size', type=int, default=16, help='Batch size.')\nparser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs.')\nparser.add_argument('--lr', type=float, default=5e-5, help='Learning rate.')\nparser.add_argument('--use_cuda', action='store_true', default=True, help='Use CUDA.')\nparser.add_argument('--focal_alpha', type=float, default=0.5, help='w focal.')\nparser.add_argument('--num_samples', type=int, default=200, help='num_samples.')\nparser.add_argument('--ewc_lambda', type=float, default=0.4, help='ewc_lambda.')",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "args",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "args = parser.parse_args()\n# Set parameters\nos.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = 42\nbatch_size = args.batch_size\nnum_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['CUDA_VISIBLE_DEVICES']",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "os.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = 42\nbatch_size = args.batch_size\nnum_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "seed",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "seed = 42\nbatch_size = args.batch_size\nnum_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "batch_size",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "batch_size = args.batch_size\nnum_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda  # EWC regularization term weight",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "num_class",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "num_class = 23\nmax_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "max_seq_l",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "max_seq_l = 512\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\nglobal_num_samples = args.num_samples",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "lr",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "lr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\nglobal_num_samples = args.num_samples\n# Define classes",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "num_epochs",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "num_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\nglobal_num_samples = args.num_samples\n# Define classes\nclasses = [",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "use_cuda",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "use_cuda = args.use_cuda\nmodel_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\nglobal_num_samples = args.num_samples\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "model_name",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "model_name = \"codet5\"\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\nglobal_num_samples = args.num_samples\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "pretrainedmodel_path",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "pretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\nglobal_num_samples = args.num_samples\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "early_stop_threshold",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = args.ewc_lambda  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\nglobal_num_samples = args.num_samples\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "ewc_lambda",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "ewc_lambda = args.ewc_lambda  # EWC regularization term weight\nglobal_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\nglobal_num_samples = args.num_samples\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "global_focal_alpha",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "global_focal_alpha = args.focal_alpha  # Focal loss alpha parameter\nglobal_num_samples = args.num_samples\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "global_num_samples",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "global_num_samples = args.num_samples\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "classes",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nCWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "CWE_TO_INDEX",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}\ndata_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',\n    f'{args.data_dir}/task4_train.csv',\n    f'{args.data_dir}/task5_train.csv',\n]\ntest_paths = [\n    f'{args.data_dir}/task1_test.csv',",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "data_paths",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "data_paths = [\n    f'{args.data_dir}/task1_train.csv',\n    f'{args.data_dir}/task2_train.csv',\n    f'{args.data_dir}/task3_train.csv',\n    f'{args.data_dir}/task4_train.csv',\n    f'{args.data_dir}/task5_train.csv',\n]\ntest_paths = [\n    f'{args.data_dir}/task1_test.csv',\n    f'{args.data_dir}/task2_test.csv',",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "test_paths",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "test_paths = [\n    f'{args.data_dir}/task1_test.csv',\n    f'{args.data_dir}/task2_test.csv',\n    f'{args.data_dir}/task3_test.csv',\n    f'{args.data_dir}/task4_test.csv',\n    f'{args.data_dir}/task5_test.csv',\n]\nvalid_paths = [\n    f'{args.data_dir}/task1_valid.csv',\n    f'{args.data_dir}/task2_valid.csv',",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "valid_paths",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "valid_paths = [\n    f'{args.data_dir}/task1_valid.csv',\n    f'{args.data_dir}/task2_valid.csv',\n    f'{args.data_dir}/task3_valid.csv',\n    f'{args.data_dir}/task4_valid.csv',\n    f'{args.data_dir}/task5_valid.csv',\n]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func_no_ewc",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func_with_ewc",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm()\n# Define template\ntemplate_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "template_text",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "template_text = ('The code snippet: {\"placeholder\":\"text_a\"} '\n                 'The vulnerability description:  {\"placeholder\":\"text_b\"} '\n                 'Identify the vulnerability type: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "mytemplate",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "mytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-416\": [\"Use After Free\", \"Dangling Pointer\", \"Memory Use After Deallocation\"],\n    \"CWE-20\": [\"Improper Input Validation\", \"Input Sanitization Flaw\", \"Invalid Input Handling\"],\n    \"CWE-190\": [\"Integer Overflow\", \"Integer Wraparound\", \"Overflow in Numeric Calculations\"],",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "myverbalizer",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "myverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-416\": [\"Use After Free\", \"Dangling Pointer\", \"Memory Use After Deallocation\"],\n    \"CWE-20\": [\"Improper Input Validation\", \"Input Sanitization Flaw\", \"Invalid Input Handling\"],\n    \"CWE-190\": [\"Integer Overflow\", \"Integer Wraparound\", \"Overflow in Numeric Calculations\"],\n    \"CWE-120\": [\"Classic Buffer Overflow\", \"Buffer Copy Error\", \"Unchecked Buffer Size\"],\n    \"CWE-200\": [\"Exposure of Sensitive Data\", \"Unauthorized Information Access\", \"Sensitive Information Leak\"],",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "prompt_model",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "prompt_model = PromptForClassification(plm=plm, template=mytemplate, verbalizer=myverbalizer, freeze_plm=False)\nif use_cuda:\n    prompt_model = prompt_model.cuda()\n# 初始化损失函数\nloss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "no_decay",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "no_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer_grouped_parameters1",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "optimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]\noptimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer_grouped_parameters2",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "optimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]\noptimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# 加载五个任务的测试集\ntest_dataloader1 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[0]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer1",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "optimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# 加载五个任务的测试集\ntest_dataloader1 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[0]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer2",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "optimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# 加载五个任务的测试集\ntest_dataloader1 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[0]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\ntest_dataloader2 = PromptDataLoader(",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataloader1",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "test_dataloader1 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[0]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\ntest_dataloader2 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[1]),\n    template=mytemplate,",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataloader2",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "test_dataloader2 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[1]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\ntest_dataloader3 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[2]),\n    template=mytemplate,",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataloader3",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "test_dataloader3 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[2]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\ntest_dataloader4 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[3]),\n    template=mytemplate,",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataloader4",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "test_dataloader4 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[3]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\ntest_dataloader5 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[4]),\n    template=mytemplate,",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataloader5",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "test_dataloader5 = PromptDataLoader(\n    dataset=read_prompt_examples(test_paths[4]),\n    template=mytemplate,\n    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n    batch_size=batch_size, shuffle=True,\n    teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n    decoder_max_length=3)\n# Training process with EWC and Meta-Learning\nglobal_step = 0\nprev_dev_loss = float('inf')",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "global_step",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "global_step = 0\nprev_dev_loss = float('inf')\nbest_dev_loss = float('inf')\n# Main loop for each dataset\nfor i in range(1, 6):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "prev_dev_loss",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "prev_dev_loss = float('inf')\nbest_dev_loss = float('inf')\n# Main loop for each dataset\nfor i in range(1, 6):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,\n            tokenizer=tokenizer,",
+        "detail": "Discussion.general_code",
+        "documentation": {}
+    },
+    {
+        "label": "best_dev_loss",
+        "kind": 5,
+        "importPath": "Discussion.general_code",
+        "description": "Discussion.general_code",
+        "peekOfCode": "best_dev_loss = float('inf')\n# Main loop for each dataset\nfor i in range(1, 6):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,\n            tokenizer=tokenizer,\n            tokenizer_wrapper_class=WrapperClass,",
+        "detail": "Discussion.general_code",
         "documentation": {}
     },
     {

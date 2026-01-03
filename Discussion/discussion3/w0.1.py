@@ -32,6 +32,8 @@ parser.add_argument('--batch_size', type=int, default=16, help='Batch size.')
 parser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs.')
 parser.add_argument('--lr', type=float, default=5e-5, help='Learning rate.')
 parser.add_argument('--use_cuda', action='store_true', default=True, help='Use CUDA.')
+parser.add_argument('--focal_alpha', type=int, default=True, help='w focal.')
+
 args = parser.parse_args()
 
 # Set parameters
@@ -47,7 +49,7 @@ model_name = "codet5"
 pretrainedmodel_path = args.pretrained_model_path
 early_stop_threshold = 10
 ewc_lambda = 0.4  # EWC regularization term weight
-
+global_focal_alpha = args.focal_alpha  # Focal loss alpha parameter
 # Define classes
 classes = [
     'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',
@@ -55,6 +57,7 @@ classes = [
     'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',
     'CWE-122', 'CWE-770', 'CWE-22'
 ]
+CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}
 
 data_paths = [
     f'{args.data_dir}/task1_train.csv',
@@ -216,7 +219,7 @@ def read_and_merge_previous_datasets(current_index, data_paths):
 
 
 class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):
-    def __init__(self, num_classes, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9):
+    def __init__(self, num_classes, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9):
         super(OnlineEWCWithFocalLabelSmoothLoss, self).__init__()
         self.num_classes = num_classes
         self.smoothing = smoothing
@@ -227,7 +230,7 @@ class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):
         self.fisher_dict = {}
         self.optpar_dict = {}
 
-    def focal_label_smooth_ce_loss(self, logits, target, w=0.1):
+    def focal_label_smooth_ce_loss(self, logits, target, w=global_focal_alpha):
         # Label Smoothing Cross Entropy Loss
         target_one_hot = F.one_hot(target, num_classes=self.num_classes).float()
         target_smooth = target_one_hot * (1 - self.smoothing) + self.smoothing / self.num_classes
@@ -430,8 +433,8 @@ def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, 
 
 
 # Initialize EWC and non-EWC loss functions
-loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.1, focal_gamma=2.0, ewc_lambda=0.0)
-loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.1, focal_gamma=2.0, ewc_lambda=ewc_lambda)
+loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.0)
+loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=ewc_lambda)
 
 
 # Load model and tokenizer
@@ -477,7 +480,7 @@ if use_cuda:
     prompt_model = prompt_model.cuda()
 
 # 初始化损失函数
-loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.1, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)
+loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=global_focal_alpha, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)
 
 no_decay = ['bias', 'LayerNorm.weight']
 optimizer_grouped_parameters1 = [
