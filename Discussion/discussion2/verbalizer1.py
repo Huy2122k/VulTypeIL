@@ -1,4 +1,5 @@
 import argparse
+import ast
 import os
 import warnings
 from collections import Counter
@@ -12,13 +13,14 @@ import transformers
 from datasets import Dataset, load_dataset
 from openprompt import PromptDataLoader, PromptForClassification
 from openprompt.data_utils import InputExample
-from openprompt.plms import load_plm
 from openprompt.prompts import ManualTemplate, ManualVerbalizer, MixedTemplate
 from scipy.spatial import distance
 from sklearn.metrics import (accuracy_score, matthews_corrcoef,
                              precision_recall_fscore_support)
 from tqdm.auto import tqdm
 from transformers import AdamW, get_linear_schedule_with_warmup
+
+from codet5 import load_plm
 
 warnings.filterwarnings("ignore")
 
@@ -53,6 +55,7 @@ classes = [
     'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',
     'CWE-122', 'CWE-770', 'CWE-22'
 ]
+CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(classes)}
 
 data_paths = [
     f'{args.data_dir}/task1_train.csv',
@@ -208,14 +211,20 @@ def read_prompt_examples(filename):
     data = pd.read_csv(filename).astype(str)
     desc = data['description'].tolist()
     code = data['abstract_func_before'].tolist()
-    type = data['type'].tolist()
+    cwe_strs = data['cwe_ids'].tolist()
     for idx in range(len(data)):
+        try:
+            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list
+            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119
+            target = CWE_TO_INDEX.get(cwe_id, 0)  # Map to index, default 0
+        except:
+            target = 0  # Fallback
         examples.append(
             InputExample(
                 guid=idx,
                 text_a=' '.join(code[idx].split(' ')[:384]),
                 text_b=' '.join(desc[idx].split(' ')[:64]),
-                tgt_text=int(type[idx]),
+                tgt_text=target,
             )
         )
     return examples
@@ -229,14 +238,20 @@ def read_and_merge_previous_datasets(current_index, data_paths):
         merged_data = pd.concat([merged_data, data], ignore_index=True)
     desc = merged_data['description'].tolist()
     code = merged_data['abstract_func_before'].tolist()
-    type = merged_data['type'].tolist()
+    cwe_strs = merged_data['cwe_ids'].tolist()
     for idx in range(len(merged_data)):
+        try:
+            cwe_list = ast.literal_eval(cwe_strs[idx])  # Parse string list
+            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119
+            target = CWE_TO_INDEX.get(cwe_id, 0)  # Map to index, default 0
+        except:
+            target = 0  # Fallback
         examples.append(
             InputExample(
                 guid=idx,
                 text_a=' '.join(code[idx].split(' ')[:384]),
                 text_b=' '.join(desc[idx].split(' ')[:64]),
-                tgt_text=int(type[idx]),
+                tgt_text=target,
             )
         )
     return examples
@@ -334,8 +349,8 @@ def test(prompt_model, test_dataloader, name):
         precisionwei, recallwei, f1wei, _ = precision_recall_fscore_support(alllabels, allpreds, average='weighted')
         precisionma, recallma, f1ma, _ = precision_recall_fscore_support(alllabels, allpreds, average='macro')
         mcc = matthews_corrcoef(alllabels, allpreds)
-        with open(os.path.join('.\\results', "{}.pred.csv".format(name)), 'w', encoding='utf-8') as f, \
-                open(os.path.join('.\\results', "{}.gold.csv".format(name)), 'w', encoding='utf-8') as f1:
+        with open(os.path.join('results', "{}.pred.csv".format(name)), 'w', encoding='utf-8') as f, \
+                open(os.path.join('results', "{}.gold.csv".format(name)), 'w', encoding='utf-8') as f1:
             for ref, gold in zip(allpreds, alllabels):
                 f.write(str(ref) + '\n')
                 f1.write(str(gold) + '\n')
@@ -457,7 +472,7 @@ loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, sm
 
 
 # Load model and tokenizer
-plm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)
+plm, tokenizer, model_config, WrapperClass = load_plm()
 
 # Define template
 template_text = ('The code snippet: {"placeholder":"text_a"} '

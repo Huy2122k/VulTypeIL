@@ -299,8 +299,8 @@ def test(prompt_model, test_dataloader, name):
         precisionwei, recallwei, f1wei, _ = precision_recall_fscore_support(alllabels, allpreds, average='weighted')
         precisionma, recallma, f1ma, _ = precision_recall_fscore_support(alllabels, allpreds, average='macro')
         mcc = matthews_corrcoef(alllabels, allpreds)
-        with open(os.path.join('.\\results', "{}.pred.csv".format(name)), 'w', encoding='utf-8') as f, \
-                open(os.path.join('.\\results', "{}.gold.csv".format(name)), 'w', encoding='utf-8') as f1:
+        with open(os.path.join('results', "{}.pred.csv".format(name)), 'w', encoding='utf-8') as f, \
+                open(os.path.join('results', "{}.gold.csv".format(name)), 'w', encoding='utf-8') as f1:
             for ref, gold in zip(allpreds, alllabels):
                 f.write(str(ref) + '\n')
                 f1.write(str(gold) + '\n')
