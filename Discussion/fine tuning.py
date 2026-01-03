@@ -1,17 +1,20 @@
+import argparse
+import ast
 import os
-import torch
-import pandas as pd
+from collections import Counter
+
 import numpy as np
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support, matthews_corrcoef
-from transformers import RobertaTokenizer, T5EncoderModel, AdamW, get_linear_schedule_with_warmup
-from torch.utils.data import DataLoader, TensorDataset
-from tqdm import tqdm
+import pandas as pd
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from collections import Counter
 from scipy.spatial import distance
-import ast
-import argparse
+from sklearn.metrics import (accuracy_score, matthews_corrcoef,
+                             precision_recall_fscore_support)
+from torch.utils.data import DataLoader, TensorDataset
+from tqdm import tqdm
+from transformers import (AdamW, RobertaTokenizer, T5EncoderModel,
+                          get_linear_schedule_with_warmup)
 
 # Set parameters
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
@@ -146,15 +149,19 @@ def evaluate(model, dataloader, device):
 # Hybrid Replay Strategy
 def hybrid_replay(dataloader, model, device, num_samples=200):
     model.eval()
-    features, labels = [], []
+    features, labels, input_ids_list, attention_mask_list = [], [], [], []
     with torch.no_grad():
         for batch in dataloader:
             input_ids, attention_mask, label_batch = [b.to(device) for b in batch]
             logits = model(input_ids, attention_mask)
             features.append(logits.cpu().numpy())
             labels.extend(label_batch.cpu().tolist())
+            input_ids_list.append(input_ids.cpu())
+            attention_mask_list.append(attention_mask.cpu())
     features = np.concatenate(features, axis=0)
     labels = np.array(labels)
+    input_ids_all = torch.cat(input_ids_list, dim=0)
+    attention_mask_all = torch.cat(attention_mask_list, dim=0)
 
     # Calculate Mahalanobis distances
     mean_features = np.mean(features, axis=0)
@@ -171,13 +178,11 @@ def hybrid_replay(dataloader, model, device, num_samples=200):
     head_selected = np.argsort(distances[head_indices])[-num_samples // 2:]
 
     selected_indices = np.concatenate((np.array(tail_indices)[tail_selected], np.array(head_indices)[head_selected]))
-    replay_features = features[selected_indices]
-    replay_labels = labels[selected_indices]
+    selected_input_ids = input_ids_all[selected_indices]
+    selected_attention_mask = attention_mask_all[selected_indices]
+    selected_labels = torch.tensor(labels[selected_indices], dtype=torch.long)
 
-    replay_dataset = TensorDataset(
-        torch.tensor(replay_features, dtype=torch.float32),
-        torch.tensor(replay_labels, dtype=torch.long)
-    )
+    replay_dataset = TensorDataset(selected_input_ids, selected_attention_mask, selected_labels)
     return DataLoader(replay_dataset, batch_size=dataloader.batch_size, shuffle=True)
 
 # Main loop
@@ -205,8 +210,9 @@ def main():
             for epoch in range(5):  # Replay for 5 epochs
                 model.train()
                 for batch in replay_dataloader:
-                    features, labels = [b.to(device) for b in batch]
-                    loss = nn.CrossEntropyLoss()(features, labels)
+                    input_ids, attention_mask, labels = [b.to(device) for b in batch]
+                    logits = model(input_ids, attention_mask)
+                    loss = nn.CrossEntropyLoss()(logits, labels)
                     optimizer.zero_grad()
                     loss.backward()
                     optimizer.step()
