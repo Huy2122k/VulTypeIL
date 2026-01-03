@@ -13,13 +13,14 @@ import transformers
 from datasets import Dataset, load_dataset
 from openprompt import PromptDataLoader, PromptForClassification
 from openprompt.data_utils import InputExample
-from codet5 import load_plm
 from openprompt.prompts import ManualVerbalizer, MixedTemplate, SoftTemplate
 from scipy.spatial import distance
 from sklearn.metrics import (accuracy_score, matthews_corrcoef,
                              precision_recall_fscore_support)
 from tqdm.auto import tqdm
 from transformers import AdamW, get_linear_schedule_with_warmup
+
+from codet5 import load_plm
 
 warnings.filterwarnings("ignore")
 
@@ -348,8 +349,8 @@ def test(prompt_model, test_dataloader, name):
         precisionwei, recallwei, f1wei, _ = precision_recall_fscore_support(alllabels, allpreds, average='weighted')
         precisionma, recallma, f1ma, _ = precision_recall_fscore_support(alllabels, allpreds, average='macro')
         mcc = matthews_corrcoef(alllabels, allpreds)
-        with open(os.path.join('.\\results', "{}.pred.csv".format(name)), 'w', encoding='utf-8') as f, \
-                open(os.path.join('.\\results', "{}.gold.csv".format(name)), 'w', encoding='utf-8') as f1:
+        with open(os.path.join('results', "{}.pred.csv".format(name)), 'w', encoding='utf-8') as f, \
+                open(os.path.join('results', "{}.gold.csv".format(name)), 'w', encoding='utf-8') as f1:
             for ref, gold in zip(allpreds, alllabels):
                 f.write(str(ref) + '\n')
                 f1.write(str(gold) + '\n')
@@ -406,7 +407,7 @@ def train_phase_one(prompt_model, train_dataloader, val_dataloader, optimizer1, 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             patience_counter = 0  # Reset the patience counter
-            torch.save(prompt_model.state_dict(), 'H:\SOTitlePlus\SOTitlePlus\\best\\best.ckpt')
+            torch.save(prompt_model.state_dict(), 'best.ckpt')
         else:
             patience_counter += 1
             if patience_counter >= patience:
@@ -457,7 +458,7 @@ def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             patience_counter = 0  # Reset the patience counter
-            torch.save(prompt_model.state_dict(), 'H:\SOTitlePlus\SOTitlePlus\\best\\best.ckpt')
+            torch.save(prompt_model.state_dict(), 'best.ckpt')
         else:
             patience_counter += 1
             if patience_counter >= patience:
@@ -644,7 +645,7 @@ for i in range(1, 6):
 
     if i >= 2:
         prompt_model.load_state_dict(
-            torch.load(os.path.join('H:\SOTitlePlus\SOTitlePlus\\best\\best.ckpt'),
+            torch.load(os.path.join('best.ckpt'),
                        map_location=torch.device('cuda:0')))
 
     print(f"Starting Phase 1 for Task {i}: Focal Loss + Label Smoothing")
@@ -665,7 +666,7 @@ for i in range(1, 6):
     print(f"Phase 1 evaluation for task {i}: ", eval_results_phase1)
 
     prompt_model.load_state_dict(
-        torch.load(os.path.join('H:\SOTitlePlus\SOTitlePlus\\best\\best.ckpt'),
+        torch.load(os.path.join('best.ckpt'),
                    map_location=torch.device('cuda:0')))
     print(f"Starting Phase 2 for Task {i}: Focal Loss + Label Smoothing + EWC")
     train_phase_two(
@@ -691,7 +692,7 @@ for i in range(1, 6):
 
     print("----------------------Load the best model and test it-----------------------------")
     prompt_model.load_state_dict(
-        torch.load(os.path.join("H:\SOTitlePlus\SOTitlePlus\\best\\best.ckpt"),
+        torch.load(os.path.join("best.ckpt"),
                    map_location=torch.device('cuda:0')))
     for task_dataloader, task_name in zip(
             [test_dataloader1, test_dataloader2, test_dataloader3, test_dataloader4, test_dataloader5],

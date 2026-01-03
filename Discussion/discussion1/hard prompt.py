@@ -13,13 +13,14 @@ import transformers
 from datasets import Dataset, load_dataset
 from openprompt import PromptDataLoader, PromptForClassification
 from openprompt.data_utils import InputExample
-from codet5 import load_plm
 from openprompt.prompts import ManualTemplate, ManualVerbalizer, MixedTemplate
 from scipy.spatial import distance
 from sklearn.metrics import (accuracy_score, matthews_corrcoef,
                              precision_recall_fscore_support)
 from tqdm.auto import tqdm
 from transformers import AdamW, get_linear_schedule_with_warmup
+
+from codet5 import load_plm
 
 warnings.filterwarnings("ignore")
 
@@ -348,8 +349,8 @@ def test(prompt_model, test_dataloader, name):
         precisionwei, recallwei, f1wei, _ = precision_recall_fscore_support(alllabels, allpreds, average='weighted')
         precisionma, recallma, f1ma, _ = precision_recall_fscore_support(alllabels, allpreds, average='macro')
         mcc = matthews_corrcoef(alllabels, allpreds)
-        with open(os.path.join('.\\results', "{}.pred.csv".format(name)), 'w', encoding='utf-8') as f, \
-                open(os.path.join('.\\results', "{}.gold.csv".format(name)), 'w', encoding='utf-8') as f1:
+        with open(os.path.join('results', "{}.pred.csv".format(name)), 'w', encoding='utf-8') as f, \
+                open(os.path.join('results', "{}.gold.csv".format(name)), 'w', encoding='utf-8') as f1:
             for ref, gold in zip(allpreds, alllabels):
                 f.write(str(ref) + '\n')
                 f1.write(str(gold) + '\n')
