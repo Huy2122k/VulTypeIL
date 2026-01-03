@@ -1,3 +1,4 @@
 dataset
 model
 incremental_tasks_csv/*.csv
+*.pyc

@@ -1,21 +1,23 @@
 import os
-import torch
+import warnings
+from collections import Counter
+
 import datasets
-import transformers
+import numpy as np
 import pandas as pd
-from datasets import load_dataset, Dataset
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support, matthews_corrcoef
+import torch
+import torch.nn.functional as F
+import transformers
+from datasets import Dataset, load_dataset
+from openprompt import PromptDataLoader, PromptForClassification
 from openprompt.data_utils import InputExample
 from openprompt.plms import load_plm
 from openprompt.prompts import ManualTemplate, ManualVerbalizer, MixedTemplate
-from openprompt import PromptDataLoader, PromptForClassification
-from transformers import AdamW, get_linear_schedule_with_warmup
-from tqdm.auto import tqdm
 from scipy.spatial import distance
-import torch.nn.functional as F
-from collections import Counter
-import numpy as np
-import warnings
+from sklearn.metrics import (accuracy_score, matthews_corrcoef,
+                             precision_recall_fscore_support)
+from tqdm.auto import tqdm
+from transformers import AdamW, get_linear_schedule_with_warmup
 
 warnings.filterwarnings("ignore")
 
@@ -190,7 +192,7 @@ def read_and_merge_previous_datasets(current_index, data_paths):
 
 
 class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):
-    def __init__(self, num_classes, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9):
+    def __init__(self, num_classes, smoothing=0.1, focal_alpha=0.9, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9):
         super(OnlineEWCWithFocalLabelSmoothLoss, self).__init__()
         self.num_classes = num_classes
         self.smoothing = smoothing
@@ -404,8 +406,8 @@ def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, 
 
 
 # Initialize EWC and non-EWC loss functions
-loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)
-loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)
+loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.9, focal_gamma=2.0, ewc_lambda=0.0)
+loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.9, focal_gamma=2.0, ewc_lambda=ewc_lambda)
 
 
 # Load model and tokenizer
@@ -451,7 +453,7 @@ if use_cuda:
     prompt_model = prompt_model.cuda()
 
 # 初始化损失函数
-loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)
+loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=0.9, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)
 
 no_decay = ['bias', 'LayerNorm.weight']
 optimizer_grouped_parameters1 = [

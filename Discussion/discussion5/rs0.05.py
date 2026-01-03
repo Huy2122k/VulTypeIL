@@ -1,35 +1,47 @@
+import argparse
 import os
-import torch
+import warnings
+from collections import Counter
+
 import datasets
-import transformers
+import numpy as np
 import pandas as pd
-from datasets import load_dataset, Dataset
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support, matthews_corrcoef
+import torch
+import torch.nn.functional as F
+import transformers
+from datasets import Dataset, load_dataset
+from openprompt import PromptDataLoader, PromptForClassification
 from openprompt.data_utils import InputExample
 from openprompt.plms import load_plm
 from openprompt.prompts import ManualTemplate, ManualVerbalizer, MixedTemplate
-from openprompt import PromptDataLoader, PromptForClassification
-from transformers import AdamW, get_linear_schedule_with_warmup
-from tqdm.auto import tqdm
 from scipy.spatial import distance
-import torch.nn.functional as F
-from collections import Counter
-import numpy as np
-import warnings
+from sklearn.metrics import (accuracy_score, matthews_corrcoef,
+                             precision_recall_fscore_support)
+from tqdm.auto import tqdm
+from transformers import AdamW, get_linear_schedule_with_warmup
 
 warnings.filterwarnings("ignore")
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--data_dir', type=str, required=True, help='Directory containing the CSV data files')
+parser.add_argument('--pretrained_model_path', type=str, required=True, help='Path to the pre-trained model')
+parser.add_argument('--batch_size', type=int, default=16, help='Batch size')
+parser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs')
+parser.add_argument('--lr', type=float, default=5e-5, help='Learning rate')
+parser.add_argument('--use_cuda', action='store_true', help='Use CUDA if available')
+args = parser.parse_args()
 
 # Set parameters
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 seed = 42
-batch_size = 16
+batch_size = args.batch_size
 num_class = 23
 max_seq_l = 512
-lr = 5e-5
-num_epochs = 100
-use_cuda = True
+lr = args.lr
+num_epochs = args.num_epochs
+use_cuda = args.use_cuda
 model_name = "codet5"
-pretrainedmodel_path = "D:/model/codet5-base"  # Path of the pre-trained model
+pretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model
 early_stop_threshold = 10
 ewc_lambda = 0.4  # EWC regularization term weight
 
@@ -42,28 +54,27 @@ classes = [
 ]
 
 data_paths = [
-    'H:\SOTitlePlus\SOTitlePlus\\task1\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task2\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task3\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task4\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task5\\train.xlsx',
+    os.path.join(args.data_dir, 'task1_train.csv'),
+    os.path.join(args.data_dir, 'task2_train.csv'),
+    os.path.join(args.data_dir, 'task3_train.csv'),
+    os.path.join(args.data_dir, 'task4_train.csv'),
+    os.path.join(args.data_dir, 'task5_train.csv'),
 ]
 
 test_paths = [
-    'H:\SOTitlePlus\SOTitlePlus\\task1\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task2\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task3\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task4\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task5\\test.xlsx',
-
+    os.path.join(args.data_dir, 'task1_test.csv'),
+    os.path.join(args.data_dir, 'task2_test.csv'),
+    os.path.join(args.data_dir, 'task3_test.csv'),
+    os.path.join(args.data_dir, 'task4_test.csv'),
+    os.path.join(args.data_dir, 'task5_test.csv'),
 ]
 
 valid_paths = [
-    'H:\SOTitlePlus\SOTitlePlus\\task1\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task2\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task3\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task4\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task5\\valid.xlsx',
+    os.path.join(args.data_dir, 'task1_valid.csv'),
+    os.path.join(args.data_dir, 'task2_valid.csv'),
+    os.path.join(args.data_dir, 'task3_valid.csv'),
+    os.path.join(args.data_dir, 'task4_valid.csv'),
+    os.path.join(args.data_dir, 'task5_valid.csv'),
 ]
 
 def mahalanobis_distance(features, mean, cov_inv):
@@ -152,7 +163,7 @@ def select_uncertain_samples_mahalanobis(prompt_model, dataloader, num_samples=2
 # Define function to read examples
 def read_prompt_examples(filename):
     examples = []
-    data = pd.read_excel(filename).astype(str)
+    data = pd.read_csv(filename).astype(str)
     desc = data['description'].tolist()
     code = data['abstract_func_before'].tolist()
     type = data['type'].tolist()
@@ -172,7 +183,7 @@ def read_and_merge_previous_datasets(current_index, data_paths):
     merged_data = pd.DataFrame()
     examples = []
     for i in range(current_index - 1):
-        data = pd.read_excel(data_paths[i]).astype(str)
+        data = pd.read_csv(data_paths[i]).astype(str)
         merged_data = pd.concat([merged_data, data], ignore_index=True)
     desc = merged_data['description'].tolist()
     code = merged_data['abstract_func_before'].tolist()

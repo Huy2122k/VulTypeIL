@@ -1,35 +1,48 @@
+import argparse
 import os
-import torch
+import warnings
+from collections import Counter
+
 import datasets
-import transformers
+import numpy as np
 import pandas as pd
-from datasets import load_dataset, Dataset
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support, matthews_corrcoef
+import torch
+import torch.nn.functional as F
+import transformers
+from datasets import Dataset, load_dataset
+from openprompt import PromptDataLoader, PromptForClassification
 from openprompt.data_utils import InputExample
 from openprompt.plms import load_plm
 from openprompt.prompts import ManualTemplate, ManualVerbalizer, MixedTemplate
-from openprompt import PromptDataLoader, PromptForClassification
-from transformers import AdamW, get_linear_schedule_with_warmup
-from tqdm.auto import tqdm
 from scipy.spatial import distance
-import torch.nn.functional as F
-from collections import Counter
-import numpy as np
-import warnings
+from sklearn.metrics import (accuracy_score, matthews_corrcoef,
+                             precision_recall_fscore_support)
+from tqdm.auto import tqdm
+from transformers import AdamW, get_linear_schedule_with_warmup
 
 warnings.filterwarnings("ignore")
+
+# Parse arguments
+parser = argparse.ArgumentParser(description="Discussion4 lamda0.2 for continual learning vulnerability classification.")
+parser.add_argument('--data_dir', type=str, default='incremental_tasks_csv', help='Directory containing the CSV data files.')
+parser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to the pre-trained model.')
+parser.add_argument('--batch_size', type=int, default=16, help='Batch size.')
+parser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs.')
+parser.add_argument('--lr', type=float, default=5e-5, help='Learning rate.')
+parser.add_argument('--use_cuda', action='store_true', default=True, help='Use CUDA.')
+args = parser.parse_args()
 
 # Set parameters
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 seed = 42
-batch_size = 16
+batch_size = args.batch_size
 num_class = 23
 max_seq_l = 512
-lr = 5e-5
-num_epochs = 100
-use_cuda = True
+lr = args.lr
+num_epochs = args.num_epochs
+use_cuda = args.use_cuda
 model_name = "codet5"
-pretrainedmodel_path = "D:/model/codet5-base"  # Path of the pre-trained model
+pretrainedmodel_path = args.pretrained_model_path  # Path of the pre-trained model
 early_stop_threshold = 10
 ewc_lambda = 0.2  # EWC regularization term weight
 
@@ -42,28 +55,27 @@ classes = [
 ]
 
 data_paths = [
-    'H:\SOTitlePlus\SOTitlePlus\\task1\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task2\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task3\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task4\\train.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task5\\train.xlsx',
+    f'{args.data_dir}/task1_train.csv',
+    f'{args.data_dir}/task2_train.csv',
+    f'{args.data_dir}/task3_train.csv',
+    f'{args.data_dir}/task4_train.csv',
+    f'{args.data_dir}/task5_train.csv',
 ]
 
 test_paths = [
-    'H:\SOTitlePlus\SOTitlePlus\\task1\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task2\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task3\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task4\\test.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task5\\test.xlsx',
-
+    f'{args.data_dir}/task1_test.csv',
+    f'{args.data_dir}/task2_test.csv',
+    f'{args.data_dir}/task3_test.csv',
+    f'{args.data_dir}/task4_test.csv',
+    f'{args.data_dir}/task5_test.csv',
 ]
 
 valid_paths = [
-    'H:\SOTitlePlus\SOTitlePlus\\task1\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task2\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task3\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task4\\valid.xlsx',
-    'H:\SOTitlePlus\SOTitlePlus\\task5\\valid.xlsx',
+    f'{args.data_dir}/task1_valid.csv',
+    f'{args.data_dir}/task2_valid.csv',
+    f'{args.data_dir}/task3_valid.csv',
+    f'{args.data_dir}/task4_valid.csv',
+    f'{args.data_dir}/task5_valid.csv',
 ]
 
 
@@ -153,7 +165,7 @@ def select_uncertain_samples_mahalanobis(prompt_model, dataloader, num_samples=2
 # Define function to read examples
 def read_prompt_examples(filename):
     examples = []
-    data = pd.read_excel(filename).astype(str)
+    data = pd.read_csv(filename).astype(str)
     desc = data['description'].tolist()
     code = data['abstract_func_before'].tolist()
     type = data['type'].tolist()
@@ -173,7 +185,7 @@ def read_and_merge_previous_datasets(current_index, data_paths):
     merged_data = pd.DataFrame()
     examples = []
     for i in range(current_index - 1):
-        data = pd.read_excel(data_paths[i]).astype(str)
+        data = pd.read_csv(data_paths[i]).astype(str)
         merged_data = pd.concat([merged_data, data], ignore_index=True)
     desc = merged_data['description'].tolist()
     code = merged_data['abstract_func_before'].tolist()
@@ -345,7 +357,7 @@ def train_phase_one(prompt_model, train_dataloader, val_dataloader, optimizer1, 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             patience_counter = 0  # Reset the patience counter
-            torch.save(prompt_model.state_dict(), 'H:\SOTitlePlus\SOTitlePlus\\best\\best.ckpt')
+            torch.save(prompt_model.state_dict(), 'best.ckpt')
         else:
             patience_counter += 1
             if patience_counter >= patience:
