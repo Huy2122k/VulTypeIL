@@ -10,6 +10,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from collections import Counter
 from scipy.spatial import distance
+import ast
+import argparse
 
 # Set parameters
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
@@ -20,31 +22,61 @@ max_seq_length = 512
 lr = 5e-5
 num_epochs = 20
 use_cuda = True
-pretrained_model_path = "D:/model/codet5-base"
+pretrained_model_path = "Salesforce/codet5-base"
+ewc_lambda = 0.4  # EWC regularization term weight
+
+# CWE list and mapping
+CWE_LIST = [
+    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',
+    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',
+    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',
+    'CWE-122', 'CWE-770', 'CWE-22'
+]
+CWE_TO_INDEX = {cwe: idx for idx, cwe in enumerate(CWE_LIST)}
+
+# Parse arguments
+parser = argparse.ArgumentParser(description="Fine-tune CodeT5 for vulnerability type classification with continual learning.")
+parser.add_argument('--data_dir', type=str, default='incremental_tasks_csv', help='Directory containing the CSV data files.')
+parser.add_argument('--checkpoint_dir', type=str, default='.', help='Directory to save model checkpoints.')
+parser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to the pre-trained model.')
+parser.add_argument('--batch_size', type=int, default=16, help='Batch size for training.')
+parser.add_argument('--num_epochs', type=int, default=20, help='Number of epochs per task.')
+parser.add_argument('--lr', type=float, default=5e-5, help='Learning rate.')
+parser.add_argument('--use_cuda', action='store_true', default=True, help='Use CUDA if available.')
+args = parser.parse_args()
+
+# Set parameters from args
+batch_size = args.batch_size
+num_class = 23
+max_seq_length = 512
+lr = args.lr
+num_epochs = args.num_epochs
+use_cuda = args.use_cuda
+pretrained_model_path = args.pretrained_model_path
 ewc_lambda = 0.4  # EWC regularization term weight
 
 data_paths = [
-    'H:/SOTitlePlus/SOTitlePlus/task1/train.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task2/train.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task3/train.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task4/train.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task5/train.xlsx',
+    f'{args.data_dir}/task1_train.csv',
+    f'{args.data_dir}/task2_train.csv',
+    f'{args.data_dir}/task3_train.csv',
+    f'{args.data_dir}/task4_train.csv',
+    f'{args.data_dir}/task5_train.csv',
 ]
 
 test_paths = [
-    'H:/SOTitlePlus/SOTitlePlus/task1/test.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task2/test.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task3/test.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task4/test.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task5/test.xlsx',
+    f'{args.data_dir}/task1_test.csv',
+    f'{args.data_dir}/task2_test.csv',
+    f'{args.data_dir}/task3_test.csv',
+    f'{args.data_dir}/task4_test.csv',
+    f'{args.data_dir}/task5_test.csv',
 ]
 
 valid_paths = [
-    'H:/SOTitlePlus/SOTitlePlus/task1/valid.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task2/valid.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task3/valid.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task4/valid.xlsx',
-    'H:/SOTitlePlus/SOTitlePlus/task5/valid.xlsx',
+    f'{args.data_dir}/task1_valid.csv',
+    f'{args.data_dir}/task2_valid.csv',
+    f'{args.data_dir}/task3_valid.csv',
+    f'{args.data_dir}/task4_valid.csv',
+    f'{args.data_dir}/task5_valid.csv',
 ]
 
 # Set random seed for reproducibility
@@ -72,12 +104,21 @@ class CodeT5Classifier(nn.Module):
 
 # Read dataset and preprocess
 def read_examples(filename):
-    data = pd.read_excel(filename).astype(str)
+    data = pd.read_csv(filename).astype(str)
     desc = data['description'].tolist()
     code = data['abstract_func_before'].tolist()
-    target = data['type'].astype(int).tolist()
+    # Parse cwe_ids and map to index
+    targets = []
+    for cwe_str in data['cwe_ids']:
+        try:
+            cwe_list = ast.literal_eval(cwe_str)  # Parse string list
+            cwe_id = cwe_list[0] if cwe_list else 'CWE-119'  # Take first CWE, default CWE-119
+            target = CWE_TO_INDEX.get(cwe_id, 0)  # Map to index, default 0
+        except:
+            target = 0  # Fallback
+        targets.append(target)
     texts = [f"{code[i]} [SEP] {desc[i]}" for i in range(len(code))]
-    return texts, target
+    return texts, targets
 
 def preprocess_data(texts, targets, tokenizer, max_seq_length):
     encodings = tokenizer(texts, max_length=max_seq_length, padding="max_length", truncation=True, return_tensors="pt")
@@ -164,9 +205,8 @@ def main():
             for epoch in range(5):  # Replay for 5 epochs
                 model.train()
                 for batch in replay_dataloader:
-                    input_ids, attention_mask, labels = [b.to(device) for b in batch]
-                    logits = model(input_ids, attention_mask)
-                    loss = nn.CrossEntropyLoss()(logits, labels)
+                    features, labels = [b.to(device) for b in batch]
+                    loss = nn.CrossEntropyLoss()(features, labels)
                     optimizer.zero_grad()
                     loss.backward()
                     optimizer.step()
@@ -188,7 +228,7 @@ def main():
             evaluate(model, valid_dataloader, device)
 
         # Save the model
-        torch.save(model.state_dict(), f"best_model_task_{i}.pt")
+        torch.save(model.state_dict(), f"{args.checkpoint_dir}/best_model_task_{i}.pt")
 
         for j in range(1, 6):
             print(f"Evaluating on Task {j} Test Data")
