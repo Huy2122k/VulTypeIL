@@ -1,6 +1,7 @@
 import ast
 import os
 import warnings
+import argparse
 # ==================================================SPECIFIC LIB==============================
 from collections import Counter, namedtuple
 
@@ -64,19 +65,38 @@ def load_plm(model_name, model_path):
 
 warnings.filterwarnings("ignore")
 
-# Set parameters
+# Parse command-line arguments
+parser = argparse.ArgumentParser(description="Train VulTypeIL model with configurable parameters")
+parser.add_argument('--data_dir', type=str, default='incremental_tasks', help='Directory containing the data files')
+parser.add_argument('--checkpoint_dir', type=str, default='model', help='Directory to save/load checkpoints')
+parser.add_argument('--results_dir', type=str, default='results', help='Directory to save results')
+parser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to pre-trained model')
+parser.add_argument('--model_name', type=str, default='t5', help='Model name')
+parser.add_argument('--batch_size', type=int, default=16, help='Batch size')
+parser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs')
+parser.add_argument('--lr', type=float, default=5e-5, help='Learning rate')
+parser.add_argument('--ewc_lambda', type=float, default=0.4, help='EWC regularization term weight')
+parser.add_argument('--num_tasks', type=int, default=5, help='Number of tasks')
+parser.add_argument('--max_seq_l', type=int, default=512, help='Maximum sequence length')
+parser.add_argument('--num_class', type=int, default=23, help='Number of classes')
+parser.add_argument('--use_cuda', action='store_true', default=True, help='Use CUDA')
+parser.add_argument('--seed', type=int, default=42, help='Random seed')
+
+args = parser.parse_args()
+
+# Set parameters from args
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-seed = 42
-batch_size = 16
-num_class = 23
-max_seq_l = 512
-lr = 5e-5
-num_epochs = 100
-use_cuda = True
-model_name = "t5"
-pretrainedmodel_path = "Salesforce/codet5-base"  # Path of the pre-trained model
+seed = args.seed
+batch_size = args.batch_size
+num_class = args.num_class
+max_seq_l = args.max_seq_l
+lr = args.lr
+num_epochs = args.num_epochs
+use_cuda = args.use_cuda
+model_name = args.model_name
+pretrainedmodel_path = args.pretrained_model_path
 early_stop_threshold = 10
-ewc_lambda = 0.4  # EWC regularization term weight
+ewc_lambda = args.ewc_lambda
 
 # Define classes
 classes = [
@@ -86,29 +106,10 @@ classes = [
     'CWE-122', 'CWE-770', 'CWE-22'
 ]
 
-data_paths = [
-    # "incremental_tasks/task1_train.xlsx",
-    "incremental_tasks/task2_train.xlsx",
-    "incremental_tasks/task3_train.xlsx",
-    "incremental_tasks/task4_train.xlsx",
-    "incremental_tasks/task5_train.xlsx",
-]
-
-test_paths = [
-    "incremental_tasks/task1_test.xlsx",
-    "incremental_tasks/task2_test.xlsx",
-    "incremental_tasks/task3_test.xlsx",
-    "incremental_tasks/task4_test.xlsx",
-    "incremental_tasks/task5_test.xlsx",
-]
-
-valid_paths = [
-    "incremental_tasks/task1_valid.xlsx",
-    "incremental_tasks/task2_valid.xlsx",
-    "incremental_tasks/task3_valid.xlsx",
-    "incremental_tasks/task4_valid.xlsx",
-    "incremental_tasks/task5_valid.xlsx",
-]
+# Construct data paths
+data_paths = [os.path.join(args.data_dir, f"task{i}_train.xlsx") for i in range(1, args.num_tasks + 1)]
+test_paths = [os.path.join(args.data_dir, f"task{i}_test.xlsx") for i in range(1, args.num_tasks + 1)]
+valid_paths = [os.path.join(args.data_dir, f"task{i}_valid.xlsx") for i in range(1, args.num_tasks + 1)]
 
 
 def mahalanobis_distance(features, mean, cov_inv):
@@ -350,9 +351,9 @@ def test(prompt_model, test_dataloader, name):
         precisionma, recallma, f1ma, _ = precision_recall_fscore_support(alllabels, allpreds, average='macro')
         mcc = matthews_corrcoef(alllabels, allpreds)
         # Create results directory if it doesn't exist
-        os.makedirs('results', exist_ok=True)
-        with open(os.path.join('results', "{}.pred.csv".format(name)), 'w', encoding='utf-8') as f, \
-                open(os.path.join('results', "{}.gold.csv".format(name)), 'w', encoding='utf-8') as f1:
+        os.makedirs(args.results_dir, exist_ok=True)
+        with open(os.path.join(args.results_dir, "{}.pred.csv".format(name)), 'w', encoding='utf-8') as f, \
+                open(os.path.join(args.results_dir, "{}.gold.csv".format(name)), 'w', encoding='utf-8') as f1:
             for ref, gold in zip(allpreds, alllabels):
                 f.write(str(ref) + '\n')
                 f1.write(str(gold) + '\n')
@@ -418,11 +419,11 @@ def train_phase_one(prompt_model, train_dataloader, val_dataloader, optimizer1, 
             best_val_loss = val_loss
             patience_counter = 0  # Reset the patience counter
             # Create directory if it doesn't exist
-            os.makedirs('model/best', exist_ok=True)
+            os.makedirs(os.path.join(args.checkpoint_dir, 'best'), exist_ok=True)
             # Save checkpoint for specific task
-            torch.save(prompt_model.state_dict(), f'model/best/task_{task_id}_phase1_best.ckpt')
+            torch.save(prompt_model.state_dict(), os.path.join(args.checkpoint_dir, 'best', f'task_{task_id}_phase1_best.ckpt'))
             # Also save as general best for backward compatibility
-            torch.save(prompt_model.state_dict(), 'model/best/best.ckpt')
+            torch.save(prompt_model.state_dict(), os.path.join(args.checkpoint_dir, 'best', 'best.ckpt'))
         else:
             patience_counter += 1
             if patience_counter >= patience:
@@ -482,11 +483,11 @@ def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, 
             best_val_loss = val_loss
             patience_counter = 0  # Reset the patience counter
             # Create directory if it doesn't exist
-            os.makedirs('model/best', exist_ok=True)
+            os.makedirs(os.path.join(args.checkpoint_dir, 'best'), exist_ok=True)
             # Save checkpoint for specific task
-            torch.save(prompt_model.state_dict(), f'model/best/task_{task_id}_phase2_best.ckpt')
+            torch.save(prompt_model.state_dict(), os.path.join(args.checkpoint_dir, 'best', f'task_{task_id}_phase2_best.ckpt'))
             # Also save as general best for backward compatibility
-            torch.save(prompt_model.state_dict(), 'model/best/best.ckpt')
+            torch.save(prompt_model.state_dict(), os.path.join(args.checkpoint_dir, 'best', 'best.ckpt'))
         else:
             patience_counter += 1
             if patience_counter >= patience:
@@ -497,15 +498,15 @@ def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, 
 # Utility functions for checkpoint management
 def save_task_checkpoint(prompt_model, task_id, phase="final"):
     """Save checkpoint for a specific task and phase."""
-    os.makedirs('model/checkpoints', exist_ok=True)
-    checkpoint_path = f'model/checkpoints/task_{task_id}_{phase}.ckpt'
+    os.makedirs(os.path.join(args.checkpoint_dir, 'checkpoints'), exist_ok=True)
+    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')
     torch.save(prompt_model.state_dict(), checkpoint_path)
     print(f"Saved checkpoint: {checkpoint_path}")
     return checkpoint_path
 
 def load_task_checkpoint(prompt_model, task_id, phase="final"):
     """Load checkpoint for a specific task and phase."""
-    checkpoint_path = f'model/checkpoints/task_{task_id}_{phase}.ckpt'
+    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')
     if os.path.exists(checkpoint_path):
         prompt_model.load_state_dict(
             torch.load(checkpoint_path, map_location=torch.device('cuda:0'))
@@ -518,9 +519,9 @@ def load_task_checkpoint(prompt_model, task_id, phase="final"):
 
 def list_available_checkpoints():
     """List all available checkpoints."""
-    checkpoint_dir = 'model/checkpoints'
-    if os.path.exists(checkpoint_dir):
-        checkpoints = [f for f in os.listdir(checkpoint_dir) if f.endswith('.ckpt')]
+    checkpoint_dir_path = os.path.join(args.checkpoint_dir, 'checkpoints')
+    if os.path.exists(checkpoint_dir_path):
+        checkpoints = [f for f in os.listdir(checkpoint_dir_path) if f.endswith('.ckpt')]
         print("Available checkpoints:")
         for checkpoint in sorted(checkpoints):
             print(f"  - {checkpoint}")
@@ -531,11 +532,11 @@ def list_available_checkpoints():
 
 # Initialize EWC and non-EWC loss functions
 loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)
-loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=ewc_lambda)
+loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda)
 
 
 # Load model and tokenizer
-plm, tokenizer, model_config, WrapperClass = load_plm(model_name, pretrainedmodel_path)
+plm, tokenizer, model_config, WrapperClass = load_plm(model_name, args.pretrained_model_path)
 
 # Define template - Improved prompt template based on the paper's methodology
 template_text = ('Given the following vulnerable code snippet: {"placeholder":"text_a"} '
@@ -577,7 +578,7 @@ if use_cuda:
     prompt_model = prompt_model.cuda()
 
 # 初始化损失函数
-loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9)
+loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda, decay_factor=0.9)
 
 no_decay = ['bias', 'LayerNorm.weight']
 optimizer_grouped_parameters1 = [
@@ -592,42 +593,17 @@ optimizer_grouped_parameters2 = [
 optimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)
 optimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)
 
-# 加载五个任务的测试集
-test_dataloader1 = PromptDataLoader(
-    dataset=read_prompt_examples(test_paths[0]),
-    template=mytemplate,
-    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,
-    batch_size=batch_size, shuffle=True,
-    teacher_forcing=False, predict_eos_token=False, truncate_method="head",
-    decoder_max_length=3)
-test_dataloader2 = PromptDataLoader(
-    dataset=read_prompt_examples(test_paths[1]),
-    template=mytemplate,
-    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,
-    batch_size=batch_size, shuffle=True,
-    teacher_forcing=False, predict_eos_token=False, truncate_method="head",
-    decoder_max_length=3)
-test_dataloader3 = PromptDataLoader(
-    dataset=read_prompt_examples(test_paths[2]),
-    template=mytemplate,
-    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,
-    batch_size=batch_size, shuffle=True,
-    teacher_forcing=False, predict_eos_token=False, truncate_method="head",
-    decoder_max_length=3)
-test_dataloader4 = PromptDataLoader(
-    dataset=read_prompt_examples(test_paths[3]),
-    template=mytemplate,
-    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,
-    batch_size=batch_size, shuffle=True,
-    teacher_forcing=False, predict_eos_token=False, truncate_method="head",
-    decoder_max_length=3)
-test_dataloader5 = PromptDataLoader(
-    dataset=read_prompt_examples(test_paths[4]),
-    template=mytemplate,
-    tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,
-    batch_size=batch_size, shuffle=True,
-    teacher_forcing=False, predict_eos_token=False, truncate_method="head",
-    decoder_max_length=3)
+# Load test dataloaders for all tasks
+test_dataloaders = []
+for j in range(args.num_tasks):
+    test_dataloader = PromptDataLoader(
+        dataset=read_prompt_examples(test_paths[j]),
+        template=mytemplate,
+        tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,
+        batch_size=batch_size, shuffle=True,
+        teacher_forcing=False, predict_eos_token=False, truncate_method="head",
+        decoder_max_length=3)
+    test_dataloaders.append(test_dataloader)
 
 # Training process with EWC and Meta-Learning
 global_step = 0
@@ -636,7 +612,7 @@ best_dev_loss = float('inf')
 
 
 # Main loop for each dataset
-for i in range(1, 6):
+for i in range(1, args.num_tasks + 1):
     print(f"----------------------- Task {i} ---------------------------")
     if i == 1:
         train_dataloader = PromptDataLoader(
@@ -707,7 +683,7 @@ for i in range(1, 6):
 
     if i >= 2:
         prompt_model.load_state_dict(
-            torch.load(os.path.join('model/best/best.ckpt'),
+            torch.load(os.path.join(args.checkpoint_dir, 'best', 'best.ckpt'),
                        map_location=torch.device('cuda:0')))
 
     print(f"Starting Phase 1 for Task {i}: Focal Loss + Label Smoothing")
@@ -729,7 +705,7 @@ for i in range(1, 6):
     print(f"Phase 1 evaluation for task {i}: ", eval_results_phase1)
 
     prompt_model.load_state_dict(
-        torch.load(os.path.join('model/best/best.ckpt'),
+        torch.load(os.path.join(args.checkpoint_dir, 'best', 'best.ckpt'),
                    map_location=torch.device('cuda:0')))
     print(f"Starting Phase 2 for Task {i}: Focal Loss + Label Smoothing + EWC")
     train_phase_two(
@@ -760,11 +736,9 @@ for i in range(1, 6):
 
     print("----------------------Load the best model and test it-----------------------------")
     prompt_model.load_state_dict(
-        torch.load(os.path.join("model/best/best.ckpt"),
+        torch.load(os.path.join(args.checkpoint_dir, "best", "best.ckpt"),
                    map_location=torch.device('cuda:0')))
-    for task_dataloader, task_name in zip(
-            [test_dataloader1, test_dataloader2, test_dataloader3, test_dataloader4, test_dataloader5],
-            ['task1', 'task2', 'task3', 'task4', 'task5']):
+    for j, (task_dataloader, task_name) in enumerate(zip(test_dataloaders, [f'task{k}' for k in range(1, args.num_tasks + 1)]), 1):
         test(prompt_model, task_dataloader, f'{task_name}_test_task_{i}')
 
 # Display all available checkpoints at the end
