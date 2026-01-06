@@ -192,7 +192,7 @@ def select_uncertain_samples_mahalanobis(prompt_model, dataloader, num_samples=2
 # Define function to read examples
 def read_prompt_examples(filename):
     examples = []
-    data = pd.read_excel(filename).astype(str)
+    data = pd.read_csv(filename).astype(str)
     desc = data['description'].tolist()
     code = data['abstract_func_before'].tolist()
     type = data['cwe_ids'].tolist()
@@ -220,7 +220,7 @@ def read_and_merge_previous_datasets(current_index, data_paths):
     merged_data = pd.DataFrame()
     examples = []
     for i in range(current_index - 1):
-        data = pd.read_excel(data_paths[i]).astype(str)
+        data = pd.read_csv(data_paths[i]).astype(str)
         merged_data = pd.concat([merged_data, data], ignore_index=True)
     desc = merged_data['description'].tolist()
     code = merged_data['abstract_func_before'].tolist()
