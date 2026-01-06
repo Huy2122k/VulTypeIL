@@ -107,9 +107,9 @@ classes = [
 ]
 
 # Construct data paths
-data_paths = [os.path.join(args.data_dir, f"task{i}_train.xlsx") for i in range(1, args.num_tasks + 1)]
-test_paths = [os.path.join(args.data_dir, f"task{i}_test.xlsx") for i in range(1, args.num_tasks + 1)]
-valid_paths = [os.path.join(args.data_dir, f"task{i}_valid.xlsx") for i in range(1, args.num_tasks + 1)]
+data_paths = [os.path.join(args.data_dir, f"task{i}_train.csv") for i in range(1, args.num_tasks + 1)]
+test_paths = [os.path.join(args.data_dir, f"task{i}_test.csv") for i in range(1, args.num_tasks + 1)]
+valid_paths = [os.path.join(args.data_dir, f"task{i}_valid.csv") for i in range(1, args.num_tasks + 1)]
 
 
 def mahalanobis_distance(features, mean, cov_inv):
