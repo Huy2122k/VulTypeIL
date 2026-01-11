@@ -9,26 +9,28 @@ Evaluation Script for Continual Learning Performance
 - Forward/Backward transfer
 """
 
+import argparse
 import ast
+import json
 import os
 import warnings
+from collections import defaultdict, namedtuple
+
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import seaborn as sns
 import torch
 import torch.nn.functional as F
-import matplotlib.pyplot as plt
-import seaborn as sns
-from collections import defaultdict, namedtuple
 from openprompt import PromptDataLoader, PromptForClassification
 from openprompt.data_utils import InputExample
 from openprompt.plms import add_special_tokens
 from openprompt.plms.seq2seq import T5TokenizerWrapper
-from openprompt.prompts import MixedTemplate, ManualVerbalizer
-from sklearn.metrics import (accuracy_score, matthews_corrcoef,
-                             precision_recall_fscore_support, confusion_matrix)
-from transformers import (RobertaTokenizer, T5Config,
-                          T5ForConditionalGeneration)
-import json
+from openprompt.prompts import ManualVerbalizer, MixedTemplate
+from sklearn.metrics import (accuracy_score, confusion_matrix,
+                             matthews_corrcoef,
+                             precision_recall_fscore_support)
+from transformers import RobertaTokenizer, T5Config, T5ForConditionalGeneration
 
 warnings.filterwarnings("ignore")
 
@@ -50,22 +52,9 @@ classes = [
     'CWE-122', 'CWE-770', 'CWE-22'
 ]
 
-# Data paths
-test_paths = [
-    "incremental_tasks/task1_test.xlsx",
-    "incremental_tasks/task2_test.xlsx", 
-    "incremental_tasks/task3_test.xlsx",
-    "incremental_tasks/task4_test.xlsx",
-    "incremental_tasks/task5_test.xlsx",
-]
-
-valid_paths = [
-    "incremental_tasks/task1_valid.xlsx",
-    "incremental_tasks/task2_valid.xlsx",
-    "incremental_tasks/task3_valid.xlsx", 
-    "incremental_tasks/task4_valid.xlsx",
-    "incremental_tasks/task5_valid.xlsx",
-]
+# Data paths (default values, can be overridden by command line arguments)
+default_data_dir = "incremental_tasks_csv"
+default_checkpoint_dir = "best/best"
 
 ModelClass = namedtuple("ModelClass", ('config', 'tokenizer', 'model','wrapper'))
 
@@ -88,9 +77,9 @@ def load_plm(model_name, model_path):
     return model, tokenizer, model_config, wrapper
 
 def read_prompt_examples(filename):
-    """Read examples from Excel file (giống vul2.py)"""
+    """Read examples from CSV file (giống vul2.py)"""
     examples = []
-    data = pd.read_excel(filename).astype(str)
+    data = pd.read_csv(filename).astype(str)
     desc = data['description'].tolist()
     code = data['abstract_func_before'].tolist()
     type = data['cwe_ids'].tolist()
@@ -202,8 +191,16 @@ def calculate_transfer_metrics(results_matrix):
     return forward_transfer, backward_transfer
 
 class ContinualLearningEvaluator:
-    def __init__(self):
+    def __init__(self, data_dir, checkpoint_dir):
         self.results = defaultdict(dict)
+        self.data_dir = data_dir
+        self.checkpoint_dir = checkpoint_dir
+        self.test_paths = [
+            os.path.join(data_dir, f"task{i}_test.csv") for i in range(1, 6)
+        ]
+        self.valid_paths = [
+            os.path.join(data_dir, f"task{i}_valid.csv") for i in range(1, 6)
+        ]
         self.setup_model()
         
     def setup_model(self):
@@ -258,7 +255,7 @@ class ContinualLearningEvaluator:
             
         # Setup test dataloaders
         self.test_dataloaders = []
-        for i, test_path in enumerate(test_paths):
+        for i, test_path in enumerate(self.test_paths):
             dataloader = PromptDataLoader(
                 dataset=read_prompt_examples(test_path),
                 template=self.mytemplate,
@@ -278,33 +275,20 @@ class ContinualLearningEvaluator:
         """Evaluate all available phase-based checkpoints"""
         print("🔍 Đang tìm kiếm các checkpoint theo phase...")
         
-        # Define checkpoint paths for phase-based evaluation
-        checkpoint_patterns = [
-            'best/best/task_{}_phase1_best.ckpt',
-            'best/best/task_{}_phase2_best.ckpt'
-        ]
-        
-        # Check for alternative locations
-        possible_dirs = ['best/best', 'best', 'checkpoints', 'model/checkpoints', '.']
-        
+        # Check for checkpoints in the specified directory
         found_checkpoints = []
-        checkpoint_base_dir = None
+        checkpoint_base_dir = self.checkpoint_dir
         
-        # Find the correct directory
-        for base_dir in possible_dirs:
-            if os.path.exists(base_dir):
-                for task_id in range(1, 5):  # Tasks 1-4
-                    for phase in [1, 2]:
-                        checkpoint_name = f'task_{task_id}_phase{phase}_best.ckpt'
-                        checkpoint_path = os.path.join(base_dir, checkpoint_name)
-                        if os.path.exists(checkpoint_path):
-                            found_checkpoints.append((checkpoint_name, checkpoint_path))
-                            if checkpoint_base_dir is None:
-                                checkpoint_base_dir = base_dir
+        if os.path.exists(checkpoint_base_dir):
+            for task_id in range(1, 6):  # Tasks 1-4
+                for phase in [1, 2]:
+                    checkpoint_name = f'task_{task_id}_phase{phase}_best.ckpt'
+                    checkpoint_path = os.path.join(checkpoint_base_dir, checkpoint_name)
+                    if os.path.exists(checkpoint_path):
+                        found_checkpoints.append((checkpoint_name, checkpoint_path))
         
         if not found_checkpoints:
-            print("❌ Không tìm thấy checkpoint phase nào!")
-            print("📁 Đang tìm kiếm trong các thư mục:", possible_dirs)
+            print(f"❌ Không tìm thấy checkpoint phase nào trong {checkpoint_base_dir}!")
             return
             
         print(f"✅ Tìm thấy {len(found_checkpoints)} checkpoint(s) trong {checkpoint_base_dir}")
@@ -875,45 +859,37 @@ class ContinualLearningEvaluator:
         
         return summary
 
-def check_checkpoint_structure():
+def check_checkpoint_structure(checkpoint_dir):
     """Check and display checkpoint file structure"""
-    print("� BKIỂM TRA CẤU TRÚC CHECKPOINT FILES")
+    print("📋 KIỂM TRA CẤU TRÚC CHECKPOINT FILES")
     print("="*50)
     
-    possible_locations = [
-        'best/best/',
-        'best/',
-        'checkpoints/',
-        'model/checkpoints/',
-        './'
-    ]
-    
+    location = checkpoint_dir
     found_files = []
     
-    for location in possible_locations:
-        if os.path.exists(location):
-            print(f"📁 Kiểm tra thư mục: {location}")
-            try:
-                files = os.listdir(location)
-                checkpoint_files = [f for f in files if f.endswith('.ckpt') and 'phase' in f]
-                if checkpoint_files:
-                    print(f"  ✅ Tìm thấy {len(checkpoint_files)} checkpoint files:")
-                    for f in sorted(checkpoint_files):
-                        print(f"    - {f}")
-                        found_files.append(os.path.join(location, f))
-                else:
-                    print(f"  ❌ Không tìm thấy checkpoint files")
-            except Exception as e:
-                print(f"  ❌ Lỗi đọc thư mục: {e}")
-        else:
-            print(f"📁 Thư mục không tồn tại: {location}")
+    if os.path.exists(location):
+        print(f"📁 Kiểm tra thư mục: {location}")
+        try:
+            files = os.listdir(location)
+            checkpoint_files = [f for f in files if f.endswith('.ckpt') and 'phase' in f]
+            if checkpoint_files:
+                print(f"  ✅ Tìm thấy {len(checkpoint_files)} checkpoint files:")
+                for f in sorted(checkpoint_files):
+                    print(f"    - {f}")
+                    found_files.append(os.path.join(location, f))
+            else:
+                print(f"  ❌ Không tìm thấy checkpoint files")
+        except Exception as e:
+            print(f"  ❌ Lỗi đọc thư mục: {e}")
+    else:
+        print(f"📁 Thư mục không tồn tại: {location}")
     
     if found_files:
         print(f"\n✅ Tổng cộng tìm thấy {len(found_files)} checkpoint files")
         return True
     else:
         print(f"\n❌ Không tìm thấy checkpoint files nào!")
-        print("� qHãy đảm bảo các files đã được giải nén với tên:")
+        print("💡 Hãy đảm bảo các files đã được giải nén với tên:")
         print("   - task_1_phase1_best.ckpt, task_1_phase2_best.ckpt")
         print("   - task_2_phase1_best.ckpt, task_2_phase2_best.ckpt")
         print("   - task_3_phase1_best.ckpt, task_3_phase2_best.ckpt")
@@ -922,15 +898,21 @@ def check_checkpoint_structure():
 
 def main():
     """Main evaluation function"""
+    parser = argparse.ArgumentParser(description='Evaluate Continual Learning Performance')
+    parser.add_argument('--data_dir', default=default_data_dir, help='Directory containing CSV data files')
+    parser.add_argument('--checkpoint_dir', default=default_checkpoint_dir, help='Directory containing checkpoint files')
+    
+    args = parser.parse_args()
+    
     print("🚀 BẮT ĐẦU ĐÁNH GIÁ PHASE-BASED CONTINUAL LEARNING")
     print("="*60)
     
     # Check checkpoint structure first
-    if not check_checkpoint_structure():
+    if not check_checkpoint_structure(args.checkpoint_dir):
         return
     
     # Initialize evaluator
-    evaluator = ContinualLearningEvaluator()
+    evaluator = ContinualLearningEvaluator(args.data_dir, args.checkpoint_dir)
     
     # Run all evaluations
     evaluator.evaluate_all_checkpoints()

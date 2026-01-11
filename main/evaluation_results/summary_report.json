@@ -1,0 +1,17 @@
+{
+    "total_checkpoints": 10,
+    "evaluation_date": "2026-01-07 14:07:35",
+    "tasks_evaluated": 5,
+    "metrics_used": [
+        "accuracy",
+        "precision",
+        "recall",
+        "f1_score",
+        "mcc"
+    ],
+    "mean_accuracy": 0.696013558053434,
+    "std_accuracy": 0.10832383448304848,
+    "min_accuracy": 0.4036697247706422,
+    "max_accuracy": 0.862453531598513,
+    "mean_step_accuracy": 0.772
+}

@@ -81,6 +81,7 @@ parser.add_argument('--max_seq_l', type=int, default=512, help='Maximum sequence
 parser.add_argument('--num_class', type=int, default=23, help='Number of classes')
 parser.add_argument('--use_cuda', action='store_true', default=True, help='Use CUDA')
 parser.add_argument('--seed', type=int, default=42, help='Random seed')
+parser.add_argument('--patience', type=int, default=5, help='patience')
 
 args = parser.parse_args()
 
@@ -698,7 +699,7 @@ for i in range(1, args.num_tasks + 1):
         num_epochs,
         loss_func_no_ewc,
         i,  # task_id
-        patience=5  # You can adjust patience as needed
+        patience=args.patience  # You can adjust patience as needed
     )
 
     eval_results_phase1 = test(prompt_model, validation_dataloader, f'task_{i}_val_phase1')
@@ -719,7 +720,7 @@ for i in range(1, args.num_tasks + 1):
         num_epochs,
         loss_func_with_ewc,
         i,  # task_id
-        patience=5  # You can adjust patience as needed
+        patience=args.patience  # You can adjust patience as needed
     )
 
 

@@ -1,0 +1,266 @@
+----------------------- Task 1 ---------------------------
+tokenizing: 2344it [00:06, 357.01it/s]
+tokenizing: 275it [00:00, 355.48it/s]
+Starting Phase 1 for Task 1: Focal Loss + Label Smoothing
+Epoch 1/50, Validation Loss: 1.5652886629104614| 19/950 [00:07<04:59,  3.11it/s]
+Epoch 2/50, Validation Loss: 1.3152925968170166| 38/950 [00:16<04:53,  3.11it/s]
+Epoch 3/50, Validation Loss: 1.0333179831504822| 57/950 [00:27<04:48,  3.10it/s]
+Epoch 4/50, Validation Loss: 1.062998612721761 | 76/950 [00:38<04:42,  3.10it/s]
+Epoch 5/50, Validation Loss: 1.0369296471277873| 95/950 [00:46<04:34,  3.11it/s]
+Epoch 6/50, Validation Loss: 1.1048665046691895 114/950 [00:53<04:28,  3.11it/s]
+Epoch 7/50, Validation Loss: 1.128565529982249| 133/950 [01:01<04:22,  3.11it/s]
+Epoch 8/50, Validation Loss: 1.2684563398361206 152/950 [01:08<04:16,  3.11it/s]
+Epoch 9/50, Validation Loss: 1.1681832869847615 171/950 [01:16<04:11,  3.10it/s]
+Epoch 10/50, Validation Loss: 1.4090111653010051190/950 [01:24<04:07,  3.07it/s]
+Epoch 11/50, Validation Loss: 1.1580973466237385209/950 [01:31<03:58,  3.11it/s]
+Epoch 12/50, Validation Loss: 1.1230350732803345228/950 [01:39<03:52,  3.11it/s]
+Epoch 13/50, Validation Loss: 1.212193489074707 247/950 [01:46<03:45,  3.11it/s]
+Early stopping at epoch 13
+ 26%|██████████▋                              | 247/950 [01:47<05:04,  2.31it/s]
+acc: 0.6436363636363637   precisionma: 0.4686067349757826  recallma: 0.5286408300694015 recallwei: 0.6436363636363637 weighted-f1: 0.644072191339106  macro-f1: 0.4840985030882729 mcc: 0.5669974404360487
+Phase 1 evaluation for task 1:  (0.6436363636363637, 0.4686067349757826, 0.5286408300694015, 0.644072191339106, 0.4840985030882729)
+Starting Phase 2 for Task 1: Focal Loss + Label Smoothing + EWC
+Epoch 1/50, Validation Loss: 1.037751277287801 | 19/950 [00:07<04:59,  3.11it/s]
+Epoch 2/50, Validation Loss: 1.077347715695699 | 38/950 [00:17<04:54,  3.09it/s]
+Epoch 3/50, Validation Loss: 1.085614283879598 | 57/950 [00:24<04:47,  3.10it/s]
+Epoch 4/50, Validation Loss: 1.129774570465088 | 76/950 [00:32<04:41,  3.11it/s]
+Epoch 5/50, Validation Loss: 1.437781572341919 | 95/950 [00:40<04:34,  3.11it/s]
+Epoch 6/50, Validation Loss: 1.2664124568303425 114/950 [00:47<04:29,  3.11it/s]
+Epoch 7/50, Validation Loss: 1.1864546537399292 133/950 [00:55<04:23,  3.10it/s]
+Epoch 8/50, Validation Loss: 1.2124525705973308 152/950 [01:02<04:16,  3.11it/s]
+Epoch 9/50, Validation Loss: 1.2615018685658772 171/950 [01:10<04:10,  3.11it/s]
+Epoch 10/50, Validation Loss: 1.227259675661723 190/950 [01:18<04:04,  3.10it/s]
+Epoch 11/50, Validation Loss: 1.2877886692682903209/950 [01:25<03:58,  3.11it/s]
+Early stopping at epoch 11
+ 22%|█████████                                | 209/950 [01:25<05:04,  2.43it/s]
+acc: 0.6472727272727272   precisionma: 0.4881464726692716  recallma: 0.48157493300350446 recallwei: 0.6472727272727272 weighted-f1: 0.6465287481271375  macro-f1: 0.4596919952413569 mcc: 0.5619049855793381
+Phase 2 evaluation for task 1:  (0.6472727272727272, 0.4881464726692716, 0.48157493300350446, 0.6465287481271375, 0.4596919952413569)
+Saved checkpoint: /home/admin/model/checkpoints/task_1_final.ckpt
+Testing Task 1 model on previous datasets after Phase 2
+----------------------Load the best model and test it-----------------------------
+acc: 0.6359649122807017   precisionma: 0.5198386045960672  recallma: 0.5838758611552729 recallwei: 0.6359649122807017 weighted-f1: 0.6156182042958688  macro-f1: 0.5223378435029717 mcc: 0.563982839116084
+acc: 0.6133828996282528   precisionma: 0.6260623635623636  recallma: 0.5595734685050902 recallwei: 0.6133828996282528 weighted-f1: 0.6360114125393234  macro-f1: 0.5623343039855285 mcc: 0.5423515601350745
+acc: 0.4036697247706422   precisionma: 0.4941618566618567  recallma: 0.4783983768946175 recallwei: 0.4036697247706422 weighted-f1: 0.43303215394748956  macro-f1: 0.42902166111484646 mcc: 0.3003401039060067
+acc: 0.5787781350482315   precisionma: 0.5254591639341859  recallma: 0.39048098751602794 recallwei: 0.5787781350482315 weighted-f1: 0.5683033089490477  macro-f1: 0.3904638331084598 mcc: 0.49033396061799406
+acc: 0.6597222222222222   precisionma: 0.583935487775357  recallma: 0.5522088574452702 recallwei: 0.6597222222222222 weighted-f1: 0.6501920320440883  macro-f1: 0.5541702187665901 mcc: 0.5989959202181954
+----------------------- Task 2 ---------------------------
+tokenizing: 2344it [00:06, 388.86it/s]
+tokenizing: 2493it [00:06, 357.45it/s]
+tokenizing: 285it [00:00, 349.21it/s]
+Starting Phase 1 for Task 2: Focal Loss + Label Smoothing
+Epoch 1/50, Validation Loss: 1.106500228246053| 20/1000 [00:07<05:33,  2.94it/s]
+Epoch 2/50, Validation Loss: 1.246677041053772| 40/1000 [00:18<05:27,  2.93it/s]
+Epoch 3/50, Validation Loss: 1.0736747582753499 60/1000 [00:26<05:19,  2.94it/s]
+Epoch 4/50, Validation Loss: 1.053499201933543| 80/1000 [00:37<05:13,  2.93it/s]
+Epoch 5/50, Validation Loss: 1.3539772431055705100/1000 [00:48<05:07,  2.93it/s]
+Epoch 6/50, Validation Loss: 1.2375306288401287120/1000 [00:57<04:59,  2.94it/s]
+Epoch 7/50, Validation Loss: 1.107679049173991 140/1000 [01:05<04:52,  2.94it/s]
+Epoch 8/50, Validation Loss: 1.1985818147659302160/1000 [01:13<04:46,  2.93it/s]
+Epoch 9/50, Validation Loss: 1.1003586848576863180/1000 [01:21<04:39,  2.93it/s]
+Epoch 10/50, Validation Loss: 1.110464493433634500/1000 [01:29<04:32,  2.94it/s]
+Epoch 11/50, Validation Loss: 1.223398168881734120/1000 [01:37<04:25,  2.94it/s]
+Epoch 12/50, Validation Loss: 1.234799742698669440/1000 [01:45<04:18,  2.94it/s]
+Epoch 13/50, Validation Loss: 1.327770233154296960/1000 [01:53<04:12,  2.93it/s]
+Epoch 14/50, Validation Loss: 1.083878993988037280/1000 [02:01<04:05,  2.93it/s]
+Early stopping at epoch 14
+ 28%|███████████▏                            | 280/1000 [02:01<05:13,  2.30it/s]
+acc: 0.7473684210526316   precisionma: 0.8488235759090433  recallma: 0.7473224728487886 recallwei: 0.7473684210526316 weighted-f1: 0.731777988010675  macro-f1: 0.752714153240469 mcc: 0.6991764000644517
+Phase 1 evaluation for task 2:  (0.7473684210526316, 0.8488235759090433, 0.7473224728487886, 0.731777988010675, 0.752714153240469)
+Starting Phase 2 for Task 2: Focal Loss + Label Smoothing + EWC
+Epoch 1/50, Validation Loss: 1.1321922540664673 20/1000 [00:08<05:55,  2.76it/s]
+Epoch 2/50, Validation Loss: 1.0592626333236694 40/1000 [00:19<05:49,  2.75it/s]
+Epoch 3/50, Validation Loss: 1.1299227476119995 60/1000 [00:30<05:42,  2.74it/s]
+Epoch 4/50, Validation Loss: 1.2344810167948406 80/1000 [00:39<05:34,  2.75it/s]
+Epoch 5/50, Validation Loss: 1.1278390884399414100/1000 [00:48<05:27,  2.75it/s]
+Epoch 6/50, Validation Loss: 1.1262782017389934120/1000 [00:56<05:19,  2.75it/s]
+Epoch 7/50, Validation Loss: 1.181452751159668 140/1000 [01:05<05:12,  2.75it/s]
+Epoch 8/50, Validation Loss: 1.099683443705241 160/1000 [01:13<05:05,  2.75it/s]
+Epoch 9/50, Validation Loss: 1.0858299533526103180/1000 [01:22<04:58,  2.75it/s]
+Epoch 10/50, Validation Loss: 1.214625914891560800/1000 [01:30<04:50,  2.75it/s]
+Epoch 11/50, Validation Loss: 1.242747306823730520/1000 [01:39<04:43,  2.75it/s]
+Epoch 12/50, Validation Loss: 1.085220992565155240/1000 [01:47<04:36,  2.75it/s]
+Early stopping at epoch 12
+ 24%|█████████▌                              | 240/1000 [01:48<05:42,  2.22it/s]
+acc: 0.7263157894736842   precisionma: 0.8633405905335729  recallma: 0.7502186020607073 recallwei: 0.7263157894736842 weighted-f1: 0.7116995560259052  macro-f1: 0.7601670534661671 mcc: 0.6734345598934193
+Phase 2 evaluation for task 2:  (0.7263157894736842, 0.8633405905335729, 0.7502186020607073, 0.7116995560259052, 0.7601670534661671)
+Saved checkpoint: /home/admin/model/checkpoints/task_2_final.ckpt
+Testing Task 2 model on previous datasets after Phase 2
+----------------------Load the best model and test it-----------------------------
+acc: 0.5657894736842105   precisionma: 0.46557296991507524  recallma: 0.5983854442677972 recallwei: 0.5657894736842105 weighted-f1: 0.5368644083274027  macro-f1: 0.5086006889891462 mcc: 0.4930173356580429
+acc: 0.7992565055762082   precisionma: 0.6467795350110991  recallma: 0.6533427890212347 recallwei: 0.7992565055762082 weighted-f1: 0.8062400854505976  macro-f1: 0.6416754363445216 mcc: 0.7600704681380657
+acc: 0.7247706422018348   precisionma: 0.6401960656591975  recallma: 0.5776788562314878 recallwei: 0.7247706422018348 weighted-f1: 0.7344533662823755  macro-f1: 0.5835983785478409 mcc: 0.6448316047875174
+acc: 0.7106109324758842   precisionma: 0.5781641518159805  recallma: 0.4720252194645726 recallwei: 0.7106109324758842 weighted-f1: 0.6983297892588172  macro-f1: 0.48542877941872026 mcc: 0.6499247942218368
+acc: 0.7152777777777778   precisionma: 0.5801716076542136  recallma: 0.5368528911553188 recallwei: 0.7152777777777778 weighted-f1: 0.6927593856428268  macro-f1: 0.5437005868758742 mcc: 0.6626104998338644
+----------------------- Task 3 ---------------------------
+tokenizing: 4637it [00:12, 379.54it/s]
+tokenizing: 2550it [00:07, 360.56it/s]
+tokenizing: 279it [00:00, 388.00it/s]
+Starting Phase 1 for Task 3: Focal Loss + Label Smoothing
+Epoch 1/50, Validation Loss: 0.6897679169972738 20/1000 [00:07<06:23,  2.55it/s]
+Epoch 2/50, Validation Loss: 0.7359358072280884 40/1000 [00:18<06:16,  2.55it/s]
+Epoch 3/50, Validation Loss: 0.6758837501207987 60/1000 [00:26<06:08,  2.55it/s]
+Epoch 4/50, Validation Loss: 0.6580256621042887 80/1000 [00:38<06:00,  2.55it/s]
+Epoch 5/50, Validation Loss: 0.807426929473877 100/1000 [00:49<05:53,  2.55it/s]
+Epoch 6/50, Validation Loss: 0.8827318350474039120/1000 [00:58<05:44,  2.55it/s]
+Epoch 7/50, Validation Loss: 0.8540082176526388140/1000 [01:06<05:37,  2.55it/s]
+Epoch 8/50, Validation Loss: 0.708303431669871 160/1000 [01:14<05:29,  2.55it/s]
+Epoch 9/50, Validation Loss: 0.7923818826675415180/1000 [01:22<05:20,  2.56it/s]
+Epoch 10/50, Validation Loss: 0.780656933784484900/1000 [01:31<05:12,  2.56it/s]
+Epoch 11/50, Validation Loss: 0.778529663880666120/1000 [01:39<05:05,  2.56it/s]
+Epoch 12/50, Validation Loss: 0.738478124141693140/1000 [01:47<04:57,  2.56it/s]
+Epoch 13/50, Validation Loss: 0.743507305781046560/1000 [01:55<04:49,  2.56it/s]
+Epoch 14/50, Validation Loss: 0.844346761703491280/1000 [02:04<04:41,  2.56it/s]
+Early stopping at epoch 14
+ 28%|███████████▏                            | 280/1000 [02:04<05:19,  2.25it/s]
+acc: 0.8458781362007168   precisionma: 0.6308740090873317  recallma: 0.6855407134163003 recallwei: 0.8458781362007168 weighted-f1: 0.8473048543011592  macro-f1: 0.6353980132930476 mcc: 0.8201586662320673
+Phase 1 evaluation for task 3:  (0.8458781362007168, 0.6308740090873317, 0.6855407134163003, 0.8473048543011592, 0.6353980132930476)
+Starting Phase 2 for Task 3: Focal Loss + Label Smoothing + EWC
+Epoch 1/50, Validation Loss: 0.7954183022181193 20/1000 [00:08<06:45,  2.42it/s]
+Epoch 2/50, Validation Loss: 0.7907198667526245 40/1000 [00:19<06:38,  2.41it/s]
+Epoch 3/50, Validation Loss: 0.7163638273874918 60/1000 [00:31<06:30,  2.41it/s]
+Epoch 4/50, Validation Loss: 0.6974043250083923 80/1000 [00:43<06:22,  2.41it/s]
+Epoch 5/50, Validation Loss: 0.7390714685122172100/1000 [00:55<06:13,  2.41it/s]
+Epoch 6/50, Validation Loss: 0.8049222628275553120/1000 [01:03<06:04,  2.41it/s]
+Epoch 7/50, Validation Loss: 0.8220598697662354140/1000 [01:12<05:56,  2.41it/s]
+Epoch 8/50, Validation Loss: 0.7216565807660421160/1000 [01:21<05:48,  2.41it/s]
+Epoch 9/50, Validation Loss: 0.7017611463864645180/1000 [01:30<05:44,  2.38it/s]
+Epoch 10/50, Validation Loss: 0.887658596038818400/1000 [01:38<05:31,  2.41it/s]
+Epoch 11/50, Validation Loss: 0.787429114182790220/1000 [01:47<05:23,  2.41it/s]
+Epoch 12/50, Validation Loss: 0.901976803938547740/1000 [01:56<05:14,  2.41it/s]
+Epoch 13/50, Validation Loss: 0.816945890585581460/1000 [02:04<05:06,  2.42it/s]
+Epoch 14/50, Validation Loss: 0.765038212140401280/1000 [02:13<04:58,  2.41it/s]
+Early stopping at epoch 14
+ 28%|███████████▏                            | 280/1000 [02:13<05:44,  2.09it/s]
+acc: 0.8351254480286738   precisionma: 0.575559204589868  recallma: 0.6322999726755595 recallwei: 0.8351254480286738 weighted-f1: 0.8384613717523614  macro-f1: 0.5742698725924131 mcc: 0.808244574035791
+Phase 2 evaluation for task 3:  (0.8351254480286738, 0.575559204589868, 0.6322999726755595, 0.8384613717523614, 0.5742698725924131)
+Saved checkpoint: /home/admin/model/checkpoints/task_3_final.ckpt
+Testing Task 3 model on previous datasets after Phase 2
+----------------------Load the best model and test it-----------------------------
+acc: 0.5394736842105263   precisionma: 0.4505632243414199  recallma: 0.5454021248138895 recallwei: 0.5394736842105263 weighted-f1: 0.5107187585198818  macro-f1: 0.45794336366541283 mcc: 0.4496219918541215
+acc: 0.8215613382899628   precisionma: 0.7047577636620287  recallma: 0.6958185604503796 recallwei: 0.8215613382899628 weighted-f1: 0.8388172781638921  macro-f1: 0.6604991015257922 mcc: 0.7872531677669512
+acc: 0.8027522935779816   precisionma: 0.7077451693750505  recallma: 0.792107061913156 recallwei: 0.8027522935779816 weighted-f1: 0.8074476327396313  macro-f1: 0.7184079100035974 mcc: 0.747643439967146
+acc: 0.7395498392282959   precisionma: 0.6904715672526968  recallma: 0.5960384391988165 recallwei: 0.7395498392282959 weighted-f1: 0.7226861610426298  macro-f1: 0.6098151447721709 mcc: 0.6844681990323076
+acc: 0.6805555555555556   precisionma: 0.5251386534417388  recallma: 0.5112447531659136 recallwei: 0.6805555555555556 weighted-f1: 0.6570561207190175  macro-f1: 0.5033566095250134 mcc: 0.621070876732261
+----------------------- Task 4 ---------------------------
+tokenizing: 6987it [00:17, 389.96it/s]
+tokenizing: 2470it [00:06, 358.07it/s]
+tokenizing: 266it [00:00, 329.72it/s]
+Starting Phase 1 for Task 4: Focal Loss + Label Smoothing
+Epoch 1/50, Validation Loss: 0.7297924757003784 20/1000 [00:07<05:14,  3.11it/s]
+Epoch 2/50, Validation Loss: 0.7549430032571157 40/1000 [00:18<05:09,  3.11it/s]
+Epoch 3/50, Validation Loss: 0.7333611051241556 60/1000 [00:26<05:01,  3.12it/s]
+Epoch 4/50, Validation Loss: 0.8816340764363607 80/1000 [00:34<04:55,  3.12it/s]
+Epoch 5/50, Validation Loss: 0.6950842539469401100/1000 [00:42<04:49,  3.11it/s]
+Epoch 6/50, Validation Loss: 0.7247195939222971120/1000 [00:53<04:43,  3.10it/s]
+Epoch 7/50, Validation Loss: 1.327603280544281 140/1000 [01:01<04:36,  3.11it/s]
+Epoch 8/50, Validation Loss: 0.8355839451154073160/1000 [01:09<04:30,  3.11it/s]
+Epoch 9/50, Validation Loss: 0.8412266572316488180/1000 [01:17<04:23,  3.11it/s]
+Epoch 10/50, Validation Loss: 0.992437620957692500/1000 [01:25<04:17,  3.11it/s]
+Epoch 11/50, Validation Loss: 0.771847575902938820/1000 [01:33<04:10,  3.11it/s]
+Epoch 12/50, Validation Loss: 0.998348255952199340/1000 [01:41<04:03,  3.12it/s]
+Epoch 13/50, Validation Loss: 0.987977524598439660/1000 [01:49<03:57,  3.11it/s]
+Epoch 14/50, Validation Loss: 1.064772049585978380/1000 [01:57<03:51,  3.11it/s]
+Epoch 15/50, Validation Loss: 0.747452080249786400/1000 [02:05<03:44,  3.11it/s]
+Early stopping at epoch 15
+ 30%|████████████                            | 300/1000 [02:05<04:53,  2.39it/s]
+acc: 0.8533834586466166   precisionma: 0.6642857142857143  recallma: 0.6459482038429407 recallwei: 0.8533834586466166 weighted-f1: 0.8614003157434102  macro-f1: 0.6389561756597767 mcc: 0.8250187702862833
+Phase 1 evaluation for task 4:  (0.8533834586466166, 0.6642857142857143, 0.6459482038429407, 0.8614003157434102, 0.6389561756597767)
+Starting Phase 2 for Task 4: Focal Loss + Label Smoothing + EWC
+Epoch 1/50, Validation Loss: 0.82749871412913 | 20/1000 [00:08<05:37,  2.91it/s]
+Epoch 2/50, Validation Loss: 1.075439949830373| 40/1000 [00:18<05:31,  2.90it/s]
+Epoch 3/50, Validation Loss: 1.0441216429074605 60/1000 [00:27<05:23,  2.90it/s]
+Epoch 4/50, Validation Loss: 0.8872568408648173 80/1000 [00:35<05:17,  2.90it/s]
+Epoch 5/50, Validation Loss: 1.0248473485310872100/1000 [00:44<05:10,  2.90it/s]
+Epoch 6/50, Validation Loss: 0.9158465464909872120/1000 [00:52<05:03,  2.90it/s]
+Epoch 7/50, Validation Loss: 1.0038682421048482140/1000 [01:01<04:56,  2.90it/s]
+Epoch 8/50, Validation Loss: 0.7260485192139944160/1000 [01:09<04:49,  2.90it/s]
+Epoch 9/50, Validation Loss: 0.9527374505996704180/1000 [01:21<04:43,  2.89it/s]
+Epoch 10/50, Validation Loss: 0.703533460696538300/1000 [01:30<04:35,  2.90it/s]
+Epoch 11/50, Validation Loss: 0.862659255663553820/1000 [01:41<04:29,  2.89it/s]
+Epoch 12/50, Validation Loss: 0.993552962938944540/1000 [01:50<04:22,  2.90it/s]
+Epoch 13/50, Validation Loss: 0.771866977214813260/1000 [01:58<04:14,  2.90it/s]
+Epoch 14/50, Validation Loss: 0.743049373229344780/1000 [02:07<04:07,  2.91it/s]
+Epoch 15/50, Validation Loss: 0.722501109043757100/1000 [02:15<04:01,  2.90it/s]
+Epoch 16/50, Validation Loss: 0.805246333281199120/1000 [02:24<03:54,  2.91it/s]
+Epoch 17/50, Validation Loss: 0.841991504033406640/1000 [02:32<03:47,  2.90it/s]
+Epoch 18/50, Validation Loss: 1.012380838394165360/1000 [02:41<03:40,  2.90it/s]
+Epoch 19/50, Validation Loss: 0.941740830739339280/1000 [02:49<03:33,  2.90it/s]
+Epoch 20/50, Validation Loss: 1.170153816541036400/1000 [02:58<03:26,  2.90it/s]
+Early stopping at epoch 20
+ 40%|████████████████                        | 400/1000 [02:58<04:27,  2.24it/s]
+acc: 0.8609022556390977   precisionma: 0.6924017417107079  recallma: 0.683068783068783 recallwei: 0.8609022556390977 weighted-f1: 0.8588082435693791  macro-f1: 0.6706663262285621 mcc: 0.8333954452944086
+Phase 2 evaluation for task 4:  (0.8609022556390977, 0.6924017417107079, 0.683068783068783, 0.8588082435693791, 0.6706663262285621)
+Saved checkpoint: /home/admin/model/checkpoints/task_4_final.ckpt
+Testing Task 4 model on previous datasets after Phase 2
+----------------------Load the best model and test it-----------------------------
+acc: 0.5219298245614035   precisionma: 0.45932270344035053  recallma: 0.5108209049385519 recallwei: 0.5219298245614035 weighted-f1: 0.49915563047463274  macro-f1: 0.4497521020987011 mcc: 0.4284174308515759
+acc: 0.862453531598513   precisionma: 0.6584044877240318  recallma: 0.6920520406962171 recallwei: 0.862453531598513 weighted-f1: 0.8515532428349625  macro-f1: 0.6381984605783233 mcc: 0.8347030637524484
+acc: 0.7844036697247706   precisionma: 0.7924303365479836  recallma: 0.8615946431735906 recallwei: 0.7844036697247706 weighted-f1: 0.7889613706264569  macro-f1: 0.8144536335443818 mcc: 0.7358703901798981
+acc: 0.7877813504823151   precisionma: 0.7404100529100529  recallma: 0.6672735894434008 recallwei: 0.7877813504823151 weighted-f1: 0.7901380922801161  macro-f1: 0.6674410584436042 mcc: 0.7464362475368701
+acc: 0.6944444444444444   precisionma: 0.6601697530864197  recallma: 0.6009895705908597 recallwei: 0.6944444444444444 weighted-f1: 0.6595616700924737  macro-f1: 0.5884077022879644 mcc: 0.6401243294353469
+----------------------- Task 5 ---------------------------
+tokenizing: 9257it [00:23, 386.33it/s]
+tokenizing: 2451it [00:06, 375.73it/s]
+tokenizing: 308it [00:00, 385.96it/s]
+Starting Phase 1 for Task 5: Focal Loss + Label Smoothing
+Epoch 1/50, Validation Loss: 1.3678593238194783 19/1000 [00:07<06:32,  2.50it/s]
+Epoch 2/50, Validation Loss: 1.3274048964182537 39/1000 [00:18<06:25,  2.49it/s]
+Epoch 3/50, Validation Loss: 1.3896638949712117 59/1000 [00:29<06:18,  2.49it/s]
+Epoch 4/50, Validation Loss: 1.32753586769104 | 79/1000 [00:37<06:08,  2.50it/s]
+Epoch 5/50, Validation Loss: 1.507143457730611| 99/1000 [00:45<06:00,  2.50it/s]
+Epoch 6/50, Validation Loss: 1.4392019510269165119/1000 [00:53<05:52,  2.50it/s]
+Epoch 7/50, Validation Loss: 1.4468036890029907139/1000 [01:01<05:44,  2.50it/s]
+Epoch 8/50, Validation Loss: 1.4184370040893555159/1000 [01:09<05:36,  2.50it/s]
+Epoch 9/50, Validation Loss: 1.5094978014628093179/1000 [01:17<05:28,  2.50it/s]
+Epoch 10/50, Validation Loss: 1.517411351203918599/1000 [01:25<05:21,  2.49it/s]
+Epoch 11/50, Validation Loss: 1.348604440689087219/1000 [01:33<05:12,  2.50it/s]
+Epoch 12/50, Validation Loss: 1.420194904009501239/1000 [01:41<05:04,  2.50it/s]
+Early stopping at epoch 12
+ 24%|█████████▌                              | 240/1000 [01:41<05:21,  2.37it/s]
+acc: 0.6818181818181818   precisionma: 0.5370258709544424  recallma: 0.5305840850029713 recallwei: 0.6818181818181818 weighted-f1: 0.6819343802479915  macro-f1: 0.5000619431410924 mcc: 0.6074995530108638
+Phase 1 evaluation for task 5:  (0.6818181818181818, 0.5370258709544424, 0.5305840850029713, 0.6819343802479915, 0.5000619431410924)
+Starting Phase 2 for Task 5: Focal Loss + Label Smoothing + EWC
+Epoch 1/50, Validation Loss: 1.2865649064381917 20/1000 [00:08<05:22,  3.04it/s]
+Epoch 2/50, Validation Loss: 1.2395201524098713 40/1000 [00:18<05:16,  3.03it/s]
+Epoch 3/50, Validation Loss: 1.2681982119878132 60/1000 [00:30<05:10,  3.03it/s]
+Epoch 4/50, Validation Loss: 1.3098676999409993 80/1000 [00:39<05:02,  3.04it/s]
+Epoch 5/50, Validation Loss: 1.4089059829711914100/1000 [00:47<04:56,  3.04it/s]
+Epoch 6/50, Validation Loss: 1.4247998396555583120/1000 [00:56<04:49,  3.04it/s]
+Epoch 7/50, Validation Loss: 1.4595705270767212140/1000 [01:04<04:43,  3.04it/s]
+Epoch 8/50, Validation Loss: 1.3152448733647664160/1000 [01:12<04:36,  3.04it/s]
+Epoch 9/50, Validation Loss: 1.3575573762257893180/1000 [01:21<04:30,  3.04it/s]
+Epoch 10/50, Validation Loss: 1.345970312754313200/1000 [01:29<04:23,  3.04it/s]
+Epoch 11/50, Validation Loss: 1.383755127588908220/1000 [01:38<04:16,  3.04it/s]
+Epoch 12/50, Validation Loss: 1.355195244153340640/1000 [01:46<04:11,  3.03it/s]
+Early stopping at epoch 12
+ 24%|█████████▌                              | 240/1000 [01:47<05:39,  2.24it/s]
+acc: 0.7012987012987013   precisionma: 0.5501018519829861  recallma: 0.5522016209062214 recallwei: 0.7012987012987013 weighted-f1: 0.7026192880037072  macro-f1: 0.5221184700707842 mcc: 0.6326142465454273
+Phase 2 evaluation for task 5:  (0.7012987012987013, 0.5501018519829861, 0.5522016209062214, 0.7026192880037072, 0.5221184700707842)
+Saved checkpoint: /home/admin/model/checkpoints/task_5_final.ckpt
+Testing Task 5 model on previous datasets after Phase 2
+----------------------Load the best model and test it-----------------------------
+acc: 0.5921052631578947   precisionma: 0.5763977384171892  recallma: 0.5960753400459283 recallwei: 0.5921052631578947 weighted-f1: 0.5887710723575038  macro-f1: 0.5497797629691134 mcc: 0.510290416314196
+acc: 0.8104089219330854   precisionma: 0.565661485851578  recallma: 0.590368246473361 recallwei: 0.8104089219330854 weighted-f1: 0.8136216711358132  macro-f1: 0.5571401560773301 mcc: 0.7710789248009211
+acc: 0.7614678899082569   precisionma: 0.7665725886314121  recallma: 0.8382167540062277 recallwei: 0.7614678899082569 weighted-f1: 0.7633280679905912  macro-f1: 0.7812053452519984 mcc: 0.7022805364850584
+acc: 0.7427652733118971   precisionma: 0.7189161025783833  recallma: 0.6211977517008963 recallwei: 0.7427652733118971 weighted-f1: 0.7411144475689585  macro-f1: 0.617008533430102 mcc: 0.6894443780444208
+acc: 0.8298611111111112   precisionma: 0.7157503974991242  recallma: 0.6552602152863175 recallwei: 0.8298611111111112 weighted-f1: 0.8168775687049753  macro-f1: 0.6628379006555051 mcc: 0.7998669166519732
+
+================================================================================
+TRAINING COMPLETED - CHECKPOINT SUMMARY
+================================================================================
+Available checkpoints:
+  - task_1_final.ckpt
+  - task_2_final.ckpt
+  - task_3_final.ckpt
+  - task_4_final.ckpt
+  - task_5_final.ckpt
+
+Checkpoint naming convention:
+  - task_X_phase1_best.ckpt: Best model from Phase 1 of Task X
+  - task_X_phase2_best.ckpt: Best model from Phase 2 of Task X
+  - task_X_final.ckpt: Final model after completing Task X
+
+To load a specific checkpoint for evaluation:
+  load_task_checkpoint(prompt_model, task_id=X, phase='final')
+  # or phase='phase1_best' or 'phase2_best'
+==========================================================================
