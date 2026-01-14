@@ -217,15 +217,23 @@ def read_prompt_examples(filename):
     return examples
 
 
-def read_and_merge_previous_datasets(current_index, data_paths):
+def read_and_merge_previous_datasets(current_index, data_paths, return_task_info=False):
     merged_data = pd.DataFrame()
     examples = []
+    task_origins = []  # Track which task each sample comes from
+    
     for i in range(current_index - 1):
         data = pd.read_csv(data_paths[i]).astype(str)
+        task_id = i + 1  # Task IDs start from 1
+        # Add task_id column to track origin
+        data['task_origin'] = task_id
         merged_data = pd.concat([merged_data, data], ignore_index=True)
+    
     desc = merged_data['description'].tolist()
     code = merged_data['abstract_func_before'].tolist()
     type = merged_data['cwe_ids'].tolist()
+    task_origin_list = merged_data['task_origin'].tolist()
+    
     for idx in range(len(merged_data)):
         # Convert CWE IDs to class index for classification
         cwe_list = ast.literal_eval(type[idx])
@@ -243,6 +251,10 @@ def read_and_merge_previous_datasets(current_index, data_paths):
                 tgt_text=class_idx,  # Use integer label instead of string
             )
         )
+        task_origins.append(int(task_origin_list[idx]))
+    
+    if return_task_info:
+        return examples, task_origins
     return examples
 
 
@@ -631,8 +643,10 @@ for i in range(1, args.num_tasks + 1):
         )
     else:
         # Create dataloader with merged previous datasets
+        prev_examples, prev_task_origins = read_and_merge_previous_datasets(i, data_paths, return_task_info=True)
+        
         train_dataloader1 = PromptDataLoader(
-            dataset=read_and_merge_previous_datasets(i, data_paths),
+            dataset=prev_examples,
             template=mytemplate,
             tokenizer=tokenizer,
             tokenizer_wrapper_class=WrapperClass,
@@ -646,9 +660,36 @@ for i in range(1, args.num_tasks + 1):
         )
 
         indices_to_replay, _ = select_uncertain_samples_mahalanobis(prompt_model, train_dataloader1, num_samples=200)
-        examples = read_prompt_examples(data_paths[i - 1])
+        
+        # Track replay statistics
+        replay_task_counts = Counter()
         for idx in indices_to_replay:
-            examples.append(read_and_merge_previous_datasets(i, data_paths)[idx])
+            task_origin = prev_task_origins[idx]
+            replay_task_counts[task_origin] += 1
+        
+        # Log replay statistics
+        print(f"\n{'='*80}")
+        print(f"REPLAY BUFFER STATISTICS FOR TASK {i}")
+        print(f"{'='*80}")
+        print(f"Total replay samples: {len(indices_to_replay)}")
+        print(f"Replay samples by task origin:")
+        for task_id in sorted(replay_task_counts.keys()):
+            count = replay_task_counts[task_id]
+            percentage = (count / len(indices_to_replay)) * 100
+            print(f"  Task {task_id}: {count} samples ({percentage:.2f}%)")
+        print(f"{'='*80}\n")
+        
+        # Build training dataset with current task + replay samples
+        examples = read_prompt_examples(data_paths[i - 1])
+        current_task_count = len(examples)
+        
+        for idx in indices_to_replay:
+            examples.append(prev_examples[idx])
+        
+        print(f"Training dataset composition for Task {i}:")
+        print(f"  Current task (Task {i}): {current_task_count} samples")
+        print(f"  Replay buffer: {len(indices_to_replay)} samples")
+        print(f"  Total: {len(examples)} samples\n")
 
         train_dataloader = PromptDataLoader(
             dataset=examples,
