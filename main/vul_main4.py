@@ -27,6 +27,10 @@ from transformers import (AdamW, RobertaTokenizer, T5Config,
                           T5ForConditionalGeneration,
                           get_linear_schedule_with_warmup)
 
+# ===== IMPORT CÁC MODULE REPLAY NÂNG CAO =====
+from replay_integration import upgrade_existing_replay_function, log_replay_improvements
+from replay_config import create_config
+
 ModelClass = namedtuple("ModelClass", ('config', 'tokenizer', 'model','wrapper'))
 
 def load_plm(model_name, model_path):
@@ -66,7 +70,7 @@ def load_plm(model_name, model_path):
 warnings.filterwarnings("ignore")
 
 # Parse command-line arguments
-parser = argparse.ArgumentParser(description="Train VulTypeIL model with configurable parameters")
+parser = argparse.ArgumentParser(description="Train VulTypeIL model with Enhanced Scalable Replay")
 parser.add_argument('--data_dir', type=str, default='incremental_tasks', help='Directory containing the data files')
 parser.add_argument('--checkpoint_dir', type=str, default='model', help='Directory to save/load checkpoints')
 parser.add_argument('--results_dir', type=str, default='results', help='Directory to save results')
@@ -84,6 +88,19 @@ parser.add_argument('--seed', type=int, default=42, help='Random seed')
 parser.add_argument('--patience', type=int, default=5, help='patience')
 parser.add_argument('--replay_ratio', type=float, default=0.2, help='Replay buffer ratio of total previous dataset (default=0.2 = 20%)')
 parser.add_argument('--min_samples_per_class', type=int, default=2, help='Minimum samples per class in replay buffer')
+
+# ===== THAM SỐ MỚI CHO SCALABLE REPLAY =====
+parser.add_argument('--replay_config_type', type=str, default='balanced', 
+                   choices=['balanced', 'memory_efficient', 'quality_focused', 'fast'],
+                   help='Loại cấu hình replay: balanced, memory_efficient, quality_focused, fast')
+parser.add_argument('--similarity_threshold', type=float, default=0.85, 
+                   help='Ngưỡng tương tự để lọc dư thừa ngữ nghĩa (0.0-1.0)')
+parser.add_argument('--max_code_lines', type=int, default=10, 
+                   help='Số dòng code tối đa để giữ lại sau tóm tắt')
+parser.add_argument('--n_clusters', type=int, default=10, 
+                   help='Số clusters cho ưu tiên replay')
+parser.add_argument('--enable_gradient_importance', action='store_true', 
+                   help='Bật gradient-based sample importance')
 
 args = parser.parse_args()
 
@@ -113,86 +130,6 @@ classes = [
 data_paths = [os.path.join(args.data_dir, f"task{i}_train.csv") for i in range(1, args.num_tasks + 1)]
 test_paths = [os.path.join(args.data_dir, f"task{i}_test.csv") for i in range(1, args.num_tasks + 1)]
 valid_paths = [os.path.join(args.data_dir, f"task{i}_valid.csv") for i in range(1, args.num_tasks + 1)]
-
-
-def mahalanobis_distance(features, mean, cov_inv):
-    """Compute the Mahalanobis distance for a given feature set to the mean with covariance."""
-    return [distance.mahalanobis(f, mean, cov_inv) for f in features]
-
-
-def compute_mahalanobis(prompt_model, dataloader):
-    """Compute Mahalanobis distance for all samples in dataloader."""
-    prompt_model.eval()
-    all_features = []
-    all_cwe_ids = []
-
-    with torch.no_grad():
-        for inputs in dataloader:
-            cwe_ids = inputs['tgt_text']
-            # Convert tensor to list if needed
-            if torch.is_tensor(cwe_ids):
-                all_cwe_ids.extend(cwe_ids.cpu().tolist())
-            else:
-                all_cwe_ids.extend(cwe_ids)
-            if use_cuda:
-                inputs = inputs.cuda()
-            logits = prompt_model(inputs)
-            all_features.append(logits.cpu().numpy())
-
-    all_features = np.concatenate(all_features, axis=0)
-    mean_features = np.mean(all_features, axis=0)
-    cov_matrix = np.cov(all_features, rowvar=False)
-    cov_inv = np.linalg.inv(cov_matrix + np.eye(cov_matrix.shape[0]) * 1e-6)  # Stability
-    mahalanobis_distances = mahalanobis_distance(all_features, mean_features, cov_inv)
-
-    return mahalanobis_distances, all_features, all_cwe_ids
-
-
-def select_uncertain_samples_mahalanobis(prompt_model, dataloader, num_samples=200):
-    """Select high-uncertainty samples based on Mahalanobis distance with tail and head data."""
-    mahalanobis_distances, all_features, all_cwe_ids = compute_mahalanobis(prompt_model, dataloader)
-
-    half_sams = num_samples / 2
-
-    cwe_counts = Counter(all_cwe_ids)
-    total_samples = len(all_cwe_ids)
-    tail_cwe_ids = {cwe_id for cwe_id, count in cwe_counts.items() if count < 0.05 * total_samples}
-    taildata = []
-    headdata = []
-    tail_distances = []
-    head_distances = []
-    for i, (feature, cwe_id, distance) in enumerate(zip(all_features, all_cwe_ids, mahalanobis_distances)):
-        if cwe_id in tail_cwe_ids:
-            taildata.append(feature)
-            tail_distances.append(distance)
-        else:
-            headdata.append(feature)
-            head_distances.append(distance)
-    taildata = np.array(taildata)
-    headdata = np.array(headdata)
-    tail_distances = np.array(tail_distances)
-    head_distances = np.array(head_distances)
-    if len(taildata) >= half_sams:
-        tail_indices = np.argsort(tail_distances)[-half_sams:]
-        head_indices = np.argsort(head_distances)[-half_sams:]
-    else:
-        tail_indices = np.argsort(tail_distances)[-len(taildata):]
-        head_indices = np.argsort(head_distances)[-(num_samples - len(taildata)):]
-    selected_indices = np.concatenate((tail_indices, head_indices))
-
-    tail_selected = taildata[tail_indices]
-    head_selected = headdata[head_indices]
-
-    if tail_selected.ndim == 1:
-        tail_selected = np.expand_dims(tail_selected, axis=1)
-    if head_selected.ndim == 1:
-        head_selected = np.expand_dims(head_selected, axis=1)
-
-    if tail_selected.shape[1] != head_selected.shape[1]:
-        head_selected = np.tile(head_selected, (1, tail_selected.shape[1]))
-
-    selected_features = np.concatenate((tail_selected, head_selected), axis=0)
-    return selected_indices, selected_features
 
 
 # Define function to read examples
@@ -609,7 +546,44 @@ optimizer_grouped_parameters2 = [
     {'params': [p for n, p in prompt_model.template.named_parameters() if "raw_embedding" not in n]}
 ]
 optimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)
-optimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)
+optimizer2 = AdamW(optimizer_grouped_parameters2, lr=lr)
+
+# ===== KHỞI TẠO ENHANCED REPLAY SELECTOR =====
+print(f"\n🚀 KHỞI TẠO SCALABLE REPLAY SYSTEM")
+print(f"{'='*70}")
+print(f"Loại cấu hình: {args.replay_config_type}")
+print(f"Ngưỡng tương tự: {args.similarity_threshold}")
+print(f"Số dòng code tối đa: {args.max_code_lines}")
+print(f"Số clusters: {args.n_clusters}")
+print(f"Gradient importance: {args.enable_gradient_importance}")
+print(f"{'='*70}\n")
+
+# Tạo enhanced replay selector với cấu hình tùy chỉnh
+if args.replay_config_type != 'balanced':
+    # Sử dụng cấu hình định sẵn
+    config = create_config(args.replay_config_type)
+    from replay_integration import EnhancedReplaySelector
+    enhanced_selector = EnhancedReplaySelector(
+        similarity_threshold=config.semantic_filter.similarity_threshold,
+        max_code_lines=config.code_summarizer.max_code_lines,
+        n_clusters=config.clustering.n_clusters,
+        memory_dir=config.long_term_memory.memory_dir,
+        use_gradient_importance=config.gradient_importance.enabled
+    )
+else:
+    # Sử dụng tham số từ command line
+    from replay_integration import EnhancedReplaySelector
+    enhanced_selector = EnhancedReplaySelector(
+        similarity_threshold=args.similarity_threshold,
+        max_code_lines=args.max_code_lines,
+        n_clusters=args.n_clusters,
+        memory_dir="long_term_memory_v4",
+        use_gradient_importance=args.enable_gradient_importance
+    )
+
+# Bật gradient importance nếu được yêu cầu
+if args.enable_gradient_importance:
+    enhanced_selector.enable_gradient_importance(prompt_model, loss_func_no_ewc)
 
 # Load test dataloaders for all tasks
 test_dataloaders = []
@@ -623,11 +597,13 @@ for j in range(args.num_tasks):
         decoder_max_length=3)
     test_dataloaders.append(test_dataloader)
 
-# Training process with EWC and Meta-Learning
+# Training process with EWC and Enhanced Replay
 global_step = 0
 prev_dev_loss = float('inf')
 best_dev_loss = float('inf')
 
+print(f"\n🎯 BẮT ĐẦU TRAINING VỚI ENHANCED SCALABLE REPLAY")
+print(f"{'='*70}")
 
 # Main loop for each dataset
 for i in range(1, args.num_tasks + 1):
@@ -655,14 +631,14 @@ for i in range(1, args.num_tasks + 1):
         replay_budget = int(total_prev_samples * args.replay_ratio)
         
         print(f"\n{'='*80}")
-        print(f"REPLAY BUFFER CONFIGURATION FOR TASK {i}")
+        print(f"CẤU HÌNH REPLAY BUFFER CHO TASK {i}")
         print(f"{'='*80}")
-        print(f"Total previous samples: {total_prev_samples}")
-        print(f"Replay ratio: {args.replay_ratio} ({args.replay_ratio*100}%)")
-        print(f"Replay budget: {replay_budget} samples")
+        print(f"Tổng số mẫu trước đó: {total_prev_samples}")
+        print(f"Tỷ lệ replay: {args.replay_ratio} ({args.replay_ratio*100}%)")
+        print(f"Ngân sách replay: {replay_budget} mẫu")
         print(f"{'='*80}\n")
         
-        # Create dataloader for Mahalanobis computation
+        # Create dataloader for enhanced replay computation
         train_dataloader_prev = PromptDataLoader(
             dataset=prev_examples,
             template=mytemplate,
@@ -676,25 +652,61 @@ for i in range(1, args.num_tasks + 1):
             truncate_method="head",
             decoder_max_length=3
         )
-
-        indices_to_replay, _ = select_uncertain_samples_mahalanobis(prompt_model, train_dataloader1, num_samples=replay_budget)
+        
+        # ===== SỬ DỤNG ENHANCED REPLAY SELECTION =====
+        # Lấy examples task hiện tại để phân tích vulnerability
+        current_examples = read_prompt_examples(data_paths[i - 1])
+        
+        # Chọn lựa nâng cao với tất cả cải tiến
+        indices_to_replay, selection_info = enhanced_selector.select_enhanced_replay_samples(
+            prompt_model=prompt_model,
+            dataloader=train_dataloader_prev,
+            examples=prev_examples,
+            num_samples=replay_budget,
+            task_id=i,
+            min_samples_per_class=args.min_samples_per_class,
+            current_task_examples=current_examples
+        )
+        
+        # Ghi log cải tiến để phân tích
+        log_replay_improvements(selection_info, i)
+        
+        # Lấy ngữ cảnh lịch sử để prompting nâng cao (tùy chọn)
+        historical_context = enhanced_selector.get_historical_context(i)
+        if historical_context:
+            print(f"📚 NGỮ CẢNH LỊCH SỬ CHO TASK {i}:")
+            print(f"{'='*50}")
+            print(historical_context)
+            print(f"{'='*50}\n")
         
         # Track replay statistics
         replay_task_counts = Counter()
+        replay_class_counts = Counter()
+        
         for idx in indices_to_replay:
             task_origin = prev_task_origins[idx]
             replay_task_counts[task_origin] += 1
+            class_label = prev_examples[idx].tgt_text
+            replay_class_counts[class_label] += 1
         
         # Log replay statistics
-        print(f"\n{'='*80}")
-        print(f"REPLAY BUFFER STATISTICS FOR TASK {i}")
         print(f"{'='*80}")
-        print(f"Total replay samples: {len(indices_to_replay)}")
-        print(f"Replay samples by task origin:")
+        print(f"THỐNG KÊ REPLAY BUFFER CHO TASK {i}")
+        print(f"{'='*80}")
+        print(f"Tổng số mẫu replay được chọn: {len(indices_to_replay)}")
+        
+        print(f"\nMẫu replay theo task gốc:")
         for task_id in sorted(replay_task_counts.keys()):
             count = replay_task_counts[task_id]
-            percentage = (count / len(indices_to_replay)) * 100
-            print(f"  Task {task_id}: {count} samples ({percentage:.2f}%)")
+            percentage = (count / len(indices_to_replay)) * 100 if len(indices_to_replay) > 0 else 0
+            print(f"  Task {task_id}: {count} mẫu ({percentage:.2f}%)")
+        
+        print(f"\nMẫu replay theo class (top 10):")
+        for class_label, count in replay_class_counts.most_common(10):
+            percentage = (count / len(indices_to_replay)) * 100 if len(indices_to_replay) > 0 else 0
+            class_name = classes[class_label] if isinstance(class_label, int) and class_label < len(classes) else str(class_label)
+            print(f"  {class_name}: {count} mẫu ({percentage:.2f}%)")
+        
         print(f"{'='*80}\n")
         
         # Build training dataset with current task + replay samples
@@ -704,10 +716,10 @@ for i in range(1, args.num_tasks + 1):
         for idx in indices_to_replay:
             examples.append(prev_examples[idx])
         
-        print(f"Training dataset composition for Task {i}:")
-        print(f"  Current task (Task {i}): {current_task_count} samples")
-        print(f"  Replay buffer: {len(indices_to_replay)} samples")
-        print(f"  Total: {len(examples)} samples\n")
+        print(f"Thành phần dataset training cho Task {i}:")
+        print(f"  Task hiện tại (Task {i}): {current_task_count} mẫu")
+        print(f"  Replay buffer: {len(indices_to_replay)} mẫu")
+        print(f"  Tổng cộng: {len(examples)} mẫu\n")
 
         train_dataloader = PromptDataLoader(
             dataset=examples,
@@ -746,7 +758,7 @@ for i in range(1, args.num_tasks + 1):
             torch.load(os.path.join(args.checkpoint_dir, 'best', 'best.ckpt'),
                        map_location=torch.device('cuda:0')))
 
-    print(f"Starting Phase 1 for Task {i}: Focal Loss + Label Smoothing")
+    print(f"Bắt đầu Phase 1 cho Task {i}: Focal Loss + Label Smoothing")
     train_phase_one(
         prompt_model,
         train_dataloader,
@@ -762,12 +774,12 @@ for i in range(1, args.num_tasks + 1):
     )
 
     eval_results_phase1 = test(prompt_model, validation_dataloader, f'task_{i}_val_phase1')
-    print(f"Phase 1 evaluation for task {i}: ", eval_results_phase1)
+    print(f"Đánh giá Phase 1 cho task {i}: ", eval_results_phase1)
 
     prompt_model.load_state_dict(
         torch.load(os.path.join(args.checkpoint_dir, 'best', 'best.ckpt'),
                    map_location=torch.device('cuda:0')))
-    print(f"Starting Phase 2 for Task {i}: Focal Loss + Label Smoothing + EWC")
+    print(f"Bắt đầu Phase 2 cho Task {i}: Focal Loss + Label Smoothing + EWC")
     train_phase_two(
         prompt_model,
         train_dataloader,
@@ -784,17 +796,17 @@ for i in range(1, args.num_tasks + 1):
 
 
     eval_results_phase2 = test(prompt_model, validation_dataloader, f'task_{i}_val_phase2')
-    print(f"Phase 2 evaluation for task {i}: ", eval_results_phase2)
+    print(f"Đánh giá Phase 2 cho task {i}: ", eval_results_phase2)
     
     # Save final checkpoint for this task
     save_task_checkpoint(prompt_model, i, "final")
     
     # Update Fisher Information for EWC after each task
     loss_func_with_ewc.update_fisher(prompt_model, train_dataloader)
-    print(f"Testing Task {i} model on previous datasets after Phase 2")
+    print(f"Kiểm tra Task {i} model trên các datasets trước đó sau Phase 2")
     # Load the best model and test it on all tasks
 
-    print("----------------------Load the best model and test it-----------------------------")
+    print("----------------------Tải model tốt nhất và kiểm tra-----------------------------")
     prompt_model.load_state_dict(
         torch.load(os.path.join(args.checkpoint_dir, "best", "best.ckpt"),
                    map_location=torch.device('cuda:0')))
@@ -803,14 +815,19 @@ for i in range(1, args.num_tasks + 1):
 
 # Display all available checkpoints at the end
 print("\n" + "="*80)
-print("TRAINING COMPLETED - CHECKPOINT SUMMARY")
+print("HOÀN THÀNH TRAINING - TÓM TẮT CHECKPOINT")
 print("="*80)
 list_available_checkpoints()
-print("\nCheckpoint naming convention:")
-print("  - task_X_phase1_best.ckpt: Best model from Phase 1 of Task X")
-print("  - task_X_phase2_best.ckpt: Best model from Phase 2 of Task X") 
-print("  - task_X_final.ckpt: Final model after completing Task X")
-print("\nTo load a specific checkpoint for evaluation:")
+print("\nQuy ước đặt tên checkpoint:")
+print("  - task_X_phase1_best.ckpt: Model tốt nhất từ Phase 1 của Task X")
+print("  - task_X_phase2_best.ckpt: Model tốt nhất từ Phase 2 của Task X") 
+print("  - task_X_final.ckpt: Model cuối cùng sau khi hoàn thành Task X")
+print("\nĐể tải checkpoint cụ thể để đánh giá:")
 print("  load_task_checkpoint(prompt_model, task_id=X, phase='final')")
-print("  # or phase='phase1_best' or 'phase2_best'")
+print("  # hoặc phase='phase1_best' hoặc 'phase2_best'")
 print("="*80)
+
+print(f"\n🎉 HOÀN THÀNH TRAINING VỚI ENHANCED SCALABLE REPLAY!")
+print(f"📊 Kiểm tra file 'replay_improvements.log' để xem thống kê cải tiến")
+print(f"📁 Kiểm tra thư mục 'long_term_memory_v4/' để xem bộ nhớ dài hạn")
+print(f"{'='*70}")

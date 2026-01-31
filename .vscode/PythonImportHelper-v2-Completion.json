@@ -408,7 +408,47 @@
         "documentation": {}
     },
     {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "namedtuple",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "namedtuple",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
         "importPath": "collections",
         "description": "collections",
         "isExtraImport": true,
@@ -489,6 +529,30 @@
     },
     {
         "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
         "importPath": "collections",
         "description": "collections",
         "isExtraImport": true,
@@ -1461,6 +1525,86 @@
         "documentation": {}
     },
     {
+        "label": "RobertaTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "T5Config",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "T5ForConditionalGeneration",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "get_linear_schedule_with_warmup",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AdamW",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "RobertaTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "T5Config",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "T5ForConditionalGeneration",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "get_linear_schedule_with_warmup",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AdamW",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
         "label": "RobertaModel",
         "importPath": "transformers",
         "description": "transformers",
@@ -2682,6 +2826,54 @@
         "description": "openprompt",
         "isExtraImport": true,
         "detail": "openprompt",
+        "documentation": {}
+    },
+    {
+        "label": "PromptDataLoader",
+        "importPath": "openprompt",
+        "description": "openprompt",
+        "isExtraImport": true,
+        "detail": "openprompt",
+        "documentation": {}
+    },
+    {
+        "label": "PromptForClassification",
+        "importPath": "openprompt",
+        "description": "openprompt",
+        "isExtraImport": true,
+        "detail": "openprompt",
+        "documentation": {}
+    },
+    {
+        "label": "PromptDataLoader",
+        "importPath": "openprompt",
+        "description": "openprompt",
+        "isExtraImport": true,
+        "detail": "openprompt",
+        "documentation": {}
+    },
+    {
+        "label": "PromptForClassification",
+        "importPath": "openprompt",
+        "description": "openprompt",
+        "isExtraImport": true,
+        "detail": "openprompt",
+        "documentation": {}
+    },
+    {
+        "label": "InputExample",
+        "importPath": "openprompt.data_utils",
+        "description": "openprompt.data_utils",
+        "isExtraImport": true,
+        "detail": "openprompt.data_utils",
+        "documentation": {}
+    },
+    {
+        "label": "InputExample",
+        "importPath": "openprompt.data_utils",
+        "description": "openprompt.data_utils",
+        "isExtraImport": true,
+        "detail": "openprompt.data_utils",
         "documentation": {}
     },
     {
@@ -3797,6 +3989,70 @@
         "documentation": {}
     },
     {
+        "label": "ManualTemplate",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "ManualVerbalizer",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "MixedTemplate",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "ManualTemplate",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "ManualVerbalizer",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "MixedTemplate",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "distance",
+        "importPath": "scipy.spatial",
+        "description": "scipy.spatial",
+        "isExtraImport": true,
+        "detail": "scipy.spatial",
+        "documentation": {}
+    },
+    {
+        "label": "distance",
+        "importPath": "scipy.spatial",
+        "description": "scipy.spatial",
+        "isExtraImport": true,
+        "detail": "scipy.spatial",
+        "documentation": {}
+    },
+    {
         "label": "distance",
         "importPath": "scipy.spatial",
         "description": "scipy.spatial",
@@ -4541,6 +4797,54 @@
         "documentation": {}
     },
     {
+        "label": "matthews_corrcoef",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_fscore_support",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "matthews_corrcoef",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_fscore_support",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
         "label": "f1_score",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",
@@ -5325,7 +5629,7 @@
         "documentation": {}
     },
     {
-        "label": "accuracy_score",
+        "label": "confusion_matrix",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",
         "isExtraImport": true,
@@ -5333,15 +5637,7 @@
         "documentation": {}
     },
     {
-        "label": "matthews_corrcoef",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
-        "label": "precision_recall_fscore_support",
+        "label": "classification_report",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",
         "isExtraImport": true,
@@ -5370,6 +5666,46 @@
         "description": "sklearn.metrics",
         "isExtraImport": true,
         "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "matthews_corrcoef",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_fscore_support",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm.auto",
+        "description": "tqdm.auto",
+        "isExtraImport": true,
+        "detail": "tqdm.auto",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm.auto",
+        "description": "tqdm.auto",
+        "isExtraImport": true,
+        "detail": "tqdm.auto",
         "documentation": {}
     },
     {
@@ -5774,6 +6110,22 @@
     },
     {
         "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "add_special_tokens",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "add_special_tokens",
         "importPath": "openprompt.plms",
         "description": "openprompt.plms",
         "isExtraImport": true,
@@ -6454,6 +6806,38 @@
         "importPath": "seaborn",
         "description": "seaborn",
         "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "T5TokenizerWrapper",
+        "importPath": "openprompt.plms.seq2seq",
+        "description": "openprompt.plms.seq2seq",
+        "isExtraImport": true,
+        "detail": "openprompt.plms.seq2seq",
+        "documentation": {}
+    },
+    {
+        "label": "T5LMTokenizerWrapper",
+        "importPath": "openprompt.plms.seq2seq",
+        "description": "openprompt.plms.seq2seq",
+        "isExtraImport": true,
+        "detail": "openprompt.plms.seq2seq",
+        "documentation": {}
+    },
+    {
+        "label": "T5TokenizerWrapper",
+        "importPath": "openprompt.plms.seq2seq",
+        "description": "openprompt.plms.seq2seq",
+        "isExtraImport": true,
+        "detail": "openprompt.plms.seq2seq",
+        "documentation": {}
+    },
+    {
+        "label": "T5LMTokenizerWrapper",
+        "importPath": "openprompt.plms.seq2seq",
+        "description": "openprompt.plms.seq2seq",
+        "isExtraImport": true,
+        "detail": "openprompt.plms.seq2seq",
         "documentation": {}
     },
     {
@@ -16321,7 +16705,7 @@
         "kind": 2,
         "importPath": "main.vul_main",
         "description": "main.vul_main",
-        "peekOfCode": "def mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():\n        for inputs in dataloader:\n            cwe_ids = inputs['tgt_text']",
+        "peekOfCode": "def mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():\n        for inputs in dataloader:",
         "detail": "main.vul_main",
         "documentation": {}
     },
@@ -16330,7 +16714,7 @@
         "kind": 2,
         "importPath": "main.vul_main",
         "description": "main.vul_main",
-        "peekOfCode": "def compute_mahalanobis(prompt_model, dataloader):\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():\n        for inputs in dataloader:\n            cwe_ids = inputs['tgt_text']\n            # Convert tensor to list if needed\n            if torch.is_tensor(cwe_ids):\n                all_cwe_ids.extend(cwe_ids.cpu().tolist())",
+        "peekOfCode": "def compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():\n        for inputs in dataloader:\n            cwe_ids = inputs['tgt_text']\n            # Convert tensor to list if needed\n            if torch.is_tensor(cwe_ids):",
         "detail": "main.vul_main",
         "documentation": {}
     },
@@ -16339,7 +16723,7 @@
         "kind": 2,
         "importPath": "main.vul_main",
         "description": "main.vul_main",
-        "peekOfCode": "def select_uncertain_samples_mahalanobis(prompt_model, dataloader, num_samples=200):\n    \"\"\"Select high-uncertainty samples based on Mahalanobis distance with tail and head data.\"\"\"\n    mahalanobis_distances, all_features, all_cwe_ids = compute_mahalanobis(prompt_model, dataloader)\n    cwe_counts = Counter(all_cwe_ids)\n    total_samples = len(all_cwe_ids)\n    tail_cwe_ids = {cwe_id for cwe_id, count in cwe_counts.items() if count < 0.05 * total_samples}\n    taildata = []\n    headdata = []\n    tail_distances = []\n    head_distances = []",
+        "peekOfCode": "def select_uncertain_samples_mahalanobis(prompt_model, dataloader, num_samples=200):\n    \"\"\"Select high-uncertainty samples based on Mahalanobis distance with tail and head data.\"\"\"\n    mahalanobis_distances, all_features, all_cwe_ids = compute_mahalanobis(prompt_model, dataloader)\n    half_sams = num_samples / 2\n    cwe_counts = Counter(all_cwe_ids)\n    total_samples = len(all_cwe_ids)\n    tail_cwe_ids = {cwe_id for cwe_id, count in cwe_counts.items() if count < 0.05 * total_samples}\n    taildata = []\n    headdata = []\n    tail_distances = []",
         "detail": "main.vul_main",
         "documentation": {}
     },
@@ -16357,7 +16741,7 @@
         "kind": 2,
         "importPath": "main.vul_main",
         "description": "main.vul_main",
-        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths):\n    merged_data = pd.DataFrame()\n    examples = []\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        merged_data = pd.concat([merged_data, data], ignore_index=True)\n    desc = merged_data['description'].tolist()\n    code = merged_data['abstract_func_before'].tolist()\n    type = merged_data['cwe_ids'].tolist()\n    for idx in range(len(merged_data)):",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths, return_task_info=False):\n    merged_data = pd.DataFrame()\n    examples = []\n    task_origins = []  # Track which task each sample comes from\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        task_id = i + 1  # Task IDs start from 1\n        # Add task_id column to track origin\n        data['task_origin'] = task_id\n        merged_data = pd.concat([merged_data, data], ignore_index=True)",
         "detail": "main.vul_main",
         "documentation": {}
     },
@@ -16564,7 +16948,7 @@
         "kind": 5,
         "importPath": "main.vul_main",
         "description": "main.vul_main",
-        "peekOfCode": "data_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]\ntest_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []",
+        "peekOfCode": "data_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]\ntest_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []",
         "detail": "main.vul_main",
         "documentation": {}
     },
@@ -16573,7 +16957,7 @@
         "kind": 5,
         "importPath": "main.vul_main",
         "description": "main.vul_main",
-        "peekOfCode": "test_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():",
+        "peekOfCode": "test_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []",
         "detail": "main.vul_main",
         "documentation": {}
     },
@@ -16582,7 +16966,7 @@
         "kind": 5,
         "importPath": "main.vul_main",
         "description": "main.vul_main",
-        "peekOfCode": "valid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():\n        for inputs in dataloader:",
+        "peekOfCode": "valid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():",
         "detail": "main.vul_main",
         "documentation": {}
     },
@@ -16728,6 +17112,870 @@
         "description": "main.vul_main",
         "peekOfCode": "best_dev_loss = float('inf')\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,\n            tokenizer=tokenizer,\n            tokenizer_wrapper_class=WrapperClass,",
         "detail": "main.vul_main",
+        "documentation": {}
+    },
+    {
+        "label": "OnlineEWCWithFocalLabelSmoothLoss",
+        "kind": 6,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):\n    def __init__(self, num_classes, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9):\n        super(OnlineEWCWithFocalLabelSmoothLoss, self).__init__()\n        self.num_classes = num_classes\n        self.smoothing = smoothing\n        self.focal_alpha = focal_alpha\n        self.focal_gamma = focal_gamma\n        self.ewc_lambda = ewc_lambda\n        self.decay_factor = decay_factor\n        self.fisher_dict = {}",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def load_plm(model_name, model_path):\n    codet5_model = ModelClass(**{\n        \"config\": T5Config, \n        \"tokenizer\": RobertaTokenizer, \n        \"model\": T5ForConditionalGeneration,\n        \"wrapper\": T5TokenizerWrapper\n    })\n    model_class = codet5_model\n    model_config = model_class.config.from_pretrained(\"Salesforce/codet5-base\")\n    # you can change huggingface model_config here",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "mahalanobis_distance",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():\n        for inputs in dataloader:",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "compute_mahalanobis",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():\n        for inputs in dataloader:\n            cwe_ids = inputs['tgt_text']\n            # Convert tensor to list if needed\n            if torch.is_tensor(cwe_ids):",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "select_uncertain_samples_with_stratified_class",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def select_uncertain_samples_with_stratified_class(prompt_model, dataloader, examples, \n                                                   num_samples, min_samples_per_class=2):\n    \"\"\"\n    Kết hợp Mahalanobis distance với stratified sampling by class.\n    Strategy:\n    1. Tính Mahalanobis distance cho tất cả samples (uncertainty)\n    2. Group samples theo class\n    3. Trong mỗi class, chọn samples có uncertainty cao nhất\n    4. Phân bổ budget theo tỷ lệ class frequency (đảm bảo min samples/class)\n    Args:",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "read_prompt_examples",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        # Convert CWE IDs to class index for classification\n        cwe_list = ast.literal_eval(type[idx])\n        # Take the first CWE ID and map it to class index",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "read_and_merge_previous_datasets",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths, return_task_info=False):\n    merged_data = pd.DataFrame()\n    examples = []\n    task_origins = []  # Track which task each sample comes from\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        task_id = i + 1  # Task IDs start from 1\n        # Add task_id column to track origin\n        data['task_origin'] = task_id\n        merged_data = pd.concat([merged_data, data], ignore_index=True)",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def test(prompt_model, test_dataloader, name):\n    num_test_steps = len(test_dataloader)\n    allpreds = []\n    alllabels = []\n    with torch.no_grad():\n        for step, inputs in enumerate(test_dataloader):\n            if use_cuda:\n                inputs = inputs.cuda()\n            logits = prompt_model(inputs)\n            labels = inputs['tgt_text']",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "train_phase_one",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def train_phase_one(prompt_model, train_dataloader, val_dataloader, optimizer1, optimizer2, scheduler1, scheduler2,\n                    num_epochs, loss_func_no_ewc, task_id, patience=5):\n    \"\"\"Phase 1: Train with Focal Loss + Label Smoothing only (no EWC) to learn task-specific features.\"\"\"\n    best_val_loss = float('inf')\n    patience_counter = 0\n    progress_bar = tqdm(range(num_epochs * len(train_dataloader)))\n    for epoch in range(num_epochs):\n        prompt_model.train()\n        for step, inputs in enumerate(train_dataloader):\n            if use_cuda:",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "train_phase_two",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, optimizer2, scheduler1, scheduler2,\n                    num_epochs, loss_func_with_ewc, task_id, patience=5):\n    \"\"\"Phase 2: Train with Focal Loss + Label Smoothing + EWC to prevent forgetting of previous tasks.\"\"\"\n    best_val_loss = float('inf')\n    patience_counter = 0\n    progress_bar = tqdm(range(num_epochs * len(train_dataloader)))\n    for epoch in range(num_epochs):\n        prompt_model.train()\n        for step, inputs in enumerate(train_dataloader):\n            if use_cuda:",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "save_task_checkpoint",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def save_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Save checkpoint for a specific task and phase.\"\"\"\n    os.makedirs(os.path.join(args.checkpoint_dir, 'checkpoints'), exist_ok=True)\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')\n    torch.save(prompt_model.state_dict(), checkpoint_path)\n    print(f\"Saved checkpoint: {checkpoint_path}\")\n    return checkpoint_path\ndef load_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Load checkpoint for a specific task and phase.\"\"\"\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "load_task_checkpoint",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def load_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Load checkpoint for a specific task and phase.\"\"\"\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')\n    if os.path.exists(checkpoint_path):\n        prompt_model.load_state_dict(\n            torch.load(checkpoint_path, map_location=torch.device('cuda:0'))\n        )\n        print(f\"Loaded checkpoint: {checkpoint_path}\")\n        return True\n    else:",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "list_available_checkpoints",
+        "kind": 2,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "def list_available_checkpoints():\n    \"\"\"List all available checkpoints.\"\"\"\n    checkpoint_dir_path = os.path.join(args.checkpoint_dir, 'checkpoints')\n    if os.path.exists(checkpoint_dir_path):\n        checkpoints = [f for f in os.listdir(checkpoint_dir_path) if f.endswith('.ckpt')]\n        print(\"Available checkpoints:\")\n        for checkpoint in sorted(checkpoints):\n            print(f\"  - {checkpoint}\")\n        return checkpoints\n    else:",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "ModelClass",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "ModelClass = namedtuple(\"ModelClass\", ('config', 'tokenizer', 'model','wrapper'))\ndef load_plm(model_name, model_path):\n    codet5_model = ModelClass(**{\n        \"config\": T5Config, \n        \"tokenizer\": RobertaTokenizer, \n        \"model\": T5ForConditionalGeneration,\n        \"wrapper\": T5TokenizerWrapper\n    })\n    model_class = codet5_model\n    model_config = model_class.config.from_pretrained(\"Salesforce/codet5-base\")",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "parser",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "parser = argparse.ArgumentParser(description=\"Train VulTypeIL model with configurable parameters\")\nparser.add_argument('--data_dir', type=str, default='incremental_tasks', help='Directory containing the data files')\nparser.add_argument('--checkpoint_dir', type=str, default='model', help='Directory to save/load checkpoints')\nparser.add_argument('--results_dir', type=str, default='results', help='Directory to save results')\nparser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to pre-trained model')\nparser.add_argument('--model_name', type=str, default='t5', help='Model name')\nparser.add_argument('--batch_size', type=int, default=16, help='Batch size')\nparser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs')\nparser.add_argument('--lr', type=float, default=5e-5, help='Learning rate')\nparser.add_argument('--ewc_lambda', type=float, default=0.4, help='EWC regularization term weight')",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "args",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "args = parser.parse_args()\n# Set parameters from args\nos.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['CUDA_VISIBLE_DEVICES']",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "os.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "seed",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "seed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "batch_size",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "batch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "num_class",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "num_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "max_seq_l",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "max_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "lr",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "lr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "num_epochs",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "num_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "use_cuda",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "use_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "model_name",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "model_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "pretrainedmodel_path",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "pretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "early_stop_threshold",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "ewc_lambda",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "ewc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths\ndata_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "classes",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths\ndata_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]\ntest_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "data_paths",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "data_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]\ntest_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "test_paths",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "test_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "valid_paths",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "valid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func_no_ewc",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, args.pretrained_model_path)\n# Define template - Improved prompt template based on the paper's methodology\ntemplate_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func_with_ewc",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, args.pretrained_model_path)\n# Define template - Improved prompt template based on the paper's methodology\ntemplate_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "template_text",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "template_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "mytemplate",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "mytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],\n    \"CWE-20\": [\"Improper Input Validation\", \"Input Sanitization Flaw\", \"Invalid Input Handling\"],\n    \"CWE-416\": [\"Use After Free\", \"Dangling Pointer\", \"Memory Use After Deallocation\"],\n    \"CWE-190\": [\"Integer Overflow\", \"Integer Wraparound\", \"Overflow in Numeric Calculations\"],",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "myverbalizer",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "myverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],\n    \"CWE-20\": [\"Improper Input Validation\", \"Input Sanitization Flaw\", \"Invalid Input Handling\"],\n    \"CWE-416\": [\"Use After Free\", \"Dangling Pointer\", \"Memory Use After Deallocation\"],\n    \"CWE-190\": [\"Integer Overflow\", \"Integer Wraparound\", \"Overflow in Numeric Calculations\"],\n    \"CWE-200\": [\"Exposure of Sensitive Data\", \"Unauthorized Information Access\", \"Sensitive Information Leak\"],\n    \"CWE-120\": [\"Classic Buffer Overflow\", \"Buffer Copy Error\", \"Unchecked Buffer Size\"],",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "prompt_model",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "prompt_model = PromptForClassification(plm=plm, template=mytemplate, verbalizer=myverbalizer, freeze_plm=False)\nif use_cuda:\n    prompt_model = prompt_model.cuda()\n# 初始化损失函数\nloss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "no_decay",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "no_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer_grouped_parameters1",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "optimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]\noptimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer_grouped_parameters2",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "optimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]\noptimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# Load test dataloaders for all tasks\ntest_dataloaders = []\nfor j in range(args.num_tasks):\n    test_dataloader = PromptDataLoader(\n        dataset=read_prompt_examples(test_paths[j]),",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer1",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "optimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# Load test dataloaders for all tasks\ntest_dataloaders = []\nfor j in range(args.num_tasks):\n    test_dataloader = PromptDataLoader(\n        dataset=read_prompt_examples(test_paths[j]),\n        template=mytemplate,\n        tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n        batch_size=batch_size, shuffle=True,",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer2",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "optimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# Load test dataloaders for all tasks\ntest_dataloaders = []\nfor j in range(args.num_tasks):\n    test_dataloader = PromptDataLoader(\n        dataset=read_prompt_examples(test_paths[j]),\n        template=mytemplate,\n        tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n        batch_size=batch_size, shuffle=True,\n        teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataloaders",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "test_dataloaders = []\nfor j in range(args.num_tasks):\n    test_dataloader = PromptDataLoader(\n        dataset=read_prompt_examples(test_paths[j]),\n        template=mytemplate,\n        tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n        batch_size=batch_size, shuffle=True,\n        teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n        decoder_max_length=3)\n    test_dataloaders.append(test_dataloader)",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "global_step",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "global_step = 0\nprev_dev_loss = float('inf')\nbest_dev_loss = float('inf')\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "prev_dev_loss",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "prev_dev_loss = float('inf')\nbest_dev_loss = float('inf')\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,\n            tokenizer=tokenizer,",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "best_dev_loss",
+        "kind": 5,
+        "importPath": "main.vul_main2",
+        "description": "main.vul_main2",
+        "peekOfCode": "best_dev_loss = float('inf')\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,\n            tokenizer=tokenizer,\n            tokenizer_wrapper_class=WrapperClass,",
+        "detail": "main.vul_main2",
+        "documentation": {}
+    },
+    {
+        "label": "OnlineEWCWithFocalLabelSmoothLoss",
+        "kind": 6,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):\n    def __init__(self, num_classes, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9):\n        super(OnlineEWCWithFocalLabelSmoothLoss, self).__init__()\n        self.num_classes = num_classes\n        self.smoothing = smoothing\n        self.focal_alpha = focal_alpha\n        self.focal_gamma = focal_gamma\n        self.ewc_lambda = ewc_lambda\n        self.decay_factor = decay_factor\n        self.fisher_dict = {}",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def load_plm(model_name, model_path):\n    codet5_model = ModelClass(**{\n        \"config\": T5Config, \n        \"tokenizer\": RobertaTokenizer, \n        \"model\": T5ForConditionalGeneration,\n        \"wrapper\": T5TokenizerWrapper\n    })\n    model_class = codet5_model\n    model_config = model_class.config.from_pretrained(\"Salesforce/codet5-base\")\n    # you can change huggingface model_config here",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "mahalanobis_distance",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():\n        for inputs in dataloader:",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "compute_mahalanobis",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():\n        for inputs in dataloader:\n            cwe_ids = inputs['tgt_text']\n            # Convert tensor to list if needed\n            if torch.is_tensor(cwe_ids):",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "select_uncertain_samples_mahalanobis",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def select_uncertain_samples_mahalanobis(prompt_model, dataloader, num_samples=200):\n    \"\"\"Select samples based on Mahalanobis distance: tail uncertain, head uncertain, and certain samples.\"\"\"\n    mahalanobis_distances, all_features, all_cwe_ids = compute_mahalanobis(prompt_model, dataloader)\n    # Chia thành 3 phần: 1/3 tail uncertain, 1/3 head uncertain, 1/3 certain\n    third_sams = int(num_samples / 3)\n    cwe_counts = Counter(all_cwe_ids)\n    total_samples = len(all_cwe_ids)\n    tail_cwe_ids = {cwe_id for cwe_id, count in cwe_counts.items() if count < 0.05 * total_samples}\n    # Phân loại samples thành tail và head\n    taildata = []",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "read_prompt_examples",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        # Convert CWE IDs to class index for classification\n        cwe_list = ast.literal_eval(type[idx])\n        # Take the first CWE ID and map it to class index",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "read_and_merge_previous_datasets",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths, return_task_info=False):\n    merged_data = pd.DataFrame()\n    examples = []\n    task_origins = []  # Track which task each sample comes from\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        task_id = i + 1  # Task IDs start from 1\n        # Add task_id column to track origin\n        data['task_origin'] = task_id\n        merged_data = pd.concat([merged_data, data], ignore_index=True)",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def test(prompt_model, test_dataloader, name):\n    num_test_steps = len(test_dataloader)\n    allpreds = []\n    alllabels = []\n    with torch.no_grad():\n        for step, inputs in enumerate(test_dataloader):\n            if use_cuda:\n                inputs = inputs.cuda()\n            logits = prompt_model(inputs)\n            labels = inputs['tgt_text']",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "train_phase_one",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def train_phase_one(prompt_model, train_dataloader, val_dataloader, optimizer1, optimizer2, scheduler1, scheduler2,\n                    num_epochs, loss_func_no_ewc, task_id, patience=5):\n    \"\"\"Phase 1: Train with Focal Loss + Label Smoothing only (no EWC) to learn task-specific features.\"\"\"\n    best_val_loss = float('inf')\n    patience_counter = 0\n    progress_bar = tqdm(range(num_epochs * len(train_dataloader)))\n    for epoch in range(num_epochs):\n        prompt_model.train()\n        for step, inputs in enumerate(train_dataloader):\n            if use_cuda:",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "train_phase_two",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, optimizer2, scheduler1, scheduler2,\n                    num_epochs, loss_func_with_ewc, task_id, patience=5):\n    \"\"\"Phase 2: Train with Focal Loss + Label Smoothing + EWC to prevent forgetting of previous tasks.\"\"\"\n    best_val_loss = float('inf')\n    patience_counter = 0\n    progress_bar = tqdm(range(num_epochs * len(train_dataloader)))\n    for epoch in range(num_epochs):\n        prompt_model.train()\n        for step, inputs in enumerate(train_dataloader):\n            if use_cuda:",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "save_task_checkpoint",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def save_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Save checkpoint for a specific task and phase.\"\"\"\n    os.makedirs(os.path.join(args.checkpoint_dir, 'checkpoints'), exist_ok=True)\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')\n    torch.save(prompt_model.state_dict(), checkpoint_path)\n    print(f\"Saved checkpoint: {checkpoint_path}\")\n    return checkpoint_path\ndef load_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Load checkpoint for a specific task and phase.\"\"\"\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "load_task_checkpoint",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def load_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Load checkpoint for a specific task and phase.\"\"\"\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')\n    if os.path.exists(checkpoint_path):\n        prompt_model.load_state_dict(\n            torch.load(checkpoint_path, map_location=torch.device('cuda:0'))\n        )\n        print(f\"Loaded checkpoint: {checkpoint_path}\")\n        return True\n    else:",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "list_available_checkpoints",
+        "kind": 2,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "def list_available_checkpoints():\n    \"\"\"List all available checkpoints.\"\"\"\n    checkpoint_dir_path = os.path.join(args.checkpoint_dir, 'checkpoints')\n    if os.path.exists(checkpoint_dir_path):\n        checkpoints = [f for f in os.listdir(checkpoint_dir_path) if f.endswith('.ckpt')]\n        print(\"Available checkpoints:\")\n        for checkpoint in sorted(checkpoints):\n            print(f\"  - {checkpoint}\")\n        return checkpoints\n    else:",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "ModelClass",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "ModelClass = namedtuple(\"ModelClass\", ('config', 'tokenizer', 'model','wrapper'))\ndef load_plm(model_name, model_path):\n    codet5_model = ModelClass(**{\n        \"config\": T5Config, \n        \"tokenizer\": RobertaTokenizer, \n        \"model\": T5ForConditionalGeneration,\n        \"wrapper\": T5TokenizerWrapper\n    })\n    model_class = codet5_model\n    model_config = model_class.config.from_pretrained(\"Salesforce/codet5-base\")",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "parser",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "parser = argparse.ArgumentParser(description=\"Train VulTypeIL model with configurable parameters\")\nparser.add_argument('--data_dir', type=str, default='incremental_tasks', help='Directory containing the data files')\nparser.add_argument('--checkpoint_dir', type=str, default='model', help='Directory to save/load checkpoints')\nparser.add_argument('--results_dir', type=str, default='results', help='Directory to save results')\nparser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to pre-trained model')\nparser.add_argument('--model_name', type=str, default='t5', help='Model name')\nparser.add_argument('--batch_size', type=int, default=16, help='Batch size')\nparser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs')\nparser.add_argument('--lr', type=float, default=5e-5, help='Learning rate')\nparser.add_argument('--ewc_lambda', type=float, default=0.4, help='EWC regularization term weight')",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "args",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "args = parser.parse_args()\n# Set parameters from args\nos.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['CUDA_VISIBLE_DEVICES']",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "os.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "seed",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "seed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "batch_size",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "batch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "num_class",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "num_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "max_seq_l",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "max_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "lr",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "lr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "num_epochs",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "num_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "use_cuda",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "use_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "model_name",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "model_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "pretrainedmodel_path",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "pretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "early_stop_threshold",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "ewc_lambda",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "ewc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths\ndata_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "classes",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths\ndata_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]\ntest_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "data_paths",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "data_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]\ntest_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "test_paths",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "test_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "valid_paths",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "valid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\ndef mahalanobis_distance(features, mean, cov_inv):\n    \"\"\"Compute the Mahalanobis distance for a given feature set to the mean with covariance.\"\"\"\n    return [distance.mahalanobis(f, mean, cov_inv) for f in features]\ndef compute_mahalanobis(prompt_model, dataloader):\n    \"\"\"Compute Mahalanobis distance for all samples in dataloader.\"\"\"\n    prompt_model.eval()\n    all_features = []\n    all_cwe_ids = []\n    with torch.no_grad():",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func_no_ewc",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, args.pretrained_model_path)\n# Define template - Improved prompt template based on the paper's methodology\ntemplate_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func_with_ewc",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, args.pretrained_model_path)\n# Define template - Improved prompt template based on the paper's methodology\ntemplate_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "template_text",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "template_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "mytemplate",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "mytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],\n    \"CWE-20\": [\"Improper Input Validation\", \"Input Sanitization Flaw\", \"Invalid Input Handling\"],\n    \"CWE-416\": [\"Use After Free\", \"Dangling Pointer\", \"Memory Use After Deallocation\"],\n    \"CWE-190\": [\"Integer Overflow\", \"Integer Wraparound\", \"Overflow in Numeric Calculations\"],",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "myverbalizer",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "myverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],\n    \"CWE-20\": [\"Improper Input Validation\", \"Input Sanitization Flaw\", \"Invalid Input Handling\"],\n    \"CWE-416\": [\"Use After Free\", \"Dangling Pointer\", \"Memory Use After Deallocation\"],\n    \"CWE-190\": [\"Integer Overflow\", \"Integer Wraparound\", \"Overflow in Numeric Calculations\"],\n    \"CWE-200\": [\"Exposure of Sensitive Data\", \"Unauthorized Information Access\", \"Sensitive Information Leak\"],\n    \"CWE-120\": [\"Classic Buffer Overflow\", \"Buffer Copy Error\", \"Unchecked Buffer Size\"],",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "prompt_model",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "prompt_model = PromptForClassification(plm=plm, template=mytemplate, verbalizer=myverbalizer, freeze_plm=False)\nif use_cuda:\n    prompt_model = prompt_model.cuda()\n# 初始化损失函数\nloss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "no_decay",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "no_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer_grouped_parameters1",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "optimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]\noptimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer_grouped_parameters2",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "optimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]\noptimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# Load test dataloaders for all tasks\ntest_dataloaders = []\nfor j in range(args.num_tasks):\n    test_dataloader = PromptDataLoader(\n        dataset=read_prompt_examples(test_paths[j]),",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer1",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "optimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# Load test dataloaders for all tasks\ntest_dataloaders = []\nfor j in range(args.num_tasks):\n    test_dataloader = PromptDataLoader(\n        dataset=read_prompt_examples(test_paths[j]),\n        template=mytemplate,\n        tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n        batch_size=batch_size, shuffle=True,",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer2",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "optimizer2 = AdamW(optimizer_grouped_parameters2, lr=5e-5)\n# Load test dataloaders for all tasks\ntest_dataloaders = []\nfor j in range(args.num_tasks):\n    test_dataloader = PromptDataLoader(\n        dataset=read_prompt_examples(test_paths[j]),\n        template=mytemplate,\n        tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n        batch_size=batch_size, shuffle=True,\n        teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataloaders",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "test_dataloaders = []\nfor j in range(args.num_tasks):\n    test_dataloader = PromptDataLoader(\n        dataset=read_prompt_examples(test_paths[j]),\n        template=mytemplate,\n        tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n        batch_size=batch_size, shuffle=True,\n        teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n        decoder_max_length=3)\n    test_dataloaders.append(test_dataloader)",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "global_step",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "global_step = 0\nprev_dev_loss = float('inf')\nbest_dev_loss = float('inf')\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "prev_dev_loss",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "prev_dev_loss = float('inf')\nbest_dev_loss = float('inf')\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,\n            tokenizer=tokenizer,",
+        "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "best_dev_loss",
+        "kind": 5,
+        "importPath": "main.vul_main3",
+        "description": "main.vul_main3",
+        "peekOfCode": "best_dev_loss = float('inf')\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,\n            tokenizer=tokenizer,\n            tokenizer_wrapper_class=WrapperClass,",
+        "detail": "main.vul_main3",
         "documentation": {}
     },
     {
@@ -24516,6 +25764,42 @@
         "documentation": {}
     },
     {
+        "label": "load_predictions",
+        "kind": 2,
+        "importPath": "analyze_task_performance",
+        "description": "analyze_task_performance",
+        "peekOfCode": "def load_predictions(pred_file, gold_file):\n    \"\"\"Đọc file predictions và gold labels\"\"\"\n    with open(pred_file, 'r') as f:\n        predictions = [int(line.strip()) for line in f.readlines()]\n    with open(gold_file, 'r') as f:\n        gold_labels = [int(line.strip()) for line in f.readlines()]\n    return predictions, gold_labels\ndef load_test_data(test_csv):\n    \"\"\"Đọc file test CSV để lấy thông tin chi tiết\"\"\"\n    df = pd.read_csv(test_csv)",
+        "detail": "analyze_task_performance",
+        "documentation": {}
+    },
+    {
+        "label": "load_test_data",
+        "kind": 2,
+        "importPath": "analyze_task_performance",
+        "description": "analyze_task_performance",
+        "peekOfCode": "def load_test_data(test_csv):\n    \"\"\"Đọc file test CSV để lấy thông tin chi tiết\"\"\"\n    df = pd.read_csv(test_csv)\n    return df\ndef analyze_performance(pred_task1, gold_task1, pred_task5, gold_task5, test_df):\n    \"\"\"Phân tích chi tiết hiệu suất\"\"\"\n    print(\"=\"*80)\n    print(\"PHÂN TÍCH KẾT QUẢ TEST TASK1\")\n    print(\"=\"*80)\n    # 1. Thống kê cơ bản",
+        "detail": "analyze_task_performance",
+        "documentation": {}
+    },
+    {
+        "label": "analyze_performance",
+        "kind": 2,
+        "importPath": "analyze_task_performance",
+        "description": "analyze_task_performance",
+        "peekOfCode": "def analyze_performance(pred_task1, gold_task1, pred_task5, gold_task5, test_df):\n    \"\"\"Phân tích chi tiết hiệu suất\"\"\"\n    print(\"=\"*80)\n    print(\"PHÂN TÍCH KẾT QUẢ TEST TASK1\")\n    print(\"=\"*80)\n    # 1. Thống kê cơ bản\n    print(\"\\n1. THỐNG KÊ CƠ BẢN:\")\n    print(f\"   Tổng số samples: {len(gold_task1)}\")\n    # Accuracy\n    acc_task1 = sum([1 for p, g in zip(pred_task1, gold_task1) if p == g]) / len(gold_task1)",
+        "detail": "analyze_task_performance",
+        "documentation": {}
+    },
+    {
+        "label": "classes",
+        "kind": 5,
+        "importPath": "analyze_task_performance",
+        "description": "analyze_task_performance",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\ndef load_predictions(pred_file, gold_file):\n    \"\"\"Đọc file predictions và gold labels\"\"\"\n    with open(pred_file, 'r') as f:\n        predictions = [int(line.strip()) for line in f.readlines()]",
+        "detail": "analyze_task_performance",
+        "documentation": {}
+    },
+    {
         "label": "pattern",
         "kind": 5,
         "importPath": "check",
@@ -24795,12 +26079,246 @@
         "documentation": {}
     },
     {
+        "label": "classes",
+        "kind": 5,
+        "importPath": "quick_analyze",
+        "description": "quick_analyze",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Load predictions\nwith open(\"main/pred_result/task1_test_task_1.pred.csv\", 'r') as f:\n    pred_t1 = [int(line.strip()) for line in f]\nwith open(\"main/pred_result/task1_test_task_1.gold.csv\", 'r') as f:",
+        "detail": "quick_analyze",
+        "documentation": {}
+    },
+    {
+        "label": "acc_t1",
+        "kind": 5,
+        "importPath": "quick_analyze",
+        "description": "quick_analyze",
+        "peekOfCode": "acc_t1 = sum([1 for p, g in zip(pred_t1, gold_t1) if p == g]) / len(gold_t1)\nacc_t5 = sum([1 for p, g in zip(pred_t5, gold_t5) if p == g]) / len(gold_t5)\nprint(\"=\"*80)\nprint(\"PHÂN TÍCH KẾT QUẢ\")\nprint(\"=\"*80)\nprint(f\"Accuracy Task1: {acc_t1:.4f} ({acc_t1*100:.2f}%)\")\nprint(f\"Accuracy Task5: {acc_t5:.4f} ({acc_t5*100:.2f}%)\")\nprint(f\"Giảm: {(acc_t1-acc_t5):.4f} ({(acc_t1-acc_t5)*100:.2f}%)\")\n# Per-class analysis\nprint(\"\\n\" + \"=\"*80)",
+        "detail": "quick_analyze",
+        "documentation": {}
+    },
+    {
+        "label": "acc_t5",
+        "kind": 5,
+        "importPath": "quick_analyze",
+        "description": "quick_analyze",
+        "peekOfCode": "acc_t5 = sum([1 for p, g in zip(pred_t5, gold_t5) if p == g]) / len(gold_t5)\nprint(\"=\"*80)\nprint(\"PHÂN TÍCH KẾT QUẢ\")\nprint(\"=\"*80)\nprint(f\"Accuracy Task1: {acc_t1:.4f} ({acc_t1*100:.2f}%)\")\nprint(f\"Accuracy Task5: {acc_t5:.4f} ({acc_t5*100:.2f}%)\")\nprint(f\"Giảm: {(acc_t1-acc_t5):.4f} ({(acc_t1-acc_t5)*100:.2f}%)\")\n# Per-class analysis\nprint(\"\\n\" + \"=\"*80)\nprint(\"PHÂN TÍCH THEO CLASS\")",
+        "detail": "quick_analyze",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "quick_analyze",
+        "description": "quick_analyze",
+        "peekOfCode": "results = []\nfor idx in range(len(classes)):\n    indices = [i for i, g in enumerate(gold_t1) if g == idx]\n    if len(indices) == 0:\n        continue\n    correct_t1 = sum([1 for i in indices if pred_t1[i] == idx])\n    correct_t5 = sum([1 for i in indices if pred_t5[i] == idx])\n    acc1 = correct_t1 / len(indices)\n    acc5 = correct_t5 / len(indices)\n    decrease = acc1 - acc5",
+        "detail": "quick_analyze",
+        "documentation": {}
+    },
+    {
+        "label": "results_sorted",
+        "kind": 5,
+        "importPath": "quick_analyze",
+        "description": "quick_analyze",
+        "peekOfCode": "results_sorted = sorted(results, key=lambda x: x['decrease'], reverse=True)\nprint(\"\\n\" + \"=\"*80)\nprint(\"TOP 10 CLASSES BỊ GIẢM NHIỀU NHẤT\")\nprint(\"=\"*80)\nfor r in results_sorted[:10]:\n    print(f\"{r['class']:<12} giảm {r['decrease']:.4f} ({r['acc_t1']:.2%} -> {r['acc_t5']:.2%})\")\n# Confusion patterns\nprint(\"\\n\" + \"=\"*80)\nprint(\"CONFUSION PATTERNS (Task5)\")\nprint(\"=\"*80)",
+        "detail": "quick_analyze",
+        "documentation": {}
+    },
+    {
+        "label": "confusion",
+        "kind": 5,
+        "importPath": "quick_analyze",
+        "description": "quick_analyze",
+        "peekOfCode": "confusion = Counter()\nfor i in range(len(gold_t5)):\n    if pred_t5[i] != gold_t5[i]:\n        pattern = f\"{classes[gold_t5[i]]} -> {classes[pred_t5[i]]}\"\n        confusion[pattern] += 1\nprint(\"TOP 15 nhầm lẫn:\")\nfor pattern, count in confusion.most_common(15):\n    print(f\"{pattern:<40} {count:>4} lần\")\n# Save results\ndf = pd.DataFrame(results)",
+        "detail": "quick_analyze",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "quick_analyze",
+        "description": "quick_analyze",
+        "peekOfCode": "df = pd.DataFrame(results)\ndf.to_csv(\"class_analysis_results.csv\", index=False)\nprint(\"\\n✓ Đã lưu: class_analysis_results.csv\")",
+        "detail": "quick_analyze",
+        "documentation": {}
+    },
+    {
         "label": "quick_convert",
         "kind": 2,
         "importPath": "quick_excel_to_csv",
         "description": "quick_excel_to_csv",
         "peekOfCode": "def quick_convert():\n    \"\"\"Chuyển đổi nhanh tất cả file Excel sang CSV\"\"\"\n    input_dir = \"incremental_tasks\"\n    output_dir = \"incremental_tasks_csv\"\n    # Tạo thư mục output\n    os.makedirs(output_dir, exist_ok=True)\n    # Tìm tất cả file Excel\n    excel_files = glob.glob(os.path.join(input_dir, \"*.xlsx\")) + glob.glob(os.path.join(input_dir, \"*.xls\"))\n    if not excel_files:\n        print(f\"❌ Không tìm thấy file Excel trong {input_dir}\")",
         "detail": "quick_excel_to_csv",
+        "documentation": {}
+    },
+    {
+        "label": "classes",
+        "kind": 5,
+        "importPath": "run_analysis",
+        "description": "run_analysis",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\nprint(\"Loading data...\")\nwith open(\"main/pred_result/task1_test_task_1.pred.csv\") as f:\n    pred_t1 = [int(x.strip()) for x in f if x.strip()]\nwith open(\"main/pred_result/task1_test_task_1.gold.csv\") as f:",
+        "detail": "run_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "acc_t1",
+        "kind": 5,
+        "importPath": "run_analysis",
+        "description": "run_analysis",
+        "peekOfCode": "acc_t1 = sum(p == g for p, g in zip(pred_t1, gold_t1)) / len(gold_t1)\nacc_t5 = sum(p == g for p, g in zip(pred_t5, gold_t5)) / len(gold_t5)\nprint(\"\\n\" + \"=\"*80)\nprint(\"PHAN TICH KET QUA TEST TASK1\")\nprint(\"=\"*80)\nprint(f\"Tong so samples: {len(gold_t1)}\")\nprint(f\"Accuracy Task1: {acc_t1:.4f} ({acc_t1*100:.2f}%)\")\nprint(f\"Accuracy Task5: {acc_t5:.4f} ({acc_t5*100:.2f}%)\")\nprint(f\"Do giam: {(acc_t1-acc_t5):.4f} ({(acc_t1-acc_t5)*100:.2f}%)\")\nprint(\"\\n\" + \"=\"*80)",
+        "detail": "run_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "acc_t5",
+        "kind": 5,
+        "importPath": "run_analysis",
+        "description": "run_analysis",
+        "peekOfCode": "acc_t5 = sum(p == g for p, g in zip(pred_t5, gold_t5)) / len(gold_t5)\nprint(\"\\n\" + \"=\"*80)\nprint(\"PHAN TICH KET QUA TEST TASK1\")\nprint(\"=\"*80)\nprint(f\"Tong so samples: {len(gold_t1)}\")\nprint(f\"Accuracy Task1: {acc_t1:.4f} ({acc_t1*100:.2f}%)\")\nprint(f\"Accuracy Task5: {acc_t5:.4f} ({acc_t5*100:.2f}%)\")\nprint(f\"Do giam: {(acc_t1-acc_t5):.4f} ({(acc_t1-acc_t5)*100:.2f}%)\")\nprint(\"\\n\" + \"=\"*80)\nprint(\"PHAN TICH THEO CLASS\")",
+        "detail": "run_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "run_analysis",
+        "description": "run_analysis",
+        "peekOfCode": "results = []\nfor idx in range(len(classes)):\n    indices = [i for i, g in enumerate(gold_t1) if g == idx]\n    if not indices:\n        continue\n    correct_t1 = sum(pred_t1[i] == idx for i in indices)\n    correct_t5 = sum(pred_t5[i] == idx for i in indices)\n    acc1 = correct_t1 / len(indices)\n    acc5 = correct_t5 / len(indices)\n    results.append({",
+        "detail": "run_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "confusion",
+        "kind": 5,
+        "importPath": "run_analysis",
+        "description": "run_analysis",
+        "peekOfCode": "confusion = Counter()\nfor i in range(len(gold_t5)):\n    if pred_t5[i] != gold_t5[i]:\n        confusion[(gold_t5[i], pred_t5[i])] += 1\nprint(\"TOP 20 nham lan:\")\nfor (true_idx, pred_idx), count in confusion.most_common(20):\n    print(f\"{classes[true_idx]:>10} -> {classes[pred_idx]:<10} {count:>4} lan\")\nprint(\"\\nDone!\")",
+        "detail": "run_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "classes",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Load data\nwith open(\"main/pred_result/task1_test_task_1.pred.csv\") as f:\n    pred_t1 = [int(x.strip()) for x in f if x.strip()]\nwith open(\"main/pred_result/task1_test_task_1.gold.csv\") as f:",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "acc_t1",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "acc_t1 = sum(p == g for p, g in zip(pred_t1, gold_t1)) / len(gold_t1)\nacc_t5 = sum(p == g for p, g in zip(pred_t5, gold_t5)) / len(gold_t5)\nprint(\"=\"*80)\nprint(\"PHÂN TÍCH KẾT QUẢ TEST TASK1\")\nprint(\"=\"*80)\nprint(f\"\\nTổng số samples: {len(gold_t1)}\")\nprint(f\"Accuracy Task1 (ngay sau train): {acc_t1:.4f} ({acc_t1*100:.2f}%)\")\nprint(f\"Accuracy Task5 (sau train 4 tasks): {acc_t5:.4f} ({acc_t5*100:.2f}%)\")\nprint(f\"Độ giảm: {(acc_t1-acc_t5):.4f} ({(acc_t1-acc_t5)*100:.2f}%)\")\nprint(f\"Tỷ lệ giảm: {((acc_t1-acc_t5)/acc_t1)*100:.2f}%\")",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "acc_t5",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "acc_t5 = sum(p == g for p, g in zip(pred_t5, gold_t5)) / len(gold_t5)\nprint(\"=\"*80)\nprint(\"PHÂN TÍCH KẾT QUẢ TEST TASK1\")\nprint(\"=\"*80)\nprint(f\"\\nTổng số samples: {len(gold_t1)}\")\nprint(f\"Accuracy Task1 (ngay sau train): {acc_t1:.4f} ({acc_t1*100:.2f}%)\")\nprint(f\"Accuracy Task5 (sau train 4 tasks): {acc_t5:.4f} ({acc_t5*100:.2f}%)\")\nprint(f\"Độ giảm: {(acc_t1-acc_t5):.4f} ({(acc_t1-acc_t5)*100:.2f}%)\")\nprint(f\"Tỷ lệ giảm: {((acc_t1-acc_t5)/acc_t1)*100:.2f}%\")\n# Per-class analysis",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "class_results",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "class_results = []\nfor idx in range(len(classes)):\n    indices = [i for i, g in enumerate(gold_t1) if g == idx]\n    if not indices:\n        continue\n    correct_t1 = sum(pred_t1[i] == idx for i in indices)\n    correct_t5 = sum(pred_t5[i] == idx for i in indices)\n    acc1 = correct_t1 / len(indices)\n    acc5 = correct_t5 / len(indices)\n    decrease = acc1 - acc5",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "confusion",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "confusion = Counter()\nfor i in range(len(gold_t5)):\n    if pred_t5[i] != gold_t5[i]:\n        pattern = f\"{classes[gold_t5[i]]:>10} -> {classes[pred_t5[i]]:<10}\"\n        confusion[pattern] += 1\nprint(\"TOP 20 nhầm lẫn:\")\nfor pattern, count in confusion.most_common(20):\n    print(f\"{pattern} {count:>4} lần\")\n# Samples correct in T1 but wrong in T5\nprint(\"\\n\" + \"=\"*80)",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "forgot",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "forgot = [i for i in range(len(gold_t1)) \n          if pred_t1[i] == gold_t1[i] and pred_t5[i] != gold_t5[i]]\nprint(f\"Số lượng: {len(forgot)} samples ({len(forgot)/len(gold_t1)*100:.2f}%)\")\nforgot_patterns = Counter()\nfor i in forgot:\n    pattern = f\"{classes[gold_t5[i]]:>10} -> {classes[pred_t5[i]]:<10}\"\n    forgot_patterns[pattern] += 1\nprint(\"\\nTop 15 patterns bị quên:\")\nfor pattern, count in forgot_patterns.most_common(15):\n    print(f\"{pattern} {count:>4} lần\")",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "forgot_patterns",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "forgot_patterns = Counter()\nfor i in forgot:\n    pattern = f\"{classes[gold_t5[i]]:>10} -> {classes[pred_t5[i]]:<10}\"\n    forgot_patterns[pattern] += 1\nprint(\"\\nTop 15 patterns bị quên:\")\nfor pattern, count in forgot_patterns.most_common(15):\n    print(f\"{pattern} {count:>4} lần\")\n# Class distribution\nprint(\"\\n\" + \"=\"*80)\nprint(\"PHÂN TÍCH DISTRIBUTION\")",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "gold_dist",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "gold_dist = Counter(gold_t1)\nprint(\"Classes trong test set (sorted by count):\")\nfor idx, count in sorted(gold_dist.items(), key=lambda x: x[1], reverse=True):\n    print(f\"  {classes[idx]:<15} {count:>4} samples ({count/len(gold_t1)*100:.1f}%)\")\n# Tail vs Head analysis\ncounts = [r['count'] for r in class_results]\nmedian_count = sorted(counts)[len(counts)//2]\ntail = [r for r in class_results if r['count'] <= median_count]\nhead = [r for r in class_results if r['count'] > median_count]\navg_dec_tail = sum(r['decrease'] for r in tail) / len(tail)",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "counts",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "counts = [r['count'] for r in class_results]\nmedian_count = sorted(counts)[len(counts)//2]\ntail = [r for r in class_results if r['count'] <= median_count]\nhead = [r for r in class_results if r['count'] > median_count]\navg_dec_tail = sum(r['decrease'] for r in tail) / len(tail)\navg_dec_head = sum(r['decrease'] for r in head) / len(head)\nprint(\"\\n\" + \"=\"*80)\nprint(\"TAIL vs HEAD CLASSES\")\nprint(\"=\"*80)\nprint(f\"Median count: {median_count}\")",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "median_count",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "median_count = sorted(counts)[len(counts)//2]\ntail = [r for r in class_results if r['count'] <= median_count]\nhead = [r for r in class_results if r['count'] > median_count]\navg_dec_tail = sum(r['decrease'] for r in tail) / len(tail)\navg_dec_head = sum(r['decrease'] for r in head) / len(head)\nprint(\"\\n\" + \"=\"*80)\nprint(\"TAIL vs HEAD CLASSES\")\nprint(\"=\"*80)\nprint(f\"Median count: {median_count}\")\nprint(f\"\\nTAIL classes (<= {median_count} samples):\")",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "tail",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "tail = [r for r in class_results if r['count'] <= median_count]\nhead = [r for r in class_results if r['count'] > median_count]\navg_dec_tail = sum(r['decrease'] for r in tail) / len(tail)\navg_dec_head = sum(r['decrease'] for r in head) / len(head)\nprint(\"\\n\" + \"=\"*80)\nprint(\"TAIL vs HEAD CLASSES\")\nprint(\"=\"*80)\nprint(f\"Median count: {median_count}\")\nprint(f\"\\nTAIL classes (<= {median_count} samples):\")\nprint(f\"  Số lượng: {len(tail)} classes\")",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "head",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "head = [r for r in class_results if r['count'] > median_count]\navg_dec_tail = sum(r['decrease'] for r in tail) / len(tail)\navg_dec_head = sum(r['decrease'] for r in head) / len(head)\nprint(\"\\n\" + \"=\"*80)\nprint(\"TAIL vs HEAD CLASSES\")\nprint(\"=\"*80)\nprint(f\"Median count: {median_count}\")\nprint(f\"\\nTAIL classes (<= {median_count} samples):\")\nprint(f\"  Số lượng: {len(tail)} classes\")\nprint(f\"  Độ giảm TB: {avg_dec_tail:.4f}\")",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "avg_dec_tail",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "avg_dec_tail = sum(r['decrease'] for r in tail) / len(tail)\navg_dec_head = sum(r['decrease'] for r in head) / len(head)\nprint(\"\\n\" + \"=\"*80)\nprint(\"TAIL vs HEAD CLASSES\")\nprint(\"=\"*80)\nprint(f\"Median count: {median_count}\")\nprint(f\"\\nTAIL classes (<= {median_count} samples):\")\nprint(f\"  Số lượng: {len(tail)} classes\")\nprint(f\"  Độ giảm TB: {avg_dec_tail:.4f}\")\nprint(f\"\\nHEAD classes (> {median_count} samples):\")",
+        "detail": "simple_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "avg_dec_head",
+        "kind": 5,
+        "importPath": "simple_analysis",
+        "description": "simple_analysis",
+        "peekOfCode": "avg_dec_head = sum(r['decrease'] for r in head) / len(head)\nprint(\"\\n\" + \"=\"*80)\nprint(\"TAIL vs HEAD CLASSES\")\nprint(\"=\"*80)\nprint(f\"Median count: {median_count}\")\nprint(f\"\\nTAIL classes (<= {median_count} samples):\")\nprint(f\"  Số lượng: {len(tail)} classes\")\nprint(f\"  Độ giảm TB: {avg_dec_tail:.4f}\")\nprint(f\"\\nHEAD classes (> {median_count} samples):\")\nprint(f\"  Số lượng: {len(head)} classes\")",
+        "detail": "simple_analysis",
         "documentation": {}
     },
     {

@@ -148,51 +148,76 @@ def compute_mahalanobis(prompt_model, dataloader):
     return mahalanobis_distances, all_features, all_cwe_ids
 
 
-def select_uncertain_samples_mahalanobis(prompt_model, dataloader, num_samples=200):
-    """Select high-uncertainty samples based on Mahalanobis distance with tail and head data."""
+def select_uncertain_samples_with_stratified_class(prompt_model, dataloader, examples, 
+                                                   num_samples, min_samples_per_class=2):
+    """
+    Kết hợp Mahalanobis distance với stratified sampling by class.
+    
+    Strategy:
+    1. Tính Mahalanobis distance cho tất cả samples (uncertainty)
+    2. Group samples theo class
+    3. Trong mỗi class, chọn samples có uncertainty cao nhất
+    4. Phân bổ budget theo tỷ lệ class frequency (đảm bảo min samples/class)
+    
+    Args:
+        prompt_model: Model để tính features
+        dataloader: DataLoader chứa previous data
+        examples: List of InputExample objects
+        num_samples: Total number of samples to select
+        min_samples_per_class: Minimum samples per class
+    
+    Returns:
+        selected_indices: Indices of selected samples
+    """
+    # Compute Mahalanobis distances
     mahalanobis_distances, all_features, all_cwe_ids = compute_mahalanobis(prompt_model, dataloader)
-
-    half_sams = num_samples / 2
-
-    cwe_counts = Counter(all_cwe_ids)
+    
+    # Group by class
+    class_to_data = {}
+    for idx, (dist, cwe_id) in enumerate(zip(mahalanobis_distances, all_cwe_ids)):
+        if cwe_id not in class_to_data:
+            class_to_data[cwe_id] = []
+        class_to_data[cwe_id].append((idx, dist))
+    
+    # Count class frequency
+    class_counts = Counter(all_cwe_ids)
     total_samples = len(all_cwe_ids)
-    tail_cwe_ids = {cwe_id for cwe_id, count in cwe_counts.items() if count < 0.05 * total_samples}
-    taildata = []
-    headdata = []
-    tail_distances = []
-    head_distances = []
-    for i, (feature, cwe_id, distance) in enumerate(zip(all_features, all_cwe_ids, mahalanobis_distances)):
-        if cwe_id in tail_cwe_ids:
-            taildata.append(feature)
-            tail_distances.append(distance)
-        else:
-            headdata.append(feature)
-            head_distances.append(distance)
-    taildata = np.array(taildata)
-    headdata = np.array(headdata)
-    tail_distances = np.array(tail_distances)
-    head_distances = np.array(head_distances)
-    if len(taildata) >= half_sams:
-        tail_indices = np.argsort(tail_distances)[-half_sams:]
-        head_indices = np.argsort(head_distances)[-half_sams:]
-    else:
-        tail_indices = np.argsort(tail_distances)[-len(taildata):]
-        head_indices = np.argsort(head_distances)[-(num_samples - len(taildata)):]
-    selected_indices = np.concatenate((tail_indices, head_indices))
-
-    tail_selected = taildata[tail_indices]
-    head_selected = headdata[head_indices]
-
-    if tail_selected.ndim == 1:
-        tail_selected = np.expand_dims(tail_selected, axis=1)
-    if head_selected.ndim == 1:
-        head_selected = np.expand_dims(head_selected, axis=1)
-
-    if tail_selected.shape[1] != head_selected.shape[1]:
-        head_selected = np.tile(head_selected, (1, tail_selected.shape[1]))
-
-    selected_features = np.concatenate((tail_selected, head_selected), axis=0)
-    return selected_indices, selected_features
+    
+    selected_indices = []
+    remaining_budget = num_samples
+    
+    # Phase 1: Đảm bảo mỗi class có ít nhất min_samples_per_class
+    # Chọn samples có uncertainty cao nhất trong mỗi class
+    for cwe_id, data_list in class_to_data.items():
+        n_min = min(min_samples_per_class, len(data_list))
+        # Sort by distance (descending) - higher distance = more uncertain
+        data_list_sorted = sorted(data_list, key=lambda x: x[1], reverse=True)
+        selected_indices.extend([idx for idx, _ in data_list_sorted[:n_min]])
+        remaining_budget -= n_min
+        
+        # Remove selected from pool
+        class_to_data[cwe_id] = data_list_sorted[n_min:]
+    
+    # Phase 2: Phân bổ remaining budget theo tỷ lệ class frequency
+    if remaining_budget > 0:
+        for cwe_id, data_list in class_to_data.items():
+            if len(data_list) == 0:
+                continue
+            
+            # Tính số samples cho class này theo tỷ lệ
+            class_freq = class_counts[cwe_id] / total_samples
+            n_select = int(remaining_budget * class_freq)
+            n_select = min(n_select, len(data_list))
+            
+            if n_select > 0:
+                # Chọn n_select samples có uncertainty cao nhất
+                selected_indices.extend([idx for idx, _ in data_list[:n_select]])
+    
+    # Đảm bảo không vượt quá budget
+    if len(selected_indices) > num_samples:
+        selected_indices = selected_indices[:num_samples]
+    
+    return selected_indices, all_features
 
 
 # Define function to read examples
@@ -676,25 +701,44 @@ for i in range(1, args.num_tasks + 1):
             truncate_method="head",
             decoder_max_length=3
         )
-
-        indices_to_replay, _ = select_uncertain_samples_mahalanobis(prompt_model, train_dataloader1, num_samples=replay_budget)
+        
+        # Select uncertain samples with stratified class sampling
+        indices_to_replay, _ = select_uncertain_samples_with_stratified_class(
+            prompt_model, 
+            train_dataloader_prev, 
+            prev_examples,
+            num_samples=replay_budget,
+            min_samples_per_class=args.min_samples_per_class
+        )
         
         # Track replay statistics
         replay_task_counts = Counter()
+        replay_class_counts = Counter()
+        
         for idx in indices_to_replay:
             task_origin = prev_task_origins[idx]
             replay_task_counts[task_origin] += 1
+            class_label = prev_examples[idx].tgt_text
+            replay_class_counts[class_label] += 1
         
         # Log replay statistics
-        print(f"\n{'='*80}")
+        print(f"{'='*80}")
         print(f"REPLAY BUFFER STATISTICS FOR TASK {i}")
         print(f"{'='*80}")
-        print(f"Total replay samples: {len(indices_to_replay)}")
-        print(f"Replay samples by task origin:")
+        print(f"Total replay samples selected: {len(indices_to_replay)}")
+        
+        print(f"\nReplay samples by task origin:")
         for task_id in sorted(replay_task_counts.keys()):
             count = replay_task_counts[task_id]
-            percentage = (count / len(indices_to_replay)) * 100
+            percentage = (count / len(indices_to_replay)) * 100 if len(indices_to_replay) > 0 else 0
             print(f"  Task {task_id}: {count} samples ({percentage:.2f}%)")
+        
+        print(f"\nReplay samples by class (top 10):")
+        for class_label, count in replay_class_counts.most_common(10):
+            percentage = (count / len(indices_to_replay)) * 100 if len(indices_to_replay) > 0 else 0
+            class_name = classes[class_label] if isinstance(class_label, int) and class_label < len(classes) else str(class_label)
+            print(f"  {class_name}: {count} samples ({percentage:.2f}%)")
+        
         print(f"{'='*80}\n")
         
         # Build training dataset with current task + replay samples

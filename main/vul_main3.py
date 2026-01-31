@@ -149,49 +149,96 @@ def compute_mahalanobis(prompt_model, dataloader):
 
 
 def select_uncertain_samples_mahalanobis(prompt_model, dataloader, num_samples=200):
-    """Select high-uncertainty samples based on Mahalanobis distance with tail and head data."""
+    """Select samples based on Mahalanobis distance: tail uncertain, head uncertain, and certain samples."""
     mahalanobis_distances, all_features, all_cwe_ids = compute_mahalanobis(prompt_model, dataloader)
 
-    half_sams = num_samples / 2
+    # Chia thành 3 phần: 1/3 tail uncertain, 1/3 head uncertain, 1/3 certain
+    third_sams = int(num_samples / 3)
 
     cwe_counts = Counter(all_cwe_ids)
     total_samples = len(all_cwe_ids)
     tail_cwe_ids = {cwe_id for cwe_id, count in cwe_counts.items() if count < 0.05 * total_samples}
+    
+    # Phân loại samples thành tail và head
     taildata = []
     headdata = []
     tail_distances = []
     head_distances = []
+    tail_original_indices = []
+    head_original_indices = []
+    
     for i, (feature, cwe_id, distance) in enumerate(zip(all_features, all_cwe_ids, mahalanobis_distances)):
         if cwe_id in tail_cwe_ids:
             taildata.append(feature)
             tail_distances.append(distance)
+            tail_original_indices.append(i)
         else:
             headdata.append(feature)
             head_distances.append(distance)
+            head_original_indices.append(i)
+    
     taildata = np.array(taildata)
     headdata = np.array(headdata)
     tail_distances = np.array(tail_distances)
     head_distances = np.array(head_distances)
-    if len(taildata) >= half_sams:
-        tail_indices = np.argsort(tail_distances)[-half_sams:]
-        head_indices = np.argsort(head_distances)[-half_sams:]
+    tail_original_indices = np.array(tail_original_indices)
+    head_original_indices = np.array(head_original_indices)
+    
+    # Lấy uncertain samples (distance lớn) từ tail
+    if len(taildata) >= third_sams:
+        tail_uncertain_local_indices = np.argsort(tail_distances)[-third_sams:]
     else:
-        tail_indices = np.argsort(tail_distances)[-len(taildata):]
-        head_indices = np.argsort(head_distances)[-(num_samples - len(taildata)):]
-    selected_indices = np.concatenate((tail_indices, head_indices))
-
-    tail_selected = taildata[tail_indices]
-    head_selected = headdata[head_indices]
-
+        tail_uncertain_local_indices = np.argsort(tail_distances)[-len(taildata):]
+    tail_uncertain_indices = tail_original_indices[tail_uncertain_local_indices]
+    
+    # Lấy uncertain samples (distance lớn) từ head
+    if len(headdata) >= third_sams:
+        head_uncertain_local_indices = np.argsort(head_distances)[-third_sams:]
+    else:
+        head_uncertain_local_indices = np.argsort(head_distances)[-len(headdata):]
+    head_uncertain_indices = head_original_indices[head_uncertain_local_indices]
+    
+    # Lấy certain samples (distance nhỏ nhất) từ tất cả samples
+    all_distances = np.array(mahalanobis_distances)
+    remaining_samples = num_samples - len(tail_uncertain_indices) - len(head_uncertain_indices)
+    certain_indices = np.argsort(all_distances)[:remaining_samples]
+    
+    # Kết hợp tất cả indices
+    selected_indices = np.concatenate((tail_uncertain_indices, head_uncertain_indices, certain_indices))
+    
+    # Lấy features tương ứng
+    tail_selected = taildata[tail_uncertain_local_indices]
+    head_selected = headdata[head_uncertain_local_indices]
+    certain_selected = all_features[certain_indices]
+    
+    # Xử lý dimensions
     if tail_selected.ndim == 1:
         tail_selected = np.expand_dims(tail_selected, axis=1)
     if head_selected.ndim == 1:
         head_selected = np.expand_dims(head_selected, axis=1)
-
-    if tail_selected.shape[1] != head_selected.shape[1]:
-        head_selected = np.tile(head_selected, (1, tail_selected.shape[1]))
-
-    selected_features = np.concatenate((tail_selected, head_selected), axis=0)
+    if certain_selected.ndim == 1:
+        certain_selected = np.expand_dims(certain_selected, axis=1)
+    
+    # Đảm bảo tất cả có cùng số chiều
+    max_dim = max(tail_selected.shape[1] if len(tail_selected) > 0 else 0,
+                  head_selected.shape[1] if len(head_selected) > 0 else 0,
+                  certain_selected.shape[1] if len(certain_selected) > 0 else 0)
+    
+    if len(tail_selected) > 0 and tail_selected.shape[1] < max_dim:
+        tail_selected = np.tile(tail_selected, (1, max_dim // tail_selected.shape[1]))
+    if len(head_selected) > 0 and head_selected.shape[1] < max_dim:
+        head_selected = np.tile(head_selected, (1, max_dim // head_selected.shape[1]))
+    if len(certain_selected) > 0 and certain_selected.shape[1] < max_dim:
+        certain_selected = np.tile(certain_selected, (1, max_dim // certain_selected.shape[1]))
+    
+    selected_features = np.concatenate((tail_selected, head_selected, certain_selected), axis=0)
+    
+    print(f"\nReplay sample selection breakdown:")
+    print(f"  - Tail uncertain (high distance): {len(tail_uncertain_indices)} samples")
+    print(f"  - Head uncertain (high distance): {len(head_uncertain_indices)} samples")
+    print(f"  - Certain (low distance): {len(certain_indices)} samples")
+    print(f"  - Total: {len(selected_indices)} samples\n")
+    
     return selected_indices, selected_features
 
 
@@ -677,7 +724,7 @@ for i in range(1, args.num_tasks + 1):
             decoder_max_length=3
         )
 
-        indices_to_replay, _ = select_uncertain_samples_mahalanobis(prompt_model, train_dataloader1, num_samples=replay_budget)
+        indices_to_replay, _ = select_uncertain_samples_mahalanobis(prompt_model, train_dataloader_prev, num_samples=replay_budget)
         
         # Track replay statistics
         replay_task_counts = Counter()

@@ -2,3 +2,5 @@ dataset
 model
 incremental_tasks_csv/*.csv
 *.pyc
+main/pred_result/*.csv
+.vscode/PythonImportHelper-v2-Completion.json
