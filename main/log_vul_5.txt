@@ -1,0 +1,535 @@
+🎯 KHỞI TẠO TASK-AWARE REPLAY SYSTEM
+======================================================================
+Loại cấu hình: balanced
+Task decay factor: 0.9 (cao hơn = ưu tiên task cũ nhiều hơn)
+Min task ratio: 0.2 (tỷ lệ tối thiểu mỗi task)
+Similarity threshold: 0.85
+Max code lines: 10
+Number of clusters: 10
+Gradient importance: False
+======================================================================
+
+tokenizing: 0it [00:00, ?it/s]Token indices sequence length is longer than the specified maximum sequence length for this model (1450 > 512). Running this sequence through the model will result in indexing errors
+tokenizing: 228it [00:00, 293.55it/s]
+tokenizing: 269it [00:00, 317.25it/s]
+tokenizing: 218it [00:00, 330.18it/s]
+tokenizing: 311it [00:00, 342.08it/s]
+tokenizing: 288it [00:00, 383.99it/s]
+
+🚀 BẮT ĐẦU TRAINING VỚI TASK-AWARE ENHANCED REPLAY
+======================================================================
+----------------------- Task 1 ---------------------------
+tokenizing: 2344it [00:06, 362.72it/s]
+tokenizing: 275it [00:00, 355.52it/s]
+Bắt đầu Phase 1 cho Task 1: Focal Loss + Label Smoothing
+Epoch 1/20, Validation Loss: 2.3384388287862143| 19/380 [00:07<01:56,  3.10it/s]
+Epoch 2/20, Validation Loss: 2.17539111773173  | 38/380 [00:17<01:50,  3.10it/s]
+Epoch 3/20, Validation Loss: 2.029208024342855 | 57/380 [00:26<01:44,  3.09it/s]
+Epoch 4/20, Validation Loss: 2.0017274618148804| 76/380 [00:36<01:38,  3.10it/s]
+Epoch 5/20, Validation Loss: 1.9169995387395222| 95/380 [00:46<01:32,  3.10it/s]
+Epoch 6/20, Validation Loss: 1.4132348696390789 114/380 [00:55<01:25,  3.09it/s]
+Epoch 7/20, Validation Loss: 1.1187504132588704 133/380 [01:05<01:19,  3.09it/s]
+Epoch 8/20, Validation Loss: 1.1055253942807515 152/380 [01:15<01:13,  3.08it/s]
+Epoch 9/20, Validation Loss: 1.0432343482971191 171/380 [01:25<01:07,  3.09it/s]
+Epoch 10/20, Validation Loss: 1.1503684918085735190/380 [01:34<01:01,  3.09it/s]
+Epoch 11/20, Validation Loss: 1.1423349777857463209/380 [01:42<00:55,  3.10it/s]
+Epoch 12/20, Validation Loss: 0.9728712439537048228/380 [01:50<00:49,  3.10it/s]
+Epoch 13/20, Validation Loss: 1.1366665760676067247/380 [01:59<00:43,  3.09it/s]
+Epoch 14/20, Validation Loss: 1.1065466403961182266/380 [02:07<00:36,  3.10it/s]
+Epoch 15/20, Validation Loss: 1.0312137603759766285/380 [02:15<00:30,  3.10it/s]
+Epoch 16/20, Validation Loss: 1.0442456404368083304/380 [02:22<00:24,  3.10it/s]
+Epoch 17/20, Validation Loss: 1.0939352909723918323/380 [02:30<00:18,  3.10it/s]
+Epoch 18/20, Validation Loss: 1.0577644507090251342/380 [02:37<00:12,  3.10it/s]
+Epoch 19/20, Validation Loss: 1.2074927886327107361/380 [02:45<00:06,  3.09it/s]
+Early stopping at epoch 19
+ 95%|██████████████████████████████████████▉  | 361/380 [02:45<00:08,  2.18it/s]
+acc: 0.6436363636363637   precisionma: 0.4705025665163843  recallma: 0.49614581186009754 recallwei: 0.6436363636363637 weighted-f1: 0.6437648940909055  macro-f1: 0.4735450483132964 mcc: 0.5555503381091743
+Đánh giá Phase 1 cho task 1:  (0.6436363636363637, 0.4705025665163843, 0.49614581186009754, 0.6437648940909055, 0.4735450483132964)
+Bắt đầu Phase 2 cho Task 1: Focal Loss + Label Smoothing + EWC
+Epoch 1/20, Validation Loss: 1.1944678624471028| 19/380 [00:07<01:56,  3.09it/s]
+Epoch 2/20, Validation Loss: 1.0126705169677734| 38/380 [00:16<01:50,  3.09it/s]
+Epoch 3/20, Validation Loss: 0.9967567920684814| 57/380 [00:26<01:44,  3.08it/s]
+Epoch 4/20, Validation Loss: 1.011042594909668 | 76/380 [00:36<01:38,  3.08it/s]
+Epoch 5/20, Validation Loss: 1.150558869043986 | 95/380 [00:44<01:32,  3.08it/s]
+Epoch 6/20, Validation Loss: 1.1177325248718262 114/380 [00:51<01:26,  3.08it/s]
+Epoch 7/20, Validation Loss: 0.9601096312204996 133/380 [00:59<01:19,  3.09it/s]
+Epoch 8/20, Validation Loss: 1.0223034222920735 152/380 [01:09<01:14,  3.08it/s]
+Epoch 9/20, Validation Loss: 1.2367702722549438 171/380 [01:16<01:07,  3.09it/s]
+Epoch 10/20, Validation Loss: 1.0206602017084758190/380 [01:24<01:01,  3.09it/s]
+Epoch 11/20, Validation Loss: 1.0411802132924397209/380 [01:31<00:55,  3.09it/s]
+Epoch 12/20, Validation Loss: 1.0710530281066895228/380 [01:39<00:49,  3.09it/s]
+Epoch 13/20, Validation Loss: 1.0391291777292888247/380 [01:47<00:43,  3.09it/s]
+Epoch 14/20, Validation Loss: 1.0701830585797627266/380 [01:54<00:36,  3.09it/s]
+Early stopping at epoch 14
+ 70%|████████████████████████████▋            | 266/380 [01:55<00:49,  2.31it/s]
+acc: 0.6509090909090909   precisionma: 0.513910207957827  recallma: 0.5287298151583867 recallwei: 0.6509090909090909 weighted-f1: 0.6493098487860203  macro-f1: 0.5143039989169631 mcc: 0.5616742104473749
+Đánh giá Phase 2 cho task 1:  (0.6509090909090909, 0.513910207957827, 0.5287298151583867, 0.6493098487860203, 0.5143039989169631)
+Saved checkpoint: /admin/model/checkpoints/task_1_final.ckpt
+Kiểm tra Task 1 model trên các datasets trước đó sau Phase 2
+----------------------Tải model tốt nhất và kiểm tra-----------------------------
+acc: 0.6359649122807017   precisionma: 0.5542223084886129  recallma: 0.6117622769828652 recallwei: 0.6359649122807017 weighted-f1: 0.6269863850551719  macro-f1: 0.5482150845703228 mcc: 0.5674252531551601
+----------------------- Task 2 ---------------------------
+
+================================================================================
+CẤU HÌNH TASK-AWARE REPLAY BUFFER CHO TASK 2
+================================================================================
+Tổng số mẫu trước đó: 2344
+Tỷ lệ replay: 0.25 (25.0%)
+Ngân sách replay: 586 mẫu
+Task decay factor: 0.9
+Min task ratio: 0.2
+================================================================================
+
+tokenizing: 2344it [00:05, 393.53it/s]
+
+🎯 TASK-AWARE REPLAY SELECTION CHO TASK 2
+======================================================================
+📊 PHÂN BỔ BUDGET THEO TASK:
+  Task 1: 586 mẫu (ưu tiên: 2.70)
+
+============================================================
+SCALABLE REPLAY PROCESSING FOR TASK 2
+============================================================
+Step 1: Semantic Redundancy Filtering...
+Lọc ngữ nghĩa: 586 → 508 mẫu (78 mẫu dư thừa đã loại bỏ)
+Step 2: Vulnerability Code Summarization...
+Step 3: Clustering-based Priority Computation...
+Task 2: Đã cập nhật 10 clusters với 508 mẫu
+Step 4: Priority-based Sample Selection...
+Step 5: Long-term Memory Storage...
+Stored long-term memory for Task 2
+Replay processing complete: 586 → 508 samples
+============================================================
+
+
+📈 KẾT QUẢ TASK-AWARE SELECTION:
+  Tổng mẫu được chọn: 508
+  Task 1: 508 mẫu (100.0%)
+======================================================================
+
+📚 NGỮ CẢNH LỊCH SỬ CHO TASK 2:
+==================================================
+Historical Context:
+
+==================================================
+
+Thành phần dataset training cho Task 2:
+  Task hiện tại (Task 2): 2293 mẫu
+  Task-aware replay buffer: 508 mẫu
+  Tổng cộng: 2801 mẫu
+
+tokenizing: 2801it [00:07, 358.29it/s]
+tokenizing: 285it [00:00, 355.48it/s]
+Bắt đầu Phase 1 cho Task 2: Focal Loss + Label Smoothing
+Epoch 1/20, Validation Loss: 1.1169313589731853| 22/440 [00:08<02:42,  2.57it/s]
+Epoch 2/20, Validation Loss: 1.1479427814483643| 44/440 [00:19<02:36,  2.52it/s]
+Epoch 3/20, Validation Loss: 1.1404285033543904| 66/440 [00:28<02:25,  2.57it/s]
+Epoch 4/20, Validation Loss: 1.0183601379394531| 88/440 [00:38<02:16,  2.57it/s]
+Epoch 5/20, Validation Loss: 1.0892582138379414 110/440 [00:49<02:08,  2.57it/s]
+Epoch 6/20, Validation Loss: 1.0662888089815776 132/440 [00:58<01:59,  2.57it/s]
+Epoch 7/20, Validation Loss: 1.1879678964614868 154/440 [01:07<01:51,  2.57it/s]
+Epoch 8/20, Validation Loss: 1.258264422416687| 176/440 [01:16<01:42,  2.57it/s]
+Epoch 9/20, Validation Loss: 1.1426585912704468 198/440 [01:25<01:34,  2.57it/s]
+Epoch 10/20, Validation Loss: 1.1654526392618816220/440 [01:34<01:25,  2.57it/s]
+Epoch 11/20, Validation Loss: 1.1947829325993855242/440 [01:43<01:17,  2.57it/s]
+Early stopping at epoch 11
+ 55%|██████████████████████▌                  | 242/440 [01:43<01:24,  2.33it/s]
+acc: 0.7473684210526316   precisionma: 0.8477857136031388  recallma: 0.7083944510398804 recallwei: 0.7473684210526316 weighted-f1: 0.733453831386682  macro-f1: 0.7284269473945744 mcc: 0.699294789792712
+Đánh giá Phase 1 cho task 2:  (0.7473684210526316, 0.8477857136031388, 0.7083944510398804, 0.733453831386682, 0.7284269473945744)
+Bắt đầu Phase 2 cho Task 2: Focal Loss + Label Smoothing + EWC
+Epoch 1/20, Validation Loss: 1.2364787658055623| 22/440 [00:09<02:52,  2.43it/s]
+Epoch 2/20, Validation Loss: 1.068412224451701 | 44/440 [00:20<02:43,  2.42it/s]
+Epoch 3/20, Validation Loss: 1.202360471089681 | 66/440 [00:32<02:34,  2.43it/s]
+Epoch 4/20, Validation Loss: 1.238750656445821 | 88/440 [00:42<02:24,  2.43it/s]
+Epoch 5/20, Validation Loss: 1.2174703280131023 110/440 [00:51<02:15,  2.43it/s]
+Epoch 6/20, Validation Loss: 1.0842218399047852 132/440 [01:01<02:06,  2.43it/s]
+Epoch 7/20, Validation Loss: 1.108110507329305| 154/440 [01:10<01:57,  2.43it/s]
+Epoch 8/20, Validation Loss: 1.1126306454340618 176/440 [01:20<01:48,  2.43it/s]
+Epoch 9/20, Validation Loss: 1.0248648126920064 198/440 [01:30<01:39,  2.43it/s]
+Epoch 10/20, Validation Loss: 1.1505704720815022220/440 [01:41<01:30,  2.43it/s]
+Epoch 11/20, Validation Loss: 1.1589759190877278242/440 [01:51<01:21,  2.43it/s]
+Epoch 12/20, Validation Loss: 1.0898024837176006264/440 [02:01<01:12,  2.42it/s]
+Epoch 13/20, Validation Loss: 1.2177138328552246286/440 [02:10<01:03,  2.43it/s]
+Epoch 14/20, Validation Loss: 1.1412636439005535308/440 [02:20<00:54,  2.43it/s]
+Epoch 15/20, Validation Loss: 1.1356570323308308330/440 [02:29<00:45,  2.43it/s]
+Epoch 16/20, Validation Loss: 1.0896098216374714352/440 [02:39<00:36,  2.43it/s]
+Early stopping at epoch 16
+ 80%|████████████████████████████████▊        | 352/440 [02:39<00:39,  2.20it/s]
+acc: 0.7333333333333333   precisionma: 0.8480321461221291  recallma: 0.6982968385876973 recallwei: 0.7333333333333333 weighted-f1: 0.7139197406498383  macro-f1: 0.7173403009131059 mcc: 0.6832369697393212
+Đánh giá Phase 2 cho task 2:  (0.7333333333333333, 0.8480321461221291, 0.6982968385876973, 0.7139197406498383, 0.7173403009131059)
+Saved checkpoint: /admin/model/checkpoints/task_2_final.ckpt
+Kiểm tra Task 2 model trên các datasets trước đó sau Phase 2
+----------------------Tải model tốt nhất và kiểm tra-----------------------------
+acc: 0.5482456140350878   precisionma: 0.4424627415259734  recallma: 0.5234738940621294 recallwei: 0.5482456140350878 weighted-f1: 0.5140201331902227  macro-f1: 0.4465201052160223 mcc: 0.4721778783620479
+acc: 0.7657992565055762   precisionma: 0.6083886395467278  recallma: 0.6114014456357255 recallwei: 0.7657992565055762 weighted-f1: 0.7752901712174334  macro-f1: 0.5951479962358209 mcc: 0.7240308727884549
+
+🔍 PHÂN TÍCH FORGETTING SAU TASK 2:
+============================================================
+Task bị forgetting nhiều nhất: Task 1 (54.82%)
+Task tốt nhất: Task 2 (76.58%)
+Accuracy trung bình: 65.70%
+Độ lệch chuẩn: 0.109
+
+💡 KHUYẾN NGHỊ CHO TASK TIẾP THEO:
+  - Tăng task_decay_factor lên 0.8-0.9 để ưu tiên Task 1
+  - Tăng min_task_ratio lên 0.2 để đảm bảo Task 1
+  - Tăng min_task_ratio để cân bằng performance các task
+============================================================
+
+----------------------- Task 3 ---------------------------
+
+================================================================================
+CẤU HÌNH TASK-AWARE REPLAY BUFFER CHO TASK 3
+================================================================================
+Tổng số mẫu trước đó: 4637
+Tỷ lệ replay: 0.25 (25.0%)
+Ngân sách replay: 1159 mẫu
+Task decay factor: 0.9
+Min task ratio: 0.2
+================================================================================
+
+tokenizing: 4637it [00:11, 388.04it/s]
+
+🎯 TASK-AWARE REPLAY SELECTION CHO TASK 3
+======================================================================
+📊 PHÂN BỔ BUDGET THEO TASK:
+  Task 1: 631 mẫu (ưu tiên: 2.43)
+  Task 2: 527 mẫu (ưu tiên: 1.80)
+
+============================================================
+SCALABLE REPLAY PROCESSING FOR TASK 3
+============================================================
+Step 1: Semantic Redundancy Filtering...
+Lọc ngữ nghĩa: 1158 → 993 mẫu (165 mẫu dư thừa đã loại bỏ)
+Step 2: Vulnerability Code Summarization...
+Step 3: Clustering-based Priority Computation...
+Task 3: Đã cập nhật 10 clusters với 993 mẫu
+Step 4: Priority-based Sample Selection...
+Step 5: Long-term Memory Storage...
+Stored long-term memory for Task 3
+Replay processing complete: 1158 → 993 samples
+============================================================
+
+
+📈 KẾT QUẢ TASK-AWARE SELECTION:
+  Tổng mẫu được chọn: 993
+  Task 1: 631 mẫu (63.5%)
+  Task 2: 362 mẫu (36.5%)
+======================================================================
+
+📚 NGỮ CẢNH LỊCH SỬ CHO TASK 3:
+==================================================
+Historical Context:
+Task 2 Summary:
+- Total samples: 508
+- Top vulnerabilities: 7(47), 11(42), 17(40)
+- Performance: {'replay_selected': 508}
+
+
+==================================================
+
+Thành phần dataset training cho Task 3:
+  Task hiện tại (Task 3): 2350 mẫu
+  Task-aware replay buffer: 993 mẫu
+  Tổng cộng: 3343 mẫu
+
+tokenizing: 3343it [00:09, 359.22it/s]
+tokenizing: 279it [00:00, 390.02it/s]
+Bắt đầu Phase 1 cho Task 3: Focal Loss + Label Smoothing
+Epoch 1/20, Validation Loss: 0.7143884499867758| 26/540 [00:10<03:26,  2.49it/s]
+Epoch 2/20, Validation Loss: 0.704506516456604 | 53/540 [00:23<03:15,  2.49it/s]
+Epoch 3/20, Validation Loss: 0.7485906283060709| 80/540 [00:36<03:05,  2.48it/s]
+Epoch 4/20, Validation Loss: 0.7168378829956055 107/540 [00:46<02:54,  2.48it/s]
+Epoch 5/20, Validation Loss: 0.8135197957356771 134/540 [00:57<02:43,  2.49it/s]
+Epoch 6/20, Validation Loss: 0.8861415386199951 161/540 [01:08<02:32,  2.48it/s]
+Epoch 7/20, Validation Loss: 0.8126937548319498 188/540 [01:19<02:21,  2.48it/s]
+Epoch 8/20, Validation Loss: 0.7474808096885681 215/540 [01:30<02:10,  2.48it/s]
+Epoch 9/20, Validation Loss: 0.8451133767763773 242/540 [01:40<01:59,  2.48it/s]
+Early stopping at epoch 9
+ 45%|██████████████████▍                      | 243/540 [01:41<02:03,  2.40it/s]
+acc: 0.8351254480286738   precisionma: 0.5588736094622521  recallma: 0.5849129866920822 recallwei: 0.8351254480286738 weighted-f1: 0.838901891686226  macro-f1: 0.5470261285408909 mcc: 0.8075705960928614
+Đánh giá Phase 1 cho task 3:  (0.8351254480286738, 0.5588736094622521, 0.5849129866920822, 0.838901891686226, 0.5470261285408909)
+Bắt đầu Phase 2 cho Task 3: Focal Loss + Label Smoothing + EWC
+Epoch 1/20, Validation Loss: 0.8112097183863322| 27/540 [00:11<02:48,  3.05it/s]
+Epoch 2/20, Validation Loss: 0.7592494885126749| 54/540 [00:24<02:39,  3.05it/s]
+Epoch 3/20, Validation Loss: 0.8498370250066122| 81/540 [00:38<02:30,  3.05it/s]
+Epoch 4/20, Validation Loss: 0.8062917788823446 108/540 [00:49<02:21,  3.05it/s]
+Epoch 5/20, Validation Loss: 0.9170790712038676 135/540 [01:00<02:13,  3.04it/s]
+Epoch 6/20, Validation Loss: 0.830720861752828| 162/540 [01:12<02:04,  3.05it/s]
+Epoch 7/20, Validation Loss: 0.8706917564074198 189/540 [01:23<01:55,  3.05it/s]
+Epoch 8/20, Validation Loss: 0.8644708593686422 216/540 [01:35<01:46,  3.04it/s]
+Epoch 9/20, Validation Loss: 0.741265594959259| 243/540 [01:46<01:37,  3.04it/s]
+Epoch 10/20, Validation Loss: 0.8440045118331909270/540 [02:00<01:29,  3.03it/s]
+Epoch 11/20, Validation Loss: 0.8560823400815328297/540 [02:11<01:19,  3.05it/s]
+Epoch 12/20, Validation Loss: 0.7563153306643168324/540 [02:23<01:10,  3.05it/s]
+Epoch 13/20, Validation Loss: 0.9040884971618652351/540 [02:34<01:02,  3.05it/s]
+Epoch 14/20, Validation Loss: 0.7908684412638346378/540 [02:45<00:53,  3.05it/s]
+Epoch 15/20, Validation Loss: 0.9512108763058981405/540 [02:57<00:44,  3.05it/s]
+Epoch 16/20, Validation Loss: 0.8981602787971497432/540 [03:08<00:35,  3.04it/s]
+Early stopping at epoch 16
+ 80%|████████████████████████████████▊        | 432/540 [03:09<00:47,  2.28it/s]
+acc: 0.8387096774193549   precisionma: 0.6143970334067287  recallma: 0.6112287761657665 recallwei: 0.8387096774193549 weighted-f1: 0.8450083565740528  macro-f1: 0.5835062176525592 mcc: 0.8118228298654906
+Đánh giá Phase 2 cho task 3:  (0.8387096774193549, 0.6143970334067287, 0.6112287761657665, 0.8450083565740528, 0.5835062176525592)
+Saved checkpoint: /admin/model/checkpoints/task_3_final.ckpt
+Kiểm tra Task 3 model trên các datasets trước đó sau Phase 2
+----------------------Tải model tốt nhất và kiểm tra-----------------------------
+acc: 0.5614035087719298   precisionma: 0.5094470124232029  recallma: 0.5944091149973504 recallwei: 0.5614035087719298 weighted-f1: 0.5402706091524936  macro-f1: 0.5135142509340872 mcc: 0.49569682010491406
+acc: 0.8104089219330854   precisionma: 0.6280218999678403  recallma: 0.6810018835120255 recallwei: 0.8104089219330854 weighted-f1: 0.8265718544996451  macro-f1: 0.6326043459948806 mcc: 0.7786489291084168
+acc: 0.8669724770642202   precisionma: 0.7083225275756235  recallma: 0.8048242616109652 recallwei: 0.8669724770642202 weighted-f1: 0.8670084464910641  macro-f1: 0.7245783816308916 mcc: 0.8291221465188631
+
+🔍 PHÂN TÍCH FORGETTING SAU TASK 3:
+============================================================
+Task bị forgetting nhiều nhất: Task 1 (56.14%)
+Task tốt nhất: Task 3 (86.70%)
+Accuracy trung bình: 74.63%
+Độ lệch chuẩn: 0.133
+
+💡 KHUYẾN NGHỊ CHO TASK TIẾP THEO:
+  - Tăng task_decay_factor lên 0.8-0.9 để ưu tiên Task 1
+  - Tăng min_task_ratio lên 0.2 để đảm bảo Task 1
+  - Tăng min_task_ratio để cân bằng performance các task
+============================================================
+
+----------------------- Task 4 ---------------------------
+
+================================================================================
+CẤU HÌNH TASK-AWARE REPLAY BUFFER CHO TASK 4
+================================================================================
+Tổng số mẫu trước đó: 6987
+Tỷ lệ replay: 0.25 (25.0%)
+Ngân sách replay: 1746 mẫu
+Task decay factor: 0.9
+Min task ratio: 0.2
+================================================================================
+
+tokenizing: 6987it [00:17, 394.42it/s]
+
+🎯 TASK-AWARE REPLAY SELECTION CHO TASK 4
+======================================================================
+📊 PHÂN BỔ BUDGET THEO TASK:
+  Task 1: 621 mẫu (ưu tiên: 2.19)
+  Task 2: 550 mẫu (ưu tiên: 1.62)
+  Task 3: 573 mẫu (ưu tiên: 1.80)
+
+============================================================
+SCALABLE REPLAY PROCESSING FOR TASK 4
+============================================================
+Step 1: Semantic Redundancy Filtering...
+Lọc ngữ nghĩa: 1744 → 1468 mẫu (276 mẫu dư thừa đã loại bỏ)
+Step 2: Vulnerability Code Summarization...
+Step 3: Clustering-based Priority Computation...
+Task 4: Đã cập nhật 10 clusters với 1468 mẫu
+Step 4: Priority-based Sample Selection...
+Step 5: Long-term Memory Storage...
+Stored long-term memory for Task 4
+Replay processing complete: 1744 → 1468 samples
+============================================================
+
+
+📈 KẾT QUẢ TASK-AWARE SELECTION:
+  Tổng mẫu được chọn: 1468
+  Task 1: 621 mẫu (42.3%)
+  Task 2: 550 mẫu (37.5%)
+  Task 3: 297 mẫu (20.2%)
+======================================================================
+
+📚 NGỮ CẢNH LỊCH SỬ CHO TASK 4:
+==================================================
+Historical Context:
+Task 2 Summary:
+- Total samples: 508
+- Top vulnerabilities: 7(47), 11(42), 17(40)
+- Performance: {'replay_selected': 508}
+
+Task 3 Summary:
+- Total samples: 993
+- Top vulnerabilities: 0(115), 12(80), 7(79)
+- Performance: {'replay_selected': 993}
+
+
+==================================================
+
+Thành phần dataset training cho Task 4:
+  Task hiện tại (Task 4): 2270 mẫu
+  Task-aware replay buffer: 1468 mẫu
+  Tổng cộng: 3738 mẫu
+
+tokenizing: 3738it [00:10, 362.31it/s]
+tokenizing: 266it [00:00, 345.29it/s]
+Bắt đầu Phase 1 cho Task 4: Focal Loss + Label Smoothing
+Epoch 1/20, Validation Loss: 0.7156290411949158| 30/600 [00:11<02:58,  3.19it/s]
+Epoch 2/20, Validation Loss: 0.7483928004900614| 60/600 [00:25<02:49,  3.19it/s]
+Epoch 3/20, Validation Loss: 0.8440374732017517| 90/600 [00:37<02:39,  3.20it/s]
+Epoch 4/20, Validation Loss: 0.7330021361509959 120/600 [00:49<02:30,  3.19it/s]
+Epoch 5/20, Validation Loss: 0.8499074975649515 150/600 [01:01<02:20,  3.19it/s]
+Epoch 6/20, Validation Loss: 0.8648523489634196 180/600 [01:13<02:11,  3.19it/s]
+Epoch 7/20, Validation Loss: 0.9674509565035502 210/600 [01:25<02:02,  3.19it/s]
+Epoch 8/20, Validation Loss: 0.8889550367991129 240/600 [01:37<01:52,  3.19it/s]
+Early stopping at epoch 8
+ 40%|████████████████▍                        | 240/600 [01:38<02:27,  2.45it/s]
+acc: 0.8345864661654135   precisionma: 0.6518667412617221  recallma: 0.6238222450064556 recallwei: 0.8345864661654135 weighted-f1: 0.8453190058961492  macro-f1: 0.6146169308699678 mcc: 0.8028626668929747
+Đánh giá Phase 1 cho task 4:  (0.8345864661654135, 0.6518667412617221, 0.6238222450064556, 0.8453190058961492, 0.6146169308699678)
+Bắt đầu Phase 2 cho Task 4: Focal Loss + Label Smoothing + EWC
+Epoch 1/20, Validation Loss: 0.8085747957229614| 30/600 [00:12<03:11,  2.98it/s]
+Epoch 2/20, Validation Loss: 0.809203584988912 | 60/600 [00:27<03:00,  2.98it/s]
+Epoch 3/20, Validation Loss: 0.7659622232119242| 90/600 [00:39<02:50,  2.98it/s]
+Epoch 4/20, Validation Loss: 0.7984498937924703 120/600 [00:54<02:40,  2.98it/s]
+Epoch 5/20, Validation Loss: 1.1336475610733032 150/600 [01:07<02:31,  2.98it/s]
+Epoch 6/20, Validation Loss: 1.0345837275187175 180/600 [01:20<02:23,  2.92it/s]
+Epoch 7/20, Validation Loss: 0.8254162669181824 210/600 [01:33<02:13,  2.92it/s]
+Epoch 8/20, Validation Loss: 0.725670705238978| 240/600 [01:45<02:02,  2.93it/s]
+Epoch 9/20, Validation Loss: 1.026618242263794| 270/600 [02:01<01:52,  2.93it/s]
+Epoch 10/20, Validation Loss: 0.9509538014729818300/600 [02:14<01:43,  2.91it/s]
+Epoch 11/20, Validation Loss: 0.7262051999568939330/600 [02:26<01:32,  2.93it/s]
+Epoch 12/20, Validation Loss: 0.9937999447186788360/600 [02:39<01:21,  2.93it/s]
+Epoch 13/20, Validation Loss: 0.8313636779785156390/600 [02:52<01:11,  2.93it/s]
+Epoch 14/20, Validation Loss: 0.713095893462499 420/600 [03:05<01:01,  2.92it/s]
+Epoch 15/20, Validation Loss: 0.8375670115152994450/600 [03:20<00:51,  2.93it/s]
+Epoch 16/20, Validation Loss: 1.1442764202753704480/600 [03:33<00:41,  2.93it/s]
+Epoch 17/20, Validation Loss: 0.9921413461367289510/600 [03:46<00:30,  2.93it/s]
+Epoch 18/20, Validation Loss: 0.7131850123405457540/600 [03:59<00:20,  2.91it/s]
+Epoch 19/20, Validation Loss: 0.7407841781775156570/600 [04:12<00:10,  2.93it/s]
+Epoch 20/20, Validation Loss: 1.0147461891174316600/600 [04:25<00:00,  2.93it/s]
+100%|█████████████████████████████████████████| 600/600 [04:25<00:00,  2.26it/s]
+acc: 0.8308270676691729   precisionma: 0.6018667412617221  recallma: 0.6113222450064556 recallwei: 0.8308270676691729 weighted-f1: 0.8393039683021642  macro-f1: 0.5946169308699678 mcc: 0.7984552962229381
+Đánh giá Phase 2 cho task 4:  (0.8308270676691729, 0.6018667412617221, 0.6113222450064556, 0.8393039683021642, 0.5946169308699678)
+Saved checkpoint: /admin/model/checkpoints/task_4_final.ckpt
+Kiểm tra Task 4 model trên các datasets trước đó sau Phase 2
+----------------------Tải model tốt nhất và kiểm tra-----------------------------
+acc: 0.5482456140350878   precisionma: 0.47666695341324006  recallma: 0.5619433604727723 recallwei: 0.5482456140350878 weighted-f1: 0.5318489973000035  macro-f1: 0.4834518438394621 mcc: 0.48858669142083566
+acc: 0.8066914498141264   precisionma: 0.6642273034936078  recallma: 0.6978127917833801 recallwei: 0.8066914498141264 weighted-f1: 0.8321918412898651  macro-f1: 0.6405788071577546 mcc: 0.7788808271953067
+acc: 0.8027522935779816   precisionma: 0.7322058135770048  recallma: 0.8309421880058999 recallwei: 0.8027522935779816 weighted-f1: 0.8126023815542119  macro-f1: 0.7593506019901329 mcc: 0.7615542216851543
+acc: 0.7877813504823151   precisionma: 0.7278756294081965  recallma: 0.6670190222077015 recallwei: 0.7877813504823151 weighted-f1: 0.7976546974217353  macro-f1: 0.658043179215461 mcc: 0.7479728404989425
+
+🔍 PHÂN TÍCH FORGETTING SAU TASK 4:
+============================================================
+Task bị forgetting nhiều nhất: Task 1 (54.82%)
+Task tốt nhất: Task 2 (80.67%)
+Accuracy trung bình: 73.64%
+Độ lệch chuẩn: 0.109
+
+💡 KHUYẾN NGHỊ CHO TASK TIẾP THEO:
+  - Tăng task_decay_factor lên 0.8-0.9 để ưu tiên Task 1
+  - Tăng min_task_ratio lên 0.2 để đảm bảo Task 1
+  - Tăng min_task_ratio để cân bằng performance các task
+============================================================
+
+----------------------- Task 5 ---------------------------
+
+================================================================================
+CẤU HÌNH TASK-AWARE REPLAY BUFFER CHO TASK 5
+================================================================================
+Tổng số mẫu trước đó: 9257
+Tỷ lệ replay: 0.25 (25.0%)
+Ngân sách replay: 2314 mẫu
+Task decay factor: 0.9
+Min task ratio: 0.2
+================================================================================
+
+tokenizing: 9257it [00:23, 392.81it/s]
+
+🎯 TASK-AWARE REPLAY SELECTION CHO TASK 5
+======================================================================
+📊 PHÂN BỔ BUDGET THEO TASK:
+  Task 1: 595 mẫu (ưu tiên: 1.97)
+  Task 2: 561 mẫu (ưu tiên: 1.46)
+  Task 3: 572 mẫu (ưu tiên: 1.62)
+  Task 4: 584 mẫu (ưu tiên: 1.80)
+
+============================================================
+SCALABLE REPLAY PROCESSING FOR TASK 5
+============================================================
+Step 1: Semantic Redundancy Filtering...
+Lọc ngữ nghĩa: 2312 → 1970 mẫu (342 mẫu dư thừa đã loại bỏ)
+Step 2: Vulnerability Code Summarization...
+Step 3: Clustering-based Priority Computation...
+Task 5: Đã cập nhật 10 clusters với 1970 mẫu
+Step 4: Priority-based Sample Selection...
+Step 5: Long-term Memory Storage...
+Stored long-term memory for Task 5
+Replay processing complete: 2312 → 1970 samples
+============================================================
+
+
+📈 KẾT QUẢ TASK-AWARE SELECTION:
+  Tổng mẫu được chọn: 1970
+  Task 1: 595 mẫu (30.2%)
+  Task 2: 561 mẫu (28.5%)
+  Task 3: 572 mẫu (29.0%)
+  Task 4: 242 mẫu (12.3%)
+======================================================================
+
+📚 NGỮ CẢNH LỊCH SỬ CHO TASK 5:
+==================================================
+Historical Context:
+Task 2 Summary:
+- Total samples: 508
+- Top vulnerabilities: 7(47), 11(42), 17(40)
+- Performance: {'replay_selected': 508}
+
+Task 3 Summary:
+- Total samples: 993
+- Top vulnerabilities: 0(115), 12(80), 7(79)
+- Performance: {'replay_selected': 993}
+
+Task 4 Summary:
+- Total samples: 1468
+- Top vulnerabilities: 4(120), 7(116), 19(115)
+- Performance: {'replay_selected': 1468}
+
+
+==================================================
+
+Thành phần dataset training cho Task 5:
+  Task hiện tại (Task 5): 2251 mẫu
+  Task-aware replay buffer: 1970 mẫu
+  Tổng cộng: 4221 mẫu
+
+tokenizing: 4221it [00:11, 374.10it/s]
+tokenizing: 308it [00:00, 390.37it/s]
+Bắt đầu Phase 1 cho Task 5: Focal Loss + Label Smoothing
+Epoch 1/20, Validation Loss: 1.3838520447413127| 33/660 [00:13<04:11,  2.49it/s]
+Epoch 2/20, Validation Loss: 1.4309797286987305| 66/660 [00:28<03:58,  2.49it/s]
+Epoch 3/20, Validation Loss: 1.4088921546936035| 99/660 [00:42<03:45,  2.49it/s]
+Epoch 4/20, Validation Loss: 1.4400471448898315 132/660 [00:56<03:32,  2.49it/s]
+Epoch 5/20, Validation Loss: 1.3782749970753987 165/660 [01:09<03:19,  2.49it/s]
+Epoch 6/20, Validation Loss: 1.4870575666427612 198/660 [01:25<03:05,  2.49it/s]
+Epoch 7/20, Validation Loss: 1.5033488670984905 231/660 [01:39<02:52,  2.49it/s]
+Epoch 8/20, Validation Loss: 1.430919090906779| 264/660 [01:52<02:39,  2.49it/s]
+Epoch 9/20, Validation Loss: 1.424545168876648| 297/660 [02:06<02:25,  2.49it/s]
+Epoch 10/20, Validation Loss: 1.463923454284668 330/660 [02:20<02:12,  2.49it/s]
+Epoch 11/20, Validation Loss: 1.4685250520706177363/660 [02:33<01:59,  2.49it/s]
+Epoch 12/20, Validation Loss: 1.4784092903137207396/660 [02:47<01:46,  2.48it/s]
+Early stopping at epoch 12
+ 60%|████████████████████████▌                | 396/660 [02:47<01:51,  2.36it/s]
+acc: 0.698051948051948   precisionma: 0.5990712260449103  recallma: 0.5898607871368162 recallwei: 0.698051948051948 weighted-f1: 0.7056535205382924  macro-f1: 0.5705549736461695 mcc: 0.6294420146931576
+Đánh giá Phase 1 cho task 5:  (0.698051948051948, 0.5990712260449103, 0.5898607871368162, 0.7056535205382924, 0.5705549736461695)
+Bắt đầu Phase 2 cho Task 5: Focal Loss + Label Smoothing + EWC
+Epoch 1/20, Validation Loss: 1.3105872869491577| 33/660 [00:14<04:28,  2.34it/s]
+Epoch 2/20, Validation Loss: 1.3160197337468464| 66/660 [00:30<04:14,  2.34it/s]
+Epoch 3/20, Validation Loss: 1.3223871787389119| 99/660 [00:45<04:00,  2.34it/s]
+Epoch 4/20, Validation Loss: 1.3566396236419678 132/660 [00:59<03:45,  2.34it/s]
+Epoch 5/20, Validation Loss: 1.430133581161499| 165/660 [01:14<03:31,  2.33it/s]
+Epoch 6/20, Validation Loss: 1.4062727292378743 198/660 [01:28<03:17,  2.34it/s]
+Epoch 7/20, Validation Loss: 1.4216423034667969 231/660 [01:43<03:03,  2.34it/s]
+Epoch 8/20, Validation Loss: 1.5096501111984253 264/660 [01:57<02:49,  2.34it/s]
+Early stopping at epoch 8
+ 40%|████████████████▍                        | 264/660 [01:58<02:57,  2.24it/s]
+acc: 0.6818181818181818   precisionma: 0.5824055579022133  recallma: 0.5862588335348625 recallwei: 0.6818181818181818 weighted-f1: 0.6876324510436366  macro-f1: 0.5578194943402318 mcc: 0.6091649496589115
+Đánh giá Phase 2 cho task 5:  (0.6818181818181818, 0.5824055579022133, 0.5862588335348625, 0.6876324510436366, 0.5578194943402318)
+Saved checkpoint: /admin/model/checkpoints/task_5_final.ckpt
+Kiểm tra Task 5 model trên các datasets trước đó sau Phase 2
+----------------------Tải model tốt nhất và kiểm tra-----------------------------
+acc: 0.6271929824561403   precisionma: 0.48420636120653987  recallma: 0.5614274702509996 recallwei: 0.6271929824561403 weighted-f1: 0.6177263139463047  macro-f1: 0.5050705258663323 mcc: 0.5640228148540226
+acc: 0.8104089219330854   precisionma: 0.6649600037643515  recallma: 0.6900924852699701 recallwei: 0.8104089219330854 weighted-f1: 0.8346482513768759  macro-f1: 0.641030636030636 mcc: 0.7806150937313476
+acc: 0.7660550458715596   precisionma: 0.6772767123667046  recallma: 0.7604831456632011 recallwei: 0.7660550458715596 weighted-f1: 0.7956478590488882  macro-f1: 0.6833240877208551 mcc: 0.7209658166107465
+acc: 0.752411575562701   precisionma: 0.7018194410733537  recallma: 0.6434227896492047 recallwei: 0.752411575562701 weighted-f1: 0.7617555390208886  macro-f1: 0.6343532841413446 mcc: 0.7055109226257904
+acc: 0.78125   precisionma: 0.6755150435898358  recallma: 0.654122541762827 recallwei: 0.78125 weighted-f1: 0.7713183359000007  macro-f1: 0.6469212578324108 mcc: 0.746843419931968
+
+🔍 PHÂN TÍCH FORGETTING SAU TASK 5:
+============================================================
+Task bị forgetting nhiều nhất: Task 1 (62.72%)
+Task tốt nhất: Task 2 (81.04%)
+Accuracy trung bình: 74.75%
+Độ lệch chuẩn: 0.063
+============================================================

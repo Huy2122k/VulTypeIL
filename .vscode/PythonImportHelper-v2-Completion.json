@@ -360,7 +360,87 @@
         "documentation": {}
     },
     {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "namedtuple",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "namedtuple",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
         "importPath": "collections",
         "description": "collections",
         "isExtraImport": true,
@@ -1605,6 +1685,86 @@
         "documentation": {}
     },
     {
+        "label": "RobertaTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "T5Config",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "T5ForConditionalGeneration",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "get_linear_schedule_with_warmup",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AdamW",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "RobertaTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "T5Config",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "T5ForConditionalGeneration",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "get_linear_schedule_with_warmup",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AdamW",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
         "label": "RobertaModel",
         "importPath": "transformers",
         "description": "transformers",
@@ -2858,6 +3018,78 @@
         "description": "openprompt",
         "isExtraImport": true,
         "detail": "openprompt",
+        "documentation": {}
+    },
+    {
+        "label": "PromptDataLoader",
+        "importPath": "openprompt",
+        "description": "openprompt",
+        "isExtraImport": true,
+        "detail": "openprompt",
+        "documentation": {}
+    },
+    {
+        "label": "PromptForClassification",
+        "importPath": "openprompt",
+        "description": "openprompt",
+        "isExtraImport": true,
+        "detail": "openprompt",
+        "documentation": {}
+    },
+    {
+        "label": "PromptDataLoader",
+        "importPath": "openprompt",
+        "description": "openprompt",
+        "isExtraImport": true,
+        "detail": "openprompt",
+        "documentation": {}
+    },
+    {
+        "label": "PromptForClassification",
+        "importPath": "openprompt",
+        "description": "openprompt",
+        "isExtraImport": true,
+        "detail": "openprompt",
+        "documentation": {}
+    },
+    {
+        "label": "InputExample",
+        "importPath": "openprompt.data_utils",
+        "description": "openprompt.data_utils",
+        "isExtraImport": true,
+        "detail": "openprompt.data_utils",
+        "documentation": {}
+    },
+    {
+        "label": "InputExample",
+        "importPath": "openprompt.data_utils",
+        "description": "openprompt.data_utils",
+        "isExtraImport": true,
+        "detail": "openprompt.data_utils",
+        "documentation": {}
+    },
+    {
+        "label": "InputExample",
+        "importPath": "openprompt.data_utils",
+        "description": "openprompt.data_utils",
+        "isExtraImport": true,
+        "detail": "openprompt.data_utils",
+        "documentation": {}
+    },
+    {
+        "label": "InputExample",
+        "importPath": "openprompt.data_utils",
+        "description": "openprompt.data_utils",
+        "isExtraImport": true,
+        "detail": "openprompt.data_utils",
+        "documentation": {}
+    },
+    {
+        "label": "InputExample",
+        "importPath": "openprompt.data_utils",
+        "description": "openprompt.data_utils",
+        "isExtraImport": true,
+        "detail": "openprompt.data_utils",
         "documentation": {}
     },
     {
@@ -4037,6 +4269,70 @@
         "documentation": {}
     },
     {
+        "label": "ManualTemplate",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "ManualVerbalizer",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "MixedTemplate",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "ManualTemplate",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "ManualVerbalizer",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "MixedTemplate",
+        "importPath": "openprompt.prompts",
+        "description": "openprompt.prompts",
+        "isExtraImport": true,
+        "detail": "openprompt.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "distance",
+        "importPath": "scipy.spatial",
+        "description": "scipy.spatial",
+        "isExtraImport": true,
+        "detail": "scipy.spatial",
+        "documentation": {}
+    },
+    {
+        "label": "distance",
+        "importPath": "scipy.spatial",
+        "description": "scipy.spatial",
+        "isExtraImport": true,
+        "detail": "scipy.spatial",
+        "documentation": {}
+    },
+    {
         "label": "distance",
         "importPath": "scipy.spatial",
         "description": "scipy.spatial",
@@ -4718,6 +5014,54 @@
     },
     {
         "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "matthews_corrcoef",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_fscore_support",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "matthews_corrcoef",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_fscore_support",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",
         "isExtraImport": true,
@@ -5981,6 +6325,22 @@
         "documentation": {}
     },
     {
+        "label": "tqdm",
+        "importPath": "tqdm.auto",
+        "description": "tqdm.auto",
+        "isExtraImport": true,
+        "detail": "tqdm.auto",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm.auto",
+        "description": "tqdm.auto",
+        "isExtraImport": true,
+        "detail": "tqdm.auto",
+        "documentation": {}
+    },
+    {
         "label": "load_plm",
         "importPath": "codet5",
         "description": "codet5",
@@ -6110,6 +6470,22 @@
     },
     {
         "label": "load_plm",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "add_special_tokens",
+        "importPath": "openprompt.plms",
+        "description": "openprompt.plms",
+        "isExtraImport": true,
+        "detail": "openprompt.plms",
+        "documentation": {}
+    },
+    {
+        "label": "add_special_tokens",
         "importPath": "openprompt.plms",
         "description": "openprompt.plms",
         "isExtraImport": true,
@@ -6782,6 +7158,150 @@
         "documentation": {}
     },
     {
+        "label": "EnhancedReplaySelector",
+        "importPath": "replay_integration",
+        "description": "replay_integration",
+        "isExtraImport": true,
+        "detail": "replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "EnhancedReplaySelector",
+        "importPath": "replay_integration",
+        "description": "replay_integration",
+        "isExtraImport": true,
+        "detail": "replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade_existing_replay_function",
+        "importPath": "replay_integration",
+        "description": "replay_integration",
+        "isExtraImport": true,
+        "detail": "replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "log_replay_improvements",
+        "importPath": "replay_integration",
+        "description": "replay_integration",
+        "isExtraImport": true,
+        "detail": "replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade_existing_replay_function",
+        "importPath": "replay_integration",
+        "description": "replay_integration",
+        "isExtraImport": true,
+        "detail": "replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "log_replay_improvements",
+        "importPath": "replay_integration",
+        "description": "replay_integration",
+        "isExtraImport": true,
+        "detail": "replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "EnhancedReplaySelector",
+        "importPath": "replay_integration",
+        "description": "replay_integration",
+        "isExtraImport": true,
+        "detail": "replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade_existing_replay_function",
+        "importPath": "replay_integration",
+        "description": "replay_integration",
+        "isExtraImport": true,
+        "detail": "replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "log_replay_improvements",
+        "importPath": "replay_integration",
+        "description": "replay_integration",
+        "isExtraImport": true,
+        "detail": "replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade_existing_replay_function",
+        "importPath": "replay_integration",
+        "description": "replay_integration",
+        "isExtraImport": true,
+        "detail": "replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "log_replay_improvements",
+        "importPath": "replay_integration",
+        "description": "replay_integration",
+        "isExtraImport": true,
+        "detail": "replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "create_config",
+        "importPath": "replay_config",
+        "description": "replay_config",
+        "isExtraImport": true,
+        "detail": "replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "create_config",
+        "importPath": "replay_config",
+        "description": "replay_config",
+        "isExtraImport": true,
+        "detail": "replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "create_config",
+        "importPath": "replay_config",
+        "description": "replay_config",
+        "isExtraImport": true,
+        "detail": "replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "create_config",
+        "importPath": "replay_config",
+        "description": "replay_config",
+        "isExtraImport": true,
+        "detail": "replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "ScalableReplayConfig",
+        "importPath": "replay_config",
+        "description": "replay_config",
+        "isExtraImport": true,
+        "detail": "replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "create_config",
+        "importPath": "replay_config",
+        "description": "replay_config",
+        "isExtraImport": true,
+        "detail": "replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "create_config",
+        "importPath": "replay_config",
+        "description": "replay_config",
+        "isExtraImport": true,
+        "detail": "replay_config",
+        "documentation": {}
+    },
+    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -6926,6 +7446,388 @@
         "description": "openprompt.plms.seq2seq",
         "isExtraImport": true,
         "detail": "openprompt.plms.seq2seq",
+        "documentation": {}
+    },
+    {
+        "label": "T5LMTokenizerWrapper",
+        "importPath": "openprompt.plms.seq2seq",
+        "description": "openprompt.plms.seq2seq",
+        "isExtraImport": true,
+        "detail": "openprompt.plms.seq2seq",
+        "documentation": {}
+    },
+    {
+        "label": "T5TokenizerWrapper",
+        "importPath": "openprompt.plms.seq2seq",
+        "description": "openprompt.plms.seq2seq",
+        "isExtraImport": true,
+        "detail": "openprompt.plms.seq2seq",
+        "documentation": {}
+    },
+    {
+        "label": "T5LMTokenizerWrapper",
+        "importPath": "openprompt.plms.seq2seq",
+        "description": "openprompt.plms.seq2seq",
+        "isExtraImport": true,
+        "detail": "openprompt.plms.seq2seq",
+        "documentation": {}
+    },
+    {
+        "label": "T5TokenizerWrapper",
+        "importPath": "openprompt.plms.seq2seq",
+        "description": "openprompt.plms.seq2seq",
+        "isExtraImport": true,
+        "detail": "openprompt.plms.seq2seq",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "stderr",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "ScalableReplayManager",
+        "importPath": "scalable_replay_improvements",
+        "description": "scalable_replay_improvements",
+        "isExtraImport": true,
+        "detail": "scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "ScalableReplayManager",
+        "importPath": "scalable_replay_improvements",
+        "description": "scalable_replay_improvements",
+        "isExtraImport": true,
+        "detail": "scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "create_scalable_replay_manager",
+        "importPath": "scalable_replay_improvements",
+        "description": "scalable_replay_improvements",
+        "isExtraImport": true,
+        "detail": "scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "GradientBasedSampleImportance",
+        "importPath": "scalable_replay_improvements",
+        "description": "scalable_replay_improvements",
+        "isExtraImport": true,
+        "detail": "scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "SemanticRedundancyFilter",
+        "importPath": "scalable_replay_improvements",
+        "description": "scalable_replay_improvements",
+        "isExtraImport": true,
+        "detail": "scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "VulnerabilityCodeSummarizer",
+        "importPath": "scalable_replay_improvements",
+        "description": "scalable_replay_improvements",
+        "isExtraImport": true,
+        "detail": "scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "ClusteringBasedReplayPriority",
+        "importPath": "scalable_replay_improvements",
+        "description": "scalable_replay_improvements",
+        "isExtraImport": true,
+        "detail": "scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "ScalableReplayManager",
+        "importPath": "scalable_replay_improvements",
+        "description": "scalable_replay_improvements",
+        "isExtraImport": true,
+        "detail": "scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "KMeans",
+        "importPath": "sklearn.cluster",
+        "description": "sklearn.cluster",
+        "isExtraImport": true,
+        "detail": "sklearn.cluster",
+        "documentation": {}
+    },
+    {
+        "label": "cosine_similarity",
+        "importPath": "sklearn.metrics.pairwise",
+        "description": "sklearn.metrics.pairwise",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics.pairwise",
+        "documentation": {}
+    },
+    {
+        "label": "TfidfVectorizer",
+        "importPath": "sklearn.feature_extraction.text",
+        "description": "sklearn.feature_extraction.text",
+        "isExtraImport": true,
+        "detail": "sklearn.feature_extraction.text",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "create_task_aware_replay_selector",
+        "importPath": "enhanced_replay_strategy",
+        "description": "enhanced_replay_strategy",
+        "isExtraImport": true,
+        "detail": "enhanced_replay_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "analyze_forgetting_pattern",
+        "importPath": "enhanced_replay_strategy",
+        "description": "enhanced_replay_strategy",
+        "isExtraImport": true,
+        "detail": "enhanced_replay_strategy",
         "documentation": {}
     },
     {
@@ -7266,15 +8168,6 @@
         "documentation": {}
     },
     {
-        "label": "pickle",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pickle",
-        "description": "pickle",
-        "detail": "pickle",
-        "documentation": {}
-    },
-    {
         "label": "random",
         "kind": 6,
         "isExtraImport": true,
@@ -7441,54 +8334,6 @@
         "description": "textcnn_model",
         "isExtraImport": true,
         "detail": "textcnn_model",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
         "documentation": {}
     },
     {
@@ -7684,23 +8529,6 @@
         "importPath": "copy",
         "description": "copy",
         "detail": "copy",
-        "documentation": {}
-    },
-    {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
-        "documentation": {}
-    },
-    {
-        "label": "stderr",
-        "importPath": "sys",
-        "description": "sys",
-        "isExtraImport": true,
-        "detail": "sys",
         "documentation": {}
     },
     {
@@ -8123,14 +8951,6 @@
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
         "label": "Parameter",
         "importPath": "torch.nn.parameter",
         "description": "torch.nn.parameter",
@@ -8351,6 +9171,216 @@
         "documentation": {}
     },
     {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "strategies",
+        "importPath": "hypothesis",
+        "description": "hypothesis",
+        "isExtraImport": true,
+        "detail": "hypothesis",
+        "documentation": {}
+    },
+    {
+        "label": "OptimizedInputExample",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "OptimizedInputExample",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "OptimizationMetrics",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "OptimizationComponent",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "FilterComponent",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "TransformComponent",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "PrioritizationComponent",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "OptimizationError",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigurationError",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingError",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigurationError",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "OptimizationError",
+        "importPath": "optimization.base",
+        "description": "optimization.base",
+        "isExtraImport": true,
+        "detail": "optimization.base",
+        "documentation": {}
+    },
+    {
+        "label": "OptimizationConfig",
+        "importPath": "optimization.config",
+        "description": "optimization.config",
+        "isExtraImport": true,
+        "detail": "optimization.config",
+        "documentation": {}
+    },
+    {
+        "label": "SemanticFilterConfig",
+        "importPath": "optimization.config",
+        "description": "optimization.config",
+        "isExtraImport": true,
+        "detail": "optimization.config",
+        "documentation": {}
+    },
+    {
+        "label": "SummarizationConfig",
+        "importPath": "optimization.config",
+        "description": "optimization.config",
+        "isExtraImport": true,
+        "detail": "optimization.config",
+        "documentation": {}
+    },
+    {
+        "label": "PrioritizationConfig",
+        "importPath": "optimization.config",
+        "description": "optimization.config",
+        "isExtraImport": true,
+        "detail": "optimization.config",
+        "documentation": {}
+    },
+    {
+        "label": "OptimizationConfig",
+        "importPath": "optimization.config",
+        "description": "optimization.config",
+        "isExtraImport": true,
+        "detail": "optimization.config",
+        "documentation": {}
+    },
+    {
+        "label": "ReplayOptimizationManager",
+        "importPath": "optimization.config",
+        "description": "optimization.config",
+        "isExtraImport": true,
+        "detail": "optimization.config",
+        "documentation": {}
+    },
+    {
+        "label": "yaml",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "yaml",
+        "description": "yaml",
+        "detail": "yaml",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Mock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
         "label": "classes",
         "importPath": "vulcom",
         "description": "vulcom",
@@ -8421,14 +9451,6 @@
         "description": "matplotlib.patches",
         "isExtraImport": true,
         "detail": "matplotlib.patches",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -16062,6 +17084,33 @@
         "documentation": {}
     },
     {
+        "label": "TaskAwareReplaySelector",
+        "kind": 6,
+        "importPath": "main.enhanced_replay_strategy",
+        "description": "main.enhanced_replay_strategy",
+        "peekOfCode": "class TaskAwareReplaySelector(EnhancedReplaySelector):\n    \"\"\"\n    Enhanced Replay Selector với Task-Aware Strategy để chống forgetting\n    \"\"\"\n    def __init__(self, \n                 similarity_threshold=0.85,\n                 max_code_lines=10,\n                 n_clusters=10,\n                 memory_dir=\"long_term_memory\",\n                 use_gradient_importance=False,",
+        "detail": "main.enhanced_replay_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "create_task_aware_replay_selector",
+        "kind": 2,
+        "importPath": "main.enhanced_replay_strategy",
+        "description": "main.enhanced_replay_strategy",
+        "peekOfCode": "def create_task_aware_replay_selector(config_type='balanced', \n                                    task_decay_factor=0.7,\n                                    min_task_ratio=0.15):\n    \"\"\"\n    Factory function để tạo Task-Aware Replay Selector\n    Args:\n        config_type: Loại cấu hình ('balanced', 'memory_efficient', etc.)\n        task_decay_factor: Hệ số decay cho task priority (0.5-0.9)\n        min_task_ratio: Tỷ lệ tối thiểu cho mỗi task (0.1-0.2)\n    Returns:",
+        "detail": "main.enhanced_replay_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "analyze_forgetting_pattern",
+        "kind": 2,
+        "importPath": "main.enhanced_replay_strategy",
+        "description": "main.enhanced_replay_strategy",
+        "peekOfCode": "def analyze_forgetting_pattern(task_results):\n    \"\"\"\n    Phân tích pattern forgetting từ kết quả các task\n    Args:\n        task_results: Dict {task_id: accuracy}\n    Returns:\n        analysis: Dict với thông tin phân tích\n    \"\"\"\n    if not task_results:\n        return {}",
+        "detail": "main.enhanced_replay_strategy",
+        "documentation": {}
+    },
+    {
         "label": "ContinualLearningEvaluator",
         "kind": 6,
         "importPath": "main.evl_vul2",
@@ -16248,6 +17297,483 @@
         "description": "main.evl_vul2",
         "peekOfCode": "ModelClass = namedtuple(\"ModelClass\", ('config', 'tokenizer', 'model','wrapper'))\ndef load_plm(model_name, model_path):\n    \"\"\"Load pre-trained language model (giống vul2.py)\"\"\"\n    codet5_model = ModelClass(**{\n        \"config\": T5Config, \n        \"tokenizer\": RobertaTokenizer, \n        \"model\": T5ForConditionalGeneration,\n        \"wrapper\": T5TokenizerWrapper\n    })\n    model_class = codet5_model",
         "detail": "main.evl_vul2",
+        "documentation": {}
+    },
+    {
+        "label": "SemanticFilterConfig",
+        "kind": 6,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "class SemanticFilterConfig:\n    \"\"\"Cấu hình cho lọc dư thừa ngữ nghĩa\"\"\"\n    similarity_threshold: float = 0.85  # Ngưỡng cosine similarity cho dư thừa\n    max_features: int = 5000           # Số features TF-IDF tối đa\n    ngram_range: tuple = (1, 2)        # Phạm vi N-gram cho TF-IDF\n    def __post_init__(self):\n        if not 0.0 <= self.similarity_threshold <= 1.0:\n            raise ValueError(\"similarity_threshold phải nằm trong khoảng 0.0 đến 1.0\")\n@dataclass\nclass CodeSummarizerConfig:",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "CodeSummarizerConfig",
+        "kind": 6,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "class CodeSummarizerConfig:\n    \"\"\"Cấu hình cho tóm tắt mã nguồn vulnerability\"\"\"\n    max_code_lines: int = 10           # Số dòng tối đa để giữ lại mỗi mẫu code\n    vulnerability_keywords: List[str] = None  # Từ khóa vulnerability tùy chỉnh\n    def __post_init__(self):\n        if self.vulnerability_keywords is None:\n            self.vulnerability_keywords = [\n                'malloc', 'free', 'strcpy', 'strcat', 'sprintf', 'gets', 'scanf',\n                'memcpy', 'memmove', 'strncpy', 'strncat', 'snprintf',\n                'buffer', 'overflow', 'underflow', 'null', 'pointer', 'dereference',",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "ClusteringConfig",
+        "kind": 6,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "class ClusteringConfig:\n    \"\"\"Cấu hình cho ưu tiên replay dựa trên clustering\"\"\"\n    n_clusters: int = 10               # Số clusters cho K-means\n    random_state: int = 42             # Random seed để tái tạo kết quả\n    rarity_boost_factor: float = 1.5   # Hệ số tăng cho vulnerabilities hiếm\n    current_task_boost: float = 1.5    # Hệ số tăng cho vulnerabilities task hiện tại\n@dataclass\nclass GradientImportanceConfig:\n    \"\"\"Cấu hình cho đánh giá tầm quan trọng dựa trên gradient\"\"\"\n    enabled: bool = False              # Có sử dụng gradient importance không",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "GradientImportanceConfig",
+        "kind": 6,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "class GradientImportanceConfig:\n    \"\"\"Cấu hình cho đánh giá tầm quan trọng dựa trên gradient\"\"\"\n    enabled: bool = False              # Có sử dụng gradient importance không\n    weight_in_combination: float = 0.3 # Trọng số khi kết hợp với các điểm khác\n    batch_size_for_computation: int = 1 # Batch size cho tính toán gradient\n@dataclass\nclass LongTermMemoryConfig:\n    \"\"\"Cấu hình cho lưu trữ bộ nhớ dài hạn\"\"\"\n    memory_dir: str = \"long_term_memory\"  # Thư mục lưu trữ memory\n    max_summary_length: int = 500         # Độ dài tối đa cho tóm tắt task",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "LongTermMemoryConfig",
+        "kind": 6,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "class LongTermMemoryConfig:\n    \"\"\"Cấu hình cho lưu trữ bộ nhớ dài hạn\"\"\"\n    memory_dir: str = \"long_term_memory\"  # Thư mục lưu trữ memory\n    max_summary_length: int = 500         # Độ dài tối đa cho tóm tắt task\n    store_features: bool = True           # Có lưu trữ feature representations không\n    compress_features: bool = True        # Có nén features đã lưu không\n@dataclass\nclass ReplaySelectionConfig:\n    \"\"\"Cấu hình cho chiến lược chọn replay tổng thể\"\"\"\n    min_samples_per_class: int = 2      # Số mẫu tối thiểu mỗi class trong replay",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "ReplaySelectionConfig",
+        "kind": 6,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "class ReplaySelectionConfig:\n    \"\"\"Cấu hình cho chiến lược chọn replay tổng thể\"\"\"\n    min_samples_per_class: int = 2      # Số mẫu tối thiểu mỗi class trong replay\n    stratified_selection: bool = True    # Sử dụng chọn lựa phân tầng theo class\n    priority_weight: float = 0.7         # Trọng số cho chọn lựa dựa trên ưu tiên\n    diversity_weight: float = 0.3        # Trọng số cho đa dạng trong chọn lựa\n@dataclass\nclass ScalableReplayConfig:\n    \"\"\"Main configuration class combining all sub-configurations\"\"\"\n    semantic_filter: SemanticFilterConfig = None",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "ScalableReplayConfig",
+        "kind": 6,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "class ScalableReplayConfig:\n    \"\"\"Main configuration class combining all sub-configurations\"\"\"\n    semantic_filter: SemanticFilterConfig = None\n    code_summarizer: CodeSummarizerConfig = None\n    clustering: ClusteringConfig = None\n    gradient_importance: GradientImportanceConfig = None\n    long_term_memory: LongTermMemoryConfig = None\n    replay_selection: ReplaySelectionConfig = None\n    # Global settings\n    verbose: bool = True                 # Enable verbose logging",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "get_memory_efficient_config",
+        "kind": 2,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "def get_memory_efficient_config() -> ScalableReplayConfig:\n    \"\"\"Cấu hình tối ưu cho hiệu quả bộ nhớ\"\"\"\n    config = ScalableReplayConfig()\n    config.semantic_filter.similarity_threshold = 0.9  # Lọc tích cực hơn\n    config.code_summarizer.max_code_lines = 5         # Tóm tắt code ngắn hơn\n    config.clustering.n_clusters = 5                  # Ít clusters hơn\n    config.long_term_memory.compress_features = True  # Bật nén\n    return config\ndef get_quality_focused_config() -> ScalableReplayConfig:\n    \"\"\"Cấu hình tối ưu cho chất lượng replay\"\"\"",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "get_quality_focused_config",
+        "kind": 2,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "def get_quality_focused_config() -> ScalableReplayConfig:\n    \"\"\"Cấu hình tối ưu cho chất lượng replay\"\"\"\n    config = ScalableReplayConfig()\n    config.semantic_filter.similarity_threshold = 0.75  # Lọc ít tích cực hơn\n    config.code_summarizer.max_code_lines = 15         # Tóm tắt code dài hơn\n    config.clustering.n_clusters = 15                  # Nhiều clusters để chính xác hơn\n    config.gradient_importance.enabled = True          # Bật gradient importance\n    return config\ndef get_balanced_config() -> ScalableReplayConfig:\n    \"\"\"Cấu hình cân bằng cho sử dụng chung\"\"\"",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "get_balanced_config",
+        "kind": 2,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "def get_balanced_config() -> ScalableReplayConfig:\n    \"\"\"Cấu hình cân bằng cho sử dụng chung\"\"\"\n    return ScalableReplayConfig()  # Sử dụng giá trị mặc định\ndef get_fast_config() -> ScalableReplayConfig:\n    \"\"\"Cấu hình tối ưu cho tốc độ\"\"\"\n    config = ScalableReplayConfig()\n    config.semantic_filter.max_features = 1000        # Ít TF-IDF features hơn\n    config.clustering.n_clusters = 5                  # Ít clusters hơn\n    config.gradient_importance.enabled = False        # Tắt tính toán gradient\n    config.long_term_memory.store_features = False    # Không lưu features",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "get_fast_config",
+        "kind": 2,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "def get_fast_config() -> ScalableReplayConfig:\n    \"\"\"Cấu hình tối ưu cho tốc độ\"\"\"\n    config = ScalableReplayConfig()\n    config.semantic_filter.max_features = 1000        # Ít TF-IDF features hơn\n    config.clustering.n_clusters = 5                  # Ít clusters hơn\n    config.gradient_importance.enabled = False        # Tắt tính toán gradient\n    config.long_term_memory.store_features = False    # Không lưu features\n    return config\n# Factory cấu hình\ndef create_config(config_type: str = \"balanced\") -> ScalableReplayConfig:",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "create_config",
+        "kind": 2,
+        "importPath": "main.replay_config",
+        "description": "main.replay_config",
+        "peekOfCode": "def create_config(config_type: str = \"balanced\") -> ScalableReplayConfig:\n    \"\"\"\n    Hàm factory để tạo cấu hình\n    Args:\n        config_type: Loại cấu hình ('memory_efficient', 'quality_focused', \n                    'balanced', 'fast')\n    Returns:\n        ScalableReplayConfig: Instance đã cấu hình\n    \"\"\"\n    config_map = {",
+        "detail": "main.replay_config",
+        "documentation": {}
+    },
+    {
+        "label": "create_mock_examples",
+        "kind": 2,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "def create_mock_examples(num_examples=100, num_classes=5):\n    \"\"\"Tạo mock examples để demo\"\"\"\n    from openprompt.data_utils import InputExample\n    examples = []\n    for i in range(num_examples):\n        # Mock vulnerability code\n        code_snippets = [\n            \"char buffer[10]; strcpy(buffer, user_input);\",\n            \"int *ptr = malloc(sizeof(int)); free(ptr); *ptr = 5;\",\n            \"for(int i = 0; i <= array_size; i++) { array[i] = value; }\",",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "create_mock_dataloader",
+        "kind": 2,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "def create_mock_dataloader(examples):\n    \"\"\"Tạo mock dataloader để demo\"\"\"\n    class MockDataLoader:\n        def __init__(self, examples):\n            self.examples = examples\n            self.batch_size = 16\n        def __iter__(self):\n            for i in range(0, len(self.examples), self.batch_size):\n                batch_examples = self.examples[i:i+self.batch_size]\n                batch_data = {",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "create_mock_model",
+        "kind": 2,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "def create_mock_model():\n    \"\"\"Tạo mock model để demo\"\"\"\n    class MockModel:\n        def __init__(self):\n            self.eval_mode = False\n        def eval(self):\n            self.eval_mode = True\n        def cuda(self):\n            return self\n        def __call__(self, inputs):",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "demo_basic_integration",
+        "kind": 2,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "def demo_basic_integration():\n    \"\"\"Demonstrate basic integration with existing code\"\"\"\n    print(\"🚀 DEMO: Basic Integration with Existing Code\")\n    print(\"=\" * 60)\n    # Create mock data\n    examples = create_mock_examples(num_examples=50, num_classes=5)\n    dataloader = create_mock_dataloader(examples)\n    model = create_mock_model()\n    current_task_examples = create_mock_examples(num_examples=20, num_classes=3)\n    # Create enhanced replay selector",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "demo_configuration_options",
+        "kind": 2,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "def demo_configuration_options():\n    \"\"\"Demonstrate different configuration options\"\"\"\n    print(\"\\n🔧 DEMO: Configuration Options\")\n    print(\"=\" * 60)\n    configs = {\n        'Memory Efficient': create_config('memory_efficient'),\n        'Quality Focused': create_config('quality_focused'),\n        'Balanced': create_config('balanced'),\n        'Fast': create_config('fast')\n    }",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "demo_scalable_replay_manager",
+        "kind": 2,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "def demo_scalable_replay_manager():\n    \"\"\"Demonstrate the ScalableReplayManager directly\"\"\"\n    print(\"\\n⚙️  DEMO: ScalableReplayManager Direct Usage\")\n    print(\"=\" * 60)\n    # Create manager with custom config\n    config = create_config('quality_focused')\n    manager = ScalableReplayManager(\n        similarity_threshold=config.semantic_filter.similarity_threshold,\n        max_code_lines=config.code_summarizer.max_code_lines,\n        n_clusters=config.clustering.n_clusters,",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "demo_integration_with_existing_code",
+        "kind": 2,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "def demo_integration_with_existing_code():\n    \"\"\"Show exact integration steps for vul_main2.py\"\"\"\n    print(\"\\n🔗 DEMO: Integration Steps for vul_main2.py\")\n    print(\"=\" * 60)\n    integration_code = '''\n# STEP 1: Add imports at the top of vul_main2.py\nfrom replay_integration import upgrade_existing_replay_function, log_replay_improvements\nfrom replay_config import create_config\n# STEP 2: Create enhanced selector (add after model initialization)\nenhanced_selector = upgrade_existing_replay_function()",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "demo_performance_comparison",
+        "kind": 2,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "def demo_performance_comparison():\n    \"\"\"Demonstrate performance comparison between old and new methods\"\"\"\n    print(\"\\n📈 DEMO: Performance Comparison\")\n    print(\"=\" * 60)\n    # Simulate old method (random selection)\n    examples = create_mock_examples(num_examples=100, num_classes=5)\n    # Old method: Random selection\n    import random\n    random.seed(42)\n    old_indices = random.sample(range(len(examples)), 20)",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "cleanup_demo_files",
+        "kind": 2,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "def cleanup_demo_files():\n    \"\"\"Clean up demo files\"\"\"\n    import shutil\n    demo_dirs = [\"demo_memory\", \"demo_scalable_memory\"]\n    for dir_name in demo_dirs:\n        if os.path.exists(dir_name):\n            shutil.rmtree(dir_name)\n            print(f\"🧹 Cleaned up {dir_name}\")\n    demo_files = [\"replay_improvements.log\", \"replay_config_example.json\"]\n    for file_name in demo_files:",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "def main():\n    \"\"\"Run all demos\"\"\"\n    print(\"🎯 SCALABLE REPLAY IMPROVEMENTS DEMO\")\n    print(\"=\" * 70)\n    print(\"This demo shows how to integrate scalable replay improvements\")\n    print(\"into your existing continual learning pipeline.\")\n    print(\"=\" * 70)\n    try:\n        # Run demos\n        demo_basic_integration()",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "enhanced_selector",
+        "kind": 5,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "enhanced_selector = upgrade_existing_replay_function()\n# STEP 3: Replace existing replay selection in main loop (around line 700)\n# OLD CODE:\n# indices_to_replay, _ = select_uncertain_samples_with_stratified_class(\n#     prompt_model, train_dataloader_prev, prev_examples,\n#     num_samples=replay_budget, min_samples_per_class=args.min_samples_per_class\n# )\n# NEW CODE:\ncurrent_examples = read_prompt_examples(data_paths[i - 1])\nindices_to_replay, selection_info = enhanced_selector.select_enhanced_replay_samples(",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "current_examples",
+        "kind": 5,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "current_examples = read_prompt_examples(data_paths[i - 1])\nindices_to_replay, selection_info = enhanced_selector.select_enhanced_replay_samples(\n    prompt_model=prompt_model,\n    dataloader=train_dataloader_prev,\n    examples=prev_examples,\n    num_samples=replay_budget,\n    task_id=i,\n    min_samples_per_class=args.min_samples_per_class,\n    current_task_examples=current_examples\n)",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "historical_context",
+        "kind": 5,
+        "importPath": "main.replay_demo",
+        "description": "main.replay_demo",
+        "peekOfCode": "historical_context = enhanced_selector.get_historical_context(i)\nif historical_context:\n    print(f\"Historical Context for Task {i}:\")\n    print(historical_context)\n'''\n    print(integration_code)\ndef demo_performance_comparison():\n    \"\"\"Demonstrate performance comparison between old and new methods\"\"\"\n    print(\"\\n📈 DEMO: Performance Comparison\")\n    print(\"=\" * 60)",
+        "detail": "main.replay_demo",
+        "documentation": {}
+    },
+    {
+        "label": "EnhancedReplaySelector",
+        "kind": 6,
+        "importPath": "main.replay_integration",
+        "description": "main.replay_integration",
+        "peekOfCode": "class EnhancedReplaySelector:\n    \"\"\"\n    Thay thế trực tiếp cho việc chọn replay hiện có với các cải tiến có thể mở rộng\n    \"\"\"\n    def __init__(self, \n                 similarity_threshold=0.85,\n                 max_code_lines=10,\n                 n_clusters=10,\n                 memory_dir=\"long_term_memory\",\n                 use_gradient_importance=False):",
+        "detail": "main.replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade_existing_replay_function",
+        "kind": 2,
+        "importPath": "main.replay_integration",
+        "description": "main.replay_integration",
+        "peekOfCode": "def upgrade_existing_replay_function():\n    \"\"\"\n    Trả về phiên bản nâng cấp của hàm chọn replay hiện có\n    Cách sử dụng trong vul_main2.py:\n        # Thay thế lời gọi hàm hiện có\n        # CŨ:\n        # indices_to_replay, _ = select_uncertain_samples_with_stratified_class(...)\n        # MỚI:\n        enhanced_selector = upgrade_existing_replay_function()\n        indices_to_replay, selection_info = enhanced_selector.select_enhanced_replay_samples(...)",
+        "detail": "main.replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "create_enhanced_template_with_history",
+        "kind": 2,
+        "importPath": "main.replay_integration",
+        "description": "main.replay_integration",
+        "peekOfCode": "def create_enhanced_template_with_history(original_template_text, historical_context=\"\"):\n    \"\"\"\n    Tạo template nâng cao bao gồm ngữ cảnh lịch sử\n    Args:\n        original_template_text: Text template ban đầu\n        historical_context: Ngữ cảnh lịch sử từ long-term memory\n    Returns:\n        enhanced_template_text: Template với ngữ cảnh lịch sử\n    \"\"\"\n    if not historical_context:",
+        "detail": "main.replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "log_replay_improvements",
+        "kind": 2,
+        "importPath": "main.replay_integration",
+        "description": "main.replay_integration",
+        "peekOfCode": "def log_replay_improvements(selection_info, task_id, log_file=\"replay_improvements.log\"):\n    \"\"\"\n    Ghi log thống kê cải tiến replay để phân tích\n    Args:\n        selection_info: Thông tin từ việc chọn replay nâng cao\n        task_id: ID task hiện tại\n        log_file: Đường dẫn file log\n    \"\"\"\n    import json\n    import datetime",
+        "detail": "main.replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "INTEGRATION_EXAMPLE",
+        "kind": 5,
+        "importPath": "main.replay_integration",
+        "description": "main.replay_integration",
+        "peekOfCode": "INTEGRATION_EXAMPLE = \"\"\"\n# Thêm vào đầu file vul_main2.py sau các imports hiện có\nfrom replay_integration import upgrade_existing_replay_function, log_replay_improvements\n# Thay thế code chọn replay hiện có (khoảng dòng 700) bằng:\nif i > 1:  # Cho các tasks sau task đầu tiên\n    # ... code hiện có cho prev_examples và train_dataloader_prev ...\n    # CHỌN REPLAY NÂNG CAO - Thay thế select_uncertain_samples_with_stratified_class hiện có\n    enhanced_selector = upgrade_existing_replay_function()\n    # Lấy examples task hiện tại để phân tích vulnerability\n    current_examples = read_prompt_examples(data_paths[i - 1])",
+        "detail": "main.replay_integration",
+        "documentation": {}
+    },
+    {
+        "label": "run_experiment",
+        "kind": 2,
+        "importPath": "main.run_comparison",
+        "description": "main.run_comparison",
+        "peekOfCode": "def run_experiment(script_name, config_name, extra_args=\"\"):\n    \"\"\"\n    Chạy thử nghiệm với script và cấu hình cụ thể\n    Args:\n        script_name: Tên script (vul_main2.py hoặc vul_main4.py)\n        config_name: Tên cấu hình để lưu kết quả\n        extra_args: Tham số bổ sung\n    \"\"\"\n    print(f\"\\n🚀 CHẠY THỬ NGHIỆM: {script_name} - {config_name}\")\n    print(f\"{'='*70}\")",
+        "detail": "main.run_comparison",
+        "documentation": {}
+    },
+    {
+        "label": "run_comparison_experiments",
+        "kind": 2,
+        "importPath": "main.run_comparison",
+        "description": "main.run_comparison",
+        "peekOfCode": "def run_comparison_experiments():\n    \"\"\"Chạy các thử nghiệm so sánh\"\"\"\n    print(f\"🎯 BẮT ĐẦU SO SÁNH VUL_MAIN2 VS VUL_MAIN4\")\n    print(f\"{'='*70}\")\n    print(f\"Thời gian bắt đầu: {datetime.now()}\")\n    print(f\"{'='*70}\")\n    experiments = []\n    # 1. Chạy vul_main2.py (baseline)\n    print(f\"\\n📋 THỬ NGHIỆM 1: BASELINE (vul_main2.py)\")\n    result1 = run_experiment(",
+        "detail": "main.run_comparison",
+        "documentation": {}
+    },
+    {
+        "label": "run_quick_test",
+        "kind": 2,
+        "importPath": "main.run_comparison",
+        "description": "main.run_comparison",
+        "peekOfCode": "def run_quick_test():\n    \"\"\"Chạy test nhanh với ít epochs\"\"\"\n    print(f\"⚡ CHẠY TEST NHANH (2 epochs)\")\n    # Test vul_main2.py\n    result1 = run_experiment(\n        script_name=\"vul_main2.py\",\n        config_name=\"quick_test_baseline\",\n        extra_args=\"--num_epochs 2 --num_tasks 2\"\n    )\n    # Test vul_main4.py",
+        "detail": "main.run_comparison",
+        "documentation": {}
+    },
+    {
+        "label": "run_task_aware_experiment",
+        "kind": 2,
+        "importPath": "main.run_task_aware_test",
+        "description": "main.run_task_aware_test",
+        "peekOfCode": "def run_task_aware_experiment(config_name, extra_args=\"\"):\n    \"\"\"\n    Chạy thử nghiệm với vul_main5.py\n    Args:\n        config_name: Tên cấu hình để lưu kết quả\n        extra_args: Tham số bổ sung\n    \"\"\"\n    print(f\"\\n🎯 CHẠY TASK-AWARE REPLAY TEST: {config_name}\")\n    print(f\"{'='*70}\")\n    # Tạo thư mục kết quả riêng",
+        "detail": "main.run_task_aware_test",
+        "documentation": {}
+    },
+    {
+        "label": "analyze_results_quick",
+        "kind": 2,
+        "importPath": "main.run_task_aware_test",
+        "description": "main.run_task_aware_test",
+        "peekOfCode": "def analyze_results_quick(results_dir):\n    \"\"\"Phân tích nhanh kết quả để xem có cải thiện Task 1 không\"\"\"\n    try:\n        import pandas as pd\n        from sklearn.metrics import accuracy_score\n        print(f\"\\n📊 PHÂN TÍCH NHANH KẾT QUẢ:\")\n        print(f\"{'='*50}\")\n        # Tìm file kết quả của task cuối cùng\n        task_files = []\n        for i in range(1, 6):  # Task 1-5",
+        "detail": "main.run_task_aware_test",
+        "documentation": {}
+    },
+    {
+        "label": "run_task_aware_tests",
+        "kind": 2,
+        "importPath": "main.run_task_aware_test",
+        "description": "main.run_task_aware_test",
+        "peekOfCode": "def run_task_aware_tests():\n    \"\"\"Chạy các test với Task-Aware Replay Strategy\"\"\"\n    print(f\"🎯 BẮT ĐẦU TEST TASK-AWARE REPLAY STRATEGY\")\n    print(f\"{'='*70}\")\n    print(f\"Mục tiêu: Cải thiện Task 1 accuracy từ 59% lên >65%\")\n    print(f\"Thời gian bắt đầu: {datetime.now()}\")\n    print(f\"{'='*70}\")\n    experiments = []\n    # 1. Test với task_decay_factor cao (ưu tiên task cũ mạnh)\n    print(f\"\\n📋 TEST 1: HIGH TASK PRIORITY (task_decay_factor=0.9)\")",
+        "detail": "main.run_task_aware_test",
+        "documentation": {}
+    },
+    {
+        "label": "run_quick_task_aware_test",
+        "kind": 2,
+        "importPath": "main.run_task_aware_test",
+        "description": "main.run_task_aware_test",
+        "peekOfCode": "def run_quick_task_aware_test():\n    \"\"\"Chạy test nhanh với ít epochs\"\"\"\n    print(f\"⚡ CHẠY QUICK TASK-AWARE TEST (5 epochs, 3 tasks)\")\n    result = run_task_aware_experiment(\n        config_name=\"quick_task_aware_test\",\n        extra_args=\"--num_epochs 5 --num_tasks 3 --task_decay_factor 0.9 --min_task_ratio 0.25\"\n    )\n    return [result]\nif __name__ == \"__main__\":\n    import sys",
+        "detail": "main.run_task_aware_test",
+        "documentation": {}
+    },
+    {
+        "label": "SemanticRedundancyFilter",
+        "kind": 6,
+        "importPath": "main.scalable_replay_improvements",
+        "description": "main.scalable_replay_improvements",
+        "peekOfCode": "class SemanticRedundancyFilter:\n    \"\"\"\n    Lọc các mẫu dư thừa về mặt ngữ nghĩa sử dụng TF-IDF + cosine similarity\n    \"\"\"\n    def __init__(self, similarity_threshold=0.85, max_features=5000):\n        self.similarity_threshold = similarity_threshold\n        self.vectorizer = TfidfVectorizer(\n            max_features=max_features,\n            stop_words='english',\n            ngram_range=(1, 2)",
+        "detail": "main.scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "VulnerabilityCodeSummarizer",
+        "kind": 6,
+        "importPath": "main.scalable_replay_improvements",
+        "description": "main.scalable_replay_improvements",
+        "peekOfCode": "class VulnerabilityCodeSummarizer:\n    \"\"\"\n    Tóm tắt mã nguồn vulnerability bằng cách trích xuất các dòng quan trọng\n    \"\"\"\n    def __init__(self):\n        # Từ khóa liên quan đến vulnerability\n        self.vuln_keywords = [\n            'malloc', 'free', 'strcpy', 'strcat', 'sprintf', 'gets', 'scanf',\n            'memcpy', 'memmove', 'strncpy', 'strncat', 'snprintf',\n            'buffer', 'overflow', 'underflow', 'null', 'pointer', 'dereference',",
+        "detail": "main.scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "ClusteringBasedReplayPriority",
+        "kind": 6,
+        "importPath": "main.scalable_replay_improvements",
+        "description": "main.scalable_replay_improvements",
+        "peekOfCode": "class ClusteringBasedReplayPriority:\n    \"\"\"\n    Triển khai ưu tiên replay dựa trên clustering với theo dõi tần suất vulnerability\n    \"\"\"\n    def __init__(self, n_clusters=10, feature_dim=768):\n        self.n_clusters = n_clusters\n        self.feature_dim = feature_dim\n        self.kmeans = KMeans(n_clusters=n_clusters, random_state=42)\n        self.cluster_vulnerability_freq = defaultdict(Counter)\n        self.task_cluster_mapping = {}",
+        "detail": "main.scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "GradientBasedSampleImportance",
+        "kind": 6,
+        "importPath": "main.scalable_replay_improvements",
+        "description": "main.scalable_replay_improvements",
+        "peekOfCode": "class GradientBasedSampleImportance:\n    \"\"\"\n    Computes sample importance based on gradient norms for replay selection\n    \"\"\"\n    def __init__(self, model):\n        self.model = model\n    def compute_gradient_norms(self, dataloader, loss_fn):\n        \"\"\"\n        Compute gradient norms for each sample to measure importance\n        Args:",
+        "detail": "main.scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "LongTermMemoryWithPrompting",
+        "kind": 6,
+        "importPath": "main.scalable_replay_improvements",
+        "description": "main.scalable_replay_improvements",
+        "peekOfCode": "class LongTermMemoryWithPrompting:\n    \"\"\"\n    Implements long-term memory storage with prompting for historical context\n    \"\"\"\n    def __init__(self, memory_dir=\"long_term_memory\"):\n        self.memory_dir = memory_dir\n        os.makedirs(memory_dir, exist_ok=True)\n        self.task_summaries = {}\n    def store_task_memory(self, task_id, examples, features, performance_metrics):\n        \"\"\"",
+        "detail": "main.scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "ScalableReplayManager",
+        "kind": 6,
+        "importPath": "main.scalable_replay_improvements",
+        "description": "main.scalable_replay_improvements",
+        "peekOfCode": "class ScalableReplayManager:\n    \"\"\"\n    Main class that integrates all replay improvements\n    \"\"\"\n    def __init__(self, \n                 similarity_threshold=0.85,\n                 max_code_lines=10,\n                 n_clusters=10,\n                 memory_dir=\"long_term_memory\"):\n        self.redundancy_filter = SemanticRedundancyFilter(similarity_threshold)",
+        "detail": "main.scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "create_scalable_replay_manager",
+        "kind": 2,
+        "importPath": "main.scalable_replay_improvements",
+        "description": "main.scalable_replay_improvements",
+        "peekOfCode": "def create_scalable_replay_manager(config=None):\n    \"\"\"Factory function to create ScalableReplayManager with configuration\"\"\"\n    if config is None:\n        config = {\n            'similarity_threshold': 0.85,\n            'max_code_lines': 10,\n            'n_clusters': 10,\n            'memory_dir': 'long_term_memory'\n        }\n    return ScalableReplayManager(**config)",
+        "detail": "main.scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "integrate_with_existing_code",
+        "kind": 2,
+        "importPath": "main.scalable_replay_improvements",
+        "description": "main.scalable_replay_improvements",
+        "peekOfCode": "def integrate_with_existing_code(replay_manager, prompt_model, examples, features, labels, \n                                task_id, replay_budget, current_task_vulnerabilities):\n    \"\"\"\n    Integration function for existing codebase\n    Usage in main training loop:\n        replay_manager = create_scalable_replay_manager()\n        selected_examples, info = integrate_with_existing_code(\n            replay_manager, prompt_model, prev_examples, features, labels,\n            task_id, replay_budget, current_task_vulnerabilities\n        )",
+        "detail": "main.scalable_replay_improvements",
+        "documentation": {}
+    },
+    {
+        "label": "TestSemanticRedundancyFilter",
+        "kind": 6,
+        "importPath": "main.test_scalable_replay",
+        "description": "main.test_scalable_replay",
+        "peekOfCode": "class TestSemanticRedundancyFilter(unittest.TestCase):\n    \"\"\"Test semantic redundancy filtering\"\"\"\n    def setUp(self):\n        self.filter = SemanticRedundancyFilter(similarity_threshold=0.8)\n    def test_filter_redundant_samples(self):\n        \"\"\"Test basic redundancy filtering\"\"\"\n        examples = [\n            InputExample(guid=0, text_a=\"buffer overflow vulnerability\", text_b=\"desc1\", tgt_text=0),\n            InputExample(guid=1, text_a=\"buffer overflow issue\", text_b=\"desc2\", tgt_text=0),  # Similar\n            InputExample(guid=2, text_a=\"null pointer dereference\", text_b=\"desc3\", tgt_text=1),  # Different",
+        "detail": "main.test_scalable_replay",
+        "documentation": {}
+    },
+    {
+        "label": "TestVulnerabilityCodeSummarizer",
+        "kind": 6,
+        "importPath": "main.test_scalable_replay",
+        "description": "main.test_scalable_replay",
+        "peekOfCode": "class TestVulnerabilityCodeSummarizer(unittest.TestCase):\n    \"\"\"Test vulnerability code summarization\"\"\"\n    def setUp(self):\n        self.summarizer = VulnerabilityCodeSummarizer()\n    def test_extract_vulnerability_lines(self):\n        \"\"\"Test vulnerability line extraction\"\"\"\n        code = \"\"\"\n        int main() {\n            char buffer[10];\n            strcpy(buffer, user_input);  // Vulnerable line",
+        "detail": "main.test_scalable_replay",
+        "documentation": {}
+    },
+    {
+        "label": "TestClusteringBasedReplayPriority",
+        "kind": 6,
+        "importPath": "main.test_scalable_replay",
+        "description": "main.test_scalable_replay",
+        "peekOfCode": "class TestClusteringBasedReplayPriority(unittest.TestCase):\n    \"\"\"Test clustering-based replay priority\"\"\"\n    def setUp(self):\n        self.clustering = ClusteringBasedReplayPriority(n_clusters=3)\n    def test_update_clusters(self):\n        \"\"\"Test cluster updating\"\"\"\n        features = np.random.randn(10, 5)\n        labels = [0, 1, 0, 1, 2, 0, 1, 2, 0, 1]\n        self.clustering.update_clusters(features, labels, task_id=1)\n        # Should have stored task mapping",
+        "detail": "main.test_scalable_replay",
+        "documentation": {}
+    },
+    {
+        "label": "TestScalableReplayManager",
+        "kind": 6,
+        "importPath": "main.test_scalable_replay",
+        "description": "main.test_scalable_replay",
+        "peekOfCode": "class TestScalableReplayManager(unittest.TestCase):\n    \"\"\"Test the main scalable replay manager\"\"\"\n    def setUp(self):\n        self.temp_dir = tempfile.mkdtemp()\n        self.manager = ScalableReplayManager(\n            similarity_threshold=0.8,\n            max_code_lines=5,\n            n_clusters=3,\n            memory_dir=self.temp_dir\n        )",
+        "detail": "main.test_scalable_replay",
+        "documentation": {}
+    },
+    {
+        "label": "TestEnhancedReplaySelector",
+        "kind": 6,
+        "importPath": "main.test_scalable_replay",
+        "description": "main.test_scalable_replay",
+        "peekOfCode": "class TestEnhancedReplaySelector(unittest.TestCase):\n    \"\"\"Test the integration wrapper\"\"\"\n    def setUp(self):\n        self.temp_dir = tempfile.mkdtemp()\n        self.selector = EnhancedReplaySelector(\n            similarity_threshold=0.8,\n            max_code_lines=5,\n            n_clusters=3,\n            memory_dir=self.temp_dir\n        )",
+        "detail": "main.test_scalable_replay",
+        "documentation": {}
+    },
+    {
+        "label": "TestReplayConfig",
+        "kind": 6,
+        "importPath": "main.test_scalable_replay",
+        "description": "main.test_scalable_replay",
+        "peekOfCode": "class TestReplayConfig(unittest.TestCase):\n    \"\"\"Test configuration management\"\"\"\n    def test_create_config(self):\n        \"\"\"Test configuration creation\"\"\"\n        config_types = ['balanced', 'memory_efficient', 'quality_focused', 'fast']\n        for config_type in config_types:\n            config = create_config(config_type)\n            self.assertIsInstance(config, ScalableReplayConfig)\n    def test_config_serialization(self):\n        \"\"\"Test config save/load\"\"\"",
+        "detail": "main.test_scalable_replay",
+        "documentation": {}
+    },
+    {
+        "label": "TestIntegration",
+        "kind": 6,
+        "importPath": "main.test_scalable_replay",
+        "description": "main.test_scalable_replay",
+        "peekOfCode": "class TestIntegration(unittest.TestCase):\n    \"\"\"Integration tests\"\"\"\n    def test_end_to_end_workflow(self):\n        \"\"\"Test complete workflow\"\"\"\n        # Create temporary directory\n        temp_dir = tempfile.mkdtemp()\n        try:\n            # Create manager\n            manager = ScalableReplayManager(memory_dir=temp_dir)\n            # Create mock data",
+        "detail": "main.test_scalable_replay",
+        "documentation": {}
+    },
+    {
+        "label": "run_tests",
+        "kind": 2,
+        "importPath": "main.test_scalable_replay",
+        "description": "main.test_scalable_replay",
+        "peekOfCode": "def run_tests():\n    \"\"\"Run all tests\"\"\"\n    # Create test suite\n    test_classes = [\n        TestSemanticRedundancyFilter,\n        TestVulnerabilityCodeSummarizer,\n        TestClusteringBasedReplayPriority,\n        TestScalableReplayManager,\n        TestEnhancedReplaySelector,\n        TestReplayConfig,",
+        "detail": "main.test_scalable_replay",
         "documentation": {}
     },
     {
@@ -17976,6 +19502,834 @@
         "description": "main.vul_main3",
         "peekOfCode": "best_dev_loss = float('inf')\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,\n            tokenizer=tokenizer,\n            tokenizer_wrapper_class=WrapperClass,",
         "detail": "main.vul_main3",
+        "documentation": {}
+    },
+    {
+        "label": "OnlineEWCWithFocalLabelSmoothLoss",
+        "kind": 6,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):\n    def __init__(self, num_classes, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9):\n        super(OnlineEWCWithFocalLabelSmoothLoss, self).__init__()\n        self.num_classes = num_classes\n        self.smoothing = smoothing\n        self.focal_alpha = focal_alpha\n        self.focal_gamma = focal_gamma\n        self.ewc_lambda = ewc_lambda\n        self.decay_factor = decay_factor\n        self.fisher_dict = {}",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "kind": 2,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "def load_plm(model_name, model_path):\n    codet5_model = ModelClass(**{\n        \"config\": T5Config, \n        \"tokenizer\": RobertaTokenizer, \n        \"model\": T5ForConditionalGeneration,\n        \"wrapper\": T5TokenizerWrapper\n    })\n    model_class = codet5_model\n    model_config = model_class.config.from_pretrained(\"Salesforce/codet5-base\")\n    # you can change huggingface model_config here",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "read_prompt_examples",
+        "kind": 2,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        # Convert CWE IDs to class index for classification\n        cwe_list = ast.literal_eval(type[idx])\n        # Take the first CWE ID and map it to class index",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "read_and_merge_previous_datasets",
+        "kind": 2,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths, return_task_info=False):\n    merged_data = pd.DataFrame()\n    examples = []\n    task_origins = []  # Track which task each sample comes from\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        task_id = i + 1  # Task IDs start from 1\n        # Add task_id column to track origin\n        data['task_origin'] = task_id\n        merged_data = pd.concat([merged_data, data], ignore_index=True)",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "def test(prompt_model, test_dataloader, name):\n    num_test_steps = len(test_dataloader)\n    allpreds = []\n    alllabels = []\n    with torch.no_grad():\n        for step, inputs in enumerate(test_dataloader):\n            if use_cuda:\n                inputs = inputs.cuda()\n            logits = prompt_model(inputs)\n            labels = inputs['tgt_text']",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "train_phase_one",
+        "kind": 2,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "def train_phase_one(prompt_model, train_dataloader, val_dataloader, optimizer1, optimizer2, scheduler1, scheduler2,\n                    num_epochs, loss_func_no_ewc, task_id, patience=5):\n    \"\"\"Phase 1: Train with Focal Loss + Label Smoothing only (no EWC) to learn task-specific features.\"\"\"\n    best_val_loss = float('inf')\n    patience_counter = 0\n    progress_bar = tqdm(range(num_epochs * len(train_dataloader)))\n    for epoch in range(num_epochs):\n        prompt_model.train()\n        for step, inputs in enumerate(train_dataloader):\n            if use_cuda:",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "train_phase_two",
+        "kind": 2,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, optimizer2, scheduler1, scheduler2,\n                    num_epochs, loss_func_with_ewc, task_id, patience=5):\n    \"\"\"Phase 2: Train with Focal Loss + Label Smoothing + EWC to prevent forgetting of previous tasks.\"\"\"\n    best_val_loss = float('inf')\n    patience_counter = 0\n    progress_bar = tqdm(range(num_epochs * len(train_dataloader)))\n    for epoch in range(num_epochs):\n        prompt_model.train()\n        for step, inputs in enumerate(train_dataloader):\n            if use_cuda:",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "save_task_checkpoint",
+        "kind": 2,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "def save_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Save checkpoint for a specific task and phase.\"\"\"\n    os.makedirs(os.path.join(args.checkpoint_dir, 'checkpoints'), exist_ok=True)\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')\n    torch.save(prompt_model.state_dict(), checkpoint_path)\n    print(f\"Saved checkpoint: {checkpoint_path}\")\n    return checkpoint_path\ndef load_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Load checkpoint for a specific task and phase.\"\"\"\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "load_task_checkpoint",
+        "kind": 2,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "def load_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Load checkpoint for a specific task and phase.\"\"\"\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')\n    if os.path.exists(checkpoint_path):\n        prompt_model.load_state_dict(\n            torch.load(checkpoint_path, map_location=torch.device('cuda:0'))\n        )\n        print(f\"Loaded checkpoint: {checkpoint_path}\")\n        return True\n    else:",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "list_available_checkpoints",
+        "kind": 2,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "def list_available_checkpoints():\n    \"\"\"List all available checkpoints.\"\"\"\n    checkpoint_dir_path = os.path.join(args.checkpoint_dir, 'checkpoints')\n    if os.path.exists(checkpoint_dir_path):\n        checkpoints = [f for f in os.listdir(checkpoint_dir_path) if f.endswith('.ckpt')]\n        print(\"Available checkpoints:\")\n        for checkpoint in sorted(checkpoints):\n            print(f\"  - {checkpoint}\")\n        return checkpoints\n    else:",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "ModelClass",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "ModelClass = namedtuple(\"ModelClass\", ('config', 'tokenizer', 'model','wrapper'))\ndef load_plm(model_name, model_path):\n    codet5_model = ModelClass(**{\n        \"config\": T5Config, \n        \"tokenizer\": RobertaTokenizer, \n        \"model\": T5ForConditionalGeneration,\n        \"wrapper\": T5TokenizerWrapper\n    })\n    model_class = codet5_model\n    model_config = model_class.config.from_pretrained(\"Salesforce/codet5-base\")",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "parser",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "parser = argparse.ArgumentParser(description=\"Train VulTypeIL model with Enhanced Scalable Replay\")\nparser.add_argument('--data_dir', type=str, default='incremental_tasks', help='Directory containing the data files')\nparser.add_argument('--checkpoint_dir', type=str, default='model', help='Directory to save/load checkpoints')\nparser.add_argument('--results_dir', type=str, default='results', help='Directory to save results')\nparser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to pre-trained model')\nparser.add_argument('--model_name', type=str, default='t5', help='Model name')\nparser.add_argument('--batch_size', type=int, default=16, help='Batch size')\nparser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs')\nparser.add_argument('--lr', type=float, default=5e-5, help='Learning rate')\nparser.add_argument('--ewc_lambda', type=float, default=0.4, help='EWC regularization term weight')",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "args",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "args = parser.parse_args()\n# Set parameters from args\nos.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['CUDA_VISIBLE_DEVICES']",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "os.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "seed",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "seed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "batch_size",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "batch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "num_class",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "num_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "max_seq_l",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "max_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "lr",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "lr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "num_epochs",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "num_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "use_cuda",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "use_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "model_name",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "model_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "pretrainedmodel_path",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "pretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "early_stop_threshold",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "ewc_lambda",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "ewc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths\ndata_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "classes",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths\ndata_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]\ntest_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "data_paths",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "data_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]\ntest_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\n# Define function to read examples\ndef read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['cwe_ids'].tolist()",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "test_paths",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "test_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\n# Define function to read examples\ndef read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['cwe_ids'].tolist()\n    for idx in range(len(data)):",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "valid_paths",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "valid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\n# Define function to read examples\ndef read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        # Convert CWE IDs to class index for classification",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func_no_ewc",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, args.pretrained_model_path)\n# Define template - Improved prompt template based on the paper's methodology\ntemplate_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func_with_ewc",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, args.pretrained_model_path)\n# Define template - Improved prompt template based on the paper's methodology\ntemplate_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "template_text",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "template_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "mytemplate",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "mytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],\n    \"CWE-20\": [\"Improper Input Validation\", \"Input Sanitization Flaw\", \"Invalid Input Handling\"],\n    \"CWE-416\": [\"Use After Free\", \"Dangling Pointer\", \"Memory Use After Deallocation\"],\n    \"CWE-190\": [\"Integer Overflow\", \"Integer Wraparound\", \"Overflow in Numeric Calculations\"],",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "myverbalizer",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "myverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],\n    \"CWE-20\": [\"Improper Input Validation\", \"Input Sanitization Flaw\", \"Invalid Input Handling\"],\n    \"CWE-416\": [\"Use After Free\", \"Dangling Pointer\", \"Memory Use After Deallocation\"],\n    \"CWE-190\": [\"Integer Overflow\", \"Integer Wraparound\", \"Overflow in Numeric Calculations\"],\n    \"CWE-200\": [\"Exposure of Sensitive Data\", \"Unauthorized Information Access\", \"Sensitive Information Leak\"],\n    \"CWE-120\": [\"Classic Buffer Overflow\", \"Buffer Copy Error\", \"Unchecked Buffer Size\"],",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "prompt_model",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "prompt_model = PromptForClassification(plm=plm, template=mytemplate, verbalizer=myverbalizer, freeze_plm=False)\nif use_cuda:\n    prompt_model = prompt_model.cuda()\n# 初始化损失函数\nloss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "no_decay",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "no_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer_grouped_parameters1",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "optimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]\noptimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer_grouped_parameters2",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "optimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]\noptimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=lr)\n# ===== KHỞI TẠO ENHANCED REPLAY SELECTOR =====\nprint(f\"\\n🚀 KHỞI TẠO SCALABLE REPLAY SYSTEM\")\nprint(f\"{'='*70}\")\nprint(f\"Loại cấu hình: {args.replay_config_type}\")\nprint(f\"Ngưỡng tương tự: {args.similarity_threshold}\")",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer1",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "optimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=lr)\n# ===== KHỞI TẠO ENHANCED REPLAY SELECTOR =====\nprint(f\"\\n🚀 KHỞI TẠO SCALABLE REPLAY SYSTEM\")\nprint(f\"{'='*70}\")\nprint(f\"Loại cấu hình: {args.replay_config_type}\")\nprint(f\"Ngưỡng tương tự: {args.similarity_threshold}\")\nprint(f\"Số dòng code tối đa: {args.max_code_lines}\")\nprint(f\"Số clusters: {args.n_clusters}\")\nprint(f\"Gradient importance: {args.enable_gradient_importance}\")",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer2",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "optimizer2 = AdamW(optimizer_grouped_parameters2, lr=lr)\n# ===== KHỞI TẠO ENHANCED REPLAY SELECTOR =====\nprint(f\"\\n🚀 KHỞI TẠO SCALABLE REPLAY SYSTEM\")\nprint(f\"{'='*70}\")\nprint(f\"Loại cấu hình: {args.replay_config_type}\")\nprint(f\"Ngưỡng tương tự: {args.similarity_threshold}\")\nprint(f\"Số dòng code tối đa: {args.max_code_lines}\")\nprint(f\"Số clusters: {args.n_clusters}\")\nprint(f\"Gradient importance: {args.enable_gradient_importance}\")\nprint(f\"{'='*70}\\n\")",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataloaders",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "test_dataloaders = []\nfor j in range(args.num_tasks):\n    test_dataloader = PromptDataLoader(\n        dataset=read_prompt_examples(test_paths[j]),\n        template=mytemplate,\n        tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n        batch_size=batch_size, shuffle=True,\n        teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n        decoder_max_length=3)\n    test_dataloaders.append(test_dataloader)",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "global_step",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "global_step = 0\nprev_dev_loss = float('inf')\nbest_dev_loss = float('inf')\nprint(f\"\\n🎯 BẮT ĐẦU TRAINING VỚI ENHANCED SCALABLE REPLAY\")\nprint(f\"{'='*70}\")\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "prev_dev_loss",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "prev_dev_loss = float('inf')\nbest_dev_loss = float('inf')\nprint(f\"\\n🎯 BẮT ĐẦU TRAINING VỚI ENHANCED SCALABLE REPLAY\")\nprint(f\"{'='*70}\")\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "best_dev_loss",
+        "kind": 5,
+        "importPath": "main.vul_main4",
+        "description": "main.vul_main4",
+        "peekOfCode": "best_dev_loss = float('inf')\nprint(f\"\\n🎯 BẮT ĐẦU TRAINING VỚI ENHANCED SCALABLE REPLAY\")\nprint(f\"{'='*70}\")\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,",
+        "detail": "main.vul_main4",
+        "documentation": {}
+    },
+    {
+        "label": "OnlineEWCWithFocalLabelSmoothLoss",
+        "kind": 6,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):\n    def __init__(self, num_classes, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.4, decay_factor=0.9):\n        super(OnlineEWCWithFocalLabelSmoothLoss, self).__init__()\n        self.num_classes = num_classes\n        self.smoothing = smoothing\n        self.focal_alpha = focal_alpha\n        self.focal_gamma = focal_gamma\n        self.ewc_lambda = ewc_lambda\n        self.decay_factor = decay_factor\n        self.fisher_dict = {}",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "load_plm",
+        "kind": 2,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "def load_plm(model_name, model_path):\n    codet5_model = ModelClass(**{\n        \"config\": T5Config, \n        \"tokenizer\": RobertaTokenizer, \n        \"model\": T5ForConditionalGeneration,\n        \"wrapper\": T5TokenizerWrapper\n    })\n    model_class = codet5_model\n    model_config = model_class.config.from_pretrained(\"Salesforce/codet5-base\")\n    model = model_class.model.from_pretrained(\"Salesforce/codet5-base\", config=model_config)",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "read_prompt_examples",
+        "kind": 2,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "def read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        # Convert CWE IDs to class index for classification\n        cwe_list = ast.literal_eval(type[idx])\n        # Take the first CWE ID and map it to class index",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "read_and_merge_previous_datasets",
+        "kind": 2,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "def read_and_merge_previous_datasets(current_index, data_paths, return_task_info=False):\n    merged_data = pd.DataFrame()\n    examples = []\n    task_origins = []  # Track which task each sample comes from\n    for i in range(current_index - 1):\n        data = pd.read_csv(data_paths[i]).astype(str)\n        task_id = i + 1  # Task IDs start from 1\n        # Add task_id column to track origin\n        data['task_origin'] = task_id\n        merged_data = pd.concat([merged_data, data], ignore_index=True)",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "def test(prompt_model, test_dataloader, name):\n    num_test_steps = len(test_dataloader)\n    allpreds = []\n    alllabels = []\n    with torch.no_grad():\n        for step, inputs in enumerate(test_dataloader):\n            if use_cuda:\n                inputs = inputs.cuda()\n            logits = prompt_model(inputs)\n            labels = inputs['tgt_text']",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "train_phase_one",
+        "kind": 2,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "def train_phase_one(prompt_model, train_dataloader, val_dataloader, optimizer1, optimizer2, scheduler1, scheduler2,\n                    num_epochs, loss_func_no_ewc, task_id, patience=5):\n    \"\"\"Phase 1: Train with Focal Loss + Label Smoothing only (no EWC) to learn task-specific features.\"\"\"\n    best_val_loss = float('inf')\n    patience_counter = 0\n    progress_bar = tqdm(range(num_epochs * len(train_dataloader)))\n    for epoch in range(num_epochs):\n        prompt_model.train()\n        for step, inputs in enumerate(train_dataloader):\n            if use_cuda:",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "train_phase_two",
+        "kind": 2,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "def train_phase_two(prompt_model, train_dataloader, val_dataloader, optimizer1, optimizer2, scheduler1, scheduler2,\n                    num_epochs, loss_func_with_ewc, task_id, patience=5):\n    \"\"\"Phase 2: Train with Focal Loss + Label Smoothing + EWC to prevent forgetting of previous tasks.\"\"\"\n    best_val_loss = float('inf')\n    patience_counter = 0\n    progress_bar = tqdm(range(num_epochs * len(train_dataloader)))\n    for epoch in range(num_epochs):\n        prompt_model.train()\n        for step, inputs in enumerate(train_dataloader):\n            if use_cuda:",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "save_task_checkpoint",
+        "kind": 2,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "def save_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Save checkpoint for a specific task and phase.\"\"\"\n    os.makedirs(os.path.join(args.checkpoint_dir, 'checkpoints'), exist_ok=True)\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')\n    torch.save(prompt_model.state_dict(), checkpoint_path)\n    print(f\"Saved checkpoint: {checkpoint_path}\")\n    return checkpoint_path\ndef load_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Load checkpoint for a specific task and phase.\"\"\"\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "load_task_checkpoint",
+        "kind": 2,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "def load_task_checkpoint(prompt_model, task_id, phase=\"final\"):\n    \"\"\"Load checkpoint for a specific task and phase.\"\"\"\n    checkpoint_path = os.path.join(args.checkpoint_dir, 'checkpoints', f'task_{task_id}_{phase}.ckpt')\n    if os.path.exists(checkpoint_path):\n        prompt_model.load_state_dict(\n            torch.load(checkpoint_path, map_location=torch.device('cuda:0'))\n        )\n        print(f\"Loaded checkpoint: {checkpoint_path}\")\n        return True\n    else:",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "list_available_checkpoints",
+        "kind": 2,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "def list_available_checkpoints():\n    \"\"\"List all available checkpoints.\"\"\"\n    checkpoint_dir_path = os.path.join(args.checkpoint_dir, 'checkpoints')\n    if os.path.exists(checkpoint_dir_path):\n        checkpoints = [f for f in os.listdir(checkpoint_dir_path) if f.endswith('.ckpt')]\n        print(\"Available checkpoints:\")\n        for checkpoint in sorted(checkpoints):\n            print(f\"  - {checkpoint}\")\n        return checkpoints\n    else:",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "ModelClass",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "ModelClass = namedtuple(\"ModelClass\", ('config', 'tokenizer', 'model','wrapper'))\ndef load_plm(model_name, model_path):\n    codet5_model = ModelClass(**{\n        \"config\": T5Config, \n        \"tokenizer\": RobertaTokenizer, \n        \"model\": T5ForConditionalGeneration,\n        \"wrapper\": T5TokenizerWrapper\n    })\n    model_class = codet5_model\n    model_config = model_class.config.from_pretrained(\"Salesforce/codet5-base\")",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "parser",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "parser = argparse.ArgumentParser(description=\"Train VulTypeIL model with Task-Aware Enhanced Replay\")\nparser.add_argument('--data_dir', type=str, default='incremental_tasks_csv', help='Directory containing the data files')\nparser.add_argument('--checkpoint_dir', type=str, default='model', help='Directory to save/load checkpoints')\nparser.add_argument('--results_dir', type=str, default='results', help='Directory to save results')\nparser.add_argument('--pretrained_model_path', type=str, default='Salesforce/codet5-base', help='Path to pre-trained model')\nparser.add_argument('--model_name', type=str, default='t5', help='Model name')\nparser.add_argument('--batch_size', type=int, default=16, help='Batch size')\nparser.add_argument('--num_epochs', type=int, default=100, help='Number of epochs')\nparser.add_argument('--lr', type=float, default=5e-5, help='Learning rate')\nparser.add_argument('--ewc_lambda', type=float, default=0.4, help='EWC regularization term weight')",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "args",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "args = parser.parse_args()\n# Set parameters from args\nos.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['CUDA_VISIBLE_DEVICES']",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "os.environ['CUDA_VISIBLE_DEVICES'] = '0'\nseed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "seed",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "seed = args.seed\nbatch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "batch_size",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "batch_size = args.batch_size\nnum_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "num_class",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "num_class = args.num_class\nmax_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "max_seq_l",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "max_seq_l = args.max_seq_l\nlr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "lr",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "lr = args.lr\nnum_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "num_epochs",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "num_epochs = args.num_epochs\nuse_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "use_cuda",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "use_cuda = args.use_cuda\nmodel_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "model_name",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "model_name = args.model_name\npretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "pretrainedmodel_path",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "pretrainedmodel_path = args.pretrained_model_path\nearly_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "early_stop_threshold",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "early_stop_threshold = 10\newc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "ewc_lambda",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "ewc_lambda = args.ewc_lambda\n# Define classes\nclasses = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths\ndata_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "classes",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "classes = [\n    'CWE-119', 'CWE-125', 'CWE-787', 'CWE-476', 'CWE-20', 'CWE-416',\n    'CWE-190', 'CWE-200', 'CWE-120', 'CWE-399', 'CWE-401', 'CWE-264', 'CWE-772',\n    'CWE-189', 'CWE-362', 'CWE-835', 'CWE-369', 'CWE-617', 'CWE-400', 'CWE-415',\n    'CWE-122', 'CWE-770', 'CWE-22'\n]\n# Construct data paths\ndata_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]\ntest_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "data_paths",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "data_paths = [os.path.join(args.data_dir, f\"task{i}_train.csv\") for i in range(1, args.num_tasks + 1)]\ntest_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\n# Define function to read examples\ndef read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['cwe_ids'].tolist()",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "test_paths",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "test_paths = [os.path.join(args.data_dir, f\"task{i}_test.csv\") for i in range(1, args.num_tasks + 1)]\nvalid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\n# Define function to read examples\ndef read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['cwe_ids'].tolist()\n    for idx in range(len(data)):",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "valid_paths",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "valid_paths = [os.path.join(args.data_dir, f\"task{i}_valid.csv\") for i in range(1, args.num_tasks + 1)]\n# Define function to read examples\ndef read_prompt_examples(filename):\n    examples = []\n    data = pd.read_csv(filename).astype(str)\n    desc = data['description'].tolist()\n    code = data['abstract_func_before'].tolist()\n    type = data['cwe_ids'].tolist()\n    for idx in range(len(data)):\n        # Convert CWE IDs to class index for classification",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func_no_ewc",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "loss_func_no_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=0.0)\nloss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, args.pretrained_model_path)\n# Define template - Improved prompt template based on the paper's methodology\ntemplate_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func_with_ewc",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "loss_func_with_ewc = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda)\n# Load model and tokenizer\nplm, tokenizer, model_config, WrapperClass = load_plm(model_name, args.pretrained_model_path)\n# Define template - Improved prompt template based on the paper's methodology\ntemplate_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "template_text",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "template_text = ('Given the following vulnerable code snippet: {\"placeholder\":\"text_a\"} '\n                 'and its vulnerability description: {\"placeholder\":\"text_b\"}, '\n                 'classify the vulnerability type as: {\"mask\"}.')\nmytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "mytemplate",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "mytemplate = MixedTemplate(tokenizer=tokenizer, text=template_text, model=plm)\n# Define the verbalizer - Updated to match exactly with classes list\nmyverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],\n    \"CWE-20\": [\"Improper Input Validation\", \"Input Sanitization Flaw\", \"Invalid Input Handling\"],\n    \"CWE-416\": [\"Use After Free\", \"Dangling Pointer\", \"Memory Use After Deallocation\"],\n    \"CWE-190\": [\"Integer Overflow\", \"Integer Wraparound\", \"Overflow in Numeric Calculations\"],",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "myverbalizer",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "myverbalizer = ManualVerbalizer(tokenizer, classes=classes, label_words={\n    \"CWE-119\": [\"Improper Memory Operations\", \"Buffer Overflow\", \"Memory Violation\"],\n    \"CWE-125\": [\"Out-of-bounds Read\", \"Memory Access Violation\", \"Read Beyond Boundaries\"],\n    \"CWE-787\": [\"Out-of-bounds Write\", \"Buffer Overflow\", \"Memory Corruption\"],\n    \"CWE-476\": [\"NULL Pointer Dereference\", \"Access to Null Pointer\", \"Dereferencing Null\"],\n    \"CWE-20\": [\"Improper Input Validation\", \"Input Sanitization Flaw\", \"Invalid Input Handling\"],\n    \"CWE-416\": [\"Use After Free\", \"Dangling Pointer\", \"Memory Use After Deallocation\"],\n    \"CWE-190\": [\"Integer Overflow\", \"Integer Wraparound\", \"Overflow in Numeric Calculations\"],\n    \"CWE-200\": [\"Exposure of Sensitive Data\", \"Unauthorized Information Access\", \"Sensitive Information Leak\"],\n    \"CWE-120\": [\"Classic Buffer Overflow\", \"Buffer Copy Error\", \"Unchecked Buffer Size\"],",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "prompt_model",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "prompt_model = PromptForClassification(plm=plm, template=mytemplate, verbalizer=myverbalizer, freeze_plm=False)\nif use_cuda:\n    prompt_model = prompt_model.cuda()\n# Initialize loss function\nloss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "loss_func",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "loss_func = OnlineEWCWithFocalLabelSmoothLoss(num_classes=num_class, smoothing=0.1, focal_alpha=1.0, focal_gamma=2.0, ewc_lambda=args.ewc_lambda, decay_factor=0.9)\nno_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "no_decay",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "no_decay = ['bias', 'LayerNorm.weight']\noptimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer_grouped_parameters1",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "optimizer_grouped_parameters1 = [\n    {'params': [p for n, p in prompt_model.named_parameters() if not any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01},\n    {'params': [p for n, p in prompt_model.named_parameters() if any(nd in n for nd in no_decay)],\n     'weight_decay': 0.01}\n]\noptimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]\noptimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer_grouped_parameters2",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "optimizer_grouped_parameters2 = [\n    {'params': [p for n, p in prompt_model.template.named_parameters() if \"raw_embedding\" not in n]}\n]\noptimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=lr)\n# ===== KHỞI TẠO TASK-AWARE REPLAY SELECTOR =====\nprint(f\"\\n🎯 KHỞI TẠO TASK-AWARE REPLAY SYSTEM\")\nprint(f\"{'='*70}\")\nprint(f\"Loại cấu hình: {args.replay_config_type}\")\nprint(f\"Task decay factor: {args.task_decay_factor} (cao hơn = ưu tiên task cũ nhiều hơn)\")",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer1",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "optimizer1 = AdamW(optimizer_grouped_parameters1, lr=lr)\noptimizer2 = AdamW(optimizer_grouped_parameters2, lr=lr)\n# ===== KHỞI TẠO TASK-AWARE REPLAY SELECTOR =====\nprint(f\"\\n🎯 KHỞI TẠO TASK-AWARE REPLAY SYSTEM\")\nprint(f\"{'='*70}\")\nprint(f\"Loại cấu hình: {args.replay_config_type}\")\nprint(f\"Task decay factor: {args.task_decay_factor} (cao hơn = ưu tiên task cũ nhiều hơn)\")\nprint(f\"Min task ratio: {args.min_task_ratio} (tỷ lệ tối thiểu mỗi task)\")\nprint(f\"Similarity threshold: {args.similarity_threshold}\")\nprint(f\"Max code lines: {args.max_code_lines}\")",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer2",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "optimizer2 = AdamW(optimizer_grouped_parameters2, lr=lr)\n# ===== KHỞI TẠO TASK-AWARE REPLAY SELECTOR =====\nprint(f\"\\n🎯 KHỞI TẠO TASK-AWARE REPLAY SYSTEM\")\nprint(f\"{'='*70}\")\nprint(f\"Loại cấu hình: {args.replay_config_type}\")\nprint(f\"Task decay factor: {args.task_decay_factor} (cao hơn = ưu tiên task cũ nhiều hơn)\")\nprint(f\"Min task ratio: {args.min_task_ratio} (tỷ lệ tối thiểu mỗi task)\")\nprint(f\"Similarity threshold: {args.similarity_threshold}\")\nprint(f\"Max code lines: {args.max_code_lines}\")\nprint(f\"Number of clusters: {args.n_clusters}\")",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "task_aware_selector",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "task_aware_selector = create_task_aware_replay_selector(\n    config_type=args.replay_config_type,\n    task_decay_factor=args.task_decay_factor,\n    min_task_ratio=args.min_task_ratio\n)\n# Bật gradient importance nếu được yêu cầu\nif args.enable_gradient_importance:\n    task_aware_selector.enable_gradient_importance(prompt_model, loss_func_no_ewc)\n# Load test dataloaders for all tasks\ntest_dataloaders = []",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataloaders",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "test_dataloaders = []\nfor j in range(args.num_tasks):\n    test_dataloader = PromptDataLoader(\n        dataset=read_prompt_examples(test_paths[j]),\n        template=mytemplate,\n        tokenizer=tokenizer, tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n        batch_size=batch_size, shuffle=True,\n        teacher_forcing=False, predict_eos_token=False, truncate_method=\"head\",\n        decoder_max_length=3)\n    test_dataloaders.append(test_dataloader)",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "global_step",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "global_step = 0\nprev_dev_loss = float('inf')\nbest_dev_loss = float('inf')\n# Theo dõi performance của từng task để phân tích forgetting\ntask_performance_history = {}\nprint(f\"\\n🚀 BẮT ĐẦU TRAINING VỚI TASK-AWARE ENHANCED REPLAY\")\nprint(f\"{'='*70}\")\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "prev_dev_loss",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "prev_dev_loss = float('inf')\nbest_dev_loss = float('inf')\n# Theo dõi performance của từng task để phân tích forgetting\ntask_performance_history = {}\nprint(f\"\\n🚀 BẮT ĐẦU TRAINING VỚI TASK-AWARE ENHANCED REPLAY\")\nprint(f\"{'='*70}\")\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "best_dev_loss",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "best_dev_loss = float('inf')\n# Theo dõi performance của từng task để phân tích forgetting\ntask_performance_history = {}\nprint(f\"\\n🚀 BẮT ĐẦU TRAINING VỚI TASK-AWARE ENHANCED REPLAY\")\nprint(f\"{'='*70}\")\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(",
+        "detail": "main.vul_main5",
+        "documentation": {}
+    },
+    {
+        "label": "task_performance_history",
+        "kind": 5,
+        "importPath": "main.vul_main5",
+        "description": "main.vul_main5",
+        "peekOfCode": "task_performance_history = {}\nprint(f\"\\n🚀 BẮT ĐẦU TRAINING VỚI TASK-AWARE ENHANCED REPLAY\")\nprint(f\"{'='*70}\")\n# Main loop for each dataset\nfor i in range(1, args.num_tasks + 1):\n    print(f\"----------------------- Task {i} ---------------------------\")\n    if i == 1:\n        train_dataloader = PromptDataLoader(\n            dataset=read_prompt_examples(data_paths[i - 1]),\n            template=mytemplate,",
+        "detail": "main.vul_main5",
         "documentation": {}
     },
     {
@@ -25707,6 +28061,276 @@
         "description": "RQ5.Unixcoder",
         "peekOfCode": "test_dataloader5 = PromptDataLoader(dataset=dataset5['test'], template=mytemplate, tokenizer=tokenizer,\n                                       tokenizer_wrapper_class=WrapperClass, max_seq_length=max_seq_l,\n                                       batch_size=batch_size, shuffle=False, teacher_forcing=False,\n                                       predict_eos_token=False, truncate_method=\"head\", decoder_max_length=3)\nfor i in range(1, 6):\n    # Read and convert data\n    train_data = read_data_to_dataframe(data_paths[i - 1])\n    valid_data = read_data_to_dataframe(valid_paths[i - 1])\n    test_data = read_data_to_dataframe(test_paths[i - 1])\n    train_dataset = convert_dataframe_to_dataset(train_data)",
         "detail": "RQ5.Unixcoder",
+        "documentation": {}
+    },
+    {
+        "label": "input_example_strategy",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def input_example_strategy(draw):\n    \"\"\"Generate InputExample instances for testing.\"\"\"\n    guid = draw(st.text(min_size=1, max_size=20))\n    text_a = draw(st.text(min_size=10, max_size=1000))  # Code content\n    text_b = draw(st.one_of(st.none(), st.text(min_size=5, max_size=200)))  # Description\n    tgt_text = draw(st.sampled_from([\n        \"CWE-119\", \"CWE-125\", \"CWE-787\", \"CWE-476\", \"CWE-20\", \n        \"CWE-190\", \"CWE-200\", \"CWE-120\", \"CWE-399\", \"CWE-401\"\n    ]))\n    return InputExample(guid=guid, text_a=text_a, text_b=text_b, tgt_text=tgt_text)",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "optimized_input_example_strategy",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def optimized_input_example_strategy(draw):\n    \"\"\"Generate OptimizedInputExample instances for testing.\"\"\"\n    base_example = draw(input_example_strategy())\n    original_size = draw(st.integers(min_value=100, max_value=10000))\n    compression_ratio = draw(st.floats(min_value=0.1, max_value=1.0))\n    semantic_cluster_id = draw(st.integers(min_value=-1, max_value=50))\n    priority_score = draw(st.floats(min_value=0.0, max_value=1.0))\n    return OptimizedInputExample(\n        guid=base_example.guid,\n        text_a=base_example.text_a,",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "sample_list_strategy",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def sample_list_strategy(draw, min_size=1, max_size=100):\n    \"\"\"Generate lists of InputExample instances.\"\"\"\n    size = draw(st.integers(min_value=min_size, max_value=max_size))\n    return draw(st.lists(input_example_strategy(), min_size=size, max_size=size))\n@st.composite\ndef feature_matrix_strategy(draw, n_samples=None, n_features=None):\n    \"\"\"Generate feature matrices for testing.\"\"\"\n    if n_samples is None:\n        n_samples = draw(st.integers(min_value=2, max_value=100))\n    if n_features is None:",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "feature_matrix_strategy",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def feature_matrix_strategy(draw, n_samples=None, n_features=None):\n    \"\"\"Generate feature matrices for testing.\"\"\"\n    if n_samples is None:\n        n_samples = draw(st.integers(min_value=2, max_value=100))\n    if n_features is None:\n        n_features = draw(st.integers(min_value=5, max_value=512))\n    # Generate normalized features (common for embeddings)\n    features = draw(st.lists(\n        st.lists(st.floats(min_value=-1.0, max_value=1.0), min_size=n_features, max_size=n_features),\n        min_size=n_samples, max_size=n_samples",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "similarity_matrix_strategy",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def similarity_matrix_strategy(draw, n_samples=None):\n    \"\"\"Generate symmetric similarity matrices.\"\"\"\n    if n_samples is None:\n        n_samples = draw(st.integers(min_value=2, max_value=50))\n    # Generate upper triangular matrix\n    matrix = np.eye(n_samples)  # Diagonal is 1.0 (self-similarity)\n    for i in range(n_samples):\n        for j in range(i + 1, n_samples):\n            similarity = draw(st.floats(min_value=0.0, max_value=1.0))\n            matrix[i, j] = similarity",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "sample_config",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def sample_config():\n    \"\"\"Provide a basic optimization configuration for testing.\"\"\"\n    return OptimizationConfig()\n@pytest.fixture\ndef sample_input_examples():\n    \"\"\"Provide a list of sample InputExample instances.\"\"\"\n    return [\n        InputExample(\n            guid=\"test_1\",\n            text_a=\"void vulnerable_function(char *input) { char buffer[100]; strcpy(buffer, input); }\",",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "sample_input_examples",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def sample_input_examples():\n    \"\"\"Provide a list of sample InputExample instances.\"\"\"\n    return [\n        InputExample(\n            guid=\"test_1\",\n            text_a=\"void vulnerable_function(char *input) { char buffer[100]; strcpy(buffer, input); }\",\n            text_b=\"Buffer overflow vulnerability in strcpy\",\n            tgt_text=\"CWE-119\"\n        ),\n        InputExample(",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "sample_features",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def sample_features():\n    \"\"\"Provide sample feature vectors for testing.\"\"\"\n    np.random.seed(42)  # For reproducible tests\n    return np.random.rand(5, 128)  # 5 samples, 128 features\n@pytest.fixture\ndef vulnerability_classes():\n    \"\"\"Provide list of vulnerability classes for testing.\"\"\"\n    return [\n        \"CWE-119\", \"CWE-125\", \"CWE-787\", \"CWE-476\", \"CWE-20\",\n        \"CWE-190\", \"CWE-200\", \"CWE-120\", \"CWE-399\", \"CWE-401\",",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "vulnerability_classes",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def vulnerability_classes():\n    \"\"\"Provide list of vulnerability classes for testing.\"\"\"\n    return [\n        \"CWE-119\", \"CWE-125\", \"CWE-787\", \"CWE-476\", \"CWE-20\",\n        \"CWE-190\", \"CWE-200\", \"CWE-120\", \"CWE-399\", \"CWE-401\",\n        \"CWE-78\", \"CWE-79\", \"CWE-89\", \"CWE-94\", \"CWE-400\",\n        \"CWE-415\", \"CWE-122\", \"CWE-770\", \"CWE-22\"\n    ]\n@pytest.fixture\ndef mock_historical_data():",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "mock_historical_data",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def mock_historical_data():\n    \"\"\"Provide mock historical data for temporal analysis testing.\"\"\"\n    return {\n        'task_1': {\n            'samples': 100,\n            'classes': {'CWE-119': 30, 'CWE-125': 25, 'CWE-787': 20, 'CWE-476': 25},\n            'timestamp': 1000\n        },\n        'task_2': {\n            'samples': 120,",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "create_similar_samples",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def create_similar_samples(base_sample: InputExample, similarity_level: float = 0.9, count: int = 3) -> List[InputExample]:\n    \"\"\"Create samples with controlled similarity to a base sample.\"\"\"\n    similar_samples = [base_sample]\n    for i in range(count - 1):\n        # Create variations by modifying the code slightly\n        modified_code = base_sample.text_a\n        if similarity_level > 0.8:\n            # High similarity - minor changes\n            modified_code = modified_code.replace(\"buffer\", f\"buffer{i}\")\n        elif similarity_level > 0.5:",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "assert_samples_preserved_per_class",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def assert_samples_preserved_per_class(original_samples: List[InputExample], \n                                     filtered_samples: List[InputExample],\n                                     min_samples_per_class: int):\n    \"\"\"Assert that minimum samples per class constraint is maintained.\"\"\"\n    from collections import Counter\n    original_counts = Counter(sample.tgt_text for sample in original_samples)\n    filtered_counts = Counter(sample.tgt_text for sample in filtered_samples)\n    for class_label, original_count in original_counts.items():\n        expected_min = min(original_count, min_samples_per_class)\n        actual_count = filtered_counts.get(class_label, 0)",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_semantic_similarity",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def calculate_semantic_similarity(text1: str, text2: str) -> float:\n    \"\"\"Simple semantic similarity calculation for testing.\"\"\"\n    # Simple token-based similarity for testing\n    tokens1 = set(text1.lower().split())\n    tokens2 = set(text2.lower().split())\n    if not tokens1 and not tokens2:\n        return 1.0\n    if not tokens1 or not tokens2:\n        return 0.0\n    intersection = tokens1.intersection(tokens2)",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "configure_hypothesis",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def configure_hypothesis():\n    \"\"\"Configure Hypothesis settings for property-based tests.\"\"\"\n    from hypothesis import settings, Verbosity\n    # Configure for thorough testing\n    settings.register_profile(\"thorough\", \n                            max_examples=100,\n                            verbosity=Verbosity.verbose,\n                            deadline=None)\n    # Configure for quick testing during development\n    settings.register_profile(\"quick\",",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "TestOptimizedInputExample",
+        "kind": 6,
+        "importPath": "tests.test_base",
+        "description": "tests.test_base",
+        "peekOfCode": "class TestOptimizedInputExample:\n    \"\"\"Test OptimizedInputExample data structure.\"\"\"\n    def test_creation_with_defaults(self):\n        \"\"\"Test creating OptimizedInputExample with default values.\"\"\"\n        example = OptimizedInputExample(\n            guid=\"test_1\",\n            text_a=\"test code\",\n            text_b=\"test description\",\n            tgt_text=\"CWE-119\"\n        )",
+        "detail": "tests.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "TestOptimizationMetrics",
+        "kind": 6,
+        "importPath": "tests.test_base",
+        "description": "tests.test_base",
+        "peekOfCode": "class TestOptimizationMetrics:\n    \"\"\"Test OptimizationMetrics data structure.\"\"\"\n    def test_creation_with_defaults(self):\n        \"\"\"Test creating OptimizationMetrics with default values.\"\"\"\n        metrics = OptimizationMetrics()\n        assert metrics.original_sample_count == 0\n        assert metrics.filtered_sample_count == 0\n        assert metrics.memory_reduction_ratio == 0.0\n        assert metrics.processing_time_ms == 0\n        assert metrics.accuracy_impact == 0.0",
+        "detail": "tests.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "MockOptimizationComponent",
+        "kind": 6,
+        "importPath": "tests.test_base",
+        "description": "tests.test_base",
+        "peekOfCode": "class MockOptimizationComponent(OptimizationComponent):\n    \"\"\"Mock implementation for testing abstract base class.\"\"\"\n    def initialize(self):\n        self._is_initialized = True\n    def process(self, samples: List[InputExample], **kwargs):\n        if not self._is_initialized:\n            self.initialize()\n        # Mock processing - just return samples unchanged\n        self.metrics.original_sample_count = len(samples)\n        self.metrics.filtered_sample_count = len(samples)",
+        "detail": "tests.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "TestOptimizationComponent",
+        "kind": 6,
+        "importPath": "tests.test_base",
+        "description": "tests.test_base",
+        "peekOfCode": "class TestOptimizationComponent:\n    \"\"\"Test OptimizationComponent abstract base class.\"\"\"\n    def test_initialization(self):\n        \"\"\"Test component initialization.\"\"\"\n        config = {\"required_param\": \"value\"}\n        component = MockOptimizationComponent(config)\n        assert component.config == config\n        assert isinstance(component.metrics, OptimizationMetrics)\n        assert not component._is_initialized\n    def test_get_metrics(self):",
+        "detail": "tests.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "MockFilterComponent",
+        "kind": 6,
+        "importPath": "tests.test_base",
+        "description": "tests.test_base",
+        "peekOfCode": "class MockFilterComponent(FilterComponent):\n    \"\"\"Mock filter component for testing.\"\"\"\n    def initialize(self):\n        self._is_initialized = True\n    def process(self, samples: List[InputExample], **kwargs):\n        indices, metadata = self.filter_samples(samples, **kwargs)\n        filtered_samples = [samples[i] for i in indices]\n        self.metrics.original_sample_count = len(samples)\n        self.metrics.filtered_sample_count = len(filtered_samples)\n        return filtered_samples, self.metrics",
+        "detail": "tests.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "TestFilterComponent",
+        "kind": 6,
+        "importPath": "tests.test_base",
+        "description": "tests.test_base",
+        "peekOfCode": "class TestFilterComponent:\n    \"\"\"Test FilterComponent abstract base class.\"\"\"\n    def test_filter_samples_implementation(self, sample_input_examples):\n        \"\"\"Test filter samples method.\"\"\"\n        component = MockFilterComponent({})\n        indices, metadata = component.filter_samples(sample_input_examples)\n        assert len(indices) == 3  # Every other sample from 5 samples\n        assert indices == [0, 2, 4]\n        assert metadata[\"filter_method\"] == \"mock\"\n    def test_process_uses_filter_samples(self, sample_input_examples):",
+        "detail": "tests.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "MockTransformComponent",
+        "kind": 6,
+        "importPath": "tests.test_base",
+        "description": "tests.test_base",
+        "peekOfCode": "class MockTransformComponent(TransformComponent):\n    \"\"\"Mock transform component for testing.\"\"\"\n    def initialize(self):\n        self._is_initialized = True\n    def process(self, samples: List[InputExample], **kwargs):\n        transformed_samples = self.transform_samples(samples)\n        self.metrics.original_sample_count = len(samples)\n        self.metrics.filtered_sample_count = len(transformed_samples)\n        return transformed_samples, self.metrics\n    def transform_samples(self, samples: List[InputExample]):",
+        "detail": "tests.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "TestTransformComponent",
+        "kind": 6,
+        "importPath": "tests.test_base",
+        "description": "tests.test_base",
+        "peekOfCode": "class TestTransformComponent:\n    \"\"\"Test TransformComponent abstract base class.\"\"\"\n    def test_transform_samples_implementation(self, sample_input_examples):\n        \"\"\"Test transform samples method.\"\"\"\n        component = MockTransformComponent({})\n        transformed = component.transform_samples(sample_input_examples)\n        assert len(transformed) == len(sample_input_examples)\n        assert all(sample.text_a.startswith(\"TRANSFORMED:\") for sample in transformed)\n    def test_process_uses_transform_samples(self, sample_input_examples):\n        \"\"\"Test that process method uses transform_samples.\"\"\"",
+        "detail": "tests.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "MockPrioritizationComponent",
+        "kind": 6,
+        "importPath": "tests.test_base",
+        "description": "tests.test_base",
+        "peekOfCode": "class MockPrioritizationComponent(PrioritizationComponent):\n    \"\"\"Mock prioritization component for testing.\"\"\"\n    def initialize(self):\n        self._is_initialized = True\n    def process(self, samples: List[InputExample], budget: int, **kwargs):\n        indices, metadata = self.prioritize_samples(samples, budget)\n        prioritized_samples = [samples[i] for i in indices]\n        self.metrics.original_sample_count = len(samples)\n        self.metrics.filtered_sample_count = len(prioritized_samples)\n        return prioritized_samples, self.metrics",
+        "detail": "tests.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "TestPrioritizationComponent",
+        "kind": 6,
+        "importPath": "tests.test_base",
+        "description": "tests.test_base",
+        "peekOfCode": "class TestPrioritizationComponent:\n    \"\"\"Test PrioritizationComponent abstract base class.\"\"\"\n    def test_prioritize_samples_implementation(self, sample_input_examples):\n        \"\"\"Test prioritize samples method.\"\"\"\n        component = MockPrioritizationComponent({})\n        budget = 3\n        indices, metadata = component.prioritize_samples(sample_input_examples, budget)\n        assert len(indices) == budget\n        assert indices == [0, 1, 2]\n        assert metadata[\"prioritization_method\"] == \"mock\"",
+        "detail": "tests.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "TestOptimizationExceptions",
+        "kind": 6,
+        "importPath": "tests.test_base",
+        "description": "tests.test_base",
+        "peekOfCode": "class TestOptimizationExceptions:\n    \"\"\"Test optimization-specific exceptions.\"\"\"\n    def test_optimization_error(self):\n        \"\"\"Test OptimizationError exception.\"\"\"\n        with pytest.raises(OptimizationError) as exc_info:\n            raise OptimizationError(\"Test error\")\n        assert str(exc_info.value) == \"Test error\"\n    def test_configuration_error(self):\n        \"\"\"Test ConfigurationError exception.\"\"\"\n        with pytest.raises(ConfigurationError) as exc_info:",
+        "detail": "tests.test_base",
+        "documentation": {}
+    },
+    {
+        "label": "TestSemanticFilterConfig",
+        "kind": 6,
+        "importPath": "tests.test_config",
+        "description": "tests.test_config",
+        "peekOfCode": "class TestSemanticFilterConfig:\n    \"\"\"Test SemanticFilterConfig data structure.\"\"\"\n    def test_default_values(self):\n        \"\"\"Test default configuration values.\"\"\"\n        config = SemanticFilterConfig()\n        assert config.enabled is True\n        assert config.similarity_threshold == 0.95\n        assert config.min_cluster_size == 2\n        assert config.clustering_method == \"hierarchical\"\n        assert config.feature_extraction_method == \"embeddings\"",
+        "detail": "tests.test_config",
+        "documentation": {}
+    },
+    {
+        "label": "TestSummarizationConfig",
+        "kind": 6,
+        "importPath": "tests.test_config",
+        "description": "tests.test_config",
+        "peekOfCode": "class TestSummarizationConfig:\n    \"\"\"Test SummarizationConfig data structure.\"\"\"\n    def test_default_values(self):\n        \"\"\"Test default configuration values.\"\"\"\n        config = SummarizationConfig()\n        assert config.enabled is True\n        assert config.summarization_method == \"vulnerability_lines\"\n        assert config.llm_model is None\n        assert config.max_code_length == 2048\n        assert config.compression_target == 0.5",
+        "detail": "tests.test_config",
+        "documentation": {}
+    },
+    {
+        "label": "TestPrioritizationConfig",
+        "kind": 6,
+        "importPath": "tests.test_config",
+        "description": "tests.test_config",
+        "peekOfCode": "class TestPrioritizationConfig:\n    \"\"\"Test PrioritizationConfig data structure.\"\"\"\n    def test_default_values(self):\n        \"\"\"Test default configuration values.\"\"\"\n        config = PrioritizationConfig()\n        assert config.enabled is True\n        assert config.clustering_method == \"kmeans\"\n        assert config.n_clusters == 10\n        assert config.temporal_weight == 0.3\n        assert config.frequency_weight == 0.4",
+        "detail": "tests.test_config",
+        "documentation": {}
+    },
+    {
+        "label": "TestOptimizationConfig",
+        "kind": 6,
+        "importPath": "tests.test_config",
+        "description": "tests.test_config",
+        "peekOfCode": "class TestOptimizationConfig:\n    \"\"\"Test OptimizationConfig main configuration class.\"\"\"\n    def test_default_values(self):\n        \"\"\"Test default configuration values.\"\"\"\n        config = OptimizationConfig()\n        assert isinstance(config.semantic_filtering, SemanticFilterConfig)\n        assert isinstance(config.summarization, SummarizationConfig)\n        assert isinstance(config.prioritization, PrioritizationConfig)\n        assert config.memory_limit_mb is None\n        assert config.performance_threshold == 0.98",
+        "detail": "tests.test_config",
+        "documentation": {}
+    },
+    {
+        "label": "TestReplayOptimizationManager",
+        "kind": 6,
+        "importPath": "tests.test_config",
+        "description": "tests.test_config",
+        "peekOfCode": "class TestReplayOptimizationManager:\n    \"\"\"Test ReplayOptimizationManager main class.\"\"\"\n    def test_initialization_success(self):\n        \"\"\"Test successful manager initialization.\"\"\"\n        config = OptimizationConfig()\n        manager = ReplayOptimizationManager(config)\n        assert manager.config == config\n        assert manager.logger is not None\n        assert manager._semantic_filter is None\n        assert manager._summarization_engine is None",
+        "detail": "tests.test_config",
         "documentation": {}
     },
     {

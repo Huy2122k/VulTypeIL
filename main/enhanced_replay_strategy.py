@@ -151,6 +151,7 @@ class TaskAwareReplaySelector(EnhancedReplaySelector):
             print(f"  Task {task_id}: {count} mẫu ({percentage:.1f}%)")
         
         selection_info = {
+            **processing_info,
             'original_count': len(examples),
             'after_task_aware_selection': len(selected_indices),
             'after_processing': len(final_indices),
@@ -159,7 +160,7 @@ class TaskAwareReplaySelector(EnhancedReplaySelector):
             'task_budgets': task_budgets,
             'task_priorities': task_priorities,
             'selection_details': selection_details,
-            'final_task_distribution': dict(final_task_counts)
+            'final_task_distribution': dict(final_task_counts),
         }
         
         print(f"{'='*70}\n")
