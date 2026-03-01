@@ -58,11 +58,7 @@ class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):
             if use_cuda:
                 inputs = inputs.cuda()
             logits = prompt_model(inputs)
-            labels = inputs['tgt_text']
-            if not torch.is_tensor(labels):
-                labels = torch.tensor(labels)
-            if use_cuda:
-                labels = labels.cuda()
+            labels = prepare_labels(inputs['tgt_text'], use_cuda)
             loss = self.focal_label_smooth_ce_loss(logits, labels)
             prompt_model.zero_grad()
             loss.backward()
@@ -109,11 +105,7 @@ def train_phase_one(prompt_model, train_dataloader, val_dataloader,
             if use_cuda:
                 inputs = inputs.cuda()
             logits = prompt_model(inputs)
-            labels = inputs['tgt_text']
-            if not torch.is_tensor(labels):
-                labels = torch.tensor(labels)
-            if use_cuda:
-                labels = labels.cuda()
+            labels = prepare_labels(inputs['tgt_text'], use_cuda)
             
             loss = loss_func_no_ewc.focal_label_smooth_ce_loss(logits, labels)
             loss.backward()
@@ -132,11 +124,7 @@ def train_phase_one(prompt_model, train_dataloader, val_dataloader,
                 if use_cuda:
                     inputs = inputs.cuda()
                 logits = prompt_model(inputs)
-                labels = inputs['tgt_text']
-                if not torch.is_tensor(labels):
-                    labels = torch.tensor(labels)
-                if use_cuda:
-                    labels = labels.cuda()
+                labels = prepare_labels(inputs['tgt_text'], use_cuda)
                 loss = loss_func_no_ewc.focal_label_smooth_ce_loss(logits, labels)
                 val_loss += loss.item()
 
@@ -175,11 +163,7 @@ def train_phase_two(prompt_model, train_dataloader, val_dataloader,
             if use_cuda:
                 inputs = inputs.cuda()
             logits = prompt_model(inputs)
-            labels = inputs['tgt_text']
-            if not torch.is_tensor(labels):
-                labels = torch.tensor(labels)
-            if use_cuda:
-                labels = labels.cuda()
+            labels = prepare_labels(inputs['tgt_text'], use_cuda)
             
             loss = loss_func_with_ewc(prompt_model, logits, labels)
             loss.backward()
@@ -198,11 +182,7 @@ def train_phase_two(prompt_model, train_dataloader, val_dataloader,
                 if use_cuda:
                     inputs = inputs.cuda()
                 logits = prompt_model(inputs)
-                labels = inputs['tgt_text']
-                if not torch.is_tensor(labels):
-                    labels = torch.tensor(labels)
-                if use_cuda:
-                    labels = labels.cuda()
+                labels = prepare_labels(inputs['tgt_text'], use_cuda)
                 loss = loss_func_with_ewc(prompt_model, logits, labels)
                 val_loss += loss.item()
 
@@ -245,11 +225,7 @@ def train_consolidation(prompt_model, cons_dataloader, optimizer1, optimizer2,
         if use_cuda:
             inputs = inputs.cuda()
         logits = prompt_model(inputs)
-        labels = inputs['tgt_text']
-        if not torch.is_tensor(labels):
-            labels = torch.tensor(labels)
-        if use_cuda:
-            labels = labels.cuda()
+        labels = prepare_labels(inputs['tgt_text'], use_cuda)
         
         loss = loss_func_with_ewc(prompt_model, logits, labels)
         loss.backward()

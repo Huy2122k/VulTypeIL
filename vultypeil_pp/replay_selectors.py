@@ -12,6 +12,33 @@ from openprompt.data_utils import InputExample
 from tqdm import tqdm
 
 
+def prepare_labels(labels, use_cuda=True):
+    """
+    Prepare labels for training, ensuring they are proper tensors.
+    
+    Args:
+        labels: Labels from dataloader (can be tensor, list, or mixed types)
+        use_cuda: Whether to move to CUDA
+    
+    Returns:
+        Tensor of labels with dtype=torch.long
+    """
+    if not torch.is_tensor(labels):
+        # Ensure all labels are integers
+        if isinstance(labels, list):
+            labels = [int(l) if not isinstance(l, int) else l for l in labels]
+        labels = torch.tensor(labels, dtype=torch.long)
+    else:
+        # Ensure tensor has correct dtype
+        if labels.dtype != torch.long:
+            labels = labels.long()
+    
+    if use_cuda:
+        labels = labels.cuda()
+    
+    return labels
+
+
 def mahalanobis_select(prompt_model, dataloader, examples: List[InputExample], 
                        num_samples: int, use_cuda: bool = True) -> Tuple[List[int], np.ndarray]:
     """
@@ -90,12 +117,7 @@ def mcss_select(candidates: List[InputExample], num_samples: int,
                 inputs = inputs.cuda()
             
             logits = prompt_model(inputs)
-            labels = inputs['tgt_text']
-            
-            if not torch.is_tensor(labels):
-                labels = torch.tensor(labels)
-            if use_cuda:
-                labels = labels.cuda()
+            labels = prepare_labels(inputs['tgt_text'], use_cuda)
             
             # Compute loss per sample
             loss_per_sample = F.cross_entropy(logits, labels, reduction='none')
@@ -239,12 +261,7 @@ def gcr_approx_select(candidates: List[InputExample], num_samples: int,
         
         # Forward pass
         logits = prompt_model(inputs)
-        labels = inputs['tgt_text']
-        
-        if not torch.is_tensor(labels):
-            labels = torch.tensor(labels)
-        if use_cuda:
-            labels = labels.cuda()
+        labels = prepare_labels(inputs['tgt_text'], use_cuda)
         
         # Compute gradient in output space
         logits_detached = logits.detach().requires_grad_(True)

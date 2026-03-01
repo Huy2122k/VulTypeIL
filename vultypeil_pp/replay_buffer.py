@@ -71,7 +71,9 @@ class ReplayBuffer:
             # Group by class
             class_groups = defaultdict(list)
             for ex in self.examples:
-                class_groups[ex.tgt_text].append(ex)
+                # Ensure tgt_text is int
+                class_label = int(ex.tgt_text) if not isinstance(ex.tgt_text, int) else ex.tgt_text
+                class_groups[class_label].append(ex)
             
             # Identify tail classes
             class_counts = {c: len(exs) for c, exs in class_groups.items()}
@@ -120,7 +122,9 @@ class ReplayBuffer:
         if len(self.examples) == 0:
             return {"size": 0}
         
-        class_counts = Counter([ex.tgt_text for ex in self.examples])
+        # Ensure all tgt_text are integers
+        class_counts = Counter([int(ex.tgt_text) if not isinstance(ex.tgt_text, int) else ex.tgt_text 
+                               for ex in self.examples])
         total = len(self.examples)
         
         tail_classes = [c for c, cnt in class_counts.items() 

@@ -77,8 +77,11 @@ def test(prompt_model, test_dataloader, name, results_dir, use_cuda=True):
                 inputs = inputs.cuda()
             logits = prompt_model(inputs)
             labels = inputs['tgt_text']
+            # Ensure labels are integers for metrics
             if torch.is_tensor(labels):
                 alllabels.extend(labels.cpu().tolist())
+            elif isinstance(labels, list):
+                alllabels.extend([int(l) if not isinstance(l, int) else l for l in labels])
             else:
                 alllabels.extend(labels)
             allpreds.extend(torch.argmax(logits, dim=-1).cpu().tolist())
