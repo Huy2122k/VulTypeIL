@@ -128,6 +128,7 @@ def train_phase_one(prompt_model, train_dataloader, val_dataloader,
     for epoch in range(num_epochs):
         prompt_model.train()
         for step, inputs in enumerate(train_dataloader):
+            print("TYPEEE", type(inputs))
             if use_cuda:
                 inputs = inputs.cuda()
             logits = prompt_model(inputs)

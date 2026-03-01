@@ -78,6 +78,14 @@ class MixedBatchIterator:
         B_mem = int(round(r * B))
         B_new = B - B_mem
         
+        # If no memory samples needed, return new batch
+        if B_mem == 0:
+            return b_new
+        
+        # If all memory samples, return memory batch
+        if B_new == 0:
+            return b_mem
+        
         # Mix all fields
         out = {}
         for k in b_new.keys():
@@ -89,6 +97,9 @@ class MixedBatchIterator:
                 continue
             
             if torch.is_tensor(v_new) and torch.is_tensor(v_mem):
+                # Ensure both tensors are on the same device before concatenating
+                if v_new.device != v_mem.device:
+                    v_mem = v_mem.to(v_new.device)
                 # Concatenate tensors
                 out[k] = torch.cat([v_new[:B_new], v_mem[:B_mem]], dim=0)
             elif isinstance(v_new, list) and isinstance(v_mem, list):
