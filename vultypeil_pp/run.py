@@ -404,8 +404,18 @@ def run_experiment(config_path, batch_size=None, num_epochs=None, patience=None)
         if task_id > 1:
             prev_checkpoint = os.path.join(checkpoint_dir, f'task_{task_id-1}_phase2_best.ckpt')
             if os.path.exists(prev_checkpoint):
-                prompt_model.load_state_dict(torch.load(prev_checkpoint))
-                print(f"Loaded checkpoint from Task {task_id-1}")
+                try:
+                    device = 'cuda' if use_cuda else 'cpu'
+                    state_dict = torch.load(prev_checkpoint, map_location=device)
+                    # Ensure state_dict is actually a dict
+                    if not isinstance(state_dict, dict):
+                        print(f"Warning: Checkpoint is not a state dict, got {type(state_dict)}")
+                    else:
+                        prompt_model.load_state_dict(state_dict)
+                        print(f"Loaded checkpoint from Task {task_id-1}")
+                except Exception as e:
+                    print(f"Warning: Failed to load checkpoint from Task {task_id-1}: {e}")
+                    print("Continuing with current model weights...")
         
         # Phase 1: Train without EWC
         print(f"\n--- Phase 1: Focal + Label Smoothing ---")
@@ -417,8 +427,18 @@ def run_experiment(config_path, batch_size=None, num_epochs=None, patience=None)
         )
         
         # Load best Phase 1 model
-        prompt_model.load_state_dict(torch.load(
-            os.path.join(checkpoint_dir, f'task_{task_id}_phase1_best.ckpt')))
+        phase1_checkpoint = os.path.join(checkpoint_dir, f'task_{task_id}_phase1_best.ckpt')
+        if os.path.exists(phase1_checkpoint):
+            try:
+                device = 'cuda' if use_cuda else 'cpu'
+                state_dict = torch.load(phase1_checkpoint, map_location=device)
+                if not isinstance(state_dict, dict):
+                    print(f"Warning: Phase 1 checkpoint is not a state dict, got {type(state_dict)}")
+                else:
+                    prompt_model.load_state_dict(state_dict)
+                    print(f"Loaded Phase 1 checkpoint for Task {task_id}")
+            except Exception as e:
+                print(f"Warning: Failed to load Phase 1 checkpoint: {e}")
         
         # Phase 2: Train with EWC
         print(f"\n--- Phase 2: Focal + Label Smoothing + EWC ---")
@@ -430,8 +450,18 @@ def run_experiment(config_path, batch_size=None, num_epochs=None, patience=None)
         )
         
         # Load best Phase 2 model
-        prompt_model.load_state_dict(torch.load(
-            os.path.join(checkpoint_dir, f'task_{task_id}_phase2_best.ckpt')))
+        phase2_checkpoint = os.path.join(checkpoint_dir, f'task_{task_id}_phase2_best.ckpt')
+        if os.path.exists(phase2_checkpoint):
+            try:
+                device = 'cuda' if use_cuda else 'cpu'
+                state_dict = torch.load(phase2_checkpoint, map_location=device)
+                if not isinstance(state_dict, dict):
+                    print(f"Warning: Phase 2 checkpoint is not a state dict, got {type(state_dict)}")
+                else:
+                    prompt_model.load_state_dict(state_dict)
+                    print(f"Loaded Phase 2 checkpoint for Task {task_id}")
+            except Exception as e:
+                print(f"Warning: Failed to load Phase 2 checkpoint: {e}")
         
         # Consolidation phase (if enabled)
         if config['consolidation']['enabled'] and buffer is not None and len(buffer) > 0:
