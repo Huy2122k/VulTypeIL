@@ -7,6 +7,32 @@ import torch.nn.functional as F
 from tqdm.auto import tqdm
 import os
 
+def prepare_labels(labels, use_cuda=True):
+    """
+    Prepare labels for training, ensuring they are proper tensors.
+    
+    Args:
+        labels: Labels from dataloader (can be tensor, list, or mixed types)
+        use_cuda: Whether to move to CUDA
+    
+    Returns:
+        Tensor of labels with dtype=torch.long
+    """
+    if not torch.is_tensor(labels):
+        # Ensure all labels are integers
+        if isinstance(labels, list):
+            labels = [int(l) if not isinstance(l, int) else l for l in labels]
+        labels = torch.tensor(labels, dtype=torch.long)
+    else:
+        # Ensure tensor has correct dtype
+        if labels.dtype != torch.long:
+            labels = labels.long()
+    
+    if use_cuda:
+        labels = labels.cuda()
+    
+    return labels
+
 
 class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):
     """Loss function combining Focal Loss, Label Smoothing, and Online EWC."""
