@@ -1,0 +1,63 @@
+# Ablation 5: VulTypeIL++-GCR (Gradient Coreset Reduction - Approx)
+# Scalable replay with gradient-based selection
+
+method: vultypeilpp_gcr_approx
+description: "VulTypeIL++ with Gradient Coreset Reduction (approximation)"
+
+# Data settings
+data:
+  data_dir: "incremental_tasks_csv"
+  num_tasks: 5
+  num_classes: 23
+
+# Model settings
+model:
+  name: "t5"
+  pretrained_path: "Salesforce/codet5-base"
+  max_seq_length: 512
+  freeze_plm: false
+
+# Training settings
+training:
+  batch_size: 16
+  num_epochs: 100
+  lr: 5e-5
+  patience: 5
+  use_cuda: true
+  seed: 42
+
+# Loss settings
+loss:
+  smoothing: 0.1
+  focal_alpha: 1.0
+  focal_gamma: 2.0
+  ewc_lambda: 0.4
+  decay_factor: 0.9
+
+# Replay settings
+replay:
+  mode: "batch_mix"  # Mixed batch iterator
+  replay_ratio: 0.2  # 20% of each batch from buffer
+  selector: null
+
+# Buffer settings
+buffer:
+  enabled: true
+  size: 2000  # Fixed buffer size
+  update: "gcr_approx"  # Gradient coreset reduction
+  sample: "balanced_tail_head"  # Balanced sampling
+  tail_threshold: 0.05
+
+# GCR specific settings
+gcr:
+  per_class: true  # Per-class gradient matching
+
+# Consolidation settings
+consolidation:
+  enabled: false
+
+# Output settings
+output:
+  checkpoint_dir: "vultypeil_pp/outputs/5_gcr/checkpoints"
+  results_dir: "vultypeil_pp/outputs/5_gcr/results"
+  metrics_dir: "vultypeil_pp/outputs/5_gcr/metrics"

@@ -1,0 +1,75 @@
+# Ablation 6: VulTypeIL++-MCSS + Consolidation Phase
+# Scalable replay with MCSS and phasic consolidation
+
+method: vultypeilpp_mcss_cons
+description: "VulTypeIL++ with MCSS and Consolidation Phase (phasic replay)"
+
+# Data settings
+data:
+  data_dir: "incremental_tasks_csv"
+  num_tasks: 5
+  num_classes: 23
+
+# Model settings
+model:
+  name: "t5"
+  pretrained_path: "Salesforce/codet5-base"
+  max_seq_length: 512
+  freeze_plm: false
+
+# Training settings
+training:
+  batch_size: 16
+  num_epochs: 100
+  lr: 5e-5
+  patience: 5
+  use_cuda: true
+  seed: 42
+
+# Loss settings
+loss:
+  smoothing: 0.1
+  focal_alpha: 1.0
+  focal_gamma: 2.0
+  ewc_lambda: 0.4
+  decay_factor: 0.9
+
+# Replay settings
+replay:
+  mode: "batch_mix"  # Mixed batch iterator
+  replay_ratio: 0.2  # 20% of each batch from buffer
+  selector: null
+
+# Buffer settings
+buffer:
+  enabled: true
+  size: 2000  # Fixed buffer size
+  update: "mcss"  # Multi-criteria selection
+  sample: "balanced_tail_head"  # Balanced sampling
+  tail_threshold: 0.05
+
+# MCSS specific settings
+mcss:
+  tail_threshold: 0.05
+  alpha_loss: 0.5
+  overselect_k: 5
+
+# Consolidation settings
+consolidation:
+  enabled: true
+  steps: 500  # Number of consolidation steps
+  replay_ratio_in_cons: 1.0  # 100% buffer during consolidation
+  ewc_lambda_multiplier: 1.0  # EWC weight during consolidation
+
+# Budget settings (compute-fixed)
+budget:
+  max_steps_per_task: 5000  # Total steps per task
+  phase1_steps: 2250  # Phase 1 steps
+  phase2_steps: 2250  # Phase 2 steps
+  cons_steps: 500  # Consolidation steps
+
+# Output settings
+output:
+  checkpoint_dir: "vultypeil_pp/outputs/6_mcss_cons/checkpoints"
+  results_dir: "vultypeil_pp/outputs/6_mcss_cons/results"
+  metrics_dir: "vultypeil_pp/outputs/6_mcss_cons/metrics"

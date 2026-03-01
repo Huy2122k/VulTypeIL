@@ -1,0 +1,56 @@
+# Ablation 2: VulTypeIL + Replay Ratio Naive All-Old (20%)
+# Non-scalable baseline with high quality but dataset scaling
+
+method: vultypeil_ratio_allold
+description: "VulTypeIL with 20% replay ratio from all previous tasks (non-scalable)"
+
+# Data settings
+data:
+  data_dir: "incremental_tasks_csv"
+  num_tasks: 5
+  num_classes: 23
+
+# Model settings
+model:
+  name: "t5"
+  pretrained_path: "Salesforce/codet5-base"
+  max_seq_length: 512
+  freeze_plm: false
+
+# Training settings
+training:
+  batch_size: 16
+  num_epochs: 100
+  lr: 5e-5
+  patience: 5
+  use_cuda: true
+  seed: 42
+
+# Loss settings
+loss:
+  smoothing: 0.1
+  focal_alpha: 1.0
+  focal_gamma: 2.0
+  ewc_lambda: 0.4
+  decay_factor: 0.9
+
+# Replay settings
+replay:
+  mode: "append_dataset"  # Materialize full dataset
+  selector: "random"  # Random selection
+  num_samples: null
+  ratio_allold: 0.2  # 20% of all previous data
+
+# Buffer settings
+buffer:
+  enabled: false  # No buffer, use append mode
+
+# Consolidation settings
+consolidation:
+  enabled: false
+
+# Output settings
+output:
+  checkpoint_dir: "vultypeil_pp/outputs/2_ratio_allold/checkpoints"
+  results_dir: "vultypeil_pp/outputs/2_ratio_allold/results"
+  metrics_dir: "vultypeil_pp/outputs/2_ratio_allold/metrics"

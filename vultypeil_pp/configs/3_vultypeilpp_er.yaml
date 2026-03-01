@@ -1,0 +1,59 @@
+# Ablation 3: VulTypeIL++ (Fixed Buffer M, Random ER)
+# Scalable replay with reservoir sampling
+
+method: vultypeilpp_er
+description: "VulTypeIL++ with fixed buffer and random experience replay (reservoir sampling)"
+
+# Data settings
+data:
+  data_dir: "incremental_tasks_csv"
+  num_tasks: 5
+  num_classes: 23
+
+# Model settings
+model:
+  name: "t5"
+  pretrained_path: "Salesforce/codet5-base"
+  max_seq_length: 512
+  freeze_plm: false
+
+# Training settings
+training:
+  batch_size: 16
+  num_epochs: 100
+  lr: 5e-5
+  patience: 5
+  use_cuda: true
+  seed: 42
+
+# Loss settings
+loss:
+  smoothing: 0.1
+  focal_alpha: 1.0
+  focal_gamma: 2.0
+  ewc_lambda: 0.4
+  decay_factor: 0.9
+
+# Replay settings
+replay:
+  mode: "batch_mix"  # Mixed batch iterator
+  replay_ratio: 0.2  # 20% of each batch from buffer
+  selector: null  # Not used in batch_mix mode
+
+# Buffer settings
+buffer:
+  enabled: true
+  size: 2000  # Fixed buffer size
+  update: "reservoir"  # Reservoir sampling
+  sample: "random"  # Random sampling from buffer
+  tail_threshold: 0.05
+
+# Consolidation settings
+consolidation:
+  enabled: false
+
+# Output settings
+output:
+  checkpoint_dir: "vultypeil_pp/outputs/3_er/checkpoints"
+  results_dir: "vultypeil_pp/outputs/3_er/results"
+  metrics_dir: "vultypeil_pp/outputs/3_er/metrics"
