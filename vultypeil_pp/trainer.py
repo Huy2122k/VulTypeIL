@@ -7,6 +7,33 @@ import torch.nn.functional as F
 from tqdm.auto import tqdm
 import os
 
+
+def move_to_cuda(inputs, use_cuda=True):
+    """
+    Move inputs to CUDA, handling both OpenPrompt batch objects and dicts.
+    
+    Args:
+        inputs: Batch from dataloader (OpenPrompt object or dict)
+        use_cuda: Whether to use CUDA
+    
+    Returns:
+        Inputs moved to CUDA
+    """
+    if not use_cuda:
+        return inputs
+    
+    # If inputs has .cuda() method (OpenPrompt batch object), use it
+    if hasattr(inputs, 'cuda') and callable(getattr(inputs, 'cuda')):
+        return inputs.cuda()
+    
+    # Otherwise, treat as dict and move tensors manually
+    if isinstance(inputs, dict):
+        return {k: v.cuda() if torch.is_tensor(v) else v for k, v in inputs.items()}
+    
+    # Fallback: return as is
+    return inputs
+
+
 def prepare_labels(labels, use_cuda=True):
     """
     Prepare labels for training, ensuring they are proper tensors.
@@ -82,7 +109,7 @@ class OnlineEWCWithFocalLabelSmoothLoss(torch.nn.Module):
 
         for step, inputs in enumerate(dataloader):
             if use_cuda:
-                inputs = inputs.cuda()
+                inputs = move_to_cuda(inputs, use_cuda)
             logits = prompt_model(inputs)
             labels = prepare_labels(inputs['tgt_text'], use_cuda)
             loss = self.focal_label_smooth_ce_loss(logits, labels)
@@ -128,9 +155,8 @@ def train_phase_one(prompt_model, train_dataloader, val_dataloader,
     for epoch in range(num_epochs):
         prompt_model.train()
         for step, inputs in enumerate(train_dataloader):
-            print("TYPEEE", type(inputs))
             if use_cuda:
-                inputs = inputs.cuda()
+                inputs = move_to_cuda(inputs, use_cuda)
             logits = prompt_model(inputs)
             labels = prepare_labels(inputs['tgt_text'], use_cuda)
             
@@ -149,7 +175,7 @@ def train_phase_one(prompt_model, train_dataloader, val_dataloader,
         with torch.no_grad():
             for inputs in val_dataloader:
                 if use_cuda:
-                    inputs = inputs.cuda()
+                    inputs = move_to_cuda(inputs, use_cuda)
                 logits = prompt_model(inputs)
                 labels = prepare_labels(inputs['tgt_text'], use_cuda)
                 loss = loss_func_no_ewc.focal_label_smooth_ce_loss(logits, labels)
@@ -188,7 +214,7 @@ def train_phase_two(prompt_model, train_dataloader, val_dataloader,
         prompt_model.train()
         for step, inputs in enumerate(train_dataloader):
             if use_cuda:
-                inputs = inputs.cuda()
+                inputs = move_to_cuda(inputs, use_cuda)
             logits = prompt_model(inputs)
             labels = prepare_labels(inputs['tgt_text'], use_cuda)
             
@@ -207,7 +233,7 @@ def train_phase_two(prompt_model, train_dataloader, val_dataloader,
         with torch.no_grad():
             for inputs in val_dataloader:
                 if use_cuda:
-                    inputs = inputs.cuda()
+                    inputs = move_to_cuda(inputs, use_cuda)
                 logits = prompt_model(inputs)
                 labels = prepare_labels(inputs['tgt_text'], use_cuda)
                 loss = loss_func_with_ewc(prompt_model, logits, labels)
@@ -250,7 +276,7 @@ def train_consolidation(prompt_model, cons_dataloader, optimizer1, optimizer2,
             inputs = next(cons_it)
         
         if use_cuda:
-            inputs = inputs.cuda()
+            inputs = move_to_cuda(inputs, use_cuda)
         logits = prompt_model(inputs)
         labels = prepare_labels(inputs['tgt_text'], use_cuda)
         

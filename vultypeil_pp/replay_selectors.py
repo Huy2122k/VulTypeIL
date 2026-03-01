@@ -10,6 +10,8 @@ from collections import defaultdict, Counter
 from typing import List, Tuple
 from openprompt.data_utils import InputExample
 from tqdm import tqdm
+from trainer import move_to_cuda
+
 
 
 def prepare_labels(labels, use_cuda=True):
@@ -60,7 +62,7 @@ def mahalanobis_select(prompt_model, dataloader, examples: List[InputExample],
     with torch.no_grad():
         for inputs in dataloader:
             if use_cuda:
-                inputs = inputs.cuda()
+                inputs = move_to_cuda(inputs, use_cuda)
             logits = prompt_model(inputs)
             all_features.append(logits.cpu().numpy())
     
@@ -114,7 +116,7 @@ def mcss_select(candidates: List[InputExample], num_samples: int,
     with torch.no_grad():
         for inputs in tqdm(dataloader, desc="MCSS: Computing features"):
             if use_cuda:
-                inputs = inputs.cuda()
+                inputs = move_to_cuda(inputs, use_cuda)
             
             logits = prompt_model(inputs)
             labels = prepare_labels(inputs['tgt_text'], use_cuda)
@@ -257,7 +259,7 @@ def gcr_approx_select(candidates: List[InputExample], num_samples: int,
     
     for inputs in tqdm(dataloader, desc="GCR: Computing gradients"):
         if use_cuda:
-            inputs = inputs.cuda()
+            inputs = move_to_cuda(inputs, use_cuda)
         
         # Forward pass
         logits = prompt_model(inputs)

@@ -18,6 +18,7 @@ from openprompt.prompts import MixedTemplate, ManualVerbalizer
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
 # Import VulTypeIL++ modules
+from trainer import move_to_cuda
 from data_utils import read_prompt_examples, read_and_merge_previous_datasets
 from replay_buffer import ReplayBuffer
 from mixed_dataloader import MixedBatchIterator
@@ -74,7 +75,7 @@ def test(prompt_model, test_dataloader, name, results_dir, use_cuda=True):
     with torch.no_grad():
         for inputs in test_dataloader:
             if use_cuda:
-                inputs = inputs.cuda()
+                inputs = move_to_cuda(inputs, use_cuda)
             logits = prompt_model(inputs)
             labels = inputs['tgt_text']
             # Ensure labels are integers for metrics
@@ -459,6 +460,8 @@ def run_experiment(config_path, batch_size=None, num_epochs=None, patience=None)
                     print(f"Warning: Phase 2 checkpoint is not a state dict, got {type(state_dict)}")
                 else:
                     prompt_model.load_state_dict(state_dict)
+                    if use_cuda:
+                        prompt_model = prompt_model.cuda()
                     print(f"Loaded Phase 2 checkpoint for Task {task_id}")
             except Exception as e:
                 print(f"Warning: Failed to load Phase 2 checkpoint: {e}")
