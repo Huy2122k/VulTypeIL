@@ -102,11 +102,24 @@ def test(prompt_model, test_dataloader, name, results_dir, use_cuda=True):
     return acc, f1ma
 
 
-def run_experiment(config_path):
+def run_experiment(config_path, batch_size=None, num_epochs=None, patience=None):
     """Run experiment based on configuration file."""
     # Load configuration
     with open(config_path, 'r') as f:
         config = yaml.safe_load(f)
+    
+    # Override with command-line arguments if provided
+    if batch_size is not None:
+        config['training']['batch_size'] = batch_size
+        print(f"Overriding batch_size: {batch_size}")
+    
+    if num_epochs is not None:
+        config['training']['num_epochs'] = num_epochs
+        print(f"Overriding num_epochs: {num_epochs}")
+    
+    if patience is not None:
+        config['training']['patience'] = patience
+        print(f"Overriding patience: {patience}")
     
     print(f"\n{'='*80}")
     print(f"Running: {config['method']}")
@@ -118,6 +131,13 @@ def run_experiment(config_path):
     
     # Setup paths
     data_dir = config['data']['data_dir']
+    # If data_dir is relative and doesn't exist, try parent directory
+    if not os.path.exists(data_dir):
+        parent_data_dir = os.path.join('..', data_dir)
+        if os.path.exists(parent_data_dir):
+            data_dir = parent_data_dir
+            print(f"Using data directory: {data_dir}")
+    
     num_tasks = config['data']['num_tasks']
     num_classes = config['data']['num_classes']
     
@@ -456,6 +476,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run VulTypeIL++ experiments")
     parser.add_argument('--config', type=str, required=True,
                        help='Path to configuration YAML file')
+    parser.add_argument('--batch_size', type=int, default=None,
+                       help='Override batch size from config')
+    parser.add_argument('--num_epochs', type=int, default=None,
+                       help='Override number of epochs from config')
+    parser.add_argument('--patience', type=int, default=None,
+                       help='Override early stopping patience from config')
     args = parser.parse_args()
     
-    run_experiment(args.config)
+    run_experiment(args.config, args.batch_size, args.num_epochs, args.patience)

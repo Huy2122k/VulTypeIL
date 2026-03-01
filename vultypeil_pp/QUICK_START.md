@@ -4,7 +4,7 @@
 
 1. **Data Preparation**: Ensure you have the incremental task data in CSV format:
    ```
-   ../incremental_tasks_csv/
+   ../incremental_tasks_csv/    # One level up from vultypeil_pp/
    ├── task1_train.csv
    ├── task1_test.csv
    ├── task1_valid.csv
@@ -16,6 +16,11 @@
 2. **Environment**: Python 3.8+ with dependencies installed:
    ```bash
    pip install -r ../requirements.txt
+   ```
+
+3. **Working Directory**: Always run commands from the `vultypeil_pp/` directory:
+   ```bash
+   cd vultypeil_pp
    ```
 
 ## Running Experiments
@@ -31,6 +36,18 @@ python run.py --config configs/3_vultypeilpp_er.yaml
 
 This runs VulTypeIL++ with random experience replay (fastest to run).
 
+**With custom parameters:**
+```bash
+# Reduce batch size for limited GPU memory
+python run.py --config configs/3_vultypeilpp_er.yaml --batch_size 8
+
+# Quick test with fewer epochs
+python run.py --config configs/3_vultypeilpp_er.yaml --num_epochs 10
+
+# Combine multiple overrides
+python run.py --config configs/3_vultypeilpp_er.yaml --batch_size 8 --num_epochs 50 --patience 3
+```
+
 ### Option 2: Run All Ablations
 
 ```bash
@@ -38,6 +55,18 @@ python run_all.py
 ```
 
 This will run all 6 ablations sequentially. Expected time: 10-20 hours depending on hardware.
+
+**With custom parameters:**
+```bash
+# Run all with reduced epochs for faster testing
+python run_all.py --num_epochs 50
+
+# Run all with smaller batch size
+python run_all.py --batch_size 8
+
+# Combine parameters
+python run_all.py --batch_size 8 --num_epochs 50 --patience 3
+```
 
 ### Option 3: Run Specific Ablations
 
@@ -49,6 +78,11 @@ python run_all.py --ablations 3 4 5
 Skip ablations 1 and 2 (non-scalable baselines):
 ```bash
 python run_all.py --skip 1 2
+```
+
+With custom parameters:
+```bash
+python run_all.py --ablations 3 4 5 --batch_size 8 --num_epochs 50
 ```
 
 ## Understanding the Output
@@ -77,8 +111,7 @@ outputs/<method_name>/
 ### Step 1: Quick Test (30 min - 1 hour)
 ```bash
 # Test with reduced epochs to verify everything works
-# Edit config file: num_epochs: 10 (instead of 100)
-python run.py --config configs/3_vultypeilpp_er.yaml
+python run.py --config configs/3_vultypeilpp_er.yaml --num_epochs 10
 ```
 
 ### Step 2: Run Scalable Methods (6-8 hours)

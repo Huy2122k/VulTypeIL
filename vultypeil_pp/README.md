@@ -94,21 +94,37 @@ pip install -r ../requirements.txt
 ### Run Single Experiment
 
 ```bash
+# Basic usage
 python run.py --config configs/1_vultypeil_fixed200.yaml
+
+# Override training parameters
+python run.py --config configs/3_vultypeilpp_er.yaml --batch_size 8 --num_epochs 50 --patience 3
+
+# Quick test with reduced epochs
+python run.py --config configs/3_vultypeilpp_er.yaml --num_epochs 10
 ```
 
 ### Run All Ablations
 
 ```bash
+# Run all with default settings
 python run_all.py
-```
 
-This will run all 6 configurations sequentially and save results to `outputs/`.
+# Run all with custom parameters
+python run_all.py --batch_size 8 --num_epochs 50 --patience 3
+```
 
 ### Run Specific Ablations
 
 ```bash
+# Run only ablations 3, 4, 5, 6
 python run_all.py --ablations 3 4 5 6
+
+# Skip ablations 1 and 2 (non-scalable)
+python run_all.py --skip 1 2
+
+# Run specific ablations with custom parameters
+python run_all.py --ablations 3 4 --batch_size 8 --num_epochs 50
 ```
 
 ## Output Structure

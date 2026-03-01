@@ -32,6 +32,12 @@ def main():
                        help='Specific ablations to run (1-6). Default: all')
     parser.add_argument('--skip', type=int, nargs='+', default=[],
                        help='Ablations to skip (1-6)')
+    parser.add_argument('--batch_size', type=int, default=None,
+                       help='Override batch size for all experiments')
+    parser.add_argument('--num_epochs', type=int, default=None,
+                       help='Override number of epochs for all experiments')
+    parser.add_argument('--patience', type=int, default=None,
+                       help='Override early stopping patience for all experiments')
     args = parser.parse_args()
     
     # Determine which ablations to run
@@ -66,7 +72,7 @@ def main():
         start_time = time.time()
         
         try:
-            metrics = run_experiment(config_path)
+            metrics = run_experiment(config_path, args.batch_size, args.num_epochs, args.patience)
             elapsed_time = time.time() - start_time
             
             summary = metrics.get_summary()
@@ -123,7 +129,7 @@ def main():
     print(f"{'='*80}\n")
     
     # Save summary to file
-    summary_path = "vultypeil_pp/outputs/experiment_summary.txt"
+    summary_path = "outputs/experiment_summary.txt"
     os.makedirs(os.path.dirname(summary_path), exist_ok=True)
     
     with open(summary_path, 'w') as f:

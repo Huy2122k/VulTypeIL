@@ -54,6 +54,6 @@ consolidation:
 
 # Output settings
 output:
-  checkpoint_dir: "vultypeil_pp/outputs/3_er/checkpoints"
-  results_dir: "vultypeil_pp/outputs/3_er/results"
-  metrics_dir: "vultypeil_pp/outputs/3_er/metrics"
+  checkpoint_dir: "outputs/3_er/checkpoints"
+  results_dir: "outputs/3_er/results"
+  metrics_dir: "outputs/3_er/metrics"
