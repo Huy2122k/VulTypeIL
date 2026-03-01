@@ -6,7 +6,7 @@ description: "VulTypeIL with 20% replay ratio from all previous tasks (non-scala
 
 # Data settings
 data:
-  data_dir: "incremental_tasks_csv"
+  data_dir: "/admin/dataset"
   num_tasks: 5
   num_classes: 23
 

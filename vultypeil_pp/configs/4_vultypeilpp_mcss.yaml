@@ -6,7 +6,7 @@ description: "VulTypeIL++ with Multi-Criteria Coreset Selection (MCSS)"
 
 # Data settings
 data:
-  data_dir: "incremental_tasks_csv"
+  data_dir: "/admin/dataset"
   num_tasks: 5
   num_classes: 23
 

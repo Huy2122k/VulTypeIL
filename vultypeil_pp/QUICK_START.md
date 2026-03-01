@@ -147,7 +147,7 @@ buffer:
 Make sure data paths are correct:
 ```yaml
 data:
-  data_dir: "incremental_tasks_csv"  # or "../incremental_tasks_csv"
+  data_dir: "/admin/dataset"  # or "../incremental_tasks_csv"
 ```
 
 If data is in Excel format, convert to CSV first:
