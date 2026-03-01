@@ -113,16 +113,56 @@ def run_experiment(config_path, batch_size=None, num_epochs=None, patience=None)
     
     # Override with command-line arguments if provided
     if batch_size is not None:
-        config['training']['batch_size'] = batch_size
+        config['training']['batch_size'] = int(batch_size)
         print(f"Overriding batch_size: {batch_size}")
     
     if num_epochs is not None:
-        config['training']['num_epochs'] = num_epochs
+        config['training']['num_epochs'] = int(num_epochs)
         print(f"Overriding num_epochs: {num_epochs}")
     
     if patience is not None:
-        config['training']['patience'] = patience
+        config['training']['patience'] = int(patience)
         print(f"Overriding patience: {patience}")
+    
+    # Ensure numeric types are correct (YAML might load as strings)
+    config['training']['batch_size'] = int(config['training']['batch_size'])
+    config['training']['num_epochs'] = int(config['training']['num_epochs'])
+    config['training']['lr'] = float(config['training']['lr'])
+    config['training']['patience'] = int(config['training']['patience'])
+    config['loss']['smoothing'] = float(config['loss']['smoothing'])
+    config['loss']['focal_alpha'] = float(config['loss']['focal_alpha'])
+    config['loss']['focal_gamma'] = float(config['loss']['focal_gamma'])
+    config['loss']['ewc_lambda'] = float(config['loss']['ewc_lambda'])
+    config['loss']['decay_factor'] = float(config['loss']['decay_factor'])
+    config['model']['max_seq_length'] = int(config['model']['max_seq_length'])
+    config['data']['num_tasks'] = int(config['data']['num_tasks'])
+    config['data']['num_classes'] = int(config['data']['num_classes'])
+    
+    # Convert buffer settings if enabled
+    if config['buffer']['enabled']:
+        config['buffer']['size'] = int(config['buffer']['size'])
+        if 'tail_threshold' in config['buffer']:
+            config['buffer']['tail_threshold'] = float(config['buffer']['tail_threshold'])
+    
+    # Convert replay settings
+    if config['replay'].get('replay_ratio') is not None:
+        config['replay']['replay_ratio'] = float(config['replay']['replay_ratio'])
+    if config['replay'].get('ratio_allold') is not None:
+        config['replay']['ratio_allold'] = float(config['replay']['ratio_allold'])
+    if config['replay'].get('num_samples') is not None:
+        config['replay']['num_samples'] = int(config['replay']['num_samples'])
+    
+    # Convert MCSS settings if present
+    if 'mcss' in config:
+        config['mcss']['tail_threshold'] = float(config['mcss']['tail_threshold'])
+        config['mcss']['alpha_loss'] = float(config['mcss']['alpha_loss'])
+        config['mcss']['overselect_k'] = int(config['mcss']['overselect_k'])
+    
+    # Convert consolidation settings if enabled
+    if config['consolidation']['enabled']:
+        config['consolidation']['steps'] = int(config['consolidation']['steps'])
+        config['consolidation']['replay_ratio_in_cons'] = float(config['consolidation']['replay_ratio_in_cons'])
+        config['consolidation']['ewc_lambda_multiplier'] = float(config['consolidation']['ewc_lambda_multiplier'])
     
     print(f"\n{'='*80}")
     print(f"Running: {config['method']}")
