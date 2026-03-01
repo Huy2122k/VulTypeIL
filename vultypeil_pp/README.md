@@ -25,11 +25,12 @@ vultypeil_pp/
 ├── data_utils.py              # Data loading utilities
 ├── replay_buffer.py           # Replay buffer implementation
 ├── mixed_dataloader.py        # Mixed batch iterator
-├── selectors.py               # Selection strategies (Mahalanobis, MCSS, GCR)
+├── replay_selectors.py        # Selection strategies (Mahalanobis, MCSS, GCR)
 ├── trainer.py                 # Training functions (2-phase + consolidation)
 ├── metrics.py                 # Continual learning metrics
 ├── run.py                     # Main experiment runner
 ├── run_all.py                 # Script to run all ablations
+├── compare_results.py         # Compare & visualize results
 └── README.md                  # This file
 ```
 

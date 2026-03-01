@@ -21,7 +21,7 @@ from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 from data_utils import read_prompt_examples, read_and_merge_previous_datasets
 from replay_buffer import ReplayBuffer
 from mixed_dataloader import MixedBatchIterator
-from selectors import mahalanobis_select, mcss_select, gcr_approx_select
+from replay_selectors import mahalanobis_select, mcss_select, gcr_approx_select
 from trainer import (OnlineEWCWithFocalLabelSmoothLoss, train_phase_one, 
                      train_phase_two, train_consolidation)
 from metrics import ContinualMetrics
